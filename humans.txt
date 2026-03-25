@@ -1,18 +1,17 @@
-/* TEAM */
+/* IRANMAP PROJECT */
 
-Project: IranMap
-Website: https://iranmap.online
-
-Creator & Owner:
+Founder & Product Owner:
 Nasir Aghayev
 
-Core Code Foundation (KMZ → HTML transformation):
+Core System Architecture & Initial Codebase:
 Nazmiyya Aghayeva
+(KMZ to Web Map Transformation)
 
-/* DESCRIPTION */
+Platform:
+https://iranmap.online
 
-Geospatial intelligence platform focused on monitoring, visualization, and analysis.
+Description:
+A geospatial intelligence platform for monitoring, analysis, and visualization.
 
-/* TECHNOLOGY */
-
+Stack:
 HTML, JavaScript, Leaflet, Vercel, Cloudflare
