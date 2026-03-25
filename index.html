@@ -546,6 +546,7 @@ document.getElementById('themeToggle').onclick = () => {
 
 // ── MAP INIT ──────────────────────────────────────────────────────────────
 const map = L.map('map', { preferCanvas:true }).setView([38.0, 47.5], 6);
+  map.attributionControl.addAttribution('© Nasir Aghayev');
 
 const TILES = {
   gray: L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
