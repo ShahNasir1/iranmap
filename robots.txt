@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+
+# Block unnecessary system files (optional)
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemap
 Sitemap: https://iranmap.online/sitemap.xml
