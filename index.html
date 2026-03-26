@@ -122,7 +122,7 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 #measureHBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:148px;padding:8px 15px;white-space:nowrap;flex-shrink:0}
 #measureHBtn .mi{font-size:13px;line-height:1}
 #measureHBtn .mtxt{display:inline-block;line-height:1.1}
-#panelToggleBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:96px;padding:8px 14px;white-space:nowrap;flex-shrink:0}
+#panelToggleBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:118px;padding:8px 14px;white-space:nowrap;flex-shrink:0}
 #panelToggleBtn .pi{font-size:13px;line-height:1}
 #panelToggleBtn .ptxt{display:inline-block;line-height:1.1}
 .hbtn{
@@ -145,7 +145,7 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 #brandBlock{display:flex;align-items:center;gap:14px;min-width:max-content}
 #hdrMeta{display:flex;align-items:center;gap:14px}
 #hdrMetaGroup{display:flex;align-items:center;gap:12px;padding-left:4px}
-#statsWrap{display:flex;align-items:center;gap:18px;flex:1;min-width:0;justify-content:center}
+#statsWrap{display:flex;align-items:center;gap:18px;flex:1;min-width:0;justify-content:center;margin-left:34px;transition:margin-left .22s ease}
 #themeBtn{min-width:42px;padding:8px 10px}
 #themeBtn .theme-label{display:none}
 #panel .status{line-height:1.6}
@@ -502,6 +502,8 @@ button.sec:hover{background:var(--sec-h)}
 #intro.hide{animation:introHide .45s .05s forwards}
 @keyframes introHide{to{opacity:0;pointer-events:none}}
 
+
+body.panel-hidden #statsWrap{margin-left:18px}
 @media(max-width:900px){
   :root{--hdr-h:auto;--ticker-h:26px;--panel-w:320px}
   #hdr{flex-wrap:wrap;align-items:flex-start;padding:12px 12px 10px}
@@ -509,7 +511,7 @@ button.sec:hover{background:var(--sec-h)}
   #hdrRight{margin-left:auto;gap:12px;padding-left:0}
   #hdrMeta{gap:10px}
   #measureHBtn{min-width:138px;padding:8px 13px}
-  #panelToggleBtn{min-width:88px;padding:8px 12px}
+  #panelToggleBtn{min-width:112px;padding:8px 12px}
 }
 @media(max-width:700px){
   :root{--panel-w:min(88vw,340px)}
@@ -783,13 +785,63 @@ const CAT_META={
   rail:{label:"Dəmiryol stansiyaları",color:"#78350f"},
   military:{label:"Hərbi obyektlər",color:"#16a34a"},
 };
+
+function normText(v){
+  return (v||"")
+    .toString()
+    .toLowerCase()
+    .replace(/[\u2010-\u2015]/g,"-")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g,"")
+    .replace(/ə/g,"e").replace(/ı/g,"i").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ğ/g,"g").replace(/ş/g,"s").replace(/ç/g,"c")
+    .replace(/[^a-z0-9\s\-]/g," ")
+    .replace(/\s+/g," ")
+    .trim();
+}
+function detectCategory(name,fallback=""){
+  const n=normText(name);
+  const fb=(fallback||"").toLowerCase();
+
+  if(n==="serhed postu" || n.includes("serhed postu")) return "post";
+  if(n==="sbm" || n.includes("serhed buraxilis menteqesi")) return "sbm";
+  if(n.includes("demiryol stansiyasi") || n.includes("demiryolu stansiyasi") || n.includes("stansiya")) return "rail";
+
+  const militaryKw=[
+    "alay","tabor","qerargah","qarnizon","briqada","diviziya","korpus","komando","zirehli",
+    "artilleriya","muhendis","muhendis istehkam","raket bazasi","raket","te lim merkezi",
+    "telim merkezi","tehsil merkezi","quru qosun","xestexanasi","hucumundan mudafie",
+    "mudafie bazasi","xususi bolme","qruppu","grupu","hissesi","qerargahi","garnizonu",
+    "garnizon","brigada","division","regiment","battalion","garrison","headquarters"
+  ];
+  if(militaryKw.some(k=>n.includes(k))) return "military";
+
+  const aviationKw=[
+    "hava limani","ucus enis zolagi","aeroport","aerodrom","air base","airbase","runway","airport","helipad"
+  ];
+  if(aviationKw.some(k=>n.includes(k))) return "aviation";
+
+  if(fb==="military" || fb==="aviation" || fb==="rail" || fb==="post" || fb==="sbm") return fb;
+  return "aviation";
+}
+function sanitizeFeatures(features){
+  return (features||[])
+    .filter(f=>f && isFinite(f.lat) && isFinite(f.lon))
+    .map(f=>({
+      ...f,
+      name:(f.name||"Obyekt").trim(),
+      lat:+f.lat,
+      lon:+f.lon,
+      cat:detectCategory(f.name,f.cat)
+    }));
+}
+
 const HOME_VIEW={center:[33,52],zoom:5};
 
 // ── INTRO ─────────────────────────────────────────────────────────────────
 setTimeout(()=>{
   const el=document.getElementById("intro");
   el.classList.add("hide");
-  setTimeout(()=>el.remove(),500);
+  setTimeout(()=>{el.remove(); setTimeout(()=>{ if(typeof map!=="undefined" && map){ map.invalidateSize(); syncLayerVisibility?.(); applyLabels?.(); } }, 80);},500);
 },2800);
 
 // ── TICKER ────────────────────────────────────────────────────────────────
@@ -932,7 +984,7 @@ function setPanelButtonState(){
   if(!panelToggleBtn) return;
   panelToggleBtn.innerHTML=hidden
     ? '<span class="pi">☰</span><span class="ptxt">Panel</span>'
-    : '<span class="pi">✕</span><span class="ptxt">Panel</span>';
+    : '<span class="pi">✕</span><span class="ptxt">Bağla</span>';
 }
 function setPanelHidden(hidden,store=true){
   document.body.classList.toggle("panel-hidden",hidden);
@@ -999,7 +1051,7 @@ function updateIconSizes(){
 function applyLabels(){
   const z=map.getZoom(),on=document.getElementById("tLabels").checked&&z>=9;
   [...sbmMarkers,...airMarkers,...railMarkers].forEach(m=>{if(on)m.openTooltip();else m.closeTooltip();});
-  const mOn=document.getElementById("tLabels").checked&&z>=7;
+  const mOn=document.getElementById("tLabels").checked&&z>=9;
   milMarkers.forEach(m=>{if(mOn)m.openTooltip();else m.closeTooltip();});
 }
 
@@ -1154,29 +1206,47 @@ document.getElementById("fitBtn").onclick=()=>{
 };
 
 // ── FILE UPLOAD ───────────────────────────────────────────────────────────
-function categorize(name){
-  const n=(name||"").trim(),l=n.toLowerCase();
-  if(n==="Sərhəd postu")return"post";if(n==="SBM")return"sbm";
-  if(l.includes("dəmiryolu")||l.includes("stanst")||l.includes("stansiya"))return"rail";
-  const mKw=["nezaja","nezsa","irgc","inqilab kesikci","briqada","diviziya","batalyon","korpus",
-    "qarnizonu","artilleriya","komando","zirehli","muhəndis","raket bazas","elmlər",
-    "ali tehsil","maraga","mersad","pesveh","jaldian","zerhorn","havanirooz","dovus bazas",
-    "sepah","nedsa","faraja","besat","xidmət sehid","kirmanşah","forur"];
-  for(const kw of mKw)if(l.includes(kw))return"military";
-  return"aviation";
+
+function categorize(name,folderName="",documentName=""){
+  const fallback = normText([folderName,documentName].filter(Boolean).join(" "));
+  if(fallback.includes("herbi")) return "military";
+  if(fallback.includes("air") || fallback.includes("airport") || fallback.includes("aviasiya")) return "aviation";
+  if(fallback.includes("rail") || fallback.includes("demiryol")) return "rail";
+  if(fallback.includes("serhed") && fallback.includes("sbm")) return "sbm";
+  if(fallback.includes("serhed")) return "post";
+  return detectCategory(name);
 }
 function parseKml(txt){
-  const NS="http://www.opengis.net/kml/2.2",xml=new DOMParser().parseFromString(txt,"text/xml"),out=[];
-  function findAll(el,tag){const res=[];const local=el.tagName?.split(":").pop()||"";if(local===tag)res.push(el);for(const c of el.children||[])res.push(...findAll(c,tag));return res;}
-  for(const pm of findAll(xml.documentElement,"Placemark")){
-    const pt=findAll(pm,"Point")[0];if(!pt)continue;
-    const ne=findAll(pm,"name")[0];const name=ne?.textContent?.trim()||"Placemark";
-    const ce=findAll(pt,"coordinates")[0];if(!ce?.textContent)continue;
-    const p=ce.textContent.trim().split(",");if(p.length<2)continue;
-    const lon=parseFloat(p[0]),lat=parseFloat(p[1]);
-    if(!isFinite(lat)||!isFinite(lon))continue;
-    out.push({name,lat,lon,cat:categorize(name)});
+  const xml=new DOMParser().parseFromString(txt,"text/xml"),out=[];
+  function localName(el){ return (el?.tagName?.split(":").pop()||""); }
+  function findChildrenByTag(el,tag){
+    return [...(el?.children||[])].filter(c=>localName(c)===tag);
   }
+  function walk(node,ctx={folder:"",doc:""}){
+    const lname=localName(node);
+    let next={...ctx};
+    if(lname==="Document" || lname==="Folder"){
+      const nm=findChildrenByTag(node,"name")[0]?.textContent?.trim()||"";
+      if(lname==="Document") next.doc=nm||ctx.doc;
+      if(lname==="Folder") next.folder=nm||ctx.folder;
+    }
+    if(lname==="Placemark"){
+      const name=findChildrenByTag(node,"name")[0]?.textContent?.trim()||"Placemark";
+      const point=findChildrenByTag(node,"Point")[0];
+      const coordEl=point ? findChildrenByTag(point,"coordinates")[0] : null;
+      if(coordEl?.textContent){
+        const p=coordEl.textContent.trim().split(",");
+        if(p.length>=2){
+          const lon=parseFloat(p[0]), lat=parseFloat(p[1]);
+          if(isFinite(lat)&&isFinite(lon)){
+            out.push({name,lat,lon,cat:categorize(name,next.folder,next.doc)});
+          }
+        }
+      }
+    }
+    [...(node?.children||[])].forEach(ch=>walk(ch,next));
+  }
+  walk(xml.documentElement,{folder:"",doc:""});
   return out;
 }
 async function loadFile(file){
@@ -1189,7 +1259,7 @@ document.getElementById("fileInput").addEventListener("change",async e=>{
   const file=e.target.files?.[0];if(!file)return;
   document.getElementById("status").textContent="Yüklənir…";
   try{
-    const feats=parseKml(await loadFile(file));
+    const feats=sanitizeFeatures(parseKml(await loadFile(file)));
     if(!feats.length){document.getElementById("status").textContent="Nöqtə tapılmadı.";return;}
     buildMap(feats);
     document.getElementById("status").textContent=`✅ ${file.name} — ${feats.length} obyekt`;
@@ -1275,7 +1345,7 @@ function doSatScan(){
   let t=0;
   const anim=setInterval(()=>{
     t+=16;
-    const prog=Math.min(t/1050,1);
+    const prog=Math.min(t/1550,1);
     const ease=1-Math.pow(1-prog,3);
     const scale=0.3+ease*0.7;
     const opacity=t<520?Math.min(t/520,1):1-((t-520)/530);
@@ -1283,7 +1353,7 @@ function doSatScan(){
     ring.style.opacity=Math.max(0,opacity);
     ch.style.opacity=Math.min(1,t/200);
     lbl.style.opacity=t<400?Math.min(1,t/150):Math.max(0,1-(t-400)/200);
-    if(t>=1050){
+    if(t>=1550){
       clearInterval(anim);
       ring.remove();ch.remove();lbl.remove();
     }
@@ -1295,12 +1365,19 @@ setTimeout(()=>{
   doSatScan();
   setInterval(()=>{
     if(Math.random()>.24)doSatScan(); // 76% chance each interval
-  },10000+Math.random()*5000);
+  },14000+Math.random()*6000);
 },5500);
 
 // ── INIT ──────────────────────────────────────────────────────────────────
-buildMap(FEATURES);
+buildMap(sanitizeFeatures(FEATURES));
 pulseFn();
+map.whenReady(()=>{
+  setTimeout(()=>{
+    map.invalidateSize();
+    syncLayerVisibility();
+    applyLabels();
+  },220);
+});
 
 // Apply dark theme by default for intelligence aesthetic
 document.documentElement.setAttribute("data-theme","dark");
