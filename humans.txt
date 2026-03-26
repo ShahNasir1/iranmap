@@ -1,17 +1,41 @@
 /* IRANMAP PROJECT */
 
+Website:
+https://iranmap.online
+
+/* TEAM */
+
 Founder & Product Owner:
 Nasir Aghayev
 
 Core System Architecture & Initial Codebase:
 Nazmiyya Aghayeva
-(KMZ to Web Map Transformation)
+(KMZ → Web Map Transformation)
 
-Platform:
-https://iranmap.online
+/* PROJECT */
 
 Description:
-A geospatial intelligence platform for monitoring, analysis, and visualization.
+A geospatial intelligence platform focused on real-time monitoring, visualization, and analysis of conflict zones using OSINT methodologies.
 
-Stack:
-HTML, JavaScript, Leaflet, Vercel, Cloudflare
+Type:
+Geospatial Intelligence Platform (OSINT)
+
+/* TECH STACK */
+
+Frontend:
+HTML, CSS, JavaScript
+
+Mapping:
+Leaflet.js, OpenStreetMap
+
+Infrastructure:
+Vercel (Hosting), Cloudflare (CDN & DNS)
+
+/* STATUS */
+
+Stage:
+Production MVP
+
+/* NOTES */
+
+All data is based on publicly available sources and analytical interpretation.
