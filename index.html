@@ -116,7 +116,15 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 .hstat-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 
 /* Right actions */
-#hdrRight{display:flex;align-items:center;gap:12px;flex-shrink:0;min-width:max-content}
+#hdrRight{display:flex;align-items:center;gap:18px;flex-shrink:0;min-width:max-content;padding-left:8px}
+#hdrMeta{display:flex;align-items:center;gap:14px;min-width:max-content}
+#hdrCopy{margin-right:2px}
+#measureHBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:148px;padding:8px 15px;white-space:nowrap;flex-shrink:0}
+#measureHBtn .mi{font-size:13px;line-height:1}
+#measureHBtn .mtxt{display:inline-block;line-height:1.1}
+#panelToggleBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:96px;padding:8px 14px;white-space:nowrap;flex-shrink:0}
+#panelToggleBtn .pi{font-size:13px;line-height:1}
+#panelToggleBtn .ptxt{display:inline-block;line-height:1.1}
 .hbtn{
   background:rgba(255,255,255,.06);border:1px solid rgba(212,175,55,.22);
   color:var(--gold-soft);border-radius:10px;padding:8px 13px;
@@ -135,7 +143,7 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 
 
 #brandBlock{display:flex;align-items:center;gap:14px;min-width:max-content}
-#hdrMeta{display:flex;align-items:center;gap:12px}
+#hdrMeta{display:flex;align-items:center;gap:14px}
 #hdrMetaGroup{display:flex;align-items:center;gap:12px;padding-left:4px}
 #statsWrap{display:flex;align-items:center;gap:18px;flex:1;min-width:0;justify-content:center}
 #themeBtn{min-width:42px;padding:8px 10px}
@@ -190,13 +198,20 @@ button{border-radius:10px}
 
 /* ── PANEL ── */
 #panel{
-  width:var(--panel-w);flex-shrink:0;
+  width:var(--panel-w);min-width:var(--panel-w);flex-shrink:0;
   background:var(--panel-bg);
   border-right:1px solid var(--panel-border);
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
   overflow-y:auto;overflow-x:hidden;
   scrollbar-width:thin;scrollbar-color:var(--scroll) transparent;
+  transition:width .3s ease,min-width .3s ease,opacity .25s ease,transform .3s ease,border-color .25s ease,box-shadow .25s ease;
+  opacity:1;
 }
+body.panel-hidden #panel{
+  width:0 !important;min-width:0 !important;border-right-color:transparent !important;
+  opacity:0;overflow:hidden;pointer-events:none;box-shadow:none;
+}
+#panelBackdrop{display:none;}
 #panel::-webkit-scrollbar{width:3px}
 #panel::-webkit-scrollbar-track{background:transparent}
 #panel::-webkit-scrollbar-thumb{background:var(--scroll);border-radius:4px}
@@ -283,7 +298,7 @@ button.sec:hover{background:var(--sec-h)}
 .bmbtn.active,.bmbtn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
 
 /* ── MAP WRAP ── */
-#mapWrap{flex:1;position:relative;overflow:hidden}
+#mapWrap{flex:1 1 auto;position:relative;overflow:hidden;min-width:0;transition:flex-basis .3s ease,width .3s ease}
 #map{width:100%;height:100%}
 
 /* Sinematik overlay */
@@ -480,7 +495,7 @@ button.sec:hover{background:var(--sec-h)}
   height:100%;width:0%;
   background:linear-gradient(90deg,var(--logo-red),#3b82f6);
   border-radius:2px;
-  animation:introProgress 2.3s .5s cubic-bezier(.4,0,.2,1) forwards;
+  animation:introProgress 3.4s .5s cubic-bezier(.4,0,.2,1) forwards;
 }
 @keyframes introProgress{0%{width:0%}100%{width:100%}}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
@@ -488,19 +503,38 @@ button.sec:hover{background:var(--sec-h)}
 @keyframes introHide{to{opacity:0;pointer-events:none}}
 
 @media(max-width:900px){
-  :root{--panel-w:100%;--hdr-h:auto;--ticker-h:26px}
-  #hdr{flex-wrap:wrap;align-items:flex-start;padding:12px}
-  #statsWrap{order:3;width:100%;justify-content:flex-start;overflow:auto}
-  #hdrRight{margin-left:auto}
+  :root{--hdr-h:auto;--ticker-h:26px;--panel-w:320px}
+  #hdr{flex-wrap:wrap;align-items:flex-start;padding:12px 12px 10px}
+  #statsWrap{order:3;width:100%;justify-content:flex-start;overflow:auto;padding-top:4px}
+  #hdrRight{margin-left:auto;gap:12px;padding-left:0}
+  #hdrMeta{gap:10px}
+  #measureHBtn{min-width:138px;padding:8px 13px}
+  #panelToggleBtn{min-width:88px;padding:8px 12px}
 }
 @media(max-width:700px){
-  :root{--panel-w:100%}
-  #body{flex-direction:column}
-  #panel{width:100%;max-height:54vh;border-right:none;border-bottom:1px solid var(--panel-border)}
+  :root{--panel-w:min(88vw,340px)}
+  #body{position:relative;display:block}
+  #mapWrap{width:100%;height:100%}
+  #panel{
+    position:absolute;left:0;top:0;bottom:0;height:100%;max-height:none;
+    border-right:1px solid var(--panel-border);border-bottom:none;
+    z-index:2100;box-shadow:0 18px 40px rgba(0,0,0,.28);
+  }
+  body.panel-hidden #panel{transform:translateX(-104%);width:var(--panel-w) !important;min-width:var(--panel-w) !important}
+  #panelBackdrop{
+    position:absolute;inset:0;background:rgba(2,8,16,.34);backdrop-filter:blur(1px);
+    z-index:2050;display:block;opacity:1;pointer-events:auto;transition:opacity .25s ease;
+  }
+  body.panel-hidden #panelBackdrop{opacity:0;pointer-events:none}
   #mmWrap{display:none}
   #statsWrap{display:none}
-  #hdrMeta{gap:8px}
+  #hdr{gap:10px}
+  #hdrRight{width:100%;justify-content:space-between;gap:10px}
+  #hdrMeta{gap:8px;flex-wrap:wrap;min-width:0}
+  #hdrCopy{font-size:11px}
   #hdrClock{display:none}
+  #measureHBtn{min-width:auto;padding:8px 12px}
+  #panelToggleBtn{min-width:auto;padding:8px 12px}
 }
 </style>
 </head>
@@ -528,6 +562,7 @@ button.sec:hover{background:var(--sec-h)}
       </a>
       <div id="logoTools">
         <button class="hbtn" id="themeBtn" title="Gecə rejimi">☾</button>
+        <button class="hbtn" id="panelToggleBtn" type="button" aria-label="Paneli göstər və ya gizlət"><span class="pi">☰</span><span class="ptxt">Panel</span></button>
       </div>
     </div>
 
@@ -564,7 +599,7 @@ button.sec:hover{background:var(--sec-h)}
         <div id="hdrMetaDivider"></div>
         <span id="hdrCopy">Nasir Aghayev</span>
       </div>
-      <button class="hbtn" id="measureHBtn">📏 Məsafə ölç</button>
+      <button class="hbtn" id="measureHBtn"><span class="mi">📏</span><span class="mtxt">Məsafə ölç</span></button>
     </div>
   </header>
 
@@ -717,6 +752,8 @@ button.sec:hover{background:var(--sec-h)}
       </div>
     </aside>
 
+    <div id="panelBackdrop" aria-hidden="true"></div>
+
     <!-- ── MAP AREA ── -->
     <div id="mapWrap">
       <div id="map"></div>
@@ -853,13 +890,22 @@ function clearMeasure(){
   measureTips.forEach(t=>t&&map.removeLayer(t));measureTips=[];
   measureResult.style.display="none";
 }
-function setMeasure(on){
-  measureMode=on;map.getContainer().style.cursor=on?"crosshair":"";
+function renderMeasureButton(on){
   const btn=document.getElementById("measureHBtn");
-  btn.classList.toggle("mactive",on);btn.innerHTML=on?"✕ Ölçməni dayandır":"📏 Məsafə ölç";
+  if(!btn) return;
+  btn.classList.toggle("mactive",on);
+  btn.innerHTML=on
+    ? '<span class="mi">✕</span><span class="mtxt">Ölçməni dayandır</span>'
+    : '<span class="mi">📏</span><span class="mtxt">Məsafə ölç</span>';
+}
+function setMeasure(on){
+  measureMode=on;
+  map.getContainer().style.cursor=on?"crosshair":"";
+  renderMeasureButton(on);
   if(!on)clearMeasure();
 }
 document.getElementById("measureHBtn").onclick=()=>setMeasure(!measureMode);
+renderMeasureButton(false);
 map.on("click",e=>{
   if(!measureMode)return;
   measurePoints.push(e.latlng);
@@ -873,6 +919,48 @@ map.on("click",e=>{
   updateMLine();
 });
 map.on("dblclick",e=>{if(!measureMode)return;L.DomEvent.stop(e);setMeasure(false);});
+
+
+// ── PANEL TOGGLE ─────────────────────────────────────────────────────────
+const panelEl=document.getElementById("panel");
+const panelToggleBtn=document.getElementById("panelToggleBtn");
+const panelBackdrop=document.getElementById("panelBackdrop");
+const mqMobile=window.matchMedia("(max-width:700px)");
+
+function setPanelButtonState(){
+  const hidden=document.body.classList.contains("panel-hidden");
+  if(!panelToggleBtn) return;
+  panelToggleBtn.innerHTML=hidden
+    ? '<span class="pi">☰</span><span class="ptxt">Panel</span>'
+    : '<span class="pi">✕</span><span class="ptxt">Panel</span>';
+}
+function setPanelHidden(hidden,store=true){
+  document.body.classList.toggle("panel-hidden",hidden);
+  setPanelButtonState();
+  if(store){
+    localStorage.setItem("iranmap-panel-hidden", hidden ? "1" : "0");
+  }
+  setTimeout(()=>{ if(typeof map!=="undefined" && map) map.invalidateSize(); }, 320);
+}
+function initPanelState(){
+  const stored=localStorage.getItem("iranmap-panel-hidden");
+  if(mqMobile.matches){
+    setPanelHidden(stored===null ? true : stored==="1", false);
+  }else{
+    setPanelHidden(stored==="1", false);
+  }
+}
+panelToggleBtn?.addEventListener("click",()=>{
+  setPanelHidden(!document.body.classList.contains("panel-hidden"));
+});
+panelBackdrop?.addEventListener("click",()=>{
+  if(mqMobile.matches) setPanelHidden(true);
+});
+window.addEventListener("resize",()=>{
+  setPanelButtonState();
+  if(typeof map!=="undefined" && map) setTimeout(()=>map.invalidateSize(),220);
+});
+initPanelState();
 
 // ── RESET ─────────────────────────────────────────────────────────────────
 document.getElementById("resetBtn").onclick=()=>map.flyTo(HOME_VIEW.center,HOME_VIEW.zoom,{duration:1.2});
@@ -1187,28 +1275,28 @@ function doSatScan(){
   let t=0;
   const anim=setInterval(()=>{
     t+=16;
-    const prog=Math.min(t/600,1);
+    const prog=Math.min(t/1050,1);
     const ease=1-Math.pow(1-prog,3);
     const scale=0.3+ease*0.7;
-    const opacity=t<300?prog*1:1-((t-300)/300);
+    const opacity=t<520?Math.min(t/520,1):1-((t-520)/530);
     ring.style.transform=`translate(-50%,-50%) scale(${scale})`;
     ring.style.opacity=Math.max(0,opacity);
     ch.style.opacity=Math.min(1,t/200);
     lbl.style.opacity=t<400?Math.min(1,t/150):Math.max(0,1-(t-400)/200);
-    if(t>=600){
+    if(t>=1050){
       clearInterval(anim);
       ring.remove();ch.remove();lbl.remove();
     }
   },16);
 }
 
-// Run scan every 6-11 seconds, starting after 4s
+// Run scan every 10-15 seconds, starting after 5.5s
 setTimeout(()=>{
   doSatScan();
   setInterval(()=>{
-    if(Math.random()>.3)doSatScan(); // 70% chance each interval
-  },7000+Math.random()*4000);
-},4000);
+    if(Math.random()>.24)doSatScan(); // 76% chance each interval
+  },10000+Math.random()*5000);
+},5500);
 
 // ── INIT ──────────────────────────────────────────────────────────────────
 buildMap(FEATURES);
