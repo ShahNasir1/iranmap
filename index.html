@@ -537,6 +537,34 @@ body.panel-hidden #statsWrap{margin-left:96px}
   #measureHBtn{min-width:42px;width:42px;padding:8px 10px}
   #panelToggleBtn{min-width:auto;padding:8px 12px}
 }
+
+/* ── MUSIC ── */
+#musicBtn{
+  width:auto;margin:0;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(212,175,55,.22);
+  color:var(--gold-soft);
+  border-radius:10px;
+  padding:8px 13px;
+  font-size:12px;
+  font-weight:700;
+  font-family:"Inter",sans-serif;
+  cursor:pointer;
+  transition:all .16s;
+  white-space:nowrap;
+  letter-spacing:.2px;
+}
+#musicBtn:hover{
+  background:rgba(212,175,55,.12);
+  color:#fff;
+  border-color:rgba(212,175,55,.36);
+}
+#musicBtn.playing{
+  background:rgba(22,163,74,.18);
+  border-color:rgba(22,163,74,.42);
+  color:#bbf7d0;
+}
+
 </style>
 </head>
 <body>
@@ -592,6 +620,8 @@ body.panel-hidden #statsWrap{margin-left:96px}
     </div>
 
     <div id="hdrRight">
+      
+      <button class="hbtn" id="musicBtn" type="button" aria-label="Musiqini başlat və ya dayandır">▶ Musiqi</button>
       <div id="hdrMeta">
         <span id="hdrClock">--:--:--</span>
         <div id="liveChip">
@@ -1399,6 +1429,82 @@ async function initApp(){
   }
 }
 initApp();
+
+
+// ── MUSIC ────────────────────────────────────────────────────────────────
+const MUSIC_PLAYLIST=["/audio/track1.mp3","/audio/track2.mp3"];
+const musicBtn=document.getElementById("musicBtn");
+const bgAudio=new Audio();
+bgAudio.preload="auto";
+bgAudio.volume=0.3;
+bgAudio.src=MUSIC_PLAYLIST[0];
+let currentTrackIndex=0;
+let musicStarted=false;
+
+function setMusicButtonState(){
+  if(!musicBtn) return;
+  if(bgAudio.paused){
+    musicBtn.textContent="▶ Musiqi";
+    musicBtn.classList.remove("playing");
+    musicBtn.setAttribute("aria-pressed","false");
+    musicBtn.title="Musiqini başlat";
+  }else{
+    musicBtn.textContent="⏸ Musiqi";
+    musicBtn.classList.add("playing");
+    musicBtn.setAttribute("aria-pressed","true");
+    musicBtn.title="Musiqini dayandır";
+  }
+}
+
+function playCurrentTrack(){
+  return bgAudio.play().then(()=>{
+    musicStarted=true;
+    setMusicButtonState();
+  });
+}
+
+function playNextTrack(){
+  currentTrackIndex=(currentTrackIndex+1)%MUSIC_PLAYLIST.length;
+  bgAudio.src=MUSIC_PLAYLIST[currentTrackIndex];
+  return playCurrentTrack().catch(()=>setMusicButtonState());
+}
+
+bgAudio.addEventListener("ended",()=>{
+  playNextTrack();
+});
+
+bgAudio.addEventListener("pause",setMusicButtonState);
+bgAudio.addEventListener("play",setMusicButtonState);
+
+musicBtn?.addEventListener("click",async ()=>{
+  try{
+    if(bgAudio.paused){
+      if(!musicStarted && !bgAudio.src){
+        currentTrackIndex=0;
+        bgAudio.src=MUSIC_PLAYLIST[currentTrackIndex];
+      }
+      await playCurrentTrack();
+    }else{
+      bgAudio.pause();
+    }
+  }catch(err){
+    console.error("Music playback error:",err);
+    setMusicButtonState();
+  }
+});
+
+window.addEventListener("load",()=>{
+  playCurrentTrack().catch(()=>{
+    setMusicButtonState();
+  });
+});
+
+document.addEventListener("visibilitychange",()=>{
+  if(document.hidden || bgAudio.paused) return;
+  setMusicButtonState();
+});
+
+setMusicButtonState();
 
 // Apply dark theme by default for intelligence aesthetic
 document.documentElement.setAttribute("data-theme","dark");
