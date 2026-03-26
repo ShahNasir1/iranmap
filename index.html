@@ -119,9 +119,8 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 #hdrRight{display:flex;align-items:center;gap:18px;flex-shrink:0;min-width:max-content;padding-left:8px}
 #hdrMeta{display:flex;align-items:center;gap:14px;min-width:max-content}
 #hdrCopy{margin-right:2px}
-#measureHBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:148px;padding:8px 15px;white-space:nowrap;flex-shrink:0}
-#measureHBtn .mi{font-size:13px;line-height:1}
-#measureHBtn .mtxt{display:inline-block;line-height:1.1}
+#measureHBtn{display:inline-flex;align-items:center;justify-content:center;gap:0;min-width:42px;width:42px;padding:8px 10px;white-space:nowrap;flex-shrink:0}
+#measureHBtn .mi{font-size:14px;line-height:1}
 #panelToggleBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:118px;padding:8px 14px;white-space:nowrap;flex-shrink:0}
 #panelToggleBtn .pi{font-size:13px;line-height:1}
 #panelToggleBtn .ptxt{display:inline-block;line-height:1.1}
@@ -145,7 +144,7 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 #brandBlock{display:flex;align-items:center;gap:14px;min-width:max-content}
 #hdrMeta{display:flex;align-items:center;gap:14px}
 #hdrMetaGroup{display:flex;align-items:center;gap:12px;padding-left:4px}
-#statsWrap{display:flex;align-items:center;gap:18px;flex:1;min-width:0;justify-content:center;margin-left:34px;transition:margin-left .22s ease}
+#statsWrap{display:flex;align-items:center;gap:18px;flex:1;min-width:0;justify-content:center;margin-left:78px;transition:margin-left .22s ease}
 #themeBtn{min-width:42px;padding:8px 10px}
 #themeBtn .theme-label{display:none}
 #panel .status{line-height:1.6}
@@ -503,14 +502,14 @@ button.sec:hover{background:var(--sec-h)}
 @keyframes introHide{to{opacity:0;pointer-events:none}}
 
 
-body.panel-hidden #statsWrap{margin-left:18px}
+body.panel-hidden #statsWrap{margin-left:54px}
 @media(max-width:900px){
   :root{--hdr-h:auto;--ticker-h:26px;--panel-w:320px}
   #hdr{flex-wrap:wrap;align-items:flex-start;padding:12px 12px 10px}
   #statsWrap{order:3;width:100%;justify-content:flex-start;overflow:auto;padding-top:4px}
   #hdrRight{margin-left:auto;gap:12px;padding-left:0}
   #hdrMeta{gap:10px}
-  #measureHBtn{min-width:138px;padding:8px 13px}
+  #measureHBtn{min-width:42px;width:42px;padding:8px 10px}
   #panelToggleBtn{min-width:112px;padding:8px 12px}
 }
 @media(max-width:700px){
@@ -535,7 +534,7 @@ body.panel-hidden #statsWrap{margin-left:18px}
   #hdrMeta{gap:8px;flex-wrap:wrap;min-width:0}
   #hdrCopy{font-size:11px}
   #hdrClock{display:none}
-  #measureHBtn{min-width:auto;padding:8px 12px}
+  #measureHBtn{min-width:42px;width:42px;padding:8px 10px}
   #panelToggleBtn{min-width:auto;padding:8px 12px}
 }
 </style>
@@ -564,6 +563,7 @@ body.panel-hidden #statsWrap{margin-left:18px}
       </a>
       <div id="logoTools">
         <button class="hbtn" id="themeBtn" title="Gecə rejimi">☾</button>
+        <button class="hbtn" id="measureHBtn" type="button" title="Məsafə ölç"><span class="mi">📏</span></button>
         <button class="hbtn" id="panelToggleBtn" type="button" aria-label="Paneli göstər və ya gizlət"><span class="pi">☰</span><span class="ptxt">Panel</span></button>
       </div>
     </div>
@@ -601,7 +601,6 @@ body.panel-hidden #statsWrap{margin-left:18px}
         <div id="hdrMetaDivider"></div>
         <span id="hdrCopy">Nasir Aghayev</span>
       </div>
-      <button class="hbtn" id="measureHBtn"><span class="mi">📏</span><span class="mtxt">Məsafə ölç</span></button>
     </div>
   </header>
 
@@ -946,18 +945,21 @@ function renderMeasureButton(on){
   const btn=document.getElementById("measureHBtn");
   if(!btn) return;
   btn.classList.toggle("mactive",on);
-  btn.innerHTML=on
-    ? '<span class="mi">✕</span><span class="mtxt">Ölçməni dayandır</span>'
-    : '<span class="mi">📏</span><span class="mtxt">Məsafə ölç</span>';
+  btn.innerHTML='<span class="mi">📏</span>';
+  btn.setAttribute("aria-pressed", on ? "true" : "false");
+  btn.title=on?"Məsafə ölçməni dayandır (Esc)":"Məsafə ölç";
 }
-function setMeasure(on){
-  measureMode=on;
-  map.getContainer().style.cursor=on?"crosshair":"";
-  renderMeasureButton(on);
-  if(!on)clearMeasure();
+function cancelMeasure(){
+  if(!measureMode)return;
+  setMeasure(false);
 }
 document.getElementById("measureHBtn").onclick=()=>setMeasure(!measureMode);
 renderMeasureButton(false);
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"||e.key==="Esc"){
+    cancelMeasure();
+  }
+});
 map.on("click",e=>{
   if(!measureMode)return;
   measurePoints.push(e.latlng);
