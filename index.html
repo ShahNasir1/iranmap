@@ -595,10 +595,6 @@ body.panel-hidden #statsWrap{margin-left:96px}
 </head>
 <body>
 
-<!-- ── AUDIO ELEMENTS ── -->
-<audio id="track1" src="audio/track1.mp3" preload="auto"></audio>
-<audio id="track2" src="audio/track2.mp3" preload="auto"></audio>
-
 <!-- ── INTRO ── -->
 <div id="intro">
   <div class="intro-logo">Iran<em>Map</em> · OSINT xəritə platforması</div>
@@ -919,11 +915,15 @@ setTimeout(()=>{
 
 // ── MUSIC PLAYER ──────────────────────────────────────────────────────────
 (function(){
-  const tracks = [
-    document.getElementById("track1"),
-    document.getElementById("track2")
+  const TRACKS = [
+    { src: "/audio/track1.mp3", name: "Track 1" },
+    { src: "/audio/track2.mp3", name: "Track 2" }
   ];
-  const TRACK_NAMES = ["Track 1", "Track 2"];
+
+  const audio = new Audio();
+  audio.preload = "auto";
+  audio.volume = 0.35;
+
   let currentTrack = 0;
   let isPlaying = false;
   let userInteracted = false;
@@ -932,68 +932,58 @@ setTimeout(()=>{
   const playerEl = document.getElementById("musicPlayer");
   const trackNameEl = document.getElementById("musicTrackName");
 
-  // Set volume — ambient background level
-  tracks.forEach(t => { t.volume = 0.35; });
+  function setTrack(index){
+    currentTrack = index % TRACKS.length;
+    audio.src = TRACKS[currentTrack].src;
+    if(trackNameEl) trackNameEl.textContent = TRACKS[currentTrack].name;
+  }
 
   function updateUI(){
     playBtn.textContent = isPlaying ? "❚❚" : "▶";
     playerEl.classList.toggle("playing", isPlaying);
-    if(trackNameEl) trackNameEl.textContent = TRACK_NAMES[currentTrack] || ("Track " + (currentTrack + 1));
+    if(trackNameEl) trackNameEl.textContent = TRACKS[currentTrack].name;
   }
 
-  function playTrack(idx){
-    // Pause all
-    tracks.forEach(t => { t.pause(); t.currentTime = 0; });
-    currentTrack = idx % tracks.length;
-    tracks[currentTrack].play().then(()=>{
+  async function playCurrent(){
+    try{
+      await audio.play();
       isPlaying = true;
       updateUI();
-    }).catch(()=>{
+    }catch(err){
+      console.error("Music play error:", err);
       isPlaying = false;
       updateUI();
-    });
+    }
   }
 
-  function nextTrack(){
-    playTrack((currentTrack + 1) % tracks.length);
+  function pauseCurrent(){
+    audio.pause();
+    isPlaying = false;
+    updateUI();
   }
 
-  // When a track ends, play next
-  tracks.forEach((t, i) => {
-    t.addEventListener("ended", () => {
-      nextTrack();
-    });
+  audio.addEventListener("ended", () => {
+    setTrack((currentTrack + 1) % TRACKS.length);
+    playCurrent();
   });
 
-  // Play/pause button
-  playBtn.addEventListener("click", () => {
+  playBtn.addEventListener("click", async () => {
     userInteracted = true;
     if(isPlaying){
-      tracks[currentTrack].pause();
-      isPlaying = false;
-      updateUI();
-    } else {
-      tracks[currentTrack].play().then(()=>{
-        isPlaying = true;
-        updateUI();
-      }).catch(()=>{});
+      pauseCurrent();
+    }else{
+      if(!audio.src) setTrack(currentTrack);
+      await playCurrent();
     }
   });
 
-  // Called after intro animation ends — tries autoplay
-  window.musicAutoStart = function(){
-    if(userInteracted) return; // user already manually paused/played
-    tracks[currentTrack].play().then(()=>{
-      isPlaying = true;
-      updateUI();
-    }).catch(()=>{
-      // Autoplay blocked by browser — stay paused, button still works
-      isPlaying = false;
-      updateUI();
-    });
+  window.musicAutoStart = async function(){
+    if(userInteracted) return;
+    if(!audio.src) setTrack(currentTrack);
+    await playCurrent();
   };
 
-  // Initial UI state
+  setTrack(0);
   updateUI();
 })();
 
