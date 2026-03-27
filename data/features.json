@@ -182,7 +182,7 @@
   {
     "name": "1‑ci Alay – 2‑ci Tabor Qərargahı",
     "lat": 35.68469280080942,
-    "lon": 51.50146242890349,
+    "lon": 51.50146242890348,
     "cat": "aviation"
   },
   {
@@ -315,6 +315,90 @@
     "name": "İran İnqilab Keşikçiləri Korpusu “Şəhid Şüştri” Təlim Qarnizonu",
     "lat": 29.6254433526109,
     "lon": 60.77236575923069,
+    "cat": "military"
+  },
+  {
+    "name": "Tehran Hava Hücumundan Müdafiə Bazası – HQ-2 Zenit Raket Sistemi",
+    "lat": 35.70586790550113,
+    "lon": 51.0785791708575,
+    "cat": "military"
+  },
+  {
+    "name": "“Şəhid Qədiri” Hava Raket Bazası",
+    "lat": 35.73081628222042,
+    "lon": 51.07555481833398,
+    "cat": "military"
+  },
+  {
+    "name": "“Şəhid Qədiri” Sursat Zavodu və Qarnizonu",
+    "lat": 35.72788320786331,
+    "lon": 51.08287781891365,
+    "cat": "military"
+  },
+  {
+    "name": "“Şəhid Çəmran” Qarnizonu",
+    "lat": 29.63601716792814,
+    "lon": 51.6264618701889,
+    "cat": "military"
+  },
+  {
+    "name": "“Şəhid Çəmran” Hazırlıq Mərkəzi / İmam Səccad Briqadası",
+    "lat": 29.632006995655,
+    "lon": 51.63556309693934,
+    "cat": "military"
+  },
+  {
+    "name": "07 Kazerun Təlim Qarnizonu",
+    "lat": 29.62851509418771,
+    "lon": 51.64066913259279,
+    "cat": "military"
+  },
+  {
+    "name": "Xorgu Raket Bazası",
+    "lat": 27.52926185655481,
+    "lon": 56.45596611612842,
+    "cat": "military"
+  },
+  {
+    "name": "05 “General-leytenant Şəhid Əlirza Əşrəf Gəncəvi” Təlim Mərkəzi",
+    "lat": 30.28851698788395,
+    "lon": 57.16171781590785,
+    "cat": "military"
+  },
+  {
+    "name": "İmam Rza Xorasan Rəzəvi Korpusu – “Şəhid Bərunsi” Qarnizonu",
+    "lat": 36.33619553639946,
+    "lon": 59.45879038927772,
+    "cat": "military"
+  },
+  {
+    "name": "İmam Rza Korpusu – Həzrət Cavad əl-Əimmə Təlim Mərkəzi",
+    "lat": 36.33204620413303,
+    "lon": 59.4529806403946,
+    "cat": "military"
+  },
+  {
+    "name": "Məscid Süleyman Hərbi Hava Bazası",
+    "lat": 31.99819719388487,
+    "lon": 49.26863337476614,
+    "cat": "military"
+  },
+  {
+    "name": "Ümidiyyə Hərbi Hava Bazası",
+    "lat": 30.83434594080744,
+    "lon": 49.55205596921881,
+    "cat": "military"
+  },
+  {
+    "name": "Musa ibn Cəfər (ə) Xüsusi Təyinatlı Briqadası (2-ci Bölmə)",
+    "lat": 35.5694098660323,
+    "lon": 51.56721207836205,
+    "cat": "military"
+  },
+  {
+    "name": "“Şəhid Xosravi” Hava Hücumundan Müdafiə Bazası (Şəhrabad Hava Hücumundan Müdafiə Bazası)",
+    "lat": 37.62658883932831,
+    "lon": 56.1694964926448,
     "cat": "military"
   },
   {
@@ -778,6 +862,570 @@
     "lat": 34.98501879790764,
     "lon": 50.36978326083074,
     "cat": "aviation"
+  },
+  {
+    "name": "Bişe Kola aerodromu",
+    "lat": 36.65502811060195,
+    "lon": 52.34979863537364,
+    "cat": "aviation"
+  },
+  {
+    "name": "Babolsar uçuş-eniş zolağı",
+    "lat": 36.71151943580823,
+    "lon": 52.68020500924089,
+    "cat": "aviation"
+  },
+  {
+    "name": "Sari Dəşt-i Naz Beynəlxalq Hava Limanı",
+    "lat": 36.63512041758035,
+    "lon": 53.19273116982132,
+    "cat": "aviation"
+  },
+  {
+    "name": "Mehtar uçuş-eniş zolağı",
+    "lat": 36.85618248245861,
+    "lon": 54.20265781446873,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qorqan hava limanı",
+    "lat": 36.90775585304871,
+    "lon": 54.4085029806701,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qonbad-i Kavus uçuş-eniş zolağı",
+    "lat": 37.24608998456016,
+    "lon": 55.09600154828389,
+    "cat": "aviation"
+  },
+  {
+    "name": "Hacı Balkan uçuş-eniş zolağı",
+    "lat": 37.2010910749115,
+    "lon": 55.26685657921706,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qalalə aerodromu",
+    "lat": 37.38308994629915,
+    "lon": 55.45393510659068,
+    "cat": "aviation"
+  },
+  {
+    "name": "Soga aerodromu",
+    "lat": 37.61887777522762,
+    "lon": 56.16581954548026,
+    "cat": "aviation"
+  },
+  {
+    "name": "Bocnurd hava limanı",
+    "lat": 37.49076151066296,
+    "lon": 57.30850174541807,
+    "cat": "aviation"
+  },
+  {
+    "name": "Məşhəd beynəlxalq hava limanı",
+    "lat": 36.22771614689379,
+    "lon": 59.64209297587937,
+    "cat": "aviation"
+  },
+  {
+    "name": "Saraxs aerodromu",
+    "lat": 36.49381562719442,
+    "lon": 61.07093907042184,
+    "cat": "aviation"
+  },
+  {
+    "name": "Nişapur qliderportu",
+    "lat": 36.2480529718912,
+    "lon": 58.90992700248559,
+    "cat": "aviation"
+  },
+  {
+    "name": "Keçmiş Nişapur hava limanı (uçuş-eniş zolağı)",
+    "lat": 36.09423253845939,
+    "lon": 58.70950954645739,
+    "cat": "aviation"
+  },
+  {
+    "name": "Səbzəvar hava limanı",
+    "lat": 36.16993108701949,
+    "lon": 57.60277064259021,
+    "cat": "aviation"
+  },
+  {
+    "name": "Mayamey uçuş-eniş zolağı",
+    "lat": 36.42154225071523,
+    "lon": 55.67296471744458,
+    "cat": "aviation"
+  },
+  {
+    "name": "Şahrud beynəlxalq hava limanı",
+    "lat": 36.42269350760177,
+    "lon": 55.09645297453677,
+    "cat": "aviation"
+  },
+  {
+    "name": "Jajarm uçuş-eniş zolağı",
+    "lat": 36.9630172193365,
+    "lon": 56.4602276630906,
+    "cat": "aviation"
+  },
+  {
+    "name": "Zərğabad uçuş-eniş zolağı",
+    "lat": 37.04475579326876,
+    "lon": 57.27670748719116,
+    "cat": "aviation"
+  },
+  {
+    "name": "Esfarayen uçuş-eniş zolağı",
+    "lat": 37.01793668040434,
+    "lon": 57.56484868626584,
+    "cat": "aviation"
+  },
+  {
+    "name": "Xorrəmdərə uçuş-eniş zolağı",
+    "lat": 36.24157138824845,
+    "lon": 49.22511841906252,
+    "cat": "aviation"
+  },
+  {
+    "name": "Abxar uçuş-eniş zolağı",
+    "lat": 36.12953630916603,
+    "lon": 49.20115369990599,
+    "cat": "aviation"
+  },
+  {
+    "name": "Uçuş-eniş üçün dizayn edilmiş Şahruxi avtomobil yolu",
+    "lat": 35.23643002419783,
+    "lon": 48.58805642788807,
+    "cat": "aviation"
+  },
+  {
+    "name": "Həmədan hava limanı",
+    "lat": 34.86735456320528,
+    "lon": 48.53926106309709,
+    "cat": "aviation"
+  },
+  {
+    "name": "Sənəndəc hava limanı",
+    "lat": 35.25016775141929,
+    "lon": 47.01118442599252,
+    "cat": "aviation"
+  },
+  {
+    "name": "Eyvanekey hava limanı",
+    "lat": 35.360391329792,
+    "lon": 51.98597696542146,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qarmsar uçuş-eniş zolağı",
+    "lat": 35.1737423840741,
+    "lon": 52.32404509534166,
+    "cat": "aviation"
+  },
+  {
+    "name": "Aradan aerodromu",
+    "lat": 35.23905855483567,
+    "lon": 52.50797908310171,
+    "cat": "aviation"
+  },
+  {
+    "name": "Səmnan hava limanı",
+    "lat": 35.59366211358721,
+    "lon": 53.49747639376591,
+    "cat": "aviation"
+  },
+  {
+    "name": "Səmnan aerodromu",
+    "lat": 35.39575376840512,
+    "lon": 53.68438307089144,
+    "cat": "aviation"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.24877717516695,
+    "lon": 62.63968757756729,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.26270959142751,
+    "lon": 62.68791450795257,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.38843372551999,
+    "lon": 62.8108348631028,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.40645588416567,
+    "lon": 62.82036658221688,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.41951093540525,
+    "lon": 62.82595290803692,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.01610493436194,
+    "lon": 62.71721935397039,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.25516276458964,
+    "lon": 62.58559214633708,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.25399211952282,
+    "lon": 62.58595514411184,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.25391224065842,
+    "lon": 62.58509335323678,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.27131148022833,
+    "lon": 62.57257010462392,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45512778781183,
+    "lon": 61.08770106110778,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45621468465944,
+    "lon": 61.03417927711756,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45658646560145,
+    "lon": 61.02070073370368,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45449129282925,
+    "lon": 61.01996698159676,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.46066923093093,
+    "lon": 60.97713663055654,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.46491808734039,
+    "lon": 60.95352022903247,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.46830018768921,
+    "lon": 60.95160794154972,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45715844343743,
+    "lon": 60.92144121521913,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45772152785759,
+    "lon": 60.92101134937241,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45796744625769,
+    "lon": 60.91981589965992,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45984415799499,
+    "lon": 60.93827597725992,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.45953956137073,
+    "lon": 60.913175976702,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.46123278907178,
+    "lon": 60.88984919098167,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.46422878074636,
+    "lon": 60.87000639090625,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.47943984924785,
+    "lon": 60.84875323593044,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.47819983889585,
+    "lon": 60.78364826649855,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.48127085726206,
+    "lon": 60.78079286738089,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 31.50397474677763,
+    "lon": 60.8277149929406,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.7039457538267,
+    "lon": 61.22806965736044,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.72752654431202,
+    "lon": 61.23294988931911,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.75342885485137,
+    "lon": 61.24653686615579,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.79529227217627,
+    "lon": 45.72789888408391,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.81424076121137,
+    "lon": 45.72533282158155,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.81196609712439,
+    "lon": 45.71761659634392,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.82922011400903,
+    "lon": 45.7339637904485,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.84631073075054,
+    "lon": 45.73754552043789,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.82412772186979,
+    "lon": 45.76003067731222,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.82368761497689,
+    "lon": 45.78129859722243,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.8143220448363,
+    "lon": 45.77119560347603,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.11185989054231,
+    "lon": 46.19420304866144,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.12932626167392,
+    "lon": 46.18446348381134,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.12897675997386,
+    "lon": 46.20421430955668,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.13074338494727,
+    "lon": 46.20360147273884,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.1435738352822,
+    "lon": 46.19796006845023,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.13923468759076,
+    "lon": 46.20922729841614,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.1122237204486,
+    "lon": 46.20460347940998,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.08916775423994,
+    "lon": 46.17728073016539,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.07393388433738,
+    "lon": 46.16908322343305,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.04840066930053,
+    "lon": 46.14793765316499,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.05303386022066,
+    "lon": 46.11123003919933,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.05352574292619,
+    "lon": 46.1009485778968,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.04037851191654,
+    "lon": 46.07749114473255,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.02576883298472,
+    "lon": 46.05834845283221,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.08362762509942,
+    "lon": 46.08138701534626,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.07241111648779,
+    "lon": 46.08842431627723,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.97819586892874,
+    "lon": 46.14208437075963,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.98054416301992,
+    "lon": 46.14704115245794,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.01764260212414,
+    "lon": 46.14819029120234,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.05552399284717,
+    "lon": 45.9636359971738,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.07790271866963,
+    "lon": 45.93920647796156,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.06380374264027,
+    "lon": 45.96858396962986,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.02893897136336,
+    "lon": 46.04992319640494,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.03316068384235,
+    "lon": 46.03084268734767,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.0533624850173,
+    "lon": 46.01371607543413,
+    "cat": "post"
   },
   {
     "name": "Sərhəd postu",
@@ -8054,7 +8702,7 @@
   {
     "name": "Sərhəd postu",
     "lat": 31.18106489293265,
-    "lon": 47.68544457575062,
+    "lon": 47.68544457575063,
     "cat": "post"
   },
   {
@@ -8090,7 +8738,7 @@
   {
     "name": "Sərhəd postu",
     "lat": 31.24365859057476,
-    "lon": 47.68543338826886,
+    "lon": 47.68543338826887,
     "cat": "post"
   },
   {
@@ -8192,7 +8840,7 @@
   {
     "name": "Sərhəd postu",
     "lat": 31.41095368443395,
-    "lon": 47.69314713487842,
+    "lon": 47.69314713487843,
     "cat": "post"
   },
   {
@@ -8366,7 +9014,7 @@
   {
     "name": "Sərhəd postu",
     "lat": 30.81081984872882,
-    "lon": 48.06017058415159,
+    "lon": 48.0601705841516,
     "cat": "post"
   },
   {
@@ -8397,414 +9045,6 @@
     "name": "Sərhəd postu",
     "lat": 30.98806830794748,
     "lon": 48.06380799558744,
-    "cat": "post"
-  },
-  {
-    "name": "Tehran Hava Hücumundan Müdafiə Bazası – HQ-2 Zenit Raket Sistemi",
-    "lat": 35.70586790550113,
-    "lon": 51.0785791708575,
-    "cat": "military"
-  },
-  {
-    "name": "“Şəhid Qədiri” Hava Raket Bazası",
-    "lat": 35.73081628222042,
-    "lon": 51.07555481833398,
-    "cat": "military"
-  },
-  {
-    "name": "“Şəhid Qədiri” Sursat Zavodu və Qarnizonu",
-    "lat": 35.72788320786331,
-    "lon": 51.08287781891365,
-    "cat": "military"
-  },
-  {
-    "name": "“Şəhid Çəmran” Qarnizonu",
-    "lat": 29.63601716792814,
-    "lon": 51.6264618701889,
-    "cat": "military"
-  },
-  {
-    "name": "“Şəhid Çəmran” Hazırlıq Mərkəzi / İmam Səccad Briqadası",
-    "lat": 29.632006995655,
-    "lon": 51.63556309693934,
-    "cat": "military"
-  },
-  {
-    "name": "07 Kazerun Təlim Qarnizonu",
-    "lat": 29.62851509418771,
-    "lon": 51.64066913259279,
-    "cat": "military"
-  },
-  {
-    "name": "Xorgu Raket Bazası",
-    "lat": 27.52926185655481,
-    "lon": 56.45596611612842,
-    "cat": "military"
-  },
-  {
-    "name": "05 “General-leytenant Şəhid Əlirza Əşrəf Gəncəvi” Təlim Mərkəzi",
-    "lat": 30.28851698788395,
-    "lon": 57.16171781590785,
-    "cat": "military"
-  },
-  {
-    "name": "İmam Rza Xorasan Rəzəvi Korpusu – “Şəhid Bərunsi” Qarnizonu",
-    "lat": 36.33619553639946,
-    "lon": 59.45879038927772,
-    "cat": "military"
-  },
-  {
-    "name": "İmam Rza Korpusu – Həzrət Cavad əl-Əimmə Təlim Mərkəzi",
-    "lat": 36.33204620413303,
-    "lon": 59.4529806403946,
-    "cat": "military"
-  },
-  {
-    "name": "Məscid Süleyman Hərbi Hava Bazası",
-    "lat": 31.99819719388487,
-    "lon": 49.26863337476614,
-    "cat": "military"
-  },
-  {
-    "name": "Ümidiyyə Hərbi Hava Bazası",
-    "lat": 30.83434594080744,
-    "lon": 49.55205596921881,
-    "cat": "military"
-  },
-  {
-    "name": "Musa ibn Cəfər (ə) Xüsusi Təyinatlı Briqadası (2-ci Bölmə)",
-    "lat": 35.5694098660323,
-    "lon": 51.56721207836205,
-    "cat": "military"
-  },
-  {
-    "name": "“Şəhid Xosravi” Hava Hücumundan Müdafiə Bazası (Şəhrabad Hava Hücumundan Müdafiə Bazası)",
-    "lat": 37.62658883932831,
-    "lon": 56.1694964926448,
-    "cat": "military"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45512778781183,
-    "lon": 61.08770106110778,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45621468465944,
-    "lon": 61.03417927711756,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45658646560145,
-    "lon": 61.02070073370368,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45449129282925,
-    "lon": 61.01996698159676,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.46066923093093,
-    "lon": 60.97713663055654,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.46491808734039,
-    "lon": 60.95352022903247,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.46830018768921,
-    "lon": 60.95160794154972,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45715844343743,
-    "lon": 60.92144121521913,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45772152785759,
-    "lon": 60.92101134937241,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45796744625769,
-    "lon": 60.91981589965992,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45984415799499,
-    "lon": 60.93827597725992,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.45953956137073,
-    "lon": 60.913175976702,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.46123278907178,
-    "lon": 60.88984919098167,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.46422878074636,
-    "lon": 60.87000639090625,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.47943984924785,
-    "lon": 60.84875323593044,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.47819983889585,
-    "lon": 60.78364826649855,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.48127085726206,
-    "lon": 60.78079286738089,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 31.50397474677763,
-    "lon": 60.8277149929406,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.7039457538267,
-    "lon": 61.22806965736044,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.72752654431202,
-    "lon": 61.23294988931911,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.75342885485137,
-    "lon": 61.24653686615579,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.79529227217627,
-    "lon": 45.72789888408391,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.81424076121137,
-    "lon": 45.72533282158155,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.81196609712439,
-    "lon": 45.71761659634392,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.82922011400903,
-    "lon": 45.7339637904485,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.84631073075054,
-    "lon": 45.73754552043789,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.82412772186979,
-    "lon": 45.76003067731222,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.82368761497689,
-    "lon": 45.78129859722243,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.8143220448363,
-    "lon": 45.77119560347603,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.11185989054231,
-    "lon": 46.19420304866144,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.12932626167392,
-    "lon": 46.18446348381134,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.12897675997386,
-    "lon": 46.20421430955668,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.13074338494727,
-    "lon": 46.20360147273884,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.1435738352822,
-    "lon": 46.19796006845023,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.13923468759076,
-    "lon": 46.20922729841614,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.1122237204486,
-    "lon": 46.20460347940998,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.08916775423994,
-    "lon": 46.17728073016539,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.07393388433738,
-    "lon": 46.16908322343305,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.04840066930053,
-    "lon": 46.14793765316499,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.05303386022066,
-    "lon": 46.11123003919933,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.05352574292619,
-    "lon": 46.1009485778968,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.04037851191654,
-    "lon": 46.07749114473255,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.02576883298472,
-    "lon": 46.05834845283221,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.08362762509942,
-    "lon": 46.08138701534626,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.07241111648779,
-    "lon": 46.08842431627723,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.97819586892874,
-    "lon": 46.14208437075963,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 34.98054416301992,
-    "lon": 46.14704115245794,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.01764260212414,
-    "lon": 46.14819029120234,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.05552399284717,
-    "lon": 45.9636359971738,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.07790271866963,
-    "lon": 45.93920647796156,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.06380374264027,
-    "lon": 45.96858396962986,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.02893897136336,
-    "lon": 46.04992319640494,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.03316068384235,
-    "lon": 46.03084268734767,
-    "cat": "post"
-  },
-  {
-    "name": "Sərhəd postu",
-    "lat": 35.0533624850173,
-    "lon": 46.01371607543413,
     "cat": "post"
   },
   {
@@ -9477,6 +9717,384 @@
     "name": "Sərhəd postu",
     "lat": 31.45902289619311,
     "lon": 60.99954113642149,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.2728365371402,
+    "lon": 62.78712942708543,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.20932126372608,
+    "lon": 62.78897580994721,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.03931773711665,
+    "lon": 62.76311848267851,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.01272283640892,
+    "lon": 62.76172381847793,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.0011779525624,
+    "lon": 62.76528303680331,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.98169886114921,
+    "lon": 62.77005370540501,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.96438062650604,
+    "lon": 62.77256485141373,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.94523858628763,
+    "lon": 62.77756052650867,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.04703009643459,
+    "lon": 62.7429622016215,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.25143859978699,
+    "lon": 62.58991821282203,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.25224455669874,
+    "lon": 62.58915848562722,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.46159960394258,
+    "lon": 62.8113541593045,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.46769712631117,
+    "lon": 62.7929733633212,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.44854434815483,
+    "lon": 62.80158676819027,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.18009836760129,
+    "lon": 62.57912377478014,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.23861121772774,
+    "lon": 62.54611200132989,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.23929992112655,
+    "lon": 62.55715316615171,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.23802294374912,
+    "lon": 62.53742796941685,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.23410692589222,
+    "lon": 62.52705119360191,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.22886310069606,
+    "lon": 62.52455911222763,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.2206195570508,
+    "lon": 62.52653999397704,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 28.13342943178089,
+    "lon": 62.60860147450289,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.47395449261622,
+    "lon": 62.81289604137936,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.49529642824553,
+    "lon": 62.81143204627182,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.5144620728116,
+    "lon": 62.81889539094341,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.53578818588577,
+    "lon": 62.83306125324468,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.55230508455166,
+    "lon": 62.83589010654526,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.57443049433516,
+    "lon": 62.8343204783039,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.60086422685677,
+    "lon": 62.83478640287149,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.61238977076136,
+    "lon": 62.83144104433612,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.62125433012196,
+    "lon": 62.83233985253521,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.63890265661823,
+    "lon": 62.8301902029966,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.66353426076148,
+    "lon": 62.83087803315852,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.68480341509687,
+    "lon": 62.82466320742394,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.70070581924479,
+    "lon": 62.8209831485075,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.72303451477334,
+    "lon": 62.82469117298854,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.74167627361803,
+    "lon": 62.82550833537732,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.76141185208091,
+    "lon": 62.82513811966753,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.76128524050397,
+    "lon": 62.82435305281196,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.76314933087034,
+    "lon": 62.82370763649302,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.7796429504917,
+    "lon": 62.82023596338093,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.7976772494493,
+    "lon": 62.8155627216176,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.81519764748399,
+    "lon": 62.81107339003773,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.83429842945217,
+    "lon": 62.806266230345,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.85077596995247,
+    "lon": 62.80191847147444,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.8716743755882,
+    "lon": 62.79684203910798,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.89039347947023,
+    "lon": 62.79173026958573,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.90773187214124,
+    "lon": 62.78723837067871,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 27.92683539978956,
+    "lon": 62.78223901893427,
+    "cat": "post"
+  },
+  {
+    "name": "SBM",
+    "lat": 36.52049816548827,
+    "lon": 61.16575563208209,
+    "cat": "sbm"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.53340029600702,
+    "lon": 61.1712620217286,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.53232260108975,
+    "lon": 61.16981103234503,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.53280289550867,
+    "lon": 61.17174805533572,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.55600039655085,
+    "lon": 61.18083490039024,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.55852995874848,
+    "lon": 61.18197209510668,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 26.64969313299253,
+    "lon": 63.18548352457027,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 26.68448363680404,
+    "lon": 63.18574733362773,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 26.71045025370579,
+    "lon": 63.1870445764139,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 26.71047221261698,
+    "lon": 63.19056810539157,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 26.7111729527639,
+    "lon": 63.18945456550185,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 26.65059388612026,
+    "lon": 63.16469968743642,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 26.65254062626535,
+    "lon": 63.12785179500685,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 26.65254380797269,
+    "lon": 63.1235550868987,
     "cat": "post"
   }
 ]
