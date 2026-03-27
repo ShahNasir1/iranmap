@@ -171,61 +171,61 @@
     "name": "1-ci Alay – 2-ci Tabor (521, 522, 523, 524 bölmələri) // Qarnizon",
     "lat": 35.68547946671888,
     "lon": 51.50051659377643,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "1‑ci Alay Qərargahı",
     "lat": 35.68533659271923,
     "lon": 51.5016411154173,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "1‑ci Alay – 2‑ci Tabor Qərargahı",
     "lat": 35.68469280080942,
     "lon": 51.50146242890348,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "1‑ci Alay – 3‑cü Tabor Qərargahı",
     "lat": 35.68383311971888,
     "lon": 51.50127688464188,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "1‑ci Alay – 3‑cü Tabor (531, 532, 533, 534 bölmələri) // Qarnizon",
     "lat": 35.68340559039291,
     "lon": 51.50048636550682,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "1‑ci Alay – 1‑ci Tabor (511, 512, 513, 514 bölmələri) // Qarnizon",
     "lat": 35.68263636774799,
     "lon": 51.50041461558456,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "2‑ci Alay – 1‑ci Tabor Qərargahı // Qarnizon (711, 712, 713, 714 bölmələri)",
     "lat": 35.68278629748026,
     "lon": 51.49911264479394,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "2‑ci Alay – 2‑ci Tabor Qərargahı // Qarnizon (721, 722, 723, 724 bölmələri)",
     "lat": 35.68322139883573,
     "lon": 51.49907763861579,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "1‑ci Alay – 1‑ci Tabor Qərargahı",
     "lat": 35.68276428730774,
     "lon": 51.4997706979418,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "2‑ci Alay – 3‑cü Tabor Qərargahı // Qarnizon (731, 732, 733, 734 bölmələri)",
     "lat": 35.68389993251168,
     "lon": 51.49780989149281,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "NEZAJA “Xidmət Şəhidləri” Təlim Mərkəzi 01",
@@ -267,7 +267,7 @@
     "name": "Həşimabad – “Şəhid Məcid Əsgəri” Hava Hücumundan Müdafiə Bazası",
     "lat": 32.74265733426375,
     "lon": 52.75693430730271,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "İran İnqilab Keşikçiləri Korpusu (NEDSA) Dəniz Qüvvələri Xüsusi Bölməsi – Forur Adası",
@@ -285,25 +285,25 @@
     "name": "1‑ci Tabor – İmam Əli",
     "lat": 34.48606508655858,
     "lon": 47.0088079795954,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "2‑ci Tabor – İmam Həsən",
     "lat": 34.4849998169016,
     "lon": 47.00851549943996,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "3‑cü Tabor – İmam Hüseyn",
     "lat": 34.48257294971897,
     "lon": 47.00946948133767,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "4-cü Tabor",
     "lat": 34.48080196614072,
     "lon": 47.01156302019989,
-    "cat": "aviation"
+    "cat": "military"
   },
   {
     "name": "NEZAJA 316‑cı Zirehli Briqada – Həmədan",
@@ -616,6 +616,108 @@
     "lat": 37.49734978902089,
     "lon": 45.14460307944798,
     "cat": "rail"
+  },
+  {
+    "name": "Dezful hava limanı",
+    "lat": 32.43980827713483,
+    "lon": 48.38917630404326,
+    "cat": "aviation"
+  },
+  {
+    "name": "Əli Ruşən uçuş-eniş zolağı",
+    "lat": 32.10619722047623,
+    "lon": 48.70389424201699,
+    "cat": "aviation"
+  },
+  {
+    "name": "Ella uçuş-eniş zolağı",
+    "lat": 31.92084949681517,
+    "lon": 48.87348985361493,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qasım Süleymani beynəlxalq hava limanı",
+    "lat": 31.34319229902763,
+    "lon": 48.74929056292398,
+    "cat": "aviation"
+  },
+  {
+    "name": "Əli Əkbər aerodromu",
+    "lat": 31.57263095203515,
+    "lon": 48.67583568948303,
+    "cat": "aviation"
+  },
+  {
+    "name": "Məhşəhr hava limanı",
+    "lat": 30.55063221080012,
+    "lon": 49.15414343148613,
+    "cat": "aviation"
+  },
+  {
+    "name": "Şadegan uçuş-eniş zolağı",
+    "lat": 30.66488293376962,
+    "lon": 48.64393558644846,
+    "cat": "aviation"
+  },
+  {
+    "name": "Abadan beynəlxalq hava limanı",
+    "lat": 30.36523422610871,
+    "lon": 48.22736090260146,
+    "cat": "aviation"
+  },
+  {
+    "name": "Ümidiyyə hava limanı",
+    "lat": 30.82930755252469,
+    "lon": 49.5394001079726,
+    "cat": "aviation"
+  },
+  {
+    "name": "Ağacari hava limanı",
+    "lat": 30.73946598499786,
+    "lon": 49.68467599086546,
+    "cat": "aviation"
+  },
+  {
+    "name": "Behbahan aerodromu",
+    "lat": 30.73051825881761,
+    "lon": 50.11680999421896,
+    "cat": "aviation"
+  },
+  {
+    "name": "Şəhid Asiyə aerodromu",
+    "lat": 31.99966355728785,
+    "lon": 49.27131752684444,
+    "cat": "aviation"
+  },
+  {
+    "name": "Xorrəmabad hava limanı",
+    "lat": 33.43687844617057,
+    "lon": 48.28576229977748,
+    "cat": "aviation"
+  },
+  {
+    "name": "Elam hava limanı",
+    "lat": 33.58767394102333,
+    "lon": 46.40036536667959,
+    "cat": "aviation"
+  },
+  {
+    "name": "Abdanan aerodromu",
+    "lat": 32.93167567558157,
+    "lon": 47.48677505525345,
+    "cat": "aviation"
+  },
+  {
+    "name": "Uçuş-eniş üçün dizayn edilmiş Şəhid Necad Rezai avtomobil yolu",
+    "lat": 34.07428554974948,
+    "lon": 46.59365878331452,
+    "cat": "aviation"
+  },
+  {
+    "name": "Mərcan uçuş-eniş zolağı",
+    "lat": 34.25169382676299,
+    "lon": 45.83072126542501,
+    "cat": "aviation"
   },
   {
     "name": "Maku hava limanı",
@@ -1041,6 +1143,18 @@
     "name": "Səmnan aerodromu",
     "lat": 35.39575376840512,
     "lon": 53.68438307089144,
+    "cat": "aviation"
+  },
+  {
+    "name": "Kirmanşah hava limanı",
+    "lat": 34.35340665053077,
+    "lon": 47.14522799169597,
+    "cat": "aviation"
+  },
+  {
+    "name": "Dalake uçuş-eniş zolağı",
+    "lat": 34.24628652380642,
+    "lon": 46.79810267763722,
     "cat": "aviation"
   },
   {
@@ -9141,7 +9255,7 @@
     "name": "SBM",
     "lat": 34.76542137140113,
     "lon": 45.6858196321577,
-    "cat": "post"
+    "cat": "sbm"
   },
   {
     "name": "Sərhəd postu",
