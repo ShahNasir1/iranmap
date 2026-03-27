@@ -157,6 +157,57 @@ input[type=search],select{padding:10px 12px;border-radius:10px;font-size:13px}
 button{border-radius:10px}
 .legend-note{font-size:12px;color:var(--text);line-height:1.6}
 
+/* ── MUSIC PLAYER ── */
+#musicPlayer{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(212,175,55,.07);
+  border:1px solid rgba(212,175,55,.2);
+  border-radius:999px;
+  padding:5px 12px 5px 7px;
+  flex-shrink:0;
+  transition:background .18s;
+}
+#musicPlayer:hover{background:rgba(212,175,55,.13)}
+#musicPlayBtn{
+  display:flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;
+  background:rgba(212,175,55,.18);border:1px solid rgba(212,175,55,.32);
+  cursor:pointer;flex-shrink:0;transition:all .16s;
+  color:var(--gold-soft);font-size:11px;
+  outline:none;padding:0;
+  /* override global button styles */
+  width:26px!important;font-weight:400!important;font-family:inherit!important;
+  margin:0!important;
+}
+#musicPlayBtn:hover{background:rgba(212,175,55,.32);transform:scale(1.08)}
+#musicPlayBtn:active{transform:scale(.96)}
+.music-info{display:flex;flex-direction:column;gap:1px;min-width:0}
+.music-track{
+  font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:600;
+  color:var(--gold-soft);letter-spacing:.3px;white-space:nowrap;line-height:1;
+}
+.music-bar{
+  display:flex;align-items:flex-end;gap:2px;height:10px;
+}
+.music-bar span{
+  display:block;width:3px;border-radius:1.5px;
+  background:var(--gold-soft);opacity:.55;
+  transform-origin:bottom;
+  animation:none;
+  height:3px;
+  transition:opacity .2s;
+}
+/* Animated bars when playing */
+#musicPlayer.playing .music-bar span:nth-child(1){animation:mbar 0.7s ease-in-out infinite alternate;animation-delay:0s}
+#musicPlayer.playing .music-bar span:nth-child(2){animation:mbar 0.7s ease-in-out infinite alternate;animation-delay:0.12s}
+#musicPlayer.playing .music-bar span:nth-child(3){animation:mbar 0.7s ease-in-out infinite alternate;animation-delay:0.24s}
+#musicPlayer.playing .music-bar span:nth-child(4){animation:mbar 0.7s ease-in-out infinite alternate;animation-delay:0.09s}
+#musicPlayer.playing .music-bar span{opacity:.85}
+@keyframes mbar{
+  0%{height:3px}
+  100%{height:10px}
+}
+
 /* ── TICKER ── */
 #ticker{
   height:var(--ticker-h);flex-shrink:0;
@@ -511,6 +562,7 @@ body.panel-hidden #statsWrap{margin-left:96px}
   #hdrMeta{gap:10px}
   #measureHBtn{min-width:42px;width:42px;padding:8px 10px}
   #panelToggleBtn{min-width:112px;padding:8px 12px}
+  .music-track{display:none}
 }
 @media(max-width:700px){
   :root{--panel-w:min(88vw,340px)}
@@ -536,10 +588,16 @@ body.panel-hidden #statsWrap{margin-left:96px}
   #hdrClock{display:none}
   #measureHBtn{min-width:42px;width:42px;padding:8px 10px}
   #panelToggleBtn{min-width:auto;padding:8px 12px}
+  #musicPlayer{padding:5px 9px 5px 6px}
+  .music-track{display:none}
 }
 </style>
 </head>
 <body>
+
+<!-- ── AUDIO ELEMENTS ── -->
+<audio id="track1" src="audio/track1.mp3" preload="auto"></audio>
+<audio id="track2" src="audio/track2.mp3" preload="auto"></audio>
 
 <!-- ── INTRO ── -->
 <div id="intro">
@@ -594,6 +652,18 @@ body.panel-hidden #statsWrap{margin-left:96px}
     <div id="hdrRight">
       <div id="hdrMeta">
         <span id="hdrClock">--:--:--</span>
+
+        <!-- ── MUSIC PLAYER ── -->
+        <div id="musicPlayer">
+          <button id="musicPlayBtn" title="Musiqini başlat / dayandır" aria-label="Play/Pause">▶</button>
+          <div class="music-info">
+            <span class="music-track" id="musicTrackName">Track 1</span>
+            <div class="music-bar">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+
         <div id="liveChip">
           <div class="ldot"></div>
           <span class="ltxt">Live OSINT</span>
@@ -839,8 +909,93 @@ const HOME_VIEW={center:[33,52],zoom:5};
 setTimeout(()=>{
   const el=document.getElementById("intro");
   el.classList.add("hide");
-  setTimeout(()=>{el.remove(); setTimeout(()=>{ if(typeof map!=="undefined" && map){ map.invalidateSize(); syncLayerVisibility?.(); applyLabels?.(); } }, 80);},500);
+  setTimeout(()=>{
+    el.remove();
+    setTimeout(()=>{ if(typeof map!=="undefined" && map){ map.invalidateSize(); syncLayerVisibility?.(); applyLabels?.(); } }, 80);
+    // Start music after intro ends
+    musicAutoStart();
+  },500);
 },2800);
+
+// ── MUSIC PLAYER ──────────────────────────────────────────────────────────
+(function(){
+  const tracks = [
+    document.getElementById("track1"),
+    document.getElementById("track2")
+  ];
+  const TRACK_NAMES = ["Track 1", "Track 2"];
+  let currentTrack = 0;
+  let isPlaying = false;
+  let userInteracted = false;
+
+  const playBtn = document.getElementById("musicPlayBtn");
+  const playerEl = document.getElementById("musicPlayer");
+  const trackNameEl = document.getElementById("musicTrackName");
+
+  // Set volume — ambient background level
+  tracks.forEach(t => { t.volume = 0.35; });
+
+  function updateUI(){
+    playBtn.textContent = isPlaying ? "❚❚" : "▶";
+    playerEl.classList.toggle("playing", isPlaying);
+    if(trackNameEl) trackNameEl.textContent = TRACK_NAMES[currentTrack] || ("Track " + (currentTrack + 1));
+  }
+
+  function playTrack(idx){
+    // Pause all
+    tracks.forEach(t => { t.pause(); t.currentTime = 0; });
+    currentTrack = idx % tracks.length;
+    tracks[currentTrack].play().then(()=>{
+      isPlaying = true;
+      updateUI();
+    }).catch(()=>{
+      isPlaying = false;
+      updateUI();
+    });
+  }
+
+  function nextTrack(){
+    playTrack((currentTrack + 1) % tracks.length);
+  }
+
+  // When a track ends, play next
+  tracks.forEach((t, i) => {
+    t.addEventListener("ended", () => {
+      nextTrack();
+    });
+  });
+
+  // Play/pause button
+  playBtn.addEventListener("click", () => {
+    userInteracted = true;
+    if(isPlaying){
+      tracks[currentTrack].pause();
+      isPlaying = false;
+      updateUI();
+    } else {
+      tracks[currentTrack].play().then(()=>{
+        isPlaying = true;
+        updateUI();
+      }).catch(()=>{});
+    }
+  });
+
+  // Called after intro animation ends — tries autoplay
+  window.musicAutoStart = function(){
+    if(userInteracted) return; // user already manually paused/played
+    tracks[currentTrack].play().then(()=>{
+      isPlaying = true;
+      updateUI();
+    }).catch(()=>{
+      // Autoplay blocked by browser — stay paused, button still works
+      isPlaying = false;
+      updateUI();
+    });
+  };
+
+  // Initial UI state
+  updateUI();
+})();
 
 // ── TICKER ────────────────────────────────────────────────────────────────
 const CHANNELS=[
@@ -850,7 +1005,6 @@ const CHANNELS=[
   {name:"ArmyMilitar",url:"https://t.me/armymilitar",icon:"🪖"},
 ];
 const ti=document.getElementById("tickerInner");
-// Duplicate for seamless loop
 [...CHANNELS,...CHANNELS,...CHANNELS,...CHANNELS].forEach(ch=>{
   const a=document.createElement("a");
   a.className="tlink";a.href=ch.url;a.target="_blank";a.rel="noopener noreferrer";
@@ -900,9 +1054,7 @@ document.querySelectorAll(".bmbtn").forEach(btn=>{
     TILES[btn.dataset.bm].addTo(map);
     activeBM=btn.dataset.bm;
     document.querySelectorAll(".bmbtn").forEach(b=>b.classList.toggle("active",b.dataset.bm===activeBM));
-    // Sinematik mode overlay
     document.getElementById("cinematicOverlay").classList.toggle("on",activeBM==="cinema");
-    // Pulse color tweak for cinema
   };
 });
 
@@ -1207,7 +1359,6 @@ document.getElementById("fitBtn").onclick=()=>{
 };
 
 // ── FILE UPLOAD ───────────────────────────────────────────────────────────
-
 function categorize(name,folderName="",documentName=""){
   const fallback = normText([folderName,documentName].filter(Boolean).join(" "));
   if(fallback.includes("herbi")) return "military";
@@ -1301,48 +1452,28 @@ map.on("contextmenu",e=>{
 });
 
 // ── SATELLITE SCAN MICRO-INTERACTION ─────────────────────────────────────
-const IRAN_CENTER=[33.0,53.0];
 const scanEl=document.getElementById("satScan");
-
-function latLonToPercent(lat,lon){
-  // Map visible bounds to percent position on map element
-  const b=map.getBounds();
-  const px=map.latLngToContainerPoint([lat,lon]);
-  const mw=document.getElementById("mapWrap");
-  return{x:px.x/mw.offsetWidth*100,y:px.y/mw.offsetHeight*100};
-}
-
 function doSatScan(){
-  // Pick a random point near Iran
-  const lat=27+Math.random()*13; // 27..40
-  const lon=44+Math.random()*22; // 44..66
+  const lat=27+Math.random()*13;
+  const lon=44+Math.random()*22;
   const pos=map.latLngToContainerPoint([lat,lon]);
   const mw=document.getElementById("mapWrap");
   if(!mw.offsetWidth)return;
-
   const cx=pos.x,cy=pos.y;
   if(cx<0||cy<0||cx>mw.offsetWidth||cy>mw.offsetHeight)return;
-
-  // Create ring
   const ring=document.createElement("div");
   ring.className="scan-ring";
   ring.style.cssText=`left:${cx}px;top:${cy}px;width:60px;height:60px;`;
   scanEl.appendChild(ring);
-
-  // Create crosshair
   const ch=document.createElement("div");
   ch.className="scan-crosshair";
   ch.style.cssText=`left:${cx}px;top:${cy}px;`;
   scanEl.appendChild(ch);
-
-  // Create label
   const lbl=document.createElement("div");
   lbl.className="scan-label";
   lbl.textContent="SCANNING";
   lbl.style.cssText=`left:${cx+14}px;top:${cy-18}px;`;
   scanEl.appendChild(lbl);
-
-  // Animate: ring expand, crosshair appear, label flash
   let t=0;
   const anim=setInterval(()=>{
     t+=16;
@@ -1360,12 +1491,10 @@ function doSatScan(){
     }
   },16);
 }
-
-// Run scan every 10-15 seconds, starting after 5.5s
 setTimeout(()=>{
   doSatScan();
   setInterval(()=>{
-    if(Math.random()>.24)doSatScan(); // 76% chance each interval
+    if(Math.random()>.24)doSatScan();
   },14000+Math.random()*6000);
 },5500);
 
@@ -1400,7 +1529,6 @@ async function initApp(){
 }
 initApp();
 
-// Apply dark theme by default for intelligence aesthetic
 document.documentElement.setAttribute("data-theme","dark");
 forcedTheme="dark";
 </script>
