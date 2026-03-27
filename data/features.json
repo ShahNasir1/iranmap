@@ -402,6 +402,90 @@
     "cat": "military"
   },
   {
+    "name": "Bəndər İmam Xomeyni Hava Hücumundan Müdafiə Bazası",
+    "lat": 30.54411274049307,
+    "lon": 49.03843736918446,
+    "cat": "military"
+  },
+  {
+    "name": "İmam Hüseyn Dəniz Bazası – Bəndər-e Mahşəhr",
+    "lat": 30.49577362247715,
+    "lon": 49.20577778436206,
+    "cat": "military"
+  },
+  {
+    "name": "“Şəhid Nuri” Piyada Briqadası",
+    "lat": 37.54530831595697,
+    "lon": 57.27134197485317,
+    "cat": "military"
+  },
+  {
+    "name": "Dezful Hava Hücumundan Müdafiə Bazası",
+    "lat": 32.42069365093961,
+    "lon": 48.47104911351945,
+    "cat": "military"
+  },
+  {
+    "name": "Dezful Hava Hücumundan Müdafiə Bazası",
+    "lat": 32.35065695506066,
+    "lon": 48.38124161457723,
+    "cat": "military"
+  },
+  {
+    "name": "4-cü Tabor Qərargahı // Qarnizon (41-ci, 42-ci, 43-cü, 44-cü bölük)",
+    "lat": 36.13408752893207,
+    "lon": 50.43012873451885,
+    "cat": "military"
+  },
+  {
+    "name": "3-cü Tabor Qərargahı // Qarnizon (31-ci, 32-ci, 33-cü, 34-cü bölük)",
+    "lat": 36.13359214309375,
+    "lon": 50.42896013521902,
+    "cat": "military"
+  },
+  {
+    "name": "2-ci Tabor Qərargahı // Qarnizon (21-ci, 22-ci, 23-cü, 24-cü bölük)",
+    "lat": 36.13305066684419,
+    "lon": 50.43057939420973,
+    "cat": "military"
+  },
+  {
+    "name": "“Şəhid Cavadniya” Qarnizonu",
+    "lat": 36.13600517524981,
+    "lon": 50.42634518615933,
+    "cat": "military"
+  },
+  {
+    "name": "1-ci Tabor Qərargahı",
+    "lat": 36.13958058743853,
+    "lon": 50.4270748601821,
+    "cat": "military"
+  },
+  {
+    "name": "“İmam Əli” Təlim Düşərgəsi",
+    "lat": 35.8190064569291,
+    "lon": 51.41657207027762,
+    "cat": "military"
+  },
+  {
+    "name": "Ərvənd Çay Flotiliya Bazası",
+    "lat": 29.93782713809742,
+    "lon": 48.62449505754896,
+    "cat": "military"
+  },
+  {
+    "name": "58-ci Komando Diviziyası / 258-ci “Şəhid General-Mayor Mustafa” Briqadası",
+    "lat": 36.71094734782658,
+    "lon": 55.30094338137363,
+    "cat": "military"
+  },
+  {
+    "name": "“Şəhid Əli Ərəbi” Helikopter Bazası",
+    "lat": 29.46442862550907,
+    "lon": 60.89699630069932,
+    "cat": "military"
+  },
+  {
     "name": "Dəmiryol stansiyası",
     "lat": 38.49377530850065,
     "lon": 44.33932999572343,
@@ -616,6 +700,12 @@
     "lat": 37.49734978902089,
     "lon": 45.14460307944798,
     "cat": "rail"
+  },
+  {
+    "name": "Xomacin aerodromu",
+    "lat": 35.0541367932264,
+    "lon": 49.18517307487033,
+    "cat": "aviation"
   },
   {
     "name": "Dezful hava limanı",
@@ -1155,6 +1245,90 @@
     "name": "Dalake uçuş-eniş zolağı",
     "lat": 34.24628652380642,
     "lon": 46.79810267763722,
+    "cat": "aviation"
+  },
+  {
+    "name": "Cəfərabad uçuş-eniş zolağı",
+    "lat": 34.82759003307747,
+    "lon": 50.73250202162741,
+    "cat": "aviation"
+  },
+  {
+    "name": "Arak hava limanı",
+    "lat": 34.13538324348658,
+    "lon": 49.84225811228753,
+    "cat": "aviation"
+  },
+  {
+    "name": "Mahmudabad uçuş-eniş zolağı",
+    "lat": 34.16961625835349,
+    "lon": 51.31756875408573,
+    "cat": "aviation"
+  },
+  {
+    "name": "Kaşan hava limanı",
+    "lat": 33.89629612156034,
+    "lon": 51.57113784415437,
+    "cat": "aviation"
+  },
+  {
+    "name": "Naen hərbi hava bazası",
+    "lat": 33.09377458592829,
+    "lon": 53.4128338420001,
+    "cat": "aviation"
+  },
+  {
+    "name": "Todeşk aerodromu",
+    "lat": 32.74324218719506,
+    "lon": 52.66936737474899,
+    "cat": "aviation"
+  },
+  {
+    "name": "İsfahan beynəlxalq hava limanı",
+    "lat": 32.74634036637354,
+    "lon": 51.87341275897874,
+    "cat": "aviation"
+  },
+  {
+    "name": "İsfahan uçuş-eniş zolağı",
+    "lat": 32.58248646429976,
+    "lon": 52.00262868209209,
+    "cat": "aviation"
+  },
+  {
+    "name": "Bədr hava bazası",
+    "lat": 32.61880535901609,
+    "lon": 51.7015528399147,
+    "cat": "aviation"
+  },
+  {
+    "name": "Şəhid Vətənpur hərbi hava bazası",
+    "lat": 32.56841759677379,
+    "lon": 51.68632883088831,
+    "cat": "aviation"
+  },
+  {
+    "name": "Hesa hava limanı",
+    "lat": 32.92764189313516,
+    "lon": 51.5617874500048,
+    "cat": "aviation"
+  },
+  {
+    "name": "Zərrinşəhr aerodromu",
+    "lat": 32.3269821357997,
+    "lon": 51.37832254984755,
+    "cat": "aviation"
+  },
+  {
+    "name": "Şəhrikürd hava limanı",
+    "lat": 32.29519059015293,
+    "lon": 50.83917636722363,
+    "cat": "aviation"
+  },
+  {
+    "name": "Tabas hava limanı",
+    "lat": 33.66865285963419,
+    "lon": 56.89643108298463,
     "cat": "aviation"
   },
   {
