@@ -440,7 +440,7 @@ button.sec:hover{background:var(--sec-h)}
 }
 
 /* Markers */
-.air-icon,.sbm-icon,.rail-icon,.mil-icon{
+.air-icon,.sbm-icon,.rail-icon,.nav-icon,.mil-icon{
   display:flex;align-items:center;justify-content:center;border-radius:50%;
   font-weight:900;border:2px solid rgba(255,255,255,.9);
   box-sizing:border-box;user-select:none;transition:transform .15s;
@@ -448,8 +448,9 @@ button.sec:hover{background:var(--sec-h)}
 .air-icon{background:#3b82f6;box-shadow:0 0 10px rgba(59,130,246,.45);color:#fff}
 .sbm-icon{background:#f59e0b;box-shadow:0 0 10px rgba(245,158,11,.55);color:#1a1a1a;font-weight:700}
 .rail-icon{background:#78350f;box-shadow:0 0 8px rgba(120,53,15,.45);color:#fff}
+.nav-icon{background:#0f766e;box-shadow:0 0 10px rgba(15,118,110,.5);color:#fff}
 .mil-icon{background:#16a34a;box-shadow:0 0 12px rgba(22,163,74,.55);color:#fff}
-.air-icon:hover,.sbm-icon:hover,.rail-icon:hover,.mil-icon:hover{transform:scale(1.28)}
+.air-icon:hover,.sbm-icon:hover,.rail-icon:hover,.nav-icon:hover,.mil-icon:hover{transform:scale(1.28)}
 
 .marker-cluster-small,.marker-cluster-medium,.marker-cluster-large{background:rgba(59,130,246,.15);border:1.5px solid rgba(59,130,246,.35)}
 .marker-cluster div{background:rgba(59,130,246,.38);color:#fff;font-weight:700}
@@ -459,6 +460,12 @@ button.sec:hover{background:var(--sec-h)}
   border:1px solid var(--panel-border);border-radius:7px;
   box-shadow:0 4px 14px rgba(0,0,0,.18);font-size:10.5px;padding:3px 8px;
   backdrop-filter:blur(8px);max-width:220px;white-space:normal;
+}
+.leaflet-tooltip.nav-label{
+  background:rgba(15,118,110,.9);color:#fff;
+  border:1px solid rgba(15,118,110,.4);border-radius:7px;
+  box-shadow:0 4px 14px rgba(0,0,0,.28);font-size:9.5px;padding:3px 8px;
+  max-width:240px;white-space:normal;font-weight:600;
 }
 .leaflet-tooltip.mil-label{
   background:rgba(22,163,74,.88);color:#fff;
@@ -492,6 +499,8 @@ button.sec:hover{background:var(--sec-h)}
 }
 .popup-cat.mil-tag{background:rgba(22,163,74,.14);color:#15803d}
 [data-theme="dark"] .popup-cat.mil-tag{background:rgba(22,163,74,.22);color:#4ade80}
+.popup-cat.nav-tag{background:rgba(15,118,110,.14);color:#0f766e}
+[data-theme="dark"] .popup-cat.nav-tag{background:rgba(15,118,110,.22);color:#5eead4}
 .popup-coords{font-size:10.5px;color:var(--text-muted);font-family:"JetBrains Mono",monospace;margin-bottom:5px}
 .popup-copy{
   display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;
@@ -640,6 +649,9 @@ body.panel-hidden #statsWrap{margin-left:96px}
           <div><div class="hstat-val" id="hRail">—</div><div class="hstat-lbl">Dəmiryol stansiyaları</div></div>
         </div>
         <div class="hstat">
+          <div><div class="hstat-val" id="hNav">—</div><div class="hstat-lbl">Dəniz</div></div>
+        </div>
+        <div class="hstat">
           <div><div class="hstat-val" id="hMil">—</div><div class="hstat-lbl">Hərbi obyektlər</div></div>
         </div>
       </div>
@@ -731,6 +743,10 @@ body.panel-hidden #statsWrap{margin-left:96px}
               <label class="tsw"><input type="checkbox" id="tRail"><span class="ttrack"></span></label>
             </div>
             <div class="toggle-row">
+              <span class="tlabel"><span class="tdot" style="background:#0f766e"></span><span>Dəniz obyektləri</span></span>
+              <label class="tsw"><input type="checkbox" id="tNav" checked><span class="ttrack"></span></label>
+            </div>
+            <div class="toggle-row">
               <span class="tlabel"><span class="tdot" style="background:#16a34a"></span><span>Hərbi obyektlər</span></span>
               <label class="tsw"><input type="checkbox" id="tMil" checked><span class="ttrack"></span></label>
             </div>
@@ -761,6 +777,7 @@ body.panel-hidden #statsWrap{margin-left:96px}
             <div class="cbrow"><span class="cblbl">SBM</span><div class="cbtrack"><div class="cbfill" id="barSBM" style="background:#f59e0b;width:0"></div></div><span class="cbcnt" id="barSBMN">—</span></div>
             <div class="cbrow"><span class="cblbl">Aviasiya</span><div class="cbtrack"><div class="cbfill" id="barAir" style="background:#3b82f6;width:0"></div></div><span class="cbcnt" id="barAirN">—</span></div>
             <div class="cbrow"><span class="cblbl">Dəmiryol stansiyaları</span><div class="cbtrack"><div class="cbfill" id="barRail" style="background:#78350f;width:0"></div></div><span class="cbcnt" id="barRailN">—</span></div>
+            <div class="cbrow"><span class="cblbl">Dəniz obyektləri</span><div class="cbtrack"><div class="cbfill" id="barNav" style="background:#0f766e;width:0"></div></div><span class="cbcnt" id="barNavN">—</span></div>
             <div class="cbrow"><span class="cblbl">Hərbi obyektlər</span><div class="cbtrack"><div class="cbfill" id="barMil" style="background:#16a34a;width:0"></div></div><span class="cbcnt" id="barMilN">—</span></div>
           </div>
         </div>
@@ -773,6 +790,7 @@ body.panel-hidden #statsWrap{margin-left:96px}
             <div class="lgitem"><div class="lgdot" style="background:#f59e0b"></div><span class="lgtxt">SBM - Sərhəd buraxılış məntəqəsi</span></div>
             <div class="lgitem"><div class="lgdot" style="background:#3b82f6"></div><span class="lgtxt">Aviasiya</span></div>
             <div class="lgitem"><div class="lgdot" style="background:#78350f"></div><span class="lgtxt">Dəmiryol stansiyaları</span></div>
+            <div class="lgitem"><div class="lgdot" style="background:#0f766e"></div><span class="lgtxt">Dəniz obyektləri</span></div>
             <div class="lgitem"><div class="lgdot" style="background:#16a34a"></div><span class="lgtxt">Hərbi obyektlər</span></div>
             <div class="lgitem"><div class="lgline" style="background:#06b6d4"></div><span class="lgtxt">Sərhəd xətti</span></div>
           </div>
@@ -787,6 +805,7 @@ body.panel-hidden #statsWrap{margin-left:96px}
               <option value="sbm">SBM</option>
               <option value="aviation">Aviasiya</option>
               <option value="rail">Dəmiryol stansiyaları</option>
+              <option value="naval">Dəniz obyektləri</option>
               <option value="military">Hərbi obyektlər</option>
             </select>
             <button id="fitBtn" style="width:auto;margin:0;padding:10px 12px">↗</button>
@@ -847,6 +866,7 @@ const CAT_META={
   sbm:{label:"SBM - Sərhəd buraxılış məntəqəsi",color:"#f59e0b"},
   aviation:{label:"Aviasiya",color:"#3b82f6"},
   rail:{label:"Dəmiryol stansiyaları",color:"#78350f"},
+  naval:{label:"Dəniz obyektləri",color:"#0f766e"},
   military:{label:"Hərbi obyektlər",color:"#16a34a"},
 };
 
@@ -870,6 +890,11 @@ function detectCategory(name,fallback=""){
   if(n==="sbm" || n.includes("serhed buraxilis menteqesi")) return "sbm";
   if(n.includes("demiryol stansiyasi") || n.includes("demiryolu stansiyasi") || n.includes("stansiya")) return "rail";
 
+  const navalKw=[
+    "deniz","flotiliya","donanma","naval","marine","forur adasi","xarq adasi bolmesi"
+  ];
+  if(navalKw.some(k=>n.includes(k))) return "naval";
+
   const militaryKw=[
     "alay","tabor","qerargah","qarnizon","briqada","diviziya","korpus","komando","zirehli",
     "artilleriya","muhendis","muhendis istehkam","raket bazasi","raket","te lim merkezi",
@@ -884,7 +909,7 @@ function detectCategory(name,fallback=""){
   ];
   if(aviationKw.some(k=>n.includes(k))) return "aviation";
 
-  if(fb==="military" || fb==="aviation" || fb==="rail" || fb==="post" || fb==="sbm") return fb;
+  if(fb==="military" || fb==="naval" || fb==="aviation" || fb==="rail" || fb==="post" || fb==="sbm") return fb;
   return "aviation";
 }
 function sanitizeFeatures(features){
@@ -1163,20 +1188,20 @@ document.getElementById("resetBtn").onclick=()=>map.flyTo(HOME_VIEW.center,HOME_
 // ── LAYERS ────────────────────────────────────────────────────────────────
 const postsCluster=L.markerClusterGroup({spiderfyOnMaxZoom:true,showCoverageOnHover:false,chunkedLoading:true});
 const postsExact=L.layerGroup(),sbmGroup=L.layerGroup(),airGroup=L.layerGroup();
-const railGroup=L.layerGroup(),milGroup=L.layerGroup(),lineGroup=L.layerGroup();
+const railGroup=L.layerGroup(),navGroup=L.layerGroup(),milGroup=L.layerGroup(),lineGroup=L.layerGroup();
 let heatLayer=null;
 let currentFeatures=[],pulseMarkers=[],pulseOffsets=[];
-let airMarkers=[],sbmMarkers=[],railMarkers=[],milMarkers=[];
+let airMarkers=[],sbmMarkers=[],railMarkers=[],navMarkers=[],milMarkers=[];
 let pulseEnabled=true,pulseTick=0,pulseRaf=null;
 
 // ── ICONS ─────────────────────────────────────────────────────────────────
 function zSc(z){return z<=4?.36:z<=5?.50:z<=6?.65:z<=7?.82:z<=8?1.0:z<=10?1.14:1.26;}
 function mkIcon(type){
   const z=map.getZoom(),sc=zSc(z);
-  const base=type==="air"?28:type==="mil"?31:26;
+  const base=type==="air"?28:type==="nav"?30:type==="mil"?31:26;
   const sz=Math.round(base*sc),fs=Math.round(13*sc);
-  const cls=type==="air"?"air-icon":type==="sbm"?"sbm-icon":type==="rail"?"rail-icon":"mil-icon";
-  const glyph=type==="air"?"✈":type==="sbm"?"◉":type==="rail"?"🚂":"⚔";
+  const cls=type==="air"?"air-icon":type==="sbm"?"sbm-icon":type==="rail"?"rail-icon":type==="nav"?"nav-icon":"mil-icon";
+  const glyph=type==="air"?"✈":type==="sbm"?"◉":type==="rail"?"🚂":type==="nav"?"⚓":"⚔";
   return L.divIcon({
     className:"",
     html:`<div class="${cls}" style="width:${sz}px;height:${sz}px;font-size:${fs}px;line-height:${sz}px;text-align:center">${glyph}</div>`,
@@ -1187,6 +1212,7 @@ function updateIconSizes(){
   airMarkers.forEach(m=>m.setIcon(mkIcon("air")));
   sbmMarkers.forEach(m=>m.setIcon(mkIcon("sbm")));
   railMarkers.forEach(m=>m.setIcon(mkIcon("rail")));
+  navMarkers.forEach(m=>m.setIcon(mkIcon("nav")));
   milMarkers.forEach(m=>m.setIcon(mkIcon("mil")));
 }
 
@@ -1195,13 +1221,14 @@ function applyLabels(){
   const z=map.getZoom(),on=document.getElementById("tLabels").checked&&z>=9;
   [...sbmMarkers,...airMarkers,...railMarkers].forEach(m=>{if(on)m.openTooltip();else m.closeTooltip();});
   const mOn=document.getElementById("tLabels").checked&&z>=9;
+  navMarkers.forEach(m=>{if(mOn)m.openTooltip();else m.closeTooltip();});
   milMarkers.forEach(m=>{if(mOn)m.openTooltip();else m.closeTooltip();});
 }
 
 // ── POPUP ─────────────────────────────────────────────────────────────────
 function popupHtml(f){
   const meta=CAT_META[f.cat]||{label:f.cat,color:"#64748b"};
-  const tagCls=f.cat==="military"?"popup-cat mil-tag":"popup-cat";
+  const tagCls=f.cat==="military"?"popup-cat mil-tag":f.cat==="naval"?"popup-cat nav-tag":"popup-cat";
   return `<div class="popup-name">${f.name}</div>
 <div class="${tagCls}">${meta.label}</div>
 <div class="popup-coords">${f.lat.toFixed(5)}, ${f.lon.toFixed(5)}</div>
@@ -1216,10 +1243,10 @@ window.copyCoords=function(btn,lat,lon){
 // ── CLEAR ─────────────────────────────────────────────────────────────────
 function clearAll(){
   postsCluster.clearLayers();postsExact.clearLayers();
-  sbmGroup.clearLayers();airGroup.clearLayers();railGroup.clearLayers();
+  sbmGroup.clearLayers();airGroup.clearLayers();railGroup.clearLayers();navGroup.clearLayers();
   milGroup.clearLayers();lineGroup.clearLayers();
   if(heatLayer){map.removeLayer(heatLayer);heatLayer=null;}
-  pulseMarkers=[];pulseOffsets=[];airMarkers=[];sbmMarkers=[];railMarkers=[];milMarkers=[];
+  pulseMarkers=[];pulseOffsets=[];airMarkers=[];sbmMarkers=[];railMarkers=[];navMarkers=[];milMarkers=[];
 }
 
 // ── BUILD MAP ─────────────────────────────────────────────────────────────
@@ -1245,6 +1272,9 @@ function buildMap(features){
     }else if(f.cat==="rail"){
       const m=L.marker(ll,{icon:mkIcon("rail")}).bindPopup(ph,{maxWidth:240}).bindTooltip(f.name,{permanent:true,direction:"top",className:"sp-label"});
       railGroup.addLayer(m);railMarkers.push(m);
+    }else if(f.cat==="naval"){
+      const m=L.marker(ll,{icon:mkIcon("nav")}).bindPopup(ph,{maxWidth:250}).bindTooltip(f.name,{permanent:true,direction:"top",className:"nav-label"});
+      navGroup.addLayer(m);navMarkers.push(m);
     }else if(f.cat==="military"){
       const m=L.marker(ll,{icon:mkIcon("mil")}).bindPopup(ph,{maxWidth:260}).bindTooltip(f.name,{permanent:true,direction:"top",className:"mil-label"});
       milGroup.addLayer(m);milMarkers.push(m);
@@ -1262,14 +1292,14 @@ function buildMap(features){
 
 // ── KPIs ──────────────────────────────────────────────────────────────────
 function computeKPIs(features){
-  const n={post:0,sbm:0,aviation:0,rail:0,military:0};
+  const n={post:0,sbm:0,aviation:0,rail:0,naval:0,military:0};
   features.forEach(f=>{if(n[f.cat]!==undefined)n[f.cat]++;});
-  const vals=[features.length,n.post,n.sbm,n.aviation,n.rail,n.military];
-  ["hAll","hPost","hSBM","hAir","hRail","hMil"].forEach((id,i)=>{
+  const vals=[features.length,n.post,n.sbm,n.aviation,n.rail,n.naval,n.military];
+  ["hAll","hPost","hSBM","hAir","hRail","hNav","hMil"].forEach((id,i)=>{
     const el=document.getElementById(id);if(el)el.textContent=vals[i];
   });
-  const max=Math.max(n.post,n.sbm,n.aviation,n.rail,n.military,1);
-  [["barPost",n.post],["barSBM",n.sbm],["barAir",n.aviation],["barRail",n.rail],["barMil",n.military]].forEach(([id,v])=>{
+  const max=Math.max(n.post,n.sbm,n.aviation,n.rail,n.naval,n.military,1);
+  [["barPost",n.post],["barSBM",n.sbm],["barAir",n.aviation],["barRail",n.rail],["barNav",n.naval],["barMil",n.military]].forEach(([id,v])=>{
     const bar=document.getElementById(id), num=document.getElementById(id+"N");
     if(bar)bar.style.width=(v/max*100)+"%";
     if(num)num.textContent=v;
@@ -1287,6 +1317,7 @@ function syncZoomVis(){
   [[document.getElementById("tSBM"),sbmGroup,6],
    [document.getElementById("tAir"),airGroup,6],
    [document.getElementById("tRail"),railGroup,8],
+   [document.getElementById("tNav"),navGroup,5],
    [document.getElementById("tMil"),milGroup,5]
   ].forEach(([el,lg,minZ])=>{
     if(el.checked&&z>=minZ){if(!map.hasLayer(lg))map.addLayer(lg);}
@@ -1303,7 +1334,7 @@ function syncLayerVisibility(){
   else map.removeLayer(lineGroup);
   applyLabels();
 }
-["tPosts","tCluster","tSBM","tAir","tRail","tMil","tHeat","tLine","tLabels"].forEach(id=>{
+["tPosts","tCluster","tSBM","tAir","tRail","tNav","tMil","tHeat","tLine","tLabels"].forEach(id=>{
   document.getElementById(id).addEventListener("change",syncLayerVisibility);
 });
 document.getElementById("tPulse").addEventListener("change",e=>{
