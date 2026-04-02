@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>IranMap – Real-Time Conflict Intelligence</title>
-<meta name="description" content="Real-time Iran conflict monitoring map using OSINT data, geospatial intelligence, and live updates."/>
+<title>IranMap – Real vaxtlı münaqişə kəşfiyyat xəritəsi</title>
+<meta name="description" content="OSINT məlumatları, geospatial kəşfiyyat və canlı yeniləmələrlə İran istiqaməti üzrə real vaxtlı münaqişə xəritəsi."/>
 <meta name="author" content="Nasir Aghayev"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -66,8 +66,9 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
   height:var(--hdr-h);flex-shrink:0;
   background:linear-gradient(180deg,rgba(5,11,22,.98),rgba(7,17,31,.96));
   border-bottom:1px solid var(--hdr-border);
-  display:flex;align-items:center;justify-content:space-between;
-  gap:20px;padding:0 18px;
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;column-gap:20px;
+  padding:0 18px;
   z-index:10000;position:relative;
   box-shadow:0 10px 34px rgba(0,0,0,.34);
 }
@@ -102,6 +103,8 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 }
 /* Left tools / right meta */
 #logoTools{display:flex;align-items:center;gap:10px;margin-left:8px}
+#resultsBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:116px;padding:8px 14px;white-space:nowrap;flex-shrink:0;text-decoration:none}
+
 #liveChip{
   display:flex;align-items:center;gap:8px;
   background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.24);
@@ -117,8 +120,13 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 
 /* Header stats strip */
 #hdrStats{
-  display:flex;align-items:center;gap:10px;flex:1;min-width:0;overflow:hidden;
+  display:flex;align-items:center;gap:10px;
+  flex:1;min-width:0;
+  overflow-x:auto;overflow-y:hidden;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
 }
+#hdrStats::-webkit-scrollbar{display:none}
 .hstat{
   display:flex;align-items:center;gap:8px;padding:0 14px 0 0;
   border-right:none;height:auto;
@@ -132,9 +140,11 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 #hdrRight{display:flex;align-items:center;gap:18px;flex-shrink:0;min-width:max-content;padding-left:8px}
 #hdrMeta{display:flex;align-items:center;gap:14px;min-width:max-content}
 #hdrCopy{margin-right:2px}
-#measureHBtn{display:inline-flex;align-items:center;justify-content:center;gap:0;min-width:42px;width:42px;padding:8px 10px;white-space:nowrap;flex-shrink:0}
-#measureHBtn .mi{font-size:14px;line-height:1}
-#panelToggleBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:118px;padding:8px 14px;white-space:nowrap;flex-shrink:0}
+#panelToggleBtn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  width:132px;min-width:132px;
+  padding:8px 14px;white-space:nowrap;flex-shrink:0
+}
 #panelToggleBtn .pi{font-size:13px;line-height:1}
 #panelToggleBtn .ptxt{display:inline-block;line-height:1.1}
 .hbtn{
@@ -144,7 +154,6 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
   cursor:pointer;transition:all .16s;white-space:nowrap;letter-spacing:.2px;
 }
 .hbtn:hover{background:rgba(212,175,55,.12);color:#fff;border-color:rgba(212,175,55,.36)}
-.hbtn.mactive{background:rgba(249,115,22,.2);border-color:rgba(249,115,22,.4);color:#fb923c}
 #hdrCopy,#hdrClock{
   font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;
   color:var(--gold-soft);letter-spacing:.15px;white-space:nowrap;
@@ -154,10 +163,18 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 }
 
 
-#brandBlock{display:flex;align-items:center;gap:14px;min-width:max-content}
+#brandBlock{display:flex;align-items:center;gap:14px;min-width:max-content;flex-shrink:0}
 #hdrMeta{display:flex;align-items:center;gap:14px}
 #hdrMetaGroup{display:flex;align-items:center;gap:12px;padding-left:4px}
-#statsWrap{display:flex;align-items:center;gap:18px;flex:1;min-width:0;justify-content:center;margin-left:126px;transition:margin-left .22s ease}
+#statsWrap{
+  display:flex;align-items:center;gap:18px;
+  min-width:0;
+  justify-content:flex-start;
+  padding:0 22px 0 18px;
+  border-left:1px solid rgba(243,216,137,.14);
+  border-right:1px solid rgba(243,216,137,.10);
+  overflow:hidden;
+}
 #themeBtn{min-width:42px;padding:8px 10px}
 #themeBtn .theme-label{display:none}
 #panel .status{line-height:1.6}
@@ -417,15 +434,6 @@ button.sec:hover{background:var(--sec-h)}
 .acitem:hover{background:var(--box-bg)}
 .acdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 
-/* Measure result */
-#measureResult{
-  position:absolute;left:50%;transform:translateX(-50%);bottom:52px;z-index:9999;
-  background:rgba(5,12,26,.92);color:#fff;border-radius:12px;
-  padding:8px 18px;font-size:12.5px;font-weight:700;
-  font-family:"JetBrains Mono",monospace;
-  box-shadow:0 4px 16px rgba(0,0,0,.3);display:none;white-space:nowrap;
-  border:1px solid rgba(249,115,22,.3);
-}
 
 /* ── SATELLITE SCAN ANIMATION ── */
 #satScan{position:absolute;inset:0;z-index:910;pointer-events:none;overflow:hidden}
@@ -492,14 +500,6 @@ button.sec:hover{background:var(--sec-h)}
   box-shadow:0 4px 14px rgba(0,0,0,.28);font-size:9.5px;padding:3px 8px;
   max-width:240px;white-space:normal;font-weight:600;
 }
-.measure-tooltip{
-  background:rgba(5,12,26,.9)!important;color:#fff!important;
-  border:none!important;border-radius:7px!important;
-  font-size:10.5px!important;font-weight:700!important;
-  font-family:"JetBrains Mono",monospace!important;
-  padding:4px 9px!important;box-shadow:0 4px 14px rgba(0,0,0,.3)!important;pointer-events:none;
-}
-.measure-tooltip::before{display:none!important}
 
 .leaflet-popup-content-wrapper{
   background:var(--panel-bg)!important;color:var(--text)!important;
@@ -583,14 +583,20 @@ button.sec:hover{background:var(--sec-h)}
 @keyframes introHide{to{opacity:0;pointer-events:none}}
 
 
-body.panel-hidden #statsWrap{margin-left:96px}
+body.panel-hidden #statsWrap{padding:0 22px 0 18px}
 @media(max-width:900px){
   :root{--hdr-h:auto;--ticker-h:26px;--panel-w:320px}
-  #hdr{flex-wrap:wrap;align-items:flex-start;padding:12px 12px 10px}
-  #statsWrap{order:3;width:100%;justify-content:flex-start;overflow:auto;padding-top:4px}
+  #hdr{display:flex;flex-wrap:wrap;align-items:flex-start;padding:12px 12px 10px;gap:12px}
+  #statsWrap{
+    order:3;width:100%;
+    justify-content:flex-start;
+    overflow:auto;
+    padding:8px 0 0;
+    border-left:none;border-right:none;
+  }
   #hdrRight{margin-left:auto;gap:12px;padding-left:0}
   #hdrMeta{gap:10px}
-  #measureHBtn{min-width:42px;width:42px;padding:8px 10px}
+  #resultsBtn{min-width:auto;padding:8px 12px}
   #panelToggleBtn{min-width:112px;padding:8px 12px}
   .music-track{display:none}
 }
@@ -616,7 +622,7 @@ body.panel-hidden #statsWrap{margin-left:96px}
   #hdrMeta{gap:8px;flex-wrap:wrap;min-width:0}
   #hdrCopy{font-size:11px}
   #hdrClock{display:none}
-  #measureHBtn{min-width:42px;width:42px;padding:8px 10px}
+  #resultsBtn{min-width:auto;padding:8px 12px}
   #panelToggleBtn{min-width:auto;padding:8px 12px}
   #musicPlayer{padding:5px 9px 5px 6px}
   .music-track{display:none}
@@ -647,7 +653,7 @@ body.panel-hidden #statsWrap{margin-left:96px}
       </a>
       <div id="logoTools">
         <button class="hbtn" id="themeBtn" title="Gecə rejimi">☾</button>
-        <button class="hbtn" id="measureHBtn" type="button" title="Məsafə ölç"><span class="mi">📏</span></button>
+        <a class="hbtn" id="resultsBtn" href="losses.html" title="Münaqişə nəticələrini aç">📊 Nəticələr</a>
         <button class="hbtn" id="panelToggleBtn" type="button" aria-label="Paneli göstər və ya gizlət"><span class="pi">☰</span><span class="ptxt">Panel</span></button>
       </div>
     </div>
@@ -884,7 +890,6 @@ body.panel-hidden #statsWrap{margin-left:96px}
         <div class="ci"><span class="cl">Zoom</span><span class="cv" id="cZoom">—</span></div>
       </div>
       <div id="mmWrap"><div id="minimap"></div></div>
-      <div id="measureResult"></div>
     </div>
 
   </div>
@@ -1122,60 +1127,6 @@ map.on("mouseout",()=>{cLat.textContent="—";cLon.textContent="—";});
 map.on("zoomend",()=>{cZoom.textContent=map.getZoom();onZoom();});
 cZoom.textContent=map.getZoom();
 function onZoom(){syncZoomVis();applyLabels();updateIconSizes();}
-
-// ── MEASURE ───────────────────────────────────────────────────────────────
-let measureMode=false,measurePoints=[],measurePoly=null,measureDots=[],measureTips=[];
-const measureResult=document.getElementById("measureResult");
-function hav(a,b){const R=6371,r=d=>d*Math.PI/180;const dLat=r(b.lat-a.lat),dLon=r(b.lng-a.lng);const s=Math.sin(dLat/2)**2+Math.cos(r(a.lat))*Math.cos(r(b.lat))*Math.sin(dLon/2)**2;return 2*R*Math.asin(Math.sqrt(s));}
-function mTotal(){let d=0;for(let i=1;i<measurePoints.length;i++)d+=hav(measurePoints[i-1],measurePoints[i]);return d;}
-function updateMLine(){
-  if(measurePoly){map.removeLayer(measurePoly);measurePoly=null;}
-  if(measurePoints.length>=2){
-    measurePoly=L.polyline(measurePoints.map(p=>[p.lat,p.lng]),{color:"#f97316",weight:2.5,dashArray:"6 5",opacity:.9}).addTo(map);
-    const d=mTotal();const txt=d<1?(d*1000).toFixed(0)+" m":d.toFixed(2)+" km";
-    measureResult.textContent="📏 "+txt+" ("+measurePoints.length+" nöqtə)";
-    measureResult.style.display="block";
-  } else measureResult.style.display="none";
-}
-function clearMeasure(){
-  measurePoints=[];if(measurePoly){map.removeLayer(measurePoly);measurePoly=null;}
-  measureDots.forEach(m=>map.removeLayer(m));measureDots=[];
-  measureTips.forEach(t=>t&&map.removeLayer(t));measureTips=[];
-  measureResult.style.display="none";
-}
-function renderMeasureButton(on){
-  const btn=document.getElementById("measureHBtn");
-  if(!btn) return;
-  btn.classList.toggle("mactive",on);
-  btn.innerHTML='<span class="mi">📏</span>';
-  btn.setAttribute("aria-pressed", on ? "true" : "false");
-  btn.title=on?"Məsafə ölçməni dayandır (Esc)":"Məsafə ölç";
-}
-function cancelMeasure(){
-  if(!measureMode)return;
-  setMeasure(false);
-}
-document.getElementById("measureHBtn").onclick=()=>setMeasure(!measureMode);
-renderMeasureButton(false);
-document.addEventListener("keydown",e=>{
-  if(e.key==="Escape"||e.key==="Esc"){
-    cancelMeasure();
-  }
-});
-map.on("click",e=>{
-  if(!measureMode)return;
-  measurePoints.push(e.latlng);
-  const dot=L.circleMarker(e.latlng,{radius:5,color:"#f97316",fillColor:"#fff",fillOpacity:1,weight:2}).addTo(map);
-  measureDots.push(dot);
-  if(measurePoints.length>=2){
-    const d=mTotal();const txt=d<1?(d*1000).toFixed(0)+" m":d.toFixed(2)+" km";
-    const tip=L.tooltip({permanent:true,direction:"top",className:"measure-tooltip",offset:[0,-8]}).setLatLng(e.latlng).setContent(txt).addTo(map);
-    measureTips.push(tip);
-  }else measureTips.push(null);
-  updateMLine();
-});
-map.on("dblclick",e=>{if(!measureMode)return;L.DomEvent.stop(e);setMeasure(false);});
-
 
 // ── PANEL TOGGLE ─────────────────────────────────────────────────────────
 const panelEl=document.getElementById("panel");
@@ -1540,7 +1491,6 @@ function pulseFn(){
 
 // ── RIGHT-CLICK ───────────────────────────────────────────────────────────
 map.on("contextmenu",e=>{
-  if(measureMode)return;
   const txt=`${e.latlng.lat.toFixed(5)}, ${e.latlng.lng.toFixed(5)}`;
   navigator.clipboard?.writeText(txt).catch(()=>{});
   const tip=L.popup({closeButton:false}).setLatLng(e.latlng)
