@@ -363,7 +363,6 @@
       "kateqoriya": "Müdafiə-tədqiqat rəhbərliyi",
       "ikon": "🔬",
       "şəkil": null,
-      "qeyd": "SPND ilə əlaqəli rəhbər fiqur kimi qeyd olunur.",
       "mənbə_qeydi": "Mənbə sənədinin 2-ci səhifəsi"
     },
     {
@@ -377,12 +376,11 @@
       "kateqoriya": "Müdafiə-tədqiqat rəhbərliyi",
       "ikon": "🔬",
       "şəkil": null,
-      "qeyd": "SPND rəhbərliyi ilə bağlı ikinci yüksək profilli adlardan biridir.",
       "mənbə_qeydi": "Mənbə sənədinin 2-ci səhifəsi"
     },
     {
       "id": "şəxs-008",
-      "ad": "Salah Esadi",
+      "ad": "Salah Əsədi",
       "vəzifə": "“Xatəm əl-Ənbiya” Komandanlığının kəşfiyyat şöbəsinin rəhbəri",
       "tərəf": "İran",
       "status": "Öldürülüb",
@@ -391,7 +389,6 @@
       "kateqoriya": "Kəşfiyyat rəhbərliyi",
       "ikon": "🕶️",
       "şəkil": null,
-      "qeyd": "Mənbədə təhlükəsizlik və kəşfiyyat blokunun əsas şəxslərindən biri kimi qeyd edilir.",
       "mənbə_qeydi": "Mənbə sənədinin 2-ci səhifəsi"
     }
   ],
