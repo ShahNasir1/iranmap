@@ -300,7 +300,6 @@
     "prioritet": 1,
     "ikon": "👤",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-002",
@@ -315,7 +314,6 @@
     "prioritet": 2,
     "ikon": "🧠",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-003",
@@ -330,7 +328,6 @@
     "prioritet": 3,
     "ikon": "🎖️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-004",
@@ -345,7 +342,6 @@
     "prioritet": 4,
     "ikon": "🎖️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-005",
@@ -360,7 +356,6 @@
     "prioritet": 5,
     "ikon": "🎖️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-006",
@@ -375,7 +370,6 @@
     "prioritet": 6,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-007",
@@ -390,7 +384,6 @@
     "prioritet": 7,
     "ikon": "🧠",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-008",
@@ -405,7 +398,6 @@
     "prioritet": 8,
     "ikon": "⚓",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-009",
@@ -420,7 +412,6 @@
     "prioritet": 9,
     "ikon": "🛡️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-010",
@@ -435,11 +426,10 @@
     "prioritet": 10,
     "ikon": "🧭",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-011",
-    "ad": "Hüseyn Cəbəl Əməliyan",
+    "ad": "Hüseyn Cəbəl Əməlian",
     "vəzifə": "Müdafiə İnnovasiyası və Tədqiqat Təşkilatının (SPND) sədri",
     "rütbə": "Briqada generalı",
     "tərəf": "İran",
@@ -450,7 +440,6 @@
     "prioritet": 11,
     "ikon": "🔬",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-012",
@@ -465,11 +454,10 @@
     "prioritet": 12,
     "ikon": "🔬",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-013",
-    "ad": "Mehdi Qüreyşi",
+    "ad": "Mehdi Qureyşi",
     "vəzifə": "SEPAH Aerokosmik Qüvvələrinin komandanı",
     "rütbə": null,
     "tərəf": "İran",
@@ -480,7 +468,6 @@
     "prioritet": 13,
     "ikon": "🚀",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-014",
@@ -495,11 +482,10 @@
     "prioritet": 14,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-015",
-    "ad": "Əbülqasım Babaiyan",
+    "ad": "Əbülqasım Babaian",
     "vəzifə": "“Xatəm əl-Ənbiya” Mərkəzi Qərargahının qərargah rəisi",
     "rütbə": "General-mayor",
     "tərəf": "İran",
@@ -510,11 +496,10 @@
     "prioritet": 15,
     "ikon": "🧭",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-016",
-    "ad": "Bəhnam Rzai",
+    "ad": "Bəhnam Rezai",
     "vəzifə": "SEPAH Hərbi Dəniz Qüvvələrinin Kəşfiyyat İdarəsinin rəisi",
     "rütbə": null,
     "tərəf": "İran",
@@ -525,11 +510,10 @@
     "prioritet": 16,
     "ikon": "⚓",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-017",
-    "ad": "Qulamrza Rəzaiyan",
+    "ad": "Qulamrza Rəzaian",
     "vəzifə": "İran Polis Kəşfiyyat Təşkilatının komandanı",
     "rütbə": "General-mayor",
     "tərəf": "İran",
@@ -540,11 +524,10 @@
     "prioritet": 17,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-018",
-    "ad": "Yəhya Hüseyni Pəncaki",
+    "ad": "Yəhya Hüseyni Pəncəki",
     "vəzifə": "İsrail istiqaməti üzrə kəşfiyyat nazirinin müavini və Kəşfiyyat və Təhlükəsizlik Nazirliyinin Daxili Təhlükəsizlik İdarəsinin rəisi",
     "rütbə": null,
     "tərəf": "İran",
@@ -555,7 +538,6 @@
     "prioritet": 18,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-019",
@@ -570,7 +552,6 @@
     "prioritet": 19,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-020",
@@ -585,11 +566,10 @@
     "prioritet": 20,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-021",
-    "ad": "Əkbər Qəffari",
+    "ad": "Əkbər Qaffari",
     "vəzifə": "Kəşfiyyat nazirinin müavini",
     "rütbə": null,
     "tərəf": "İran",
@@ -600,11 +580,10 @@
     "prioritet": 21,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-022",
-    "ad": "Mehdi Rostəmi Şoməstan",
+    "ad": "Mehdi Rüstəmi Şəmistan",
     "vəzifə": "Kəşfiyyat Nazirliyində yüksəksəviyyəli komandan",
     "rütbə": null,
     "tərəf": "İran",
@@ -615,7 +594,6 @@
     "prioritet": 22,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-023",
@@ -630,7 +608,6 @@
     "prioritet": 23,
     "ikon": "📦",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-024",
@@ -645,7 +622,6 @@
     "prioritet": 24,
     "ikon": "🧭",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-025",
@@ -660,7 +636,6 @@
     "prioritet": 25,
     "ikon": "📦",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-026",
@@ -690,7 +665,6 @@
     "prioritet": 27,
     "ikon": "🛡️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-028",
@@ -705,7 +679,6 @@
     "prioritet": 28,
     "ikon": "🚀",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-029",
@@ -720,7 +693,6 @@
     "prioritet": 29,
     "ikon": "📣",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-030",
@@ -735,7 +707,6 @@
     "prioritet": 30,
     "ikon": "🎖️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-031",
@@ -750,7 +721,6 @@
     "prioritet": 31,
     "ikon": "👤",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-032",
@@ -765,7 +735,6 @@
     "prioritet": 32,
     "ikon": "🕌",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-033",
@@ -780,7 +749,6 @@
     "prioritet": 33,
     "ikon": "🕶️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-034",
@@ -810,7 +778,6 @@
     "prioritet": 35,
     "ikon": "🧠",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-036",
@@ -840,11 +807,10 @@
     "prioritet": 37,
     "ikon": "🛡️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-038",
-    "ad": "Qasim Qüreyşi",
+    "ad": "Qasim Qureyşi",
     "vəzifə": "Bəsic qüvvələri rəhbərinin müavini",
     "rütbə": null,
     "tərəf": "İran",
@@ -855,7 +821,6 @@
     "prioritet": 38,
     "ikon": "🛡️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-039",
@@ -870,11 +835,10 @@
     "prioritet": 39,
     "ikon": "🛡️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-040",
-    "ad": "Əfşin Nəqşbəndi",
+    "ad": "Afşin Nəqşibəndi",
     "vəzifə": "Silahlı Qüvvələr Baş Qərargahının Bəsic qüvvələri üzrə nümayəndəsi",
     "rütbə": null,
     "tərəf": "İran",
@@ -885,11 +849,10 @@
     "prioritet": 40,
     "ikon": "🛡️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-041",
-    "ad": "Qədir Azaryan",
+    "ad": "Qədir Azarian",
     "vəzifə": "SEPAH-ın Şərqi Azərbaycan vilayəti üzrə komandanı",
     "rütbə": null,
     "tərəf": "İran",
@@ -900,7 +863,6 @@
     "prioritet": 41,
     "ikon": "🎖️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-042",
@@ -915,7 +877,6 @@
     "prioritet": 42,
     "ikon": "🛡️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-043",
@@ -930,7 +891,6 @@
     "prioritet": 43,
     "ikon": "🎖️",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-044",
@@ -945,7 +905,6 @@
     "prioritet": 44,
     "ikon": "🌍",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-045",
@@ -960,11 +919,10 @@
     "prioritet": 45,
     "ikon": "🌍",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-046",
-    "ad": "Rza Xəzai",
+    "ad": "Reza Xəzai",
     "vəzifə": "SEPAH Qüds Qüvvələrinin rəsmisi",
     "rütbə": null,
     "tərəf": "İran",
@@ -975,7 +933,6 @@
     "prioritet": 46,
     "ikon": "🌍",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-047",
@@ -990,7 +947,6 @@
     "prioritet": 47,
     "ikon": "🌍",
     "şəkil": null,
-    "mənbə_qeydi": "Wikipedia siyahısı və əlavə edilmiş vizual materiallar əsasında yenilənib."
   },
   {
     "id": "şəxs-048",
@@ -1005,7 +961,6 @@
     "prioritet": 48,
     "ikon": "🪖",
     "şəkil": null,
-    "mənbə_qeydi": "Əlavə edilmiş vizual materiallar əsasında daxil edilib."
   },
   {
     "id": "şəxs-049",
@@ -1020,7 +975,6 @@
     "prioritet": 49,
     "ikon": "🪖",
     "şəkil": null,
-    "mənbə_qeydi": "Əlavə edilmiş vizual materiallar əsasında daxil edilib."
   },
   {
     "id": "şəxs-050",
@@ -1039,7 +993,7 @@
   },
   {
     "id": "şəxs-051",
-    "ad": "Sajed əl-Həndəsa",
+    "ad": "Səcid əl-Həndəsa",
     "vəzifə": "“İmam Hüseyn Diviziyası”nda PUA istiqamətinə cavabdeh şəxs",
     "rütbə": null,
     "tərəf": "İran",
@@ -1050,7 +1004,6 @@
     "prioritet": 51,
     "ikon": "🪖",
     "şəkil": null,
-    "mənbə_qeydi": "Əlavə edilmiş vizual materiallar əsasında daxil edilib."
   },
   {
     "id": "şəxs-052",
@@ -1065,7 +1018,6 @@
     "prioritet": 52,
     "ikon": "🪖",
     "şəkil": null,
-    "mənbə_qeydi": "Əlavə edilmiş vizual materiallar əsasında daxil edilib."
   }
 ],
   "strateji_təsirlər": [
