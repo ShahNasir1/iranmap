@@ -240,7 +240,7 @@
     <section class="card section">
       <div class="section-head">
         <div>
-          <div class="section-title">Qısa vəziyyət dəyərləndirməsi</div>
+          <div class="section-title">Qısa dəyərləndirmə</div>
           <div class="section-sub">Tərəflərin ümumi itkilərinə baxaraq münaqişədə əməliyyat yükünün və zərbə balansının hansı istiqamətdə formalaşdığını qısa şəkildə görmək mümkündür.</div>
         </div>
       </div>
@@ -413,15 +413,15 @@ function computeSideStats(side){
 
 function getOverviewComment(side, stats){
   if(side === "İran"){
-    return "Ən ağır itki yükü İranın üzərində cəmlənib; bu da zərbələrin əsas istiqamətinin onun hərbi infrastrukturu olduğunu göstərir.";
+    return "İran üçün bu itkilər hərbi-strateji dayaqlarının ağır şəkildə aşınması deməkdir. Tehran hələ də cavab zərbələri endirə bilir, amma bunu əvvəlki güc və davamlılıqla etməsi çətinləşib.";
   }
   if(side === "ABŞ"){
-    return "ABŞ üzrə itkilər məhduddur, lakin tam sıfır deyil; bu, iştirakın riskli, amma nəzarətdə saxlanıldığını göstərir.";
+    return "ABŞ üçün bu itkilər “toxunulmazlıq mifinin” ciddi şəkildə zədələnməsi deməkdir. Əsas mesaj budur: Vaşinqton qalib gələ bilər, amma artıq itkisiz və risksiz edə bilməz.";
   }
   if(side === "İsrail"){
-    return "İsrailin itkiləri əsasən PUA seqmentində toplanır; ümumi mənzərədə yük nisbətən aşağı qalır.";
+    return "İsrail üçün bu itkilər tam toxunulmaz olmadığını göstərən ciddi siqnaldır. Təl-Əviv artıq zərbələrinin cavabsız və nəticəsiz qalmayacağı görür.";
   }
-  return "Proksi qüvvələrdə itki sayı daha azdır; bu, onların əsas döyüş yükünü daşımadığını, daha çox köməkçi xəttdə zərbə aldığını göstərir.";
+  return "Proksi qüvvələr üçün bu müharibə həm imkan, həm də risk deməkdir: onların rolu artır, amma itkiləri də daha görünən və daha ağır olur.";
 }
 
 function renderOverview(){
