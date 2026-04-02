@@ -298,7 +298,6 @@
       "kateqoriya": "Ali siyasi-hərbi rəhbərlik",
       "ikon": "👤",
       "şəkil": null,
-      "qeyd": "ABŞ və İsrailin açıqlamalarına görə hava zərbələri zamanı öldürüldüyü bildirilir.",
       "mənbə_qeydi": "Mənbə sənədinin giriş hissəsi"
     },
     {
@@ -312,12 +311,11 @@
       "kateqoriya": "Hərbi rəhbərlik",
       "ikon": "🎖️",
       "şəkil": null,
-      "qeyd": "Mənbə mətnində ayrıca adı çəkilən yüksək rütbəli şəxslərdən biridir.",
       "mənbə_qeydi": "Mənbə sənədinin 1-2-ci səhifələri"
     },
     {
       "id": "şəxs-003",
-      "ad": "Əziz Nasirzadə",
+      "ad": "Əziz Nəsirzadə",
       "vəzifə": "Müdafiə naziri",
       "tərəf": "İran",
       "status": "Öldürülüb",
@@ -326,12 +324,11 @@
       "kateqoriya": "Siyasi-hərbi rəhbərlik",
       "ikon": "🎖️",
       "şəkil": null,
-      "qeyd": "Mənbə xülasəsində ayrıca qeyd olunur.",
       "mənbə_qeydi": "Mənbə sənədinin 2-ci səhifəsi"
     },
     {
       "id": "şəxs-004",
-      "ad": "Əli Xamenei Məhəmməd Şirazi",
+      "ad": "Məhəmməd Şirazi",
       "vəzifə": "Ali liderin Hərbi Bürosunun rəhbəri",
       "tərəf": "İran",
       "status": "Öldürülüb",
@@ -340,7 +337,6 @@
       "kateqoriya": "Hərbi idarəetmə",
       "ikon": "🧭",
       "şəkil": null,
-      "qeyd": "Ali liderə bağlı hərbi idarəetmə xəttinin əsas fiqurlarından biri kimi qeyd olunur.",
       "mənbə_qeydi": "Mənbə sənədinin 2-ci səhifəsi"
     },
     {
@@ -354,7 +350,6 @@
       "kateqoriya": "Strateji müşavir heyəti",
       "ikon": "🧠",
       "şəkil": null,
-      "qeyd": "Mənbədə ali rəhbərliyə yaxın əsas fiqurlardan biri kimi göstərilir.",
       "mənbə_qeydi": "Mənbə sənədinin 2-ci səhifəsi"
     },
     {
