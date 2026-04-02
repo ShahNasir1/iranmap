@@ -66,8 +66,9 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
   height:var(--hdr-h);flex-shrink:0;
   background:linear-gradient(180deg,rgba(5,11,22,.98),rgba(7,17,31,.96));
   border-bottom:1px solid var(--hdr-border);
-  display:flex;align-items:center;justify-content:space-between;
-  gap:20px;padding:0 18px;
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;column-gap:20px;
+  padding:0 18px;
   z-index:10000;position:relative;
   box-shadow:0 10px 34px rgba(0,0,0,.34);
 }
@@ -119,8 +120,13 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 
 /* Header stats strip */
 #hdrStats{
-  display:flex;align-items:center;gap:10px;flex:1;min-width:0;overflow:hidden;
+  display:flex;align-items:center;gap:10px;
+  flex:1;min-width:0;
+  overflow-x:auto;overflow-y:hidden;
+  scrollbar-width:none;
+  -ms-overflow-style:none;
 }
+#hdrStats::-webkit-scrollbar{display:none}
 .hstat{
   display:flex;align-items:center;gap:8px;padding:0 14px 0 0;
   border-right:none;height:auto;
@@ -134,7 +140,11 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 #hdrRight{display:flex;align-items:center;gap:18px;flex-shrink:0;min-width:max-content;padding-left:8px}
 #hdrMeta{display:flex;align-items:center;gap:14px;min-width:max-content}
 #hdrCopy{margin-right:2px}
-#panelToggleBtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-width:118px;padding:8px 14px;white-space:nowrap;flex-shrink:0}
+#panelToggleBtn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  width:132px;min-width:132px;
+  padding:8px 14px;white-space:nowrap;flex-shrink:0
+}
 #panelToggleBtn .pi{font-size:13px;line-height:1}
 #panelToggleBtn .ptxt{display:inline-block;line-height:1.1}
 .hbtn{
@@ -153,16 +163,17 @@ html,body{height:100%;overflow:hidden;font-family:"Inter",system-ui,-apple-syste
 }
 
 
-#brandBlock{display:flex;align-items:center;gap:14px;min-width:max-content}
+#brandBlock{display:flex;align-items:center;gap:14px;min-width:max-content;flex-shrink:0}
 #hdrMeta{display:flex;align-items:center;gap:14px}
 #hdrMetaGroup{display:flex;align-items:center;gap:12px;padding-left:4px}
-#hdrRight{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  flex-shrink:0;
-  min-width:max-content;
-  padding-left:20px; /* əlavə nəfəs */
+#statsWrap{
+  display:flex;align-items:center;gap:18px;
+  min-width:0;
+  justify-content:flex-start;
+  padding:0 22px 0 18px;
+  border-left:1px solid rgba(243,216,137,.14);
+  border-right:1px solid rgba(243,216,137,.10);
+  overflow:hidden;
 }
 #themeBtn{min-width:42px;padding:8px 10px}
 #themeBtn .theme-label{display:none}
@@ -572,11 +583,17 @@ button.sec:hover{background:var(--sec-h)}
 @keyframes introHide{to{opacity:0;pointer-events:none}}
 
 
-body.panel-hidden #statsWrap{margin-left:96px}
+body.panel-hidden #statsWrap{padding:0 22px 0 18px}
 @media(max-width:900px){
   :root{--hdr-h:auto;--ticker-h:26px;--panel-w:320px}
-  #hdr{flex-wrap:wrap;align-items:flex-start;padding:12px 12px 10px}
-  #statsWrap{order:3;width:100%;justify-content:flex-start;overflow:auto;padding-top:4px}
+  #hdr{display:flex;flex-wrap:wrap;align-items:flex-start;padding:12px 12px 10px;gap:12px}
+  #statsWrap{
+    order:3;width:100%;
+    justify-content:flex-start;
+    overflow:auto;
+    padding:8px 0 0;
+    border-left:none;border-right:none;
+  }
   #hdrRight{margin-left:auto;gap:12px;padding-left:0}
   #hdrMeta{gap:10px}
   #resultsBtn{min-width:auto;padding:8px 12px}
