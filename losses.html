@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IranMap — Münaqişə nəticələri</title>
-  <meta name="description" content="Münaqişənin nəticələri, öldürülmüş şəxslər, vizual təsdiqlənmiş itkilər və strateji təsirlər paneli." />
+  <meta name="description" content="Vizual şəkildə təsdiqlənmiş itkilər, öldürülmüş şəxslər və strateji təsirlər paneli." />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,23 +40,105 @@
     .btn.primary{background:linear-gradient(135deg, rgba(212,175,55,.22), rgba(212,175,55,.08))}
     .page{width:min(var(--max), calc(100% - 32px));margin:28px auto 42px;display:flex;flex-direction:column;gap:22px}
     .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .hero{position:relative;overflow:hidden;padding:34px 30px;background:
+
+    .hero{
+      position:relative;overflow:hidden;padding:56px 30px 48px;
+      background:
       radial-gradient(circle at 86% 4%, rgba(96,165,250,.14), transparent 21%),
       radial-gradient(circle at left center, rgba(212,175,55,.08), transparent 26%),
-      linear-gradient(180deg, rgba(10,18,31,.96), rgba(10,18,31,.88))}
+      linear-gradient(180deg, rgba(10,18,31,.96), rgba(10,18,31,.88));
+      text-align:center;
+    }
     .hero::after{content:"";position:absolute;right:-72px;top:-58px;width:230px;height:230px;border-radius:50%;border:1px solid rgba(212,175,55,.12);box-shadow:0 0 0 24px rgba(212,175,55,.04),0 0 0 48px rgba(212,175,55,.02)}
-    .kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.18);font-size:12px;font-weight:800;color:var(--goldSoft);margin-bottom:16px}
-    .hero h1{font-family:Manrope,sans-serif;font-size:clamp(32px,4.1vw,56px);line-height:1.02;font-weight:800;max-width:920px}
+    .hero-kicker{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:9px 14px;border-radius:999px;background:rgba(212,175,55,.08);
+      border:1px solid rgba(212,175,55,.18);font-size:12px;font-weight:800;color:var(--goldSoft);margin-bottom:18px
+    }
+    .hero h1{
+      font-family:Manrope,sans-serif;
+      font-size:clamp(38px,5vw,68px);
+      line-height:1.02;
+      font-weight:800;
+      max-width:980px;
+      margin:0 auto;
+      text-align:center;
+      letter-spacing:-.02em;
+    }
     .hero h1 span{color:var(--goldSoft)}
-    .hero p{margin-top:14px;max-width:900px;color:var(--muted);font-size:15px;line-height:1.75}
-    .hero-meta{margin-top:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:980px}
-    .hero-stat{padding:16px 18px;border-radius:20px;border:1px solid var(--border);background:rgba(255,255,255,.03)}
-    .hero-label{font-size:11px;letter-spacing:.7px;text-transform:uppercase;color:var(--dim);font-weight:800}
-    .hero-value{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;color:#fff}
+    .hero-mini{
+      max-width:760px;margin:18px auto 0;color:var(--muted);font-size:15px;line-height:1.7
+    }
+
     .section,.losses-shell,.search-wrap{padding:24px}
     .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
     .section-title{font-family:Manrope,sans-serif;font-size:28px;font-weight:800;line-height:1.05}
     .section-sub{margin-top:6px;color:var(--muted);font-size:14px;line-height:1.65}
+
+    .overview-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+    .overview-card{
+      position:relative;
+      overflow:hidden;
+      padding:20px 18px;
+      border-radius:24px;
+      background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);
+      min-height:180px;
+    }
+    .overview-card::before{
+      content:"";
+      position:absolute;left:0;right:0;top:0;height:2px;
+      background:linear-gradient(90deg, rgba(212,175,55,.85), transparent);
+      opacity:.85;
+    }
+    .overview-card.red::before{background:linear-gradient(90deg, rgba(239,68,68,.95), transparent)}
+    .overview-card.blue::before{background:linear-gradient(90deg, rgba(96,165,250,.95), transparent)}
+    .overview-card.gold::before{background:linear-gradient(90deg, rgba(212,175,55,.95), transparent)}
+    .overview-card.orange::before{background:linear-gradient(90deg, rgba(245,158,11,.95), transparent)}
+    .overview-top{display:flex;align-items:center;gap:10px}
+    .overview-flag{font-size:22px}
+    .overview-title{font-family:Manrope,sans-serif;font-size:22px;font-weight:800;line-height:1.05}
+    .overview-total{
+      margin-top:14px;
+      font-family:Manrope,sans-serif;
+      font-size:42px;
+      font-weight:800;
+      line-height:1;
+      color:#fff;
+    }
+    .overview-label{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.3px;
+      text-transform:uppercase;
+    }
+    .overview-meta{
+      margin-top:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .overview-chip{
+      display:inline-flex;align-items:center;gap:6px;
+      padding:6px 10px;border-radius:999px;
+      font-size:11px;font-weight:800;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.05);
+      color:#dbe7fb;
+    }
+    .overview-note{
+      margin-top:14px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.6;
+    }
+
     .person-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .person-card{padding:18px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);display:flex;gap:14px;min-height:210px;position:relative;overflow:hidden}
     .person-card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg, rgba(212,175,55,.8), rgba(212,175,55,0));opacity:.6}
@@ -70,6 +152,7 @@
     .badge.gold{color:var(--goldSoft);background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.22)}
     .badge.blue{color:#d8e8ff;background:rgba(96,165,250,.11);border-color:rgba(96,165,250,.22)}
     .person-note{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.65}
+
     .losses-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .side-card{padding:18px 18px 12px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.028));border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
     .side-card[data-side="İran"]::before,.side-card[data-side="ABŞ"]::before,.side-card[data-side="İsrail"]::before,.side-card[data-side="İranın proksi qrupları"]::before{content:"";position:absolute;inset:0 0 auto 0;height:2px}
@@ -108,8 +191,23 @@
     .status-pill[data-status="Qəzaya uğrayıb"]{background:rgba(96,165,250,.12);border-color:rgba(96,165,250,.24);color:#d4e7ff}
     .empty{padding:18px;border:1px dashed rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.02);color:var(--muted);font-size:13px;line-height:1.7}
     .footer-note{padding:18px 22px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:var(--muted);font-size:13px;line-height:1.8}.footer-note b{color:#fff}
-    @media (max-width:1280px){.person-grid,.losses-grid{grid-template-columns:repeat(2,1fr)} .impact-grid{grid-template-columns:repeat(2,1fr)}}
-    @media (max-width:860px){.page{width:min(calc(100% - 20px), var(--max))} .hero,.section,.losses-shell,.search-wrap{padding:18px} .person-grid,.losses-grid,.impact-grid,.hero-meta,.filters{grid-template-columns:1fr} .topbar-inner{padding:12px} .actions{width:100%;justify-content:flex-start} .brand-title{font-size:20px} thead th:nth-child(5),tbody td:nth-child(5){display:none} .section-title{font-size:24px} .person-name,.impact-title{font-size:19px}}
+
+    @media (max-width:1280px){
+      .person-grid,.losses-grid,.overview-grid{grid-template-columns:repeat(2,1fr)}
+      .impact-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:860px){
+      .page{width:min(calc(100% - 20px), var(--max))}
+      .hero,.section,.losses-shell,.search-wrap{padding:18px}
+      .person-grid,.losses-grid,.impact-grid,.overview-grid,.filters{grid-template-columns:1fr}
+      .topbar-inner{padding:12px}
+      .actions{width:100%;justify-content:flex-start}
+      .brand-title{font-size:20px}
+      thead th:nth-child(5),tbody td:nth-child(5){display:none}
+      .section-title{font-size:24px}
+      .person-name,.impact-title{font-size:19px}
+      .hero h1{font-size:clamp(32px,9vw,48px)}
+    }
   </style>
 </head>
 <body>
@@ -131,22 +229,29 @@
   </header>
 
   <main class="page">
-<section class="hero card">
-      <div class="kicker">📡 Vizual təsdiqlənmiş itkilər və nəticələr</div>
-      <h1>Münaqişənin <span>nəticələri</span>, şəxsi itkilər və strateji təsirlər</h1>
-      <p>Bu səhifə əlavə edilmiş tam siyahı, vizual təsdiqlənmiş itki qeydləri və əməliyyat xülasələri əsasında yenidən qurulub. Başlıq altında əvvəlcə öldürülmüş şəxslər, sonra tərəflər üzrə vizual təsdiqlənmiş itkilər, daha sonra strateji və mülki təsirlər, sonda isə tam axtarış bölməsi təqdim olunur.</p>
-      <div class="hero-meta">
-        <div class="hero-stat"><div class="hero-label">Mənbə xülasəsi</div><div class="hero-value" id="heroSourceSummary">İran 270 · ABŞ 24 · İsrail 16 · Proksi 4</div></div>
-        <div class="hero-stat"><div class="hero-label">Aktiv qeyd sayı</div><div class="hero-value" id="heroRecordCount">—</div></div>
-        <div class="hero-stat"><div class="hero-label">Son yenilənmə</div><div class="hero-value" id="heroUpdated">—</div></div>
+    <section class="hero card">
+      <div class="hero-kicker">📡 Münaqişə nəticələri paneli</div>
+      <h1>Vizual şəkildə <span>təsdiqlənmiş itkilər</span></h1>
+      <div class="hero-mini">
+        Təsdiqlənmiş itki qeydləri üzrə ümumi mənzərə: əsas yük İranın üzərində cəmlənib, ABŞ və İsrailin itkiləri daha məhdud səviyyədədir, proksi qüvvələr isə lokal miqyasda zərbə alıb.
       </div>
     </section>
 
-     <section class="card section">
+    <section class="card section">
+      <div class="section-head">
+        <div>
+          <div class="section-title">Qısa vəziyyət dəyərləndirməsi</div>
+          <div class="section-sub">Tərəflərin ümumi itkilərinə baxaraq münaqişədə əməliyyat yükünün və zərbə balansının hansı istiqamətdə formalaşdığını qısa şəkildə görmək mümkündür.</div>
+        </div>
+      </div>
+      <div class="overview-grid" id="overviewGrid"></div>
+    </section>
+
+    <section class="card section">
       <div class="section-head">
         <div>
           <div class="section-title">Öldürülmüş şəxslər</div>
-          <div class="section-sub">Mənbə sənədinin giriş hissəsində ayrıca adı çəkilən yüksək siyasi, hərbi, kəşfiyyat və müdafiə-tədqiqat rəhbərləri.</div>
+          <div class="section-sub">Mənbələrdə ayrıca adı çəkilən siyasi, hərbi, kəşfiyyat və təhlükəsizlik xətti üzrə öldürülmüş şəxslər.</div>
         </div>
       </div>
       <div class="person-grid" id="personGrid"></div>
@@ -156,7 +261,7 @@
       <div class="section-head">
         <div>
           <div class="section-title">Vizual şəkildə təsdiqlənmiş itkilər</div>
-          <div class="section-sub">Dörd sütun üzrə tərəf bölgüsü verilir. Hər kateqoriyaya klik etdikdə həmin kateqoriya üzrə təsdiqlənmiş qeydlər elə olduğu yerdəcə açılır və yenidən klik etdikdə bağlanır.</div>
+          <div class="section-sub">Tərəflər üzrə bölgü verilir. Hər kateqoriyaya klik etdikdə həmin kateqoriya üzrə təsdiqlənmiş qeydlər açılır.</div>
         </div>
       </div>
       <div class="losses-grid" id="lossesGrid"></div>
@@ -166,7 +271,7 @@
       <div class="section-head">
         <div>
           <div class="section-title">Strateji və mülki təsirlər</div>
-          <div class="section-sub">Mənbə sənədinin giriş hissəsində ayrıca vurğulanan qeyri-hərbi, mülki və strateji təsir nümunələri.</div>
+          <div class="section-sub">Mənbələrdə ayrıca vurğulanan qeyri-hərbi, mülki və strateji təsir nümunələri.</div>
         </div>
       </div>
       <div class="impact-grid" id="impactGrid"></div>
@@ -176,21 +281,39 @@
       <div class="section-head">
         <div>
           <div class="section-title">Axtarış bölməsi</div>
-          <div class="section-sub">Tam siyahıda tərəf, kateqoriya, status və tarix üzrə axtarış et. Aşağıdakı cədvəldə obyekt adı, status, itirilmə tarixi və mənbə göstərilir.</div>
+          <div class="section-sub">Tam siyahıda tərəf, kateqoriya, status və tarix üzrə axtarış et.</div>
         </div>
         <div class="search-count" id="searchCount">—</div>
       </div>
       <div class="filters">
-        <div class="field"><label for="searchInput">Axtarış</label><input id="searchInput" type="text" placeholder="Məsələn: MiG-29, radar, İran..."/></div>
+        <div class="field"><label for="searchInput">Axtarış</label><input id="searchInput" type="text" placeholder="Məsələn: MiG-29, radar, İran..." /></div>
         <div class="field"><label for="sideFilter">Tərəf</label><select id="sideFilter"><option value="">Hamısı</option></select></div>
         <div class="field"><label for="categoryFilter">Kateqoriya</label><select id="categoryFilter"><option value="">Hamısı</option></select></div>
         <div class="field"><label for="statusFilter">Status</label><select id="statusFilter"><option value="">Hamısı</option></select></div>
         <div class="field"><label for="dateFilter">İtki tarixi</label><select id="dateFilter"><option value="">Hamısı</option></select></div>
       </div>
-      <div class="results-table"><div class="table-wrap"><table><thead><tr><th>Obyekt</th><th>Tərəf</th><th>Kateqoriya</th><th>Status</th><th>İtki tarixi</th><th>Mənbə</th></tr></thead><tbody id="recordsBody"></tbody></table></div></div>
+      <div class="results-table">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Obyekt</th>
+                <th>Tərəf</th>
+                <th>Kateqoriya</th>
+                <th>Status</th>
+                <th>İtki tarixi</th>
+                <th>Mənbə</th>
+              </tr>
+            </thead>
+            <tbody id="recordsBody"></tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
-    <section class="footer-note"><b>Qeyd:</b> Mənbə sənədində İran üçün <b>270</b>, İsrail üçün <b>16</b>, ABŞ üçün <b>24</b>, İraq yönlü pro-İran milis qrupları üçün isə <b>4</b> ümumi qeyd verilir. Eyni sənədin 1–2-ci səhifələrində Əli Xamenei, Məhəmməd Pakpur, Əziz Nasirzadə, Əli Xamenei Məhəmməd Şirazi, Əli Şamxani, Hüseyn Cəbəl Ameli, Rza Müzəffəri-Niya və Salah Esadi ayrıca şəxsi itki kimi sadalanır; Dubay Beynəlxalq Hava Limanı, Fairmont The Palm, Bəhreyndə hündürmərtəbəli bina, Təl-Əviv, Süveydada yaşayış evi və Minabdakı Şəcərəyi-Təyyibə qız məktəbi isə strateji və mülki təsirlər bölməsinə daxil edilir.</section>
+    <section class="footer-note">
+      <b>Qeyd:</b> Bu səhifədə başlıq hissəsi sadələşdirilib və girişdə yalnız qısa ümumi dəyərləndirmə saxlanılıb. Əsas ardıcıllıq belədir: əvvəl ümumi vəziyyət, sonra öldürülmüş şəxslər, daha sonra vizual şəkildə təsdiqlənmiş itkilər və digər bölmələr.
+    </section>
   </main>
 </div>
 
@@ -200,34 +323,338 @@ const SIDE_ORDER = [
   { key: "İran", label: "İran", flag: "🇮🇷" },
   { key: "ABŞ", label: "ABŞ", flag: "🇺🇸" },
   { key: "İsrail", label: "İsrail", flag: "🇮🇱" },
-  { key: "İranın proksi qrupları", label: "İranın proksi qrupları", flag: "🟧" }
+  { key: "İranın proksi qrupları", label: "Proksi qruplar", flag: "🟧" }
 ];
-const SIDE_ALIASES = {"Pro-Iranian Militia (Iraq)":"İranın proksi qrupları","İraq yönlü pro-İran milis qrupları":"İranın proksi qrupları","İran-yönlü pro-İran milis qrupları":"İranın proksi qrupları","Proksi":"İranın proksi qrupları"};
+const SIDE_ALIASES = {
+  "Pro-Iranian Militia (Iraq)":"İranın proksi qrupları",
+  "İraq yönlü pro-İran milis qrupları":"İranın proksi qrupları",
+  "İran-yönlü pro-İran milis qrupları":"İranın proksi qrupları",
+  "Proksi":"İranın proksi qrupları"
+};
 const STATUS_ALIASES = {"Destroyed":"Məhv edilib","Damaged":"Zədələnib","Captured":"Ələ keçirilib","Crashed":"Qəzaya uğrayıb"};
-const CATEGORY_ICONS = {"Dəniz platforması":"🚢","Təyyarə":"✈️","PUA":"🛰️","Ballistik raket sistemi":"🚀","HHM raket sistemi":"🛡️","Radar sistemi":"📡","Komanda məntəqəsi":"🧠","Nəqliyyat vasitələri":"🚚","Zenit topu":"🛡️","Yedəkli artilleriya":"🎯","YARS / Çoxsaylı raket buraxıcısı":"🎯","Mühəndis texnikası":"🏗️","Helikopter":"🚁","Piyada hərəkət vasitəsi":"🚙","Digər":"📦"};
+const CATEGORY_ICONS = {
+  "Dəniz platforması":"🚢","Təyyarə":"✈️","PUA":"🛰️","Ballistik raket sistemi":"🚀","HHM raket sistemi":"🛡️","Radar sistemi":"📡","Komanda məntəqəsi":"🧠","Nəqliyyat vasitələri":"🚚","Zenit topu":"🛡️","Yedəkli artilleriya":"🎯","YARS / Çoxsaylı raket buraxıcısı":"🎯","Mühəndis texnikası":"🏗️","Helikopter":"🚁","Piyada hərəkətlilik vasitəsi":"🚙","Piyada hərəkət vasitəsi":"🚙","Rabitə / SATCOM":"📡","Elektron mübarizə sistemi":"📶","Digər":"📦"
+};
+
 let appData = null;
 let allRecords = [];
 let filteredRecords = [];
+
 function mapSide(side){ return SIDE_ALIASES[side] || side; }
 function mapStatus(status){ return STATUS_ALIASES[status] || status; }
-function formatDate(dateStr){ if(!dateStr) return "—"; if(dateStr.includes('.')) return dateStr; const p = dateStr.split('-'); return p.length===3 ? `${p[2]}.${p[1]}.${p[0]}` : dateStr; }
-function escapeHtml(str){ return String(str ?? '').replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s])); }
-function initials(name){ return String(name||'').split(/\s+/).slice(0,2).map(w=>w[0]||'').join('').toUpperCase(); }
-function personPhotoMarkup(person){ if(person && person.şəkil) return `<img src="${escapeHtml(person.şəkil)}" alt="${escapeHtml(person.ad)}" loading="lazy">`; return `<div class="person-fallback">${escapeHtml(initials(person.ad) || '👤')}</div>`; }
+
+function formatDate(dateStr){
+  if(!dateStr) return "—";
+  if(dateStr.includes('.')) return dateStr;
+  const p = dateStr.split('-');
+  return p.length===3 ? `${p[2]}.${p[1]}.${p[0]}` : dateStr;
+}
+
+function escapeHtml(str){
+  return String(str ?? '').replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+}
+
+function initials(name){
+  return String(name || '').split(/\s+/).slice(0,2).map(w => w[0] || '').join('').toUpperCase();
+}
+
+function personPhotoMarkup(person){
+  if(person && person.şəkil) return `<img src="${escapeHtml(person.şəkil)}" alt="${escapeHtml(person.ad)}" loading="lazy">`;
+  return `<div class="person-fallback">${escapeHtml(initials(person.ad) || '👤')}</div>`;
+}
+
 function unique(arr){ return [...new Set(arr.filter(Boolean))]; }
-function sourceLink(url, idx){ const safe = escapeHtml(url); return `<a href="${safe}" target="_blank" rel="noopener noreferrer">Mənbə ${idx+1} — ${safe}</a>`; }
-function normalizeRecords(records){ return records.map((r,idx)=>({ ...r, tərəf: mapSide(r.tərəf || r.xamTərəf || ''), status: mapStatus(r.status || r.xamStatus || ''), kateqoriya: r.kateqoriya || 'Digər', ikon: r.ikon || CATEGORY_ICONS[r.kateqoriya] || '📦', mənbələr: Array.isArray(r.mənbələr) ? r.mənbələr : [], id: r.id || `qeyd-${idx+1}` })); }
-function computeSideStats(side){ const sideRecords = allRecords.filter(r => r.tərəf === side); const statusCounts = Object.fromEntries(STATUS_ORDER.map(s => [s, 0])); sideRecords.forEach(r => { statusCounts[r.status] = (statusCounts[r.status] || 0) + 1; }); const categoryMap = new Map(); sideRecords.forEach(r => { const key = r.kateqoriya || 'Digər'; if(!categoryMap.has(key)) categoryMap.set(key, []); categoryMap.get(key).push(r); }); const categories = [...categoryMap.entries()].map(([name, items]) => { const st = Object.fromEntries(STATUS_ORDER.map(s => [s,0])); items.forEach(it => st[it.status] = (st[it.status]||0)+1); return { name, items, total: items.length, statusCounts: st, icon: CATEGORY_ICONS[name] || items[0]?.ikon || '📦' }; }).sort((a,b)=>b.total-a.total || a.name.localeCompare(b.name,'az')); return { total: sideRecords.length, statusCounts, categories }; }
-function renderPersons(){ const grid = document.getElementById('personGrid'); const people = appData?.şəxsi_itkilər || []; grid.innerHTML = people.map(person => `<article class="person-card"><div class="person-photo">${personPhotoMarkup(person)}</div><div class="person-main"><div class="person-name">${escapeHtml(person.ad)}</div><div class="person-role">${escapeHtml(person.vəzifə || '—')}</div><div class="person-meta"><span class="badge red">Öldürülüb</span><span class="badge gold">${escapeHtml(person.tərəf || 'İran')}</span><span class="badge blue">${escapeHtml(person.tarix_göstəriş || formatDate(person.tarix))}</span></div><div class="person-note">${escapeHtml(person.qeyd || '')}</div></div></article>`).join(''); }
-function recordItemMarkup(record){ return `<div class="record-item"><div class="record-top"><div class="record-title">${escapeHtml(record.ad)}</div><span class="status-pill" data-status="${escapeHtml(record.status)}">${escapeHtml(record.status)}</span></div><div class="record-meta"><span class="badge blue">${escapeHtml(formatDate(record.itkiTarixi || record.qeydTarixi))}</span></div><div class="src-links">${(record.mənbələr||[]).map(sourceLink).join('')}</div></div>`; }
-function renderLossesGrid(){ const wrap = document.getElementById('lossesGrid'); wrap.innerHTML = SIDE_ORDER.map(sideInfo => { const stats = computeSideStats(sideInfo.key); const mini = STATUS_ORDER.map(st => `<div class="mini-stat"><b>${stats.statusCounts[st] || 0}</b><span>${escapeHtml(st)}</span></div>`).join(''); const categories = stats.categories.length ? stats.categories.map(cat => `<div class="cat-item" data-side="${escapeHtml(sideInfo.key)}" data-cat="${escapeHtml(cat.name)}"><button class="cat-trigger" type="button"><div class="cat-trigger-left"><div class="cat-icon">${escapeHtml(cat.icon)}</div><div><div class="cat-name">${escapeHtml(cat.name)}</div><div class="cat-count">Məhv: ${cat.statusCounts['Məhv edilib']||0} · Zədə: ${cat.statusCounts['Zədələnib']||0} · Ələ keçirilib: ${cat.statusCounts['Ələ keçirilib']||0} · Qəzaya uğrayıb: ${cat.statusCounts['Qəzaya uğrayıb']||0}</div></div></div><div class="cat-right"><div class="cat-total">${cat.total}</div><div class="chev">▾</div></div></button><div class="cat-body">${cat.items.length ? `<div class="record-list">${cat.items.map(recordItemMarkup).join('')}</div>` : `<div class="empty">Bu kateqoriya üzrə qeyd yoxdur.</div>`}</div></div>`).join('') : `<div class="empty">Bu tərəf üzrə vizual təsdiqlənmiş qeyd yoxdur.</div>`; return `<article class="side-card" data-side="${escapeHtml(sideInfo.key)}"><div class="side-name"><span class="flag">${sideInfo.flag}</span><div class="side-title">${escapeHtml(sideInfo.label)}</div></div><div class="side-total"><b>${stats.total}</b><span>Ümumi itki</span></div><div class="mini-stats">${mini}</div><div class="cat-list">${categories}</div></article>`; }).join(''); wrap.querySelectorAll('.cat-trigger').forEach(btn => btn.addEventListener('click', () => btn.closest('.cat-item').classList.toggle('open'))); }
-function renderImpacts(){ const wrap = document.getElementById('impactGrid'); const items = appData?.strateji_təsirlər || []; wrap.innerHTML = items.map(item => `<article class="impact-card"><div class="impact-head"><div class="impact-icon">${escapeHtml(item.ikon || '⚠️')}</div><div><div class="impact-title">${escapeHtml(item.ad || item.başlıq || '—')}</div><div class="impact-type">${escapeHtml(item.növ || item.kateqoriya || 'Strateji və mülki təsir')}</div></div></div><div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px"><span class="badge red">${escapeHtml(item.status || 'Təsir qeydi')}</span><span class="badge blue">${escapeHtml(item.tarix_göstəriş || formatDate(item.tarix))}</span></div><div class="impact-desc">${escapeHtml(item.qeyd || item.təsvir || '')}</div></article>`).join(''); }
-function populateFilters(){ const sideSel = document.getElementById('sideFilter'); const catSel = document.getElementById('categoryFilter'); const statusSel = document.getElementById('statusFilter'); const dateSel = document.getElementById('dateFilter'); sideSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.tərəf)).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join(''); catSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.kateqoriya)).sort((a,b)=>a.localeCompare(b,'az')).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join(''); statusSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.status)).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join(''); dateSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>formatDate(r.itkiTarixi||r.qeydTarixi))).sort((a,b)=>{ const pa=a.split('.').reverse().join(''); const pb=b.split('.').reverse().join(''); return pa.localeCompare(pb); }).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join(''); }
-function applyFilters(){ const q = document.getElementById('searchInput').value.trim().toLowerCase(); const side = document.getElementById('sideFilter').value; const cat = document.getElementById('categoryFilter').value; const status = document.getElementById('statusFilter').value; const date = document.getElementById('dateFilter').value; filteredRecords = allRecords.filter(r => { const hay = [r.ad,r.tərəf,r.kateqoriya,r.status,...(r.mənbələr||[])].join(' ').toLowerCase(); return (!q || hay.includes(q)) && (!side || r.tərəf===side) && (!cat || r.kateqoriya===cat) && (!status || r.status===status) && (!date || formatDate(r.itkiTarixi||r.qeydTarixi)===date); }); renderTable(); }
-function renderTable(){ const body = document.getElementById('recordsBody'); document.getElementById('searchCount').textContent = `Axtarış nəticəsi: ${filteredRecords.length} qeyd`; if(!filteredRecords.length){ body.innerHTML = `<tr><td colspan="6"><div class="empty">Seçilmiş axtarış meyarları üzrə nəticə tapılmadı.</div></td></tr>`; return; } body.innerHTML = filteredRecords.map(r => `<tr><td><strong>${escapeHtml(r.ad)}</strong></td><td>${escapeHtml(r.tərəf)}</td><td>${escapeHtml(r.kateqoriya)}</td><td><span class="status-pill" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span></td><td>${escapeHtml(formatDate(r.itkiTarixi||r.qeydTarixi))}</td><td>${(r.mənbələr||[]).length ? `<a href="${escapeHtml(r.mənbələr[0])}" target="_blank" rel="noopener noreferrer">${(r.mənbələr||[]).length} mənbə</a>` : '—'}</td></tr>`).join(''); }
-function fillHero(){ const src = appData?.mənbə_xülasəsi?.ümumi_rəqəmlər || {}; const heroText = `İran ${src['İran']?.ümumi ?? 270} · ABŞ ${src['ABŞ']?.ümumi ?? 24} · İsrail ${src['İsrail']?.ümumi ?? 16} · Proksi ${src['İraq yönlü pro-İran milis qrupları']?.ümumi ?? 4}`; document.getElementById('heroSourceSummary').textContent = heroText; document.getElementById('heroRecordCount').textContent = `${allRecords.length} aktiv qeyd`; document.getElementById('heroUpdated').textContent = appData?.metadata?.yaradılma_tarixi || '—'; }
-async function loadData(){ const res = await fetch('data/losses.json', {cache:'no-store'}); appData = await res.json(); allRecords = normalizeRecords(appData?.qeydlər || appData?.records || []); fillHero(); renderPersons(); renderLossesGrid(); renderImpacts(); populateFilters(); filteredRecords = [...allRecords]; renderTable(); }
-document.getElementById('yenileBtn').addEventListener('click', () => location.reload()); ['searchInput','sideFilter','categoryFilter','statusFilter','dateFilter'].forEach(id => { const el = document.getElementById(id); el.addEventListener(id==='searchInput' ? 'input' : 'change', applyFilters); }); loadData().catch(err => console.error(err));
+
+function sourceLink(url, idx){
+  const safe = escapeHtml(url);
+  return `<a href="${safe}" target="_blank" rel="noopener noreferrer">Mənbə ${idx+1} — ${safe}</a>`;
+}
+
+function normalizeRecords(records){
+  return records.map((r,idx)=>({
+    ...r,
+    tərəf: mapSide(r.tərəf || r.xamTərəf || ''),
+    status: mapStatus(r.status || r.xamStatus || ''),
+    kateqoriya: r.kateqoriya || 'Digər',
+    ikon: r.ikon || CATEGORY_ICONS[r.kateqoriya] || '📦',
+    mənbələr: Array.isArray(r.mənbələr) ? r.mənbələr : [],
+    id: r.id || `qeyd-${idx+1}`
+  }));
+}
+
+function computeSideStats(side){
+  const sideRecords = allRecords.filter(r => r.tərəf === side);
+  const statusCounts = Object.fromEntries(STATUS_ORDER.map(s => [s, 0]));
+  sideRecords.forEach(r => {
+    statusCounts[r.status] = (statusCounts[r.status] || 0) + 1;
+  });
+
+  const categoryMap = new Map();
+  sideRecords.forEach(r => {
+    const key = r.kateqoriya || 'Digər';
+    if(!categoryMap.has(key)) categoryMap.set(key, []);
+    categoryMap.get(key).push(r);
+  });
+
+  const categories = [...categoryMap.entries()].map(([name, items]) => {
+    const st = Object.fromEntries(STATUS_ORDER.map(s => [s,0]));
+    items.forEach(it => st[it.status] = (st[it.status] || 0) + 1);
+    return {
+      name,
+      items,
+      total: items.length,
+      statusCounts: st,
+      icon: CATEGORY_ICONS[name] || items[0]?.ikon || '📦'
+    };
+  }).sort((a,b)=>b.total-a.total || a.name.localeCompare(b.name,'az'));
+
+  return { total: sideRecords.length, statusCounts, categories };
+}
+
+function getOverviewComment(side, stats){
+  if(side === "İran"){
+    return "Ən ağır itki yükü İranın üzərində cəmlənib; bu da zərbələrin əsas istiqamətinin onun hərbi infrastrukturu olduğunu göstərir.";
+  }
+  if(side === "ABŞ"){
+    return "ABŞ üzrə itkilər məhduddur, lakin tam sıfır deyil; bu, iştirakın riskli, amma nəzarətdə saxlanıldığını göstərir.";
+  }
+  if(side === "İsrail"){
+    return "İsrailin itkiləri əsasən PUA seqmentində toplanır; ümumi mənzərədə yük nisbətən aşağı qalır.";
+  }
+  return "Proksi qüvvələrdə itki sayı daha azdır; bu, onların əsas döyüş yükünü daşımadığını, daha çox köməkçi xəttdə zərbə aldığını göstərir.";
+}
+
+function renderOverview(){
+  const wrap = document.getElementById('overviewGrid');
+  wrap.innerHTML = SIDE_ORDER.map(sideInfo => {
+    const stats = computeSideStats(sideInfo.key);
+    const destroyed = stats.statusCounts["Məhv edilib"] || 0;
+    const damaged = stats.statusCounts["Zədələnib"] || 0;
+    const captured = stats.statusCounts["Ələ keçirilib"] || 0;
+    const crashed = stats.statusCounts["Qəzaya uğrayıb"] || 0;
+
+    let cls = 'gold';
+    if(sideInfo.key === "İran") cls = 'red';
+    if(sideInfo.key === "ABŞ") cls = 'blue';
+    if(sideInfo.key === "İranın proksi qrupları") cls = 'orange';
+
+    return `
+      <article class="overview-card ${cls}">
+        <div class="overview-top">
+          <div class="overview-flag">${sideInfo.flag}</div>
+          <div class="overview-title">${escapeHtml(sideInfo.label)}</div>
+        </div>
+        <div class="overview-total">${stats.total}</div>
+        <div class="overview-label">ümumi təsdiqlənmiş itki</div>
+        <div class="overview-meta">
+          <span class="overview-chip">Məhv: ${destroyed}</span>
+          ${damaged ? `<span class="overview-chip">Zədə: ${damaged}</span>` : ``}
+          ${captured ? `<span class="overview-chip">Ələ keçirilib: ${captured}</span>` : ``}
+          ${crashed ? `<span class="overview-chip">Qəzaya uğrayıb: ${crashed}</span>` : ``}
+        </div>
+        <div class="overview-note">${escapeHtml(getOverviewComment(sideInfo.key, stats))}</div>
+      </article>
+    `;
+  }).join('');
+}
+
+function renderPersons(){
+  const grid = document.getElementById('personGrid');
+  const people = (appData?.şəxsi_itkilər || []).slice().sort((a,b)=>(a.prioritet||999)-(b.prioritet||999));
+
+  grid.innerHTML = people.map(person => `
+    <article class="person-card">
+      <div class="person-photo">${personPhotoMarkup(person)}</div>
+      <div class="person-main">
+        <div class="person-name">${escapeHtml(person.ad)}</div>
+        <div class="person-role">${escapeHtml(person.vəzifə || '—')}</div>
+        <div class="person-meta">
+          <span class="badge red">Öldürülüb</span>
+          <span class="badge gold">${escapeHtml(person.tərəf || 'İran')}</span>
+          <span class="badge blue">${escapeHtml(person.tarix_göstəriş || formatDate(person.tarix))}</span>
+        </div>
+        <div class="person-note">${escapeHtml(person.mənbə_qeydi || '')}</div>
+      </div>
+    </article>
+  `).join('');
+}
+
+function recordItemMarkup(record){
+  return `
+    <div class="record-item">
+      <div class="record-top">
+        <div class="record-title">${escapeHtml(record.ad)}</div>
+        <span class="status-pill" data-status="${escapeHtml(record.status)}">${escapeHtml(record.status)}</span>
+      </div>
+      <div class="record-meta">
+        <span class="badge blue">${escapeHtml(formatDate(record.itki_tarixi || record.itkiTarixi || record.qeyd_tarixi || record.qeydTarixi))}</span>
+      </div>
+      <div class="src-links">${(record.mənbələr||[]).map(sourceLink).join('')}</div>
+    </div>
+  `;
+}
+
+function renderLossesGrid(){
+  const wrap = document.getElementById('lossesGrid');
+  wrap.innerHTML = SIDE_ORDER.map(sideInfo => {
+    const stats = computeSideStats(sideInfo.key);
+    const mini = STATUS_ORDER.map(st => `
+      <div class="mini-stat">
+        <b>${stats.statusCounts[st] || 0}</b>
+        <span>${escapeHtml(st)}</span>
+      </div>
+    `).join('');
+
+    const categories = stats.categories.length
+      ? stats.categories.map(cat => `
+        <div class="cat-item" data-side="${escapeHtml(sideInfo.key)}" data-cat="${escapeHtml(cat.name)}">
+          <button class="cat-trigger" type="button">
+            <div class="cat-trigger-left">
+              <div class="cat-icon">${escapeHtml(cat.icon)}</div>
+              <div>
+                <div class="cat-name">${escapeHtml(cat.name)}</div>
+                <div class="cat-count">
+                  Məhv: ${cat.statusCounts['Məhv edilib']||0}
+                  · Zədə: ${cat.statusCounts['Zədələnib']||0}
+                  · Ələ keçirilib: ${cat.statusCounts['Ələ keçirilib']||0}
+                  · Qəzaya uğrayıb: ${cat.statusCounts['Qəzaya uğrayıb']||0}
+                </div>
+              </div>
+            </div>
+            <div class="cat-right">
+              <div class="cat-total">${cat.total}</div>
+              <div class="chev">▾</div>
+            </div>
+          </button>
+          <div class="cat-body">
+            ${cat.items.length ? `<div class="record-list">${cat.items.map(recordItemMarkup).join('')}</div>` : `<div class="empty">Bu kateqoriya üzrə qeyd yoxdur.</div>`}
+          </div>
+        </div>
+      `).join('')
+      : `<div class="empty">Bu tərəf üzrə vizual təsdiqlənmiş qeyd yoxdur.</div>`;
+
+    return `
+      <article class="side-card" data-side="${escapeHtml(sideInfo.key)}">
+        <div class="side-name">
+          <span class="flag">${sideInfo.flag}</span>
+          <div class="side-title">${escapeHtml(sideInfo.label)}</div>
+        </div>
+        <div class="side-total">
+          <b>${stats.total}</b>
+          <span>Ümumi itki</span>
+        </div>
+        <div class="mini-stats">${mini}</div>
+        <div class="cat-list">${categories}</div>
+      </article>
+    `;
+  }).join('');
+
+  wrap.querySelectorAll('.cat-trigger').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.cat-item').classList.toggle('open'));
+  });
+}
+
+function renderImpacts(){
+  const wrap = document.getElementById('impactGrid');
+  const items = appData?.strateji_təsirlər || [];
+  wrap.innerHTML = items.map(item => `
+    <article class="impact-card">
+      <div class="impact-head">
+        <div class="impact-icon">${escapeHtml(item.ikon || '⚠️')}</div>
+        <div>
+          <div class="impact-title">${escapeHtml(item.ad || item.başlıq || '—')}</div>
+          <div class="impact-type">${escapeHtml(item.növ || item.kateqoriya || 'Strateji və mülki təsir')}</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
+        <span class="badge red">${escapeHtml(item.status || 'Təsir qeydi')}</span>
+        <span class="badge blue">${escapeHtml(item.tarix_göstəriş || formatDate(item.tarix))}</span>
+      </div>
+      <div class="impact-desc">${escapeHtml(item.qeyd || item.təsvir || '')}</div>
+    </article>
+  `).join('');
+}
+
+function populateFilters(){
+  const sideSel = document.getElementById('sideFilter');
+  const catSel = document.getElementById('categoryFilter');
+  const statusSel = document.getElementById('statusFilter');
+  const dateSel = document.getElementById('dateFilter');
+
+  sideSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.tərəf)).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+  catSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.kateqoriya)).sort((a,b)=>a.localeCompare(b,'az')).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+  statusSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.status)).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+  dateSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi))).sort((a,b)=>{
+    const pa=a.split('.').reverse().join('');
+    const pb=b.split('.').reverse().join('');
+    return pa.localeCompare(pb);
+  }).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+}
+
+function applyFilters(){
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const side = document.getElementById('sideFilter').value;
+  const cat = document.getElementById('categoryFilter').value;
+  const status = document.getElementById('statusFilter').value;
+  const date = document.getElementById('dateFilter').value;
+
+  filteredRecords = allRecords.filter(r => {
+    const hay = [
+      r.ad, r.tərəf, r.kateqoriya, r.status, ...(r.mənbələr || [])
+    ].join(' ').toLowerCase();
+
+    return (!q || hay.includes(q))
+      && (!side || r.tərəf === side)
+      && (!cat || r.kateqoriya === cat)
+      && (!status || r.status === status)
+      && (!date || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi) === date);
+  });
+
+  renderTable();
+}
+
+function renderTable(){
+  const body = document.getElementById('recordsBody');
+  document.getElementById('searchCount').textContent = `Axtarış nəticəsi: ${filteredRecords.length} qeyd`;
+
+  if(!filteredRecords.length){
+    body.innerHTML = `<tr><td colspan="6"><div class="empty">Seçilmiş axtarış meyarları üzrə nəticə tapılmadı.</div></td></tr>`;
+    return;
+  }
+
+  body.innerHTML = filteredRecords.map(r => `
+    <tr>
+      <td><strong>${escapeHtml(r.ad)}</strong></td>
+      <td>${escapeHtml(r.tərəf)}</td>
+      <td>${escapeHtml(r.kateqoriya)}</td>
+      <td><span class="status-pill" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span></td>
+      <td>${escapeHtml(formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi))}</td>
+      <td>${(r.mənbələr||[]).length ? `<a href="${escapeHtml(r.mənbələr[0])}" target="_blank" rel="noopener noreferrer">${(r.mənbələr||[]).length} mənbə</a>` : '—'}</td>
+    </tr>
+  `).join('');
+}
+
+async function loadData(){
+  const res = await fetch('data/losses.json', {cache:'no-store'});
+  appData = await res.json();
+  allRecords = normalizeRecords(appData?.qeydlər || appData?.records || []);
+  renderOverview();
+  renderPersons();
+  renderLossesGrid();
+  renderImpacts();
+  populateFilters();
+  filteredRecords = [...allRecords];
+  renderTable();
+}
+
+document.getElementById('yenileBtn').addEventListener('click', () => location.reload());
+
+['searchInput','sideFilter','categoryFilter','statusFilter','dateFilter'].forEach(id => {
+  const el = document.getElementById(id);
+  el.addEventListener(id === 'searchInput' ? 'input' : 'change', applyFilters);
+});
+
+loadData().catch(err => console.error(err));
 </script>
 </body>
 </html>
