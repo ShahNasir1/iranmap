@@ -569,6 +569,133 @@
       line-height:1.7;
     }
 
+
+    .finance-shell{padding:28px}
+    .finance-wrap{display:flex;flex-direction:column;gap:18px}
+    .finance-hero{
+      position:relative;
+      overflow:hidden;
+      padding:22px 22px 18px;
+      border-radius:var(--r-md);
+      background:
+        radial-gradient(circle at 85% 10%, rgba(212,175,55,.16), transparent 24%),
+        linear-gradient(160deg, rgba(212,175,55,.07), rgba(255,255,255,.02));
+      border:1px solid rgba(212,175,55,.18);
+    }
+    .finance-hero::after{
+      content:"";
+      position:absolute;
+      right:-52px;top:-52px;
+      width:180px;height:180px;border-radius:50%;
+      border:1px solid rgba(212,175,55,.12);
+      box-shadow:0 0 0 18px rgba(212,175,55,.04), 0 0 0 36px rgba(212,175,55,.02);
+      pointer-events:none;
+    }
+    .finance-kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 12px;border-radius:999px;
+      background:rgba(212,175,55,.09);
+      border:1px solid rgba(212,175,55,.18);
+      font-family:var(--mono);font-size:10px;font-weight:700;
+      text-transform:uppercase;letter-spacing:.5px;color:var(--accent)
+    }
+    .finance-hero-grid{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:18px;align-items:end;margin-top:16px
+    }
+    .finance-total-label{
+      font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.48px;text-transform:uppercase;color:var(--dim)
+    }
+    .finance-total{
+      margin-top:8px;
+      font-family:var(--display);
+      font-size:clamp(34px,4.7vw,62px);
+      line-height:1;
+      font-weight:800;
+      letter-spacing:-.03em;
+      color:#fff
+    }
+    .finance-hero-note{
+      margin-top:10px;max-width:720px;color:var(--muted);font-size:14px;line-height:1.75
+    }
+    .finance-topline{
+      display:flex;justify-content:flex-end;align-items:flex-end;gap:12px;flex-wrap:wrap
+    }
+    .finance-pill{
+      display:inline-flex;align-items:center;gap:7px;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(255,255,255,.04);border:1px solid var(--border);
+      font-family:var(--mono);font-size:11px;font-weight:600;color:var(--muted)
+    }
+    .finance-distribution{
+      display:flex;height:16px;border-radius:999px;overflow:hidden;background:rgba(255,255,255,.05);border:1px solid var(--border)
+    }
+    .finance-distribution span{display:block;height:100%;min-width:2px}
+    .finance-distribution .iran{background:linear-gradient(90deg, rgba(34,197,94,.88), rgba(34,197,94,.6))}
+    .finance-distribution .usa{background:linear-gradient(90deg, rgba(240,244,255,.95), rgba(180,190,210,.66))}
+    .finance-distribution .israel{background:linear-gradient(90deg, rgba(96,165,250,.92), rgba(96,165,250,.56))}
+    .finance-distribution .proxy{background:linear-gradient(90deg, rgba(249,115,22,.95), rgba(249,115,22,.64))}
+    .finance-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .finance-card{
+      position:relative;overflow:hidden;padding:20px;border-radius:var(--r-md);
+      background:linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.024));
+      border:1px solid var(--border);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.03)
+    }
+    .finance-card::before{
+      content:"";position:absolute;left:0;right:0;top:0;height:2px;
+      background:linear-gradient(90deg, rgba(212,175,55,.9), transparent)
+    }
+    .finance-card[data-side="iran"]{border-color:var(--iran-border)}
+    .finance-card[data-side="iran"]::before{background:linear-gradient(90deg, rgba(34,197,94,.95), transparent)}
+    .finance-card[data-side="usa"]{border-color:var(--usa-border)}
+    .finance-card[data-side="usa"]::before{background:linear-gradient(90deg, rgba(240,244,255,.95), transparent)}
+    .finance-card[data-side="israel"]{border-color:var(--israel-border)}
+    .finance-card[data-side="israel"]::before{background:linear-gradient(90deg, rgba(96,165,250,.95), transparent)}
+    .finance-card[data-side="proxy"]{border-color:var(--proxy-border)}
+    .finance-card[data-side="proxy"]::before{background:linear-gradient(90deg, rgba(249,115,22,.95), transparent)}
+    .finance-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .finance-side{display:flex;align-items:center;gap:10px}
+    .finance-flag{font-size:24px;line-height:1}
+    .finance-name{font-family:var(--display);font-size:22px;font-weight:800;line-height:1.05;color:#fff}
+    .finance-rank{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-width:34px;height:34px;padding:0 10px;border-radius:12px;
+      background:rgba(255,255,255,.05);border:1px solid var(--border);
+      font-family:var(--mono);font-size:12px;font-weight:700;color:var(--accent)
+    }
+    .finance-amount{
+      margin-top:18px;
+      font-family:var(--display);font-size:34px;font-weight:800;line-height:1;letter-spacing:-.03em;color:#fff
+    }
+    .finance-amount-label{margin-top:6px;color:var(--muted);font-size:13px}
+    .finance-meter{
+      margin-top:16px;height:10px;border-radius:999px;background:rgba(255,255,255,.055);overflow:hidden;border:1px solid rgba(255,255,255,.06)
+    }
+    .finance-meter span{display:block;height:100%;border-radius:999px;width:0;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+    .finance-card[data-side="iran"] .finance-meter span{background:linear-gradient(90deg, rgba(34,197,94,.95), rgba(34,197,94,.55))}
+    .finance-card[data-side="usa"] .finance-meter span{background:linear-gradient(90deg, rgba(240,244,255,.95), rgba(200,210,230,.6))}
+    .finance-card[data-side="israel"] .finance-meter span{background:linear-gradient(90deg, rgba(96,165,250,.95), rgba(96,165,250,.55))}
+    .finance-card[data-side="proxy"] .finance-meter span{background:linear-gradient(90deg, rgba(249,115,22,.95), rgba(249,115,22,.55))}
+    .finance-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .finance-meta .badge{background:rgba(255,255,255,.04)}
+    .finance-summary{
+      margin-top:14px;
+      padding-top:14px;
+      border-top:1px solid var(--border);
+      color:var(--muted);font-size:12px;line-height:1.7
+    }
+    .finance-bottom{
+      display:grid;grid-template-columns:1fr 1fr;gap:14px
+    }
+    .finance-mini{
+      padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid var(--border)
+    }
+    .finance-mini-title{
+      font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.48px;text-transform:uppercase;color:var(--dim)
+    }
+    .finance-mini-body{margin-top:8px;color:#fff;font-size:14px;line-height:1.75}
+    .finance-mini-body b{font-family:var(--display);font-size:22px;letter-spacing:-.02em}
+
     .filters{
       display:grid;
       grid-template-columns:1.4fr repeat(4,minmax(140px,1fr));
@@ -709,13 +836,13 @@
     .footer-divider{width:1px;height:36px;background:var(--border)}
 
     @media (max-width:1280px){
-      .overview-grid,.person-grid,.impact-grid{grid-template-columns:repeat(2,1fr)}
+      .overview-grid,.person-grid,.impact-grid,.finance-grid{grid-template-columns:repeat(2,1fr)}
       .mini-stats{grid-template-columns:repeat(2,1fr)}
     }
     @media (max-width:860px){
       .page{width:min(calc(100% - 22px), var(--max))}
       .hero,.section,.losses-shell,.search-wrap{padding:20px}
-      .overview-grid,.person-grid,.impact-grid,.filters,.losses-grid{grid-template-columns:1fr}
+      .overview-grid,.person-grid,.impact-grid,.filters,.losses-grid,.finance-grid,.finance-bottom,.finance-hero-grid{grid-template-columns:1fr}
       .topbar-inner{padding:12px}
       .topbar-right{width:100%;justify-content:flex-start}
       .brand-title{font-size:20px}
@@ -764,6 +891,24 @@
         <div class="section-badge" id="totalBadge">— qeyd</div>
       </div>
       <div class="overview-grid" id="overviewGrid"></div>
+
+    </section>
+
+    <section class="card finance-shell fade-up fd-2">
+      <div class="section-head">
+        <div>
+          <div class="section-label">Maliyyə infoqrafikası</div>
+          <div class="section-title">Maliyyə itkilərinin qiymətləndirilməsi</div>
+          <div class="section-sub">Vizual şəkildə təsdiqlənmiş itkilər bazasında tərəflərin itirdiyi hərbi vasitələrin təqribi maliyyə dəyəri. Rəqəmlər infoqrafik təqdimat üçün ayrıca maliyyə datasından götürülür.</div>
+        </div>
+        <div class="section-badge" id="financialTotalBadge">—</div>
+      </div>
+      <div class="finance-wrap" id="financialWrap">
+        <div class="empty">
+          <div class="empty-icon">💰</div>
+          <div class="empty-text">Maliyyə məlumatı yüklənir…</div>
+        </div>
+      </div>
     </section>
 
     <section class="card section fade-up fd-2">
@@ -905,6 +1050,7 @@ const CATEGORY_ICONS = {
 let appData = null;
 let allRecords = [];
 let filteredRecords = [];
+let financialData = null;
 
 function mapSide(s){ return SIDE_ALIASES[s] || s; }
 function mapStatus(s){ return STATUS_ALIASES[s] || s; }
@@ -950,6 +1096,121 @@ function animateCount(el, target, duration = 900){
     else el.textContent = target;
   }
   requestAnimationFrame(step);
+}
+
+
+function formatMoneyCompact(value){
+  if(value === null || value === undefined || isNaN(value)) return "—";
+  const n = Number(value);
+  if(n >= 1e9) return `${(n/1e9).toFixed(n >= 10e9 ? 1 : 2).replace(/\.0$/, '')} milyard $`;
+  if(n >= 1e6) return `${(n/1e6).toFixed(n >= 100e6 ? 0 : 1).replace(/\.0$/, '')} milyon $`;
+  if(n >= 1e3) return `${(n/1e3).toFixed(0)} min $`;
+  return `${n.toLocaleString('en-US')} $`;
+}
+function formatMoneyFull(value){
+  if(value === null || value === undefined || isNaN(value)) return "—";
+  return `${Number(value).toLocaleString('en-US')} $`;
+}
+function getFinancialBadgeClass(id){
+  if(id === 'iran') return 'green';
+  if(id === 'usa') return '';
+  if(id === 'israel') return 'blue';
+  if(id === 'proxy') return 'orange';
+  return '';
+}
+function renderFinancialSection(){
+  const wrap = document.getElementById('financialWrap');
+  const badge = document.getElementById('financialTotalBadge');
+  if(!wrap || !badge) return;
+
+  if(!financialData || !Array.isArray(financialData.tərəflər) || !financialData.tərəflər.length){
+    badge.textContent = 'Maliyyə datası yoxdur';
+    wrap.innerHTML = `<div class="empty"><div class="empty-icon">💰</div><div class="empty-text">financial_losses.json faylında uyğun məlumat tapılmadı.</div></div>`;
+    return;
+  }
+
+  const total = Number(financialData?.ümumi_xülasə?.təqribi_cəmi_usd || financialData.tərəflər.reduce((s, item) => s + Number(item.məbləğ_usd || 0), 0));
+  const totalDisplay = financialData?.ümumi_xülasə?.təqribi_cəmi_göstəriş || formatMoneyCompact(total);
+  badge.textContent = totalDisplay;
+
+  const ordered = [...financialData.tərəflər].sort((a,b) => (a.sıralama || 999) - (b.sıralama || 999) || (b.məbləğ_usd || 0) - (a.məbləğ_usd || 0));
+  const distribution = ordered.map(item => {
+    const width = total > 0 ? (Number(item.məbləğ_usd || 0) / total) * 100 : 0;
+    return `<span class="${escapeHtml(item.rəng || item.id || '')}" style="width:${Math.max(width, 0.8)}%"></span>`;
+  }).join('');
+
+  const cards = ordered.map(item => {
+    const width = total > 0 ? (Number(item.məbləğ_usd || 0) / total) * 100 : 0;
+    const shortAmount = item.məbləğ_göstəriş || formatMoneyCompact(item.məbləğ_usd);
+    const share = item.pay_göstəriş || `${Number(item.pay_faiz || 0).toFixed(2)}%`;
+    const rank = item.sıralama ? `#${item.sıralama}` : '—';
+    return `<article class="finance-card" data-side="${escapeHtml(item.id || item.rəng || '')}">
+      <div class="finance-head">
+        <div class="finance-side">
+          <div class="finance-flag">${escapeHtml(item.bayraq || '💰')}</div>
+          <div>
+            <div class="finance-name">${escapeHtml(item.ad || '—')}</div>
+            <div class="finance-amount-label">${escapeHtml(item.status || 'Maliyyə göstəricisi')}</div>
+          </div>
+        </div>
+        <div class="finance-rank">${escapeHtml(rank)}</div>
+      </div>
+      <div class="finance-amount" data-fin-count="${Number(item.məbləğ_usd || 0)}">0</div>
+      <div class="finance-amount-label">${escapeHtml(shortAmount)}</div>
+      <div class="finance-meter"><span data-fin-width="${width.toFixed(2)}"></span></div>
+      <div class="finance-meta">
+        <span class="badge ${getFinancialBadgeClass(item.id || item.rəng || '')}">Pay: ${escapeHtml(share)}</span>
+        <span class="badge gold">${escapeHtml(formatMoneyFull(item.məbləğ_usd))}</span>
+      </div>
+      <div class="finance-summary">Ümumi maliyyə yükünün <b>${escapeHtml(share)}</b> hissəsi bu tərəfin üzərinə düşür. Vizual təsdiqlənmiş itkilərin dəyər baxımından çəkisini göstərir.</div>
+    </article>`;
+  }).join('');
+
+  const compare = financialData?.müqayisəli_göstəricilər || {};
+  const notes = financialData?.infoqrafika_qeydləri || {};
+  wrap.innerHTML = `
+    <div class="finance-hero">
+      <div class="finance-kicker">💰 Maliyyə təsir paneli</div>
+      <div class="finance-hero-grid">
+        <div>
+          <div class="finance-total-label">Ümumi təxmini maliyyə yükü</div>
+          <div class="finance-total">${escapeHtml(totalDisplay)}</div>
+          <div class="finance-hero-note">${escapeHtml(notes.əsas_mesaj || financialData?.ümumi_xülasə?.qısa_qeyd || 'Tərəflərin itirdiyi hərbi vasitələrin təqribi maliyyə dəyəri aşağıdakı infoqrafikada göstərilir.')}</div>
+        </div>
+        <div class="finance-topline">
+          <span class="finance-pill">Ən böyük yük: ${escapeHtml(compare.ən_böyük_itki_tərəfi || '—')}</span>
+          <span class="finance-pill">Valyuta: ${escapeHtml(financialData?.metadata?.valyuta || 'USD')}</span>
+        </div>
+      </div>
+      <div class="finance-distribution" aria-label="Maliyyə bölgüsü">${distribution}</div>
+    </div>
+    <div class="finance-grid">${cards}</div>
+    <div class="finance-bottom">
+      <div class="finance-mini">
+        <div class="finance-mini-title">Ən böyük maliyyə itkisi</div>
+        <div class="finance-mini-body"><b>${escapeHtml(compare.ən_böyük_itki_məbləği_göstəriş || '—')}</b><br>${escapeHtml(compare.ən_böyük_itki_tərəfi || '—')} hazırkı qiymətləndirmədə ən böyük maliyyə itkisi verən tərəfdir.</div>
+      </div>
+      <div class="finance-mini">
+        <div class="finance-mini-title">Ən aşağı maliyyə itkisi</div>
+        <div class="finance-mini-body"><b>${escapeHtml(compare.ən_aşağı_itki_məbləği_göstəriş || '—')}</b><br>${escapeHtml(compare.ən_aşağı_itki_tərəfi || '—')} üzrə maliyyə yükü digər tərəflərlə müqayisədə çox aşağı səviyyədə qalır.</div>
+      </div>
+    </div>
+  `;
+
+  wrap.querySelectorAll('.finance-card').forEach((card, i) => {
+    const amountEl = card.querySelector('.finance-amount');
+    const meterEl = card.querySelector('.finance-meter span');
+    const target = Number(amountEl?.dataset.finCount || 0);
+    const width = Number(meterEl?.dataset.finWidth || 0);
+    setTimeout(() => {
+      if(amountEl) {
+        const compactTarget = amountEl.nextElementSibling?.textContent || formatMoneyCompact(target);
+        animateCount(amountEl, target, 1100);
+        setTimeout(() => { amountEl.textContent = compactTarget; }, 1150);
+      }
+      if(meterEl) meterEl.style.width = `${width}%`;
+    }, i * 100);
+  });
 }
 
 function normalizeRecords(records){
@@ -1273,6 +1534,7 @@ function applyFilters(){
 function renderAll(){
   setHeroSummary();
   renderOverview();
+  renderFinancialSection();
   renderPersons();
   renderLossesGrid();
   renderImpacts();
@@ -1287,12 +1549,15 @@ function showLoadError(message){
   document.getElementById('personGrid').innerHTML = '';
   document.getElementById('lossesGrid').innerHTML = '';
   document.getElementById('impactGrid').innerHTML = '';
+  const finWrap = document.getElementById('financialWrap');
+  if(finWrap) finWrap.innerHTML = '';
   document.getElementById('recordsBody').innerHTML = `<tr><td colspan="6"><div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">${escapeHtml(message)}</div></div></td></tr>`;
   document.getElementById('searchCount').textContent = 'Xəta';
 }
 
 async function loadData(){
   const paths = ['./data/losses.json', 'data/losses.json', '/data/losses.json', './losses.json', 'losses.json'];
+  const financialPaths = ['./data/financial_losses.json', 'data/financial_losses.json', '/data/financial_losses.json', './financial_losses.json', 'financial_losses.json'];
   let usedPath = null;
   let json = null;
   let lastError = null;
@@ -1325,6 +1590,27 @@ async function loadData(){
   if(!Array.isArray(appData.qeydlər) && !Array.isArray(appData.records)){
     showLoadError('JSON oxundu, amma itki qeydləri tapılmadı. "qeydlər" massivini yoxla.');
     return;
+  }
+
+  financialData = null;
+  let finUsedPath = null;
+  for(const path of financialPaths){
+    try{
+      const res = await fetch(path, { cache:'no-store' });
+      if(!res.ok) continue;
+      const finJson = await res.json();
+      if(finJson && Array.isArray(finJson.tərəflər)){
+        financialData = finJson;
+        finUsedPath = path;
+        break;
+      }
+    }catch(err){
+      // Maliyyə faylı əsas səhifəni dayandırmamalıdır
+    }
+  }
+
+  if(finUsedPath){
+    setStatus(`JSON: ${usedPath} + ${finUsedPath}`, 'ok');
   }
 
   renderAll();
