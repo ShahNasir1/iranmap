@@ -899,7 +899,7 @@
         <div>
           <div class="section-label">Maliyyə infoqrafikası</div>
           <div class="section-title">Maliyyə itkilərinin qiymətləndirilməsi</div>
-          <div class="section-sub">Vizual şəkildə təsdiqlənmiş itkilər bazasında tərəflərin itirdiyi hərbi vasitələrin təqribi maliyyə dəyəri. Rəqəmlər infoqrafik təqdimat üçün ayrıca maliyyə datasından götürülür.</div>
+          <div class="section-sub">Vizual şəkildə təsdiqlənmiş itkilər bazasında tərəflərin itirdiyi hərbi vasitələrin maliyyə dəyəri. Rəqəmlər infoqrafik təqdimat üçün ayrıca maliyyə datasından götürülür.</div>
         </div>
         <div class="section-badge" id="financialTotalBadge">—</div>
       </div>
@@ -1111,6 +1111,13 @@ function formatMoneyFull(value){
   if(value === null || value === undefined || isNaN(value)) return "—";
   return `${Number(value).toLocaleString('en-US')} $`;
 }
+function cleanApproxLabel(text){
+  if(text === null || text === undefined) return "—";
+  return String(text)
+    .replace(/təqribi\s*/gi, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
 function getFinancialBadgeClass(id){
   if(id === 'iran') return 'green';
   if(id === 'usa') return '';
@@ -1130,7 +1137,7 @@ function renderFinancialSection(){
   }
 
   const total = Number(financialData?.ümumi_xülasə?.təqribi_cəmi_usd || financialData.tərəflər.reduce((s, item) => s + Number(item.məbləğ_usd || 0), 0));
-  const totalDisplay = financialData?.ümumi_xülasə?.təqribi_cəmi_göstəriş || formatMoneyCompact(total);
+  const totalDisplay = cleanApproxLabel(financialData?.ümumi_xülasə?.təqribi_cəmi_göstəriş) || formatMoneyCompact(total);
   badge.textContent = totalDisplay;
 
   const ordered = [...financialData.tərəflər].sort((a,b) => (a.sıralama || 999) - (b.sıralama || 999) || (b.məbləğ_usd || 0) - (a.məbləğ_usd || 0));
@@ -1141,7 +1148,7 @@ function renderFinancialSection(){
 
   const cards = ordered.map(item => {
     const width = total > 0 ? (Number(item.məbləğ_usd || 0) / total) * 100 : 0;
-    const shortAmount = item.məbləğ_göstəriş || formatMoneyCompact(item.məbləğ_usd);
+    const shortAmount = cleanApproxLabel(item.məbləğ_göstəriş) || formatMoneyCompact(item.məbləğ_usd);
     const share = item.pay_göstəriş || `${Number(item.pay_faiz || 0).toFixed(2)}%`;
     const rank = item.sıralama ? `#${item.sıralama}` : '—';
     return `<article class="finance-card" data-side="${escapeHtml(item.id || item.rəng || '')}">
@@ -1173,7 +1180,7 @@ function renderFinancialSection(){
       <div class="finance-kicker">💰 Maliyyə təsir paneli</div>
       <div class="finance-hero-grid">
         <div>
-          <div class="finance-total-label">Ümumi təxmini maliyyə yükü</div>
+          <div class="finance-total-label">Ümumi maliyyə yükü</div>
           <div class="finance-total">${escapeHtml(totalDisplay)}</div>
           <div class="finance-hero-note">${escapeHtml(notes.əsas_mesaj || financialData?.ümumi_xülasə?.qısa_qeyd || 'Tərəflərin itirdiyi hərbi vasitələrin təqribi maliyyə dəyəri aşağıdakı infoqrafikada göstərilir.')}</div>
         </div>
@@ -1188,11 +1195,11 @@ function renderFinancialSection(){
     <div class="finance-bottom">
       <div class="finance-mini">
         <div class="finance-mini-title">Ən böyük maliyyə itkisi</div>
-        <div class="finance-mini-body"><b>${escapeHtml(compare.ən_böyük_itki_məbləği_göstəriş || '—')}</b><br>${escapeHtml(compare.ən_böyük_itki_tərəfi || '—')} hazırkı qiymətləndirmədə ən böyük maliyyə itkisi verən tərəfdir.</div>
+        <div class="finance-mini-body"><b>${escapeHtml(cleanApproxLabel(compare.ən_böyük_itki_məbləği_göstəriş) || '—')}</b><br>${escapeHtml(compare.ən_böyük_itki_tərəfi || '—')} hazırkı qiymətləndirmədə ən böyük maliyyə itkisi verən tərəfdir.</div>
       </div>
       <div class="finance-mini">
         <div class="finance-mini-title">Ən aşağı maliyyə itkisi</div>
-        <div class="finance-mini-body"><b>${escapeHtml(compare.ən_aşağı_itki_məbləği_göstəriş || '—')}</b><br>${escapeHtml(compare.ən_aşağı_itki_tərəfi || '—')} üzrə maliyyə yükü digər tərəflərlə müqayisədə çox aşağı səviyyədə qalır.</div>
+        <div class="finance-mini-body"><b>${escapeHtml(cleanApproxLabel(compare.ən_aşağı_itki_məbləği_göstəriş) || '—')}</b><br>${escapeHtml(compare.ən_aşağı_itki_tərəfi || '—')} üzrə maliyyə yükü digər tərəflərlə müqayisədə çox aşağı səviyyədə qalır.</div>
       </div>
     </div>
   `;
