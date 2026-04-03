@@ -5,208 +5,725 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IranMap — Münaqişə nəticələri</title>
   <meta name="description" content="Vizual şəkildə təsdiqlənmiş itkilər, öldürülmüş şəxslər və strateji təsirlər paneli." />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    *{box-sizing:border-box;margin:0;padding:0}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    a{text-decoration:none;color:inherit}
     :root{
-      --bg:#050c15;--bg2:#08121f;--panel:rgba(8,16,29,.9);--panel2:rgba(255,255,255,.04);--panel3:rgba(255,255,255,.03);
-      --border:rgba(255,255,255,.08);--text:#edf3ff;--muted:#97a8c5;--dim:#6b7d9a;
-      --gold:#d4af37;--goldSoft:#f0d886;--red:#ef4444;--orange:#f59e0b;--blue:#60a5fa;--violet:#8b5cf6;--green:#22c55e;
-      --shadow:0 20px 60px rgba(0,0,0,.35);--max:1480px;--radius:26px;
+      --bg:#040a10;--bg2:#07111b;--surface:rgba(8,18,30,.92);--surface2:rgba(255,255,255,.035);--surface3:rgba(255,255,255,.025);
+      --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.12);
+      --text:#e8f0fb;--muted:#8ca0bc;--dim:#5a6d86;
+      --iran:#22c55e;--iran-soft:rgba(34,197,94,.14);--iran-border:rgba(34,197,94,.28);
+      --usa:#f0f4ff;--usa-soft:rgba(240,244,255,.10);--usa-border:rgba(240,244,255,.24);
+      --israel:#60a5fa;--israel-soft:rgba(96,165,250,.13);--israel-border:rgba(96,165,250,.28);
+      --proxy:#f97316;--proxy-soft:rgba(249,115,22,.13);--proxy-border:rgba(249,115,22,.28);
+      --unknown:#94a3b8;
+      --accent:#d4af37;--accent-soft:rgba(212,175,55,.12);--accent-dim:rgba(212,175,55,.22);
+      --mono:'JetBrains Mono',monospace;--sans:'Inter',sans-serif;--display:'Manrope',sans-serif;
+      --r-sm:14px;--r-md:20px;--r-lg:26px;--shadow:0 24px 64px rgba(0,0,0,.45);--max:1500px;
     }
-    html,body{min-height:100%;background:
-      radial-gradient(circle at 10% 0%, rgba(212,175,55,.08), transparent 24%),
-      radial-gradient(circle at 90% 5%, rgba(96,165,250,.09), transparent 20%),
-      linear-gradient(180deg,#040911,#07111b 38%,#08121d 100%);color:var(--text);font-family:Inter,sans-serif}
-    body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:
-      linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(180deg, rgba(255,255,255,.5), rgba(255,255,255,.08));z-index:0}
-    a{color:inherit;text-decoration:none}
-    .shell{position:relative;z-index:1;min-height:100vh}
-    .topbar{position:sticky;top:0;z-index:100;background:linear-gradient(180deg,rgba(5,11,22,.97),rgba(7,15,28,.91));backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-    .topbar-inner{max-width:var(--max);margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand-badge{width:42px;height:42px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#e4c979,#8d6a1f);color:#07111c;font-size:20px;box-shadow:0 0 18px rgba(212,175,55,.25)}
-    .brand-title{font-family:Manrope,sans-serif;font-size:23px;font-weight:800;color:#fff;line-height:1}
-    .brand-title em{font-style:normal;color:var(--goldSoft)}
-    .brand-sub{margin-top:4px;font-size:11px;font-weight:700;color:rgba(255,255,255,.56);letter-spacing:.24px}
-    .actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:0 16px;border-radius:12px;border:1px solid rgba(212,175,55,.22);background:rgba(255,255,255,.05);color:var(--goldSoft);font-size:13px;font-weight:700;transition:.18s ease;cursor:pointer}
-    .btn:hover{transform:translateY(-1px);background:rgba(212,175,55,.12);border-color:rgba(212,175,55,.36);color:#fff}
-    .btn.primary{background:linear-gradient(135deg, rgba(212,175,55,.22), rgba(212,175,55,.08))}
-    .page{width:min(var(--max), calc(100% - 32px));margin:28px auto 42px;display:flex;flex-direction:column;gap:22px}
-    .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
 
-    .hero{
-      position:relative;overflow:hidden;padding:56px 30px 48px;
+    html,body{
+      min-height:100%;
       background:
-      radial-gradient(circle at 86% 4%, rgba(96,165,250,.14), transparent 21%),
-      radial-gradient(circle at left center, rgba(212,175,55,.08), transparent 26%),
-      linear-gradient(180deg, rgba(10,18,31,.96), rgba(10,18,31,.88));
-      text-align:center;
+        radial-gradient(ellipse at 8% 0%, rgba(34,197,94,.07) 0%, transparent 28%),
+        radial-gradient(ellipse at 92% 8%, rgba(96,165,250,.07) 0%, transparent 24%),
+        linear-gradient(180deg, #030810 0%, #05101a 40%, #060f18 100%);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.55;
     }
-    .hero::after{content:"";position:absolute;right:-72px;top:-58px;width:230px;height:230px;border-radius:50%;border:1px solid rgba(212,175,55,.12);box-shadow:0 0 0 24px rgba(212,175,55,.04),0 0 0 48px rgba(212,175,55,.02)}
-    .hero-kicker{
-      display:inline-flex;align-items:center;justify-content:center;gap:8px;
-      padding:9px 14px;border-radius:999px;background:rgba(212,175,55,.08);
-      border:1px solid rgba(212,175,55,.18);font-size:12px;font-weight:800;color:var(--goldSoft);margin-bottom:18px
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.016) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.016) 1px, transparent 1px);
+      background-size:48px 48px;
+      mask-image:linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.06) 80%);
     }
-    .hero h1{
-      font-family:Manrope,sans-serif;
-      font-size:clamp(38px,5vw,68px);
-      line-height:1.02;
-      font-weight:800;
-      max-width:980px;
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(18px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+    @keyframes pulse-dot{
+      0%,100%{opacity:1}
+      50%{opacity:.35}
+    }
+
+    .fade-up{animation:fadeUp .55s ease both}
+    .fd-1{animation-delay:.08s}
+    .fd-2{animation-delay:.16s}
+    .fd-3{animation-delay:.24s}
+    .fd-4{animation-delay:.32s}
+
+    .shell{position:relative;z-index:1;min-height:100vh}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:linear-gradient(180deg, rgba(3,8,16,.98), rgba(5,12,22,.94));
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar-inner{
+      max-width:var(--max);
       margin:0 auto;
-      text-align:center;
-      letter-spacing:-.02em;
-    }
-    .hero h1 span{color:var(--goldSoft)}
-    .hero-mini{
-      max-width:760px;margin:18px auto 0;color:var(--muted);font-size:15px;line-height:1.7
-    }
-
-    .section,.losses-shell,.search-wrap{padding:24px}
-    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}
-    .section-title{font-family:Manrope,sans-serif;font-size:28px;font-weight:800;line-height:1.05}
-    .section-sub{margin-top:6px;color:var(--muted);font-size:14px;line-height:1.65}
-
-    .overview-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
+      padding:12px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
       gap:16px;
     }
-    .overview-card{
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand-badge{
+      width:40px;height:40px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg, rgba(212,175,55,.3), rgba(212,175,55,.08));
+      border:1px solid var(--accent-dim);
+      font-size:18px;
+      box-shadow:0 0 20px rgba(212,175,55,.15);
+    }
+    .brand-title{
+      font-family:var(--display);
+      font-size:22px;
+      font-weight:800;
+      color:#fff;
+      line-height:1;
+    }
+    .brand-title em{font-style:normal;color:var(--accent)}
+    .brand-sub{
+      margin-top:3px;
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:500;
+      color:var(--dim);
+      letter-spacing:.3px;
+      text-transform:uppercase;
+    }
+    .topbar-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .live-chip,.data-status{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:6px 12px;
+      border-radius:999px;
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:600;
+    }
+    .live-chip{
+      background:rgba(34,197,94,.08);
+      border:1px solid rgba(34,197,94,.2);
+      color:#86efac;
+    }
+    .live-dot{
+      width:7px;height:7px;border-radius:50%;
+      background:#22c55e;
+      animation:pulse-dot 1.8s ease-in-out infinite;
+    }
+    .data-status{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      color:var(--muted);
+    }
+    .data-status.ok{
+      background:rgba(34,197,94,.08);
+      border-color:rgba(34,197,94,.22);
+      color:#86efac;
+    }
+    .data-status.err{
+      background:rgba(239,68,68,.08);
+      border-color:rgba(239,68,68,.22);
+      color:#fca5a5;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      min-height:38px;
+      padding:0 16px;
+      border-radius:10px;
+      border:1px solid var(--border2);
+      background:var(--surface2);
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
+      transition:all .18s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      background:var(--accent-soft);
+      border-color:var(--accent-dim);
+      color:var(--text);
+      transform:translateY(-1px);
+    }
+    .btn.primary{
+      background:var(--accent-soft);
+      border-color:var(--accent-dim);
+      color:var(--accent);
+    }
+
+    .page{
+      width:min(var(--max), calc(100% - 36px));
+      margin:26px auto 52px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--r-lg);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero{
+      padding:52px 36px 44px;
+      background:
+        radial-gradient(ellipse at 82% 0%, rgba(96,165,250,.1), transparent 30%),
+        radial-gradient(ellipse at 10% 60%, rgba(34,197,94,.07), transparent 28%),
+        linear-gradient(160deg, rgba(8,16,28,.97), rgba(6,14,24,.92));
+      text-align:center;
+    }
+    .hero-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:8px 16px;
+      border-radius:999px;
+      background:rgba(212,175,55,.07);
+      border:1px solid var(--accent-dim);
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:600;
+      color:var(--accent);
+      letter-spacing:.4px;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+    .hero h1{
+      font-family:var(--display);
+      font-size:clamp(40px, 5.2vw, 72px);
+      font-weight:800;
+      letter-spacing:-.02em;
+      line-height:.98;
+      max-width:960px;
+      margin:0 auto;
+      color:#fff;
+    }
+    .hero h1 span{color:var(--accent)}
+    .hero-sub{
+      max-width:720px;
+      margin:20px auto 0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.75;
+    }
+
+    .section,.losses-shell,.search-wrap{padding:28px}
+    .section-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:22px;
+      padding-bottom:18px;
+      border-bottom:1px solid var(--border);
+    }
+    .section-label{
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      color:var(--dim);
+      letter-spacing:.55px;
+      text-transform:uppercase;
+      margin-bottom:8px;
+    }
+    .section-title{
+      font-family:var(--display);
+      font-size:32px;
+      font-weight:800;
+      letter-spacing:-.01em;
+      line-height:1.02;
+      color:#fff;
+    }
+    .section-sub{
+      margin-top:7px;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.7;
+      max-width:680px;
+    }
+    .section-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      border:1px solid var(--accent-dim);
+      font-family:var(--mono);
+      font-size:12px;
+      font-weight:700;
+      color:var(--accent);
+      white-space:nowrap;
+    }
+
+    .overview-grid,.person-grid,.impact-grid{display:grid;gap:14px}
+    .overview-grid{grid-template-columns:repeat(4,1fr)}
+    .person-grid{grid-template-columns:repeat(4,1fr)}
+    .impact-grid{grid-template-columns:repeat(3,1fr)}
+    .losses-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+    .overview-card,.person-card,.impact-card,.side-card{
       position:relative;
       overflow:hidden;
-      padding:20px 18px;
-      border-radius:24px;
-      background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.03));
-      border:1px solid rgba(255,255,255,.08);
-      min-height:180px;
+      padding:20px;
+      border-radius:var(--r-md);
+      background:var(--surface2);
+      border:1px solid var(--border);
     }
-    .overview-card::before{
+
+    .overview-card::before,.side-card::before{
       content:"";
-      position:absolute;left:0;right:0;top:0;height:2px;
-      background:linear-gradient(90deg, rgba(212,175,55,.85), transparent);
-      opacity:.85;
+      position:absolute;
+      left:0;top:0;bottom:0;
+      width:3px;
     }
-    .overview-card.red::before{background:linear-gradient(90deg, rgba(239,68,68,.95), transparent)}
-    .overview-card.blue::before{background:linear-gradient(90deg, rgba(96,165,250,.95), transparent)}
-    .overview-card.gold::before{background:linear-gradient(90deg, rgba(212,175,55,.95), transparent)}
-    .overview-card.orange::before{background:linear-gradient(90deg, rgba(245,158,11,.95), transparent)}
-    .overview-top{display:flex;align-items:center;gap:10px}
-    .overview-flag{font-size:22px}
-    .overview-title{font-family:Manrope,sans-serif;font-size:22px;font-weight:800;line-height:1.05}
-    .overview-total{
-      margin-top:14px;
-      font-family:Manrope,sans-serif;
-      font-size:42px;
+
+    .overview-card.iran,.side-card[data-side="İran"]{border-color:var(--iran-border)}
+    .overview-card.iran::before,.side-card[data-side="İran"]::before{background:var(--iran)}
+    .overview-card.usa,.side-card[data-side="ABŞ"]{border-color:var(--usa-border)}
+    .overview-card.usa::before,.side-card[data-side="ABŞ"]::before{background:var(--usa)}
+    .overview-card.israel,.side-card[data-side="İsrail"]{border-color:var(--israel-border)}
+    .overview-card.israel::before,.side-card[data-side="İsrail"]::before{background:var(--israel)}
+    .overview-card.proxy,.side-card[data-side="İranın proksi qrupları"]{border-color:var(--proxy-border)}
+    .overview-card.proxy::before,.side-card[data-side="İranın proksi qrupları"]::before{background:var(--proxy)}
+
+    .ov-top,.side-name-wrap,.impact-head{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+    }
+    .ov-flag,.side-flag{font-size:24px;line-height:1}
+    .ov-name,.person-name,.impact-title,.side-title{
+      font-family:var(--display);
+      font-weight:800;
+      color:#fff;
+    }
+    .ov-name{font-size:20px}
+    .ov-num{
+      font-family:var(--display);
+      font-size:46px;
       font-weight:800;
       line-height:1;
       color:#fff;
     }
-    .overview-label{
-      margin-top:6px;
-      color:var(--muted);
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.3px;
+    .ov-num-label,.side-total-label{
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
       text-transform:uppercase;
+      letter-spacing:.4px;
+      color:var(--dim);
     }
-    .overview-meta{
+    .ov-bar-wrap{
       margin-top:14px;
+      height:4px;
+      border-radius:99px;
+      background:rgba(255,255,255,.07);
+      overflow:hidden;
+    }
+    .ov-bar{
+      height:100%;
+      border-radius:99px;
+      transition:width 1.2s cubic-bezier(.4,0,.2,1);
+    }
+    .iran .ov-bar{background:var(--iran)}
+    .usa .ov-bar{background:var(--usa)}
+    .israel .ov-bar{background:var(--israel)}
+    .proxy .ov-bar{background:var(--proxy)}
+
+    .ov-chips,.person-meta,.impact-badges,.record-meta{
       display:flex;
       flex-wrap:wrap;
-      gap:8px;
+      gap:6px;
     }
-    .overview-chip{
-      display:inline-flex;align-items:center;gap:6px;
-      padding:6px 10px;border-radius:999px;
-      font-size:11px;font-weight:800;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.05);
-      color:#dbe7fb;
+    .ov-chips{margin-top:12px}
+
+    .ov-chip,.badge,.status-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      padding:4px 9px;
+      border-radius:999px;
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:600;
+      border:1px solid var(--border);
     }
-    .overview-note{
-      margin-top:14px;
+    .ov-chip{background:var(--surface3);color:var(--muted)}
+    .person-name{font-size:20px}
+    .person-role,.person-note,.ov-note,.impact-desc{
       color:var(--muted);
+      line-height:1.65;
+    }
+    .person-role{margin-top:6px;font-size:13px}
+    .person-note,.ov-note{margin-top:12px}
+    .person-note{
+      padding-top:10px;
+      border-top:1px solid var(--border);
+      color:var(--dim);
       font-size:12px;
-      line-height:1.6;
+    }
+    .ov-note{font-size:12px}
+
+    .person-photo{
+      width:72px;height:72px;
+      border-radius:16px;
+      overflow:hidden;
+      background:linear-gradient(135deg, rgba(212,175,55,.18), rgba(255,255,255,.04));
+      border:1px solid var(--accent-dim);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .person-photo img{width:100%;height:100%;object-fit:cover}
+    .person-fallback{
+      width:100%;height:100%;
+      display:flex;align-items:center;justify-content:center;
+      font-family:var(--display);
+      font-size:26px;
+      color:#fff;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,.1), transparent 40%),
+        linear-gradient(135deg, rgba(212,175,55,.2), rgba(8,24,48,.6));
     }
 
-    .person-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .person-card{padding:18px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.08);display:flex;gap:14px;min-height:210px;position:relative;overflow:hidden}
-    .person-card::before{content:"";position:absolute;inset:0 0 auto 0;height:2px;background:linear-gradient(90deg, rgba(212,175,55,.8), rgba(212,175,55,0));opacity:.6}
-    .person-photo{width:74px;height:74px;flex-shrink:0;border-radius:20px;overflow:hidden;background:linear-gradient(135deg, rgba(212,175,55,.22), rgba(255,255,255,.05));border:1px solid rgba(212,175,55,.16);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(0,0,0,.22)}
-    .person-photo img{width:100%;height:100%;object-fit:cover;display:block}
-    .person-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:Manrope,sans-serif;font-size:24px;font-weight:800;color:#fff;background:radial-gradient(circle at 30% 20%, rgba(255,255,255,.12), transparent 30%),linear-gradient(135deg, rgba(212,175,55,.22), rgba(91,33,182,.35))}
-    .person-main{flex:1;min-width:0}.person-name{font-family:Manrope,sans-serif;font-size:22px;font-weight:800;line-height:1.08}
-    .person-role{margin-top:7px;color:#c8d7ef;font-size:13px;line-height:1.5}.person-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-    .badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.05)}
-    .badge.red{color:#ffd6d6;background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.24)}
-    .badge.gold{color:var(--goldSoft);background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.22)}
-    .badge.blue{color:#d8e8ff;background:rgba(96,165,250,.11);border-color:rgba(96,165,250,.22)}
-    .person-note{margin-top:12px;color:var(--muted);font-size:12px;line-height:1.65}
+    .badge{background:var(--surface3);color:var(--muted)}
+    .badge.red{color:#fdd;background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.22)}
+    .badge.gold{color:#fde68a;background:var(--accent-soft);border-color:var(--accent-dim)}
+    .badge.blue{color:#bfdbfe;background:var(--israel-soft);border-color:var(--israel-border)}
+    .badge.green{color:#bbf7d0;background:var(--iran-soft);border-color:var(--iran-border)}
+    .badge.orange{color:#fed7aa;background:var(--proxy-soft);border-color:var(--proxy-border)}
 
-    .losses-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-    .side-card{padding:18px 18px 12px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.028));border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
-    .side-card[data-side="İran"]::before,.side-card[data-side="ABŞ"]::before,.side-card[data-side="İsrail"]::before,.side-card[data-side="İranın proksi qrupları"]::before{content:"";position:absolute;inset:0 0 auto 0;height:2px}
-    .side-card[data-side="İran"]::before{background:linear-gradient(90deg, rgba(239,68,68,.9), transparent)}
-    .side-card[data-side="ABŞ"]::before{background:linear-gradient(90deg, rgba(96,165,250,.9), transparent)}
-    .side-card[data-side="İsrail"]::before{background:linear-gradient(90deg, rgba(212,175,55,.9), transparent)}
-    .side-card[data-side="İranın proksi qrupları"]::before{background:linear-gradient(90deg, rgba(245,158,11,.9), transparent)}
-    .side-name{display:flex;align-items:center;gap:10px}.flag{font-size:22px;line-height:1}.side-title{font-family:Manrope,sans-serif;font-size:22px;font-weight:800;line-height:1.05}
-    .side-total{margin-top:14px;padding:14px 16px;border-radius:18px;border:1px solid rgba(212,175,55,.12);background:rgba(255,255,255,.03)}
-    .side-total b{display:block;font-family:Manrope,sans-serif;font-size:35px;line-height:1}.side-total span{display:block;margin-top:6px;color:var(--muted);font-size:13px}
-    .mini-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}.mini-stat{padding:12px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06)}
-    .mini-stat b{display:block;font-size:18px;font-weight:800}.mini-stat span{display:block;margin-top:4px;color:var(--muted);font-size:12px}
-    .cat-list{display:flex;flex-direction:column;gap:10px;margin-top:16px}.cat-item{border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.028);border-radius:18px;overflow:hidden}
-    .cat-trigger{width:100%;padding:14px;background:transparent;border:none;display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--text);cursor:pointer;text-align:left}
-    .cat-trigger:hover{background:rgba(255,255,255,.03)}.cat-trigger-left{display:flex;align-items:center;gap:10px;min-width:0}.cat-icon{width:34px;height:34px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(212,175,55,.12);font-size:16px;flex-shrink:0}
-    .cat-name{font-size:14px;font-weight:800;line-height:1.35}.cat-count{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-top:3px}
-    .cat-right{display:flex;align-items:center;gap:10px;flex-shrink:0}.cat-total{font-family:Manrope,sans-serif;font-size:18px;font-weight:800}.chev{font-size:14px;color:var(--goldSoft);transition:transform .18s ease}
-    .cat-item.open .chev{transform:rotate(180deg)}.cat-body{display:none;padding:0 14px 14px}.cat-item.open .cat-body{display:block}
-    .record-list{display:flex;flex-direction:column;gap:10px}.record-item{padding:12px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
-    .record-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.record-title{font-size:13px;font-weight:800;line-height:1.45;color:#fff}
-    .record-meta{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}.src-links{display:flex;flex-direction:column;gap:8px;margin-top:10px}
-    .src-links a{padding:8px 10px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-size:12px;color:#dbe8ff;word-break:break-all}
-    .src-links a:hover{border-color:rgba(212,175,55,.26);background:rgba(212,175,55,.08)}
-    .impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.impact-card{padding:18px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.028));border:1px solid rgba(255,255,255,.08)}
-    .impact-head{display:flex;align-items:flex-start;gap:12px}.impact-icon{width:48px;height:48px;border-radius:16px;background:rgba(239,68,68,.12);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
-    .impact-title{font-family:Manrope,sans-serif;font-size:21px;font-weight:800;line-height:1.08}.impact-type{margin-top:4px;color:var(--muted);font-size:12px}.impact-desc{margin-top:12px;color:var(--muted);font-size:13px;line-height:1.72}
-    .filters{display:grid;grid-template-columns:1.3fr repeat(4,minmax(150px,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:7px}.field label{font-size:11px;color:var(--dim);font-weight:800;letter-spacing:.55px;text-transform:uppercase}
-    .field input,.field select{width:100%;min-height:48px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:var(--text);padding:0 14px;outline:none}.field input::placeholder{color:#7c8daa}
-    .search-count{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--goldSoft)}.results-table{margin-top:18px;border:1px solid rgba(255,255,255,.08);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.02)}.table-wrap{overflow:auto;max-height:780px}
-    table{width:100%;border-collapse:collapse}thead th{position:sticky;top:0;background:rgba(9,16,28,.98);z-index:2;font-size:11px;text-transform:uppercase;letter-spacing:.55px;color:var(--dim);text-align:left;padding:14px;border-bottom:1px solid rgba(255,255,255,.08)}
-    tbody td{padding:14px;border-bottom:1px solid rgba(255,255,255,.06);vertical-align:top;font-size:13px}tbody tr:hover{background:rgba(255,255,255,.03)}
-    .status-pill{display:inline-flex;padding:6px 9px;border-radius:999px;font-size:11px;font-weight:800;border:1px solid rgba(255,255,255,.08)}
-    .status-pill[data-status="Məhv edilib"]{background:rgba(239,68,68,.12);border-color:rgba(239,68,68,.24);color:#ffd7d7}
-    .status-pill[data-status="Zədələnib"]{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.24);color:#ffe0af}
-    .status-pill[data-status="Ələ keçirilib"]{background:rgba(139,92,246,.12);border-color:rgba(139,92,246,.24);color:#e5dbff}
-    .status-pill[data-status="Qəzaya uğrayıb"]{background:rgba(96,165,250,.12);border-color:rgba(96,165,250,.24);color:#d4e7ff}
-    .empty{padding:18px;border:1px dashed rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.02);color:var(--muted);font-size:13px;line-height:1.7}
-    .footer-note{padding:18px 22px;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:var(--muted);font-size:13px;line-height:1.8}.footer-note b{color:#fff}
+    .side-title{font-size:24px}
+    .side-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .side-total-num{
+      font-family:var(--display);
+      font-size:42px;
+      font-weight:800;
+      color:#fff;
+      text-align:right;
+      line-height:1;
+    }
+
+    .mini-stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+      margin:14px 0;
+    }
+    .mini-stat{
+      padding:10px 12px;
+      border-radius:var(--r-sm);
+      background:rgba(255,255,255,.028);
+      border:1px solid var(--border);
+    }
+    .mini-stat b{
+      display:block;
+      font-family:var(--display);
+      font-size:22px;
+      color:#fff;
+    }
+    .mini-stat span{
+      display:block;
+      margin-top:3px;
+      font-family:var(--mono);
+      font-size:10px;
+      color:var(--dim);
+      line-height:1.3;
+    }
+
+    .cat-list,.record-list,.src-links{display:flex;flex-direction:column}
+    .cat-list,.record-list{gap:8px}
+    .src-links{gap:6px;margin-top:8px}
+
+    .cat-item{
+      border:1px solid var(--border);
+      background:var(--surface3);
+      border-radius:var(--r-sm);
+      overflow:hidden;
+    }
+    .cat-trigger{
+      width:100%;
+      padding:12px 14px;
+      background:transparent;
+      border:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      color:var(--text);
+      cursor:pointer;
+      text-align:left;
+    }
+    .cat-trigger-left{display:flex;align-items:center;gap:10px;min-width:0}
+    .cat-icon{
+      width:32px;height:32px;
+      border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      background:var(--accent-soft);
+      border:1px solid var(--accent-dim);
+      font-size:15px;
+    }
+    .cat-name{font-size:13.5px;font-weight:600;line-height:1.3}
+    .cat-count{
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--dim);
+      margin-top:2px;
+    }
+    .cat-right{display:flex;align-items:center;gap:10px}
+    .cat-total{
+      font-family:var(--display);
+      font-size:20px;
+      font-weight:800;
+    }
+    .chev{font-size:12px;color:var(--muted);transition:transform .2s ease}
+    .cat-item.open .chev{transform:rotate(180deg)}
+    .cat-body{display:none;padding:0 14px 14px}
+    .cat-item.open .cat-body{display:block}
+
+    .record-item{
+      padding:12px 14px;
+      border-radius:12px;
+      background:rgba(255,255,255,.025);
+      border:1px solid var(--border);
+    }
+    .record-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .record-title{
+      font-size:13px;
+      font-weight:600;
+      line-height:1.45;
+      color:#fff;
+    }
+    .src-links a{
+      padding:7px 10px;
+      border-radius:10px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--muted);
+      word-break:break-all;
+    }
+
+    .impact-icon{
+      width:48px;height:48px;
+      border-radius:14px;
+      background:rgba(239,68,68,.1);
+      border:1px solid rgba(239,68,68,.2);
+      display:flex;align-items:center;justify-content:center;
+      font-size:22px;
+    }
+    .impact-title{font-size:20px;line-height:1.1}
+    .impact-type{
+      margin-top:4px;
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--dim);
+    }
+    .impact-desc{
+      margin-top:12px;
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .filters{
+      display:grid;
+      grid-template-columns:1.4fr repeat(4,minmax(140px,1fr));
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field label{
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.55px;
+      color:var(--dim);
+    }
+    .field input,.field select{
+      width:100%;
+      min-height:44px;
+      border-radius:12px;
+      border:1px solid var(--border2);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      padding:0 14px;
+      outline:none;
+      font-family:var(--sans);
+      font-size:13.5px;
+      appearance:none;
+    }
+    .field input::placeholder{color:var(--dim)}
+    .field select{
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a6d86' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 14px center;
+      padding-right:36px;
+    }
+
+    .search-count{
+      font-family:var(--mono);
+      font-size:12px;
+      font-weight:600;
+      color:var(--accent);
+      white-space:nowrap;
+      margin-top:6px;
+    }
+
+    .results-table{
+      border:1px solid var(--border);
+      border-radius:18px;
+      overflow:hidden;
+      background:rgba(255,255,255,.018);
+    }
+    .table-wrap{overflow:auto;max-height:800px}
+    table{width:100%;border-collapse:collapse}
+    thead th{
+      position:sticky;
+      top:0;
+      z-index:2;
+      background:rgba(6,13,22,.98);
+      padding:13px 16px;
+      border-bottom:1px solid var(--border);
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.55px;
+      color:var(--dim);
+      text-align:left;
+    }
+    tbody td{
+      padding:13px 16px;
+      border-bottom:1px solid rgba(255,255,255,.04);
+      vertical-align:top;
+      font-size:13px;
+    }
+
+    .side-dot{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+    }
+    .side-dot::before{
+      content:"";
+      width:7px;height:7px;
+      border-radius:50%;
+    }
+    .side-dot[data-side="İran"]::before{background:var(--iran)}
+    .side-dot[data-side="ABŞ"]::before{background:var(--usa);border:1px solid rgba(255,255,255,.3)}
+    .side-dot[data-side="İsrail"]::before{background:var(--israel)}
+    .side-dot[data-side="İranın proksi qrupları"]::before{background:var(--proxy)}
+    .side-dot[data-side="Naməlum"]::before{background:var(--unknown)}
+
+    .status-pill{color:var(--muted)}
+    .status-pill[data-status="Məhv edilib"]{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.22);color:#fdd}
+    .status-pill[data-status="Zədələnib"]{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.22);color:#fed7aa}
+    .status-pill[data-status="Ələ keçirilib"]{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.22);color:#e9d5ff}
+    .status-pill[data-status="Qəzaya uğrayıb"]{background:rgba(96,165,250,.1);border-color:rgba(96,165,250,.22);color:#bfdbfe}
+
+    .empty{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:36px 20px;
+      gap:10px;
+      text-align:center;
+      color:var(--dim);
+    }
+    .empty-icon{font-size:32px;opacity:.4}
+    .empty-text{font-size:13px;line-height:1.6;max-width:420px}
+
+    .footer-bar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      padding:18px 24px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--r-lg);
+    }
+    .footer-left{font-size:13px;color:var(--muted);line-height:1.7}
+    .footer-left b{color:var(--text)}
+    .footer-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .footer-stat{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+    .footer-stat-num{
+      font-family:var(--display);
+      font-size:22px;
+      font-weight:800;
+      color:#fff;
+    }
+    .footer-stat-label{
+      font-family:var(--mono);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.4px;
+      color:var(--dim);
+    }
+    .footer-divider{width:1px;height:36px;background:var(--border)}
 
     @media (max-width:1280px){
-      .person-grid,.losses-grid,.overview-grid{grid-template-columns:repeat(2,1fr)}
-      .impact-grid{grid-template-columns:repeat(2,1fr)}
+      .overview-grid,.person-grid,.impact-grid{grid-template-columns:repeat(2,1fr)}
+      .mini-stats{grid-template-columns:repeat(2,1fr)}
     }
     @media (max-width:860px){
-      .page{width:min(calc(100% - 20px), var(--max))}
-      .hero,.section,.losses-shell,.search-wrap{padding:18px}
-      .person-grid,.losses-grid,.impact-grid,.overview-grid,.filters{grid-template-columns:1fr}
+      .page{width:min(calc(100% - 22px), var(--max))}
+      .hero,.section,.losses-shell,.search-wrap{padding:20px}
+      .overview-grid,.person-grid,.impact-grid,.filters,.losses-grid{grid-template-columns:1fr}
       .topbar-inner{padding:12px}
-      .actions{width:100%;justify-content:flex-start}
+      .topbar-right{width:100%;justify-content:flex-start}
       .brand-title{font-size:20px}
       thead th:nth-child(5),tbody td:nth-child(5){display:none}
-      .section-title{font-size:24px}
-      .person-name,.impact-title{font-size:19px}
-      .hero h1{font-size:clamp(32px,9vw,48px)}
+      .section-title{font-size:26px}
+      .hero h1{font-size:clamp(34px,9vw,52px)}
+      .footer-bar{flex-direction:column;align-items:flex-start}
+      .footer-right{justify-content:flex-start}
     }
   </style>
 </head>
@@ -214,42 +731,45 @@
 <div class="shell">
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="./index.html">
         <div class="brand-badge">📊</div>
         <div>
           <div class="brand-title">Iran<em>Map</em></div>
           <div class="brand-sub">Münaqişə nəticələri paneli</div>
         </div>
       </a>
-      <div class="actions">
-        <button class="btn primary" id="yenileBtn">Yenilə</button>
-        <a class="btn" href="index.html">🗺 Xəritəyə qayıt</a>
+      <div class="topbar-right">
+        <div class="live-chip"><span class="live-dot"></span>Canlı məlumat</div>
+        <div class="data-status" id="dataStatus">JSON gözlənilir…</div>
+        <button class="btn primary" id="yenileBtn">↺ Yenilə</button>
+        <a class="btn" href="./index.html">🗺 Xəritəyə qayıt</a>
       </div>
     </div>
   </header>
 
   <main class="page">
-    <section class="hero card">
-      <div class="hero-kicker">📡 Münaqişə nəticələri paneli</div>
-      <h1>Vizual şəkildə <span>təsdiqlənmiş itkilər</span></h1>
-      <div class="hero-mini">
-        Təsdiqlənmiş itki qeydləri üzrə ümumi mənzərə: əsas yük İranın üzərində cəmlənib, ABŞ və İsrailin itkiləri daha məhdud səviyyədədir, proksi qüvvələr isə lokal miqyasda zərbə alıb.
-      </div>
+    <section class="hero card fade-up">
+      <div class="hero-kicker">📡 Əməliyyat Epic Fury / Roaring Lion — 2026</div>
+      <h1>Vizual <span>təsdiqlənmiş itkilər</span></h1>
+      <div class="hero-sub" id="heroSub">Təsdiqlənmiş itki qeydləri üzrə ümumi mənzərə yüklənir…</div>
     </section>
 
-    <section class="card section">
+    <section class="card section fade-up fd-1">
       <div class="section-head">
         <div>
-          <div class="section-title">Qısa dəyərləndirmə</div>
-          <div class="section-sub">Tərəflərin ümumi itkilərinə baxaraq münaqişədə əməliyyat yükünün və zərbə balansının hansı istiqamətdə formalaşdığını qısa şəkildə görmək mümkündür.</div>
+          <div class="section-label">Ümumi dəyərləndirmə</div>
+          <div class="section-title">Qısa baxış</div>
+          <div class="section-sub">Tərəflərin ümumi itkiləri üzrə müqayisəli mənzərə — münaqişədə əməliyyat yükü hansı istiqamətdə formalaşıb.</div>
         </div>
+        <div class="section-badge" id="totalBadge">— qeyd</div>
       </div>
       <div class="overview-grid" id="overviewGrid"></div>
     </section>
 
-    <section class="card section">
+    <section class="card section fade-up fd-2">
       <div class="section-head">
         <div>
+          <div class="section-label">Şəxsi itkilər</div>
           <div class="section-title">Öldürülmüş şəxslər</div>
           <div class="section-sub">Mənbələrdə ayrıca adı çəkilən siyasi, hərbi, kəşfiyyat və təhlükəsizlik xətti üzrə öldürülmüş şəxslər.</div>
         </div>
@@ -257,19 +777,21 @@
       <div class="person-grid" id="personGrid"></div>
     </section>
 
-    <section class="card losses-shell">
+    <section class="card losses-shell fade-up fd-3">
       <div class="section-head">
         <div>
-          <div class="section-title">Vizual şəkildə təsdiqlənmiş itkilər</div>
-          <div class="section-sub">Tərəflər üzrə bölgü verilir. Hər kateqoriyaya klik etdikdə həmin kateqoriya üzrə təsdiqlənmiş qeydlər açılır.</div>
+          <div class="section-label">Tərəflər üzrə bölgü</div>
+          <div class="section-title">Vizual təsdiqlənmiş itkilər</div>
+          <div class="section-sub">Hər kateqoriyaya klik etdikdə həmin kateqoriya üzrə təsdiqlənmiş qeydlər açılır.</div>
         </div>
       </div>
       <div class="losses-grid" id="lossesGrid"></div>
     </section>
 
-    <section class="card section">
+    <section class="card section fade-up fd-4">
       <div class="section-head">
         <div>
+          <div class="section-label">Mülki və strateji</div>
           <div class="section-title">Strateji və mülki təsirlər</div>
           <div class="section-sub">Mənbələrdə ayrıca vurğulanan qeyri-hərbi, mülki və strateji təsir nümunələri.</div>
         </div>
@@ -277,21 +799,39 @@
       <div class="impact-grid" id="impactGrid"></div>
     </section>
 
-    <section class="card search-wrap">
+    <section class="card search-wrap fade-up fd-4">
       <div class="section-head">
         <div>
+          <div class="section-label">Tam siyahı</div>
           <div class="section-title">Axtarış bölməsi</div>
-          <div class="section-sub">Tam siyahıda tərəf, kateqoriya, status və tarix üzrə axtarış et.</div>
+          <div class="section-sub">Tərəf, kateqoriya, status və tarix üzrə süzgəcdən keçir.</div>
         </div>
         <div class="search-count" id="searchCount">—</div>
       </div>
+
       <div class="filters">
-        <div class="field"><label for="searchInput">Axtarış</label><input id="searchInput" type="text" placeholder="Məsələn: MiG-29, radar, İran..." /></div>
-        <div class="field"><label for="sideFilter">Tərəf</label><select id="sideFilter"><option value="">Hamısı</option></select></div>
-        <div class="field"><label for="categoryFilter">Kateqoriya</label><select id="categoryFilter"><option value="">Hamısı</option></select></div>
-        <div class="field"><label for="statusFilter">Status</label><select id="statusFilter"><option value="">Hamısı</option></select></div>
-        <div class="field"><label for="dateFilter">İtki tarixi</label><select id="dateFilter"><option value="">Hamısı</option></select></div>
+        <div class="field">
+          <label for="searchInput">Axtarış</label>
+          <input id="searchInput" type="text" placeholder="Məsələn: MiG-29, radar, İran…" />
+        </div>
+        <div class="field">
+          <label for="sideFilter">Tərəf</label>
+          <select id="sideFilter"><option value="">Hamısı</option></select>
+        </div>
+        <div class="field">
+          <label for="categoryFilter">Kateqoriya</label>
+          <select id="categoryFilter"><option value="">Hamısı</option></select>
+        </div>
+        <div class="field">
+          <label for="statusFilter">Status</label>
+          <select id="statusFilter"><option value="">Hamısı</option></select>
+        </div>
+        <div class="field">
+          <label for="dateFilter">İtki tarixi</label>
+          <select id="dateFilter"><option value="">Hamısı</option></select>
+        </div>
       </div>
+
       <div class="results-table">
         <div class="table-wrap">
           <table>
@@ -311,93 +851,133 @@
       </div>
     </section>
 
-    <section class="footer-note">
-      <b>Qeyd:</b> Bu səhifədə başlıq hissəsi sadələşdirilib və girişdə yalnız qısa ümumi dəyərləndirmə saxlanılıb. Əsas ardıcıllıq belədir: əvvəl ümumi vəziyyət, sonra öldürülmüş şəxslər, daha sonra vizual şəkildə təsdiqlənmiş itkilər və digər bölmələr.
-    </section>
+    <footer class="footer-bar fade-up fd-4">
+      <div class="footer-left">
+        <b>Qeyd:</b> Bütün qeydlər vizual material üzrə müstəqil mənbələr tərəfindən təsdiqlənib. Əsas ardıcıllıq: ümumi vəziyyət → şəxsi itkilər → vizual itkilər → strateji təsirlər.
+      </div>
+      <div class="footer-right">
+        <div class="footer-stat">
+          <div class="footer-stat-num" id="footerTotal">—</div>
+          <div class="footer-stat-label">Ümumi qeyd</div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-stat">
+          <div class="footer-stat-num" id="footerSides">4</div>
+          <div class="footer-stat-label">Tərəf</div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-stat">
+          <div class="footer-stat-num" id="footerCategories">—</div>
+          <div class="footer-stat-label">Kateqoriya</div>
+        </div>
+      </div>
+    </footer>
   </main>
 </div>
 
 <script>
 const STATUS_ORDER = ["Məhv edilib","Zədələnib","Ələ keçirilib","Qəzaya uğrayıb"];
 const SIDE_ORDER = [
-  { key: "İran", label: "İran", flag: "🇮🇷" },
-  { key: "ABŞ", label: "ABŞ", flag: "🇺🇸" },
-  { key: "İsrail", label: "İsrail", flag: "🇮🇱" },
-  { key: "İranın proksi qrupları", label: "Proksi qruplar", flag: "🟧" }
+  { key: "İran", label: "İran", flag: "🇮🇷", cls: "iran" },
+  { key: "ABŞ", label: "ABŞ", flag: "🇺🇸", cls: "usa" },
+  { key: "İsrail", label: "İsrail", flag: "🇮🇱", cls: "israel" },
+  { key: "İranın proksi qrupları", label: "Proksi qruplar", flag: "🟧", cls: "proxy" }
 ];
 const SIDE_ALIASES = {
-  "Pro-Iranian Militia (Iraq)":"İranın proksi qrupları",
-  "İraq yönlü pro-İran milis qrupları":"İranın proksi qrupları",
-  "İran-yönlü pro-İran milis qrupları":"İranın proksi qrupları",
-  "Proksi":"İranın proksi qrupları"
+  "Pro-Iranian Militia (Iraq)": "İranın proksi qrupları",
+  "İraq yönlü pro-İran milis qrupları": "İranın proksi qrupları",
+  "İran-yönlü pro-İran milis qrupları": "İranın proksi qrupları",
+  "Proksi": "İranın proksi qrupları"
 };
-const STATUS_ALIASES = {"Destroyed":"Məhv edilib","Damaged":"Zədələnib","Captured":"Ələ keçirilib","Crashed":"Qəzaya uğrayıb"};
+const STATUS_ALIASES = {
+  "Destroyed": "Məhv edilib",
+  "Damaged": "Zədələnib",
+  "Captured": "Ələ keçirilib",
+  "Crashed": "Qəzaya uğrayıb"
+};
 const CATEGORY_ICONS = {
-  "Dəniz platforması":"🚢","Təyyarə":"✈️","PUA":"🛰️","Ballistik raket sistemi":"🚀","HHM raket sistemi":"🛡️","Radar sistemi":"📡","Komanda məntəqəsi":"🧠","Nəqliyyat vasitələri":"🚚","Zenit topu":"🛡️","Yedəkli artilleriya":"🎯","YARS / Çoxsaylı raket buraxıcısı":"🎯","Mühəndis texnikası":"🏗️","Helikopter":"🚁","Piyada hərəkətlilik vasitəsi":"🚙","Piyada hərəkət vasitəsi":"🚙","Rabitə / SATCOM":"📡","Elektron mübarizə sistemi":"📶","Digər":"📦"
+  "Dəniz platforması":"🚢","Təyyarə":"✈️","PUA":"🛰️","Ballistik raket sistemi":"🚀","HHM raket sistemi":"🛡️","Radar sistemi":"📡",
+  "Komanda məntəqəsi":"🧠","Nəqliyyat vasitələri":"🚚","Zenit topu":"🔫","Yedəkli artilleriya":"🎯","YARS / Çoxsaylı raket buraxıcısı":"🎯",
+  "Mühəndis texnikası":"🏗️","Helikopter":"🚁","Piyada hərəkətlilik vasitəsi":"🚙","Piyada hərəkət vasitəsi":"🚙","Rabitə / SATCOM":"📡",
+  "Elektron mübarizə sistemi":"📶","Digər":"📦"
 };
 
 let appData = null;
 let allRecords = [];
 let filteredRecords = [];
 
-function mapSide(side){ return SIDE_ALIASES[side] || side; }
-function mapStatus(status){ return STATUS_ALIASES[status] || status; }
+function mapSide(s){ return SIDE_ALIASES[s] || s; }
+function mapStatus(s){ return STATUS_ALIASES[s] || s; }
 
-function formatDate(dateStr){
-  if(!dateStr) return "—";
-  if(dateStr.includes('.')) return dateStr;
-  const p = dateStr.split('-');
-  return p.length===3 ? `${p[2]}.${p[1]}.${p[0]}` : dateStr;
+function formatDate(d){
+  if(!d) return "—";
+  if(d.includes('.')) return d;
+  const p = d.split('-');
+  return p.length === 3 ? `${p[2]}.${p[1]}.${p[0]}` : d;
 }
 
-function escapeHtml(str){
-  return String(str ?? '').replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+function escapeHtml(s){
+  return String(s ?? '').replace(/[&<>"']/g, c => (
+    {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
+  ));
 }
+
+function unique(arr){ return [...new Set(arr.filter(Boolean))]; }
 
 function initials(name){
   return String(name || '').split(/\s+/).slice(0,2).map(w => w[0] || '').join('').toUpperCase();
 }
 
-function personPhotoMarkup(person){
-  if(person && person.şəkil) return `<img src="${escapeHtml(person.şəkil)}" alt="${escapeHtml(person.ad)}" loading="lazy">`;
-  return `<div class="person-fallback">${escapeHtml(initials(person.ad) || '👤')}</div>`;
+function personPhotoMarkup(p){
+  if(p?.şəkil){
+    return `<img src="${escapeHtml(p.şəkil)}" alt="${escapeHtml(p.ad)}" loading="lazy">`;
+  }
+  return `<div class="person-fallback">${escapeHtml(initials(p?.ad) || '?')}</div>`;
 }
-
-function unique(arr){ return [...new Set(arr.filter(Boolean))]; }
 
 function sourceLink(url, idx){
   const safe = escapeHtml(url);
-  return `<a href="${safe}" target="_blank" rel="noopener noreferrer">Mənbə ${idx+1} — ${safe}</a>`;
+  return `<a href="${safe}" target="_blank" rel="noopener noreferrer">Mənbə ${idx + 1}</a>`;
+}
+
+function animateCount(el, target, duration = 900){
+  const start = performance.now();
+  function step(now){
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.round(target * eased);
+    if(progress < 1) requestAnimationFrame(step);
+    else el.textContent = target;
+  }
+  requestAnimationFrame(step);
 }
 
 function normalizeRecords(records){
-  return records.map((r,idx)=>({
+  return (records || []).map((r, idx) => ({
     ...r,
-    tərəf: mapSide(r.tərəf || r.xamTərəf || ''),
-    status: mapStatus(r.status || r.xamStatus || ''),
+    tərəf: mapSide(r.tərəf || r.tərəf_xam || r.xamTərəf || ''),
+    status: mapStatus(r.status || r.status_xam || r.xamStatus || ''),
     kateqoriya: r.kateqoriya || 'Digər',
     ikon: r.ikon || CATEGORY_ICONS[r.kateqoriya] || '📦',
     mənbələr: Array.isArray(r.mənbələr) ? r.mənbələr : [],
-    id: r.id || `qeyd-${idx+1}`
+    id: r.id || `qeyd-${idx + 1}`
   }));
 }
 
 function computeSideStats(side){
-  const sideRecords = allRecords.filter(r => r.tərəf === side);
+  const recs = allRecords.filter(r => r.tərəf === side);
   const statusCounts = Object.fromEntries(STATUS_ORDER.map(s => [s, 0]));
-  sideRecords.forEach(r => {
-    statusCounts[r.status] = (statusCounts[r.status] || 0) + 1;
+  recs.forEach(r => statusCounts[r.status] = (statusCounts[r.status] || 0) + 1);
+
+  const catMap = new Map();
+  recs.forEach(r => {
+    const k = r.kateqoriya || 'Digər';
+    if(!catMap.has(k)) catMap.set(k, []);
+    catMap.get(k).push(r);
   });
 
-  const categoryMap = new Map();
-  sideRecords.forEach(r => {
-    const key = r.kateqoriya || 'Digər';
-    if(!categoryMap.has(key)) categoryMap.set(key, []);
-    categoryMap.get(key).push(r);
-  });
-
-  const categories = [...categoryMap.entries()].map(([name, items]) => {
-    const st = Object.fromEntries(STATUS_ORDER.map(s => [s,0]));
+  const categories = [...catMap.entries()].map(([name, items]) => {
+    const st = Object.fromEntries(STATUS_ORDER.map(s => [s, 0]));
     items.forEach(it => st[it.status] = (st[it.status] || 0) + 1);
     return {
       name,
@@ -406,118 +986,167 @@ function computeSideStats(side){
       statusCounts: st,
       icon: CATEGORY_ICONS[name] || items[0]?.ikon || '📦'
     };
-  }).sort((a,b)=>b.total-a.total || a.name.localeCompare(b.name,'az'));
+  }).sort((a,b) => b.total - a.total || a.name.localeCompare(b.name, 'az'));
 
-  return { total: sideRecords.length, statusCounts, categories };
+  return { total: recs.length, statusCounts, categories };
 }
 
-function getOverviewComment(side, stats){
-  if(side === "İran"){
-    return "İran üçün bu itkilər hərbi-strateji dayaqlarının ağır şəkildə aşınması deməkdir. Tehran hələ də cavab zərbələri endirə bilir, amma bunu əvvəlki güc və davamlılıqla etməsi çətinləşib.";
-  }
-  if(side === "ABŞ"){
-    return "ABŞ üçün bu itkilər “toxunulmazlıq mifinin” ciddi şəkildə zədələnməsi deməkdir. Əsas mesaj budur: Vaşinqton qalib gələ bilər, amma artıq itkisiz və risksiz edə bilməz.";
-  }
-  if(side === "İsrail"){
-    return "İsrail üçün bu itkilər tam toxunulmaz olmadığını göstərən ciddi siqnaldır. Təl-Əviv artıq zərbələrinin cavabsız və nəticəsiz qalmayacağı görür.";
-  }
-  return "Proksi qüvvələr üçün bu müharibə həm imkan, həm də risk deməkdir: onların rolu artır, amma itkiləri də daha görünən və daha ağır olur.";
+function getOverviewComment(side){
+  if(side === "İran") return "İranın itkiləri hərbi-strateji dayaqlarının ağır şəkildə aşınması deməkdir.";
+  if(side === "ABŞ") return "ABŞ üzrə itkilər məhduddur, amma sıfır deyil.";
+  if(side === "İsrail") return "İsrailin itkiləri əsasən PUA seqmentində toplanır.";
+  return "Proksi qüvvələrdə itki daha lokal miqyasda görünür.";
+}
+
+function setStatus(text, mode){
+  const el = document.getElementById('dataStatus');
+  el.textContent = text;
+  el.className = `data-status ${mode || ''}`.trim();
+}
+
+function setHeroSummary(){
+  const src = appData?.mənbə_xülasəsi?.ümumi_rəqəmlər || {};
+  const iran = src["İran"]?.cəmi ?? computeSideStats("İran").total;
+  const usa = src["ABŞ"]?.cəmi ?? computeSideStats("ABŞ").total;
+  const israel = src["İsrail"]?.cəmi ?? computeSideStats("İsrail").total;
+  const proxy = src["İraq yönlü pro-İran milis qrupları"]?.cəmi
+    ?? src["İranın proksi qrupları"]?.cəmi
+    ?? computeSideStats("İranın proksi qrupları").total;
+
+  document.getElementById('heroSub').textContent =
+    `Təsdiqlənmiş itki qeydləri üzrə ümumi mənzərə: İran üzrə ${iran}, ABŞ üzrə ${usa}, İsrail üzrə ${israel}, proksi qruplar üzrə isə ${proxy} qeyd mövcuddur. Əsas yük İranın üzərində cəmlənir.`;
 }
 
 function renderOverview(){
   const wrap = document.getElementById('overviewGrid');
-  wrap.innerHTML = SIDE_ORDER.map(sideInfo => {
-    const stats = computeSideStats(sideInfo.key);
-    const destroyed = stats.statusCounts["Məhv edilib"] || 0;
-    const damaged = stats.statusCounts["Zədələnib"] || 0;
-    const captured = stats.statusCounts["Ələ keçirilib"] || 0;
-    const crashed = stats.statusCounts["Qəzaya uğrayıb"] || 0;
 
-    let cls = 'gold';
-    if(sideInfo.key === "İran") cls = 'red';
-    if(sideInfo.key === "ABŞ") cls = 'blue';
-    if(sideInfo.key === "İranın proksi qrupları") cls = 'orange';
+  if(!allRecords.length){
+    wrap.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">⚠️</div><div class="empty-text">İtki qeydləri tapılmadı.</div></div>`;
+    return;
+  }
 
-    return `
-      <article class="overview-card ${cls}">
-        <div class="overview-top">
-          <div class="overview-flag">${sideInfo.flag}</div>
-          <div class="overview-title">${escapeHtml(sideInfo.label)}</div>
-        </div>
-        <div class="overview-total">${stats.total}</div>
-        <div class="overview-label">ümumi təsdiqlənmiş itki</div>
-        <div class="overview-meta">
-          <span class="overview-chip">Məhv: ${destroyed}</span>
-          ${damaged ? `<span class="overview-chip">Zədə: ${damaged}</span>` : ``}
-          ${captured ? `<span class="overview-chip">Ələ keçirilib: ${captured}</span>` : ``}
-          ${crashed ? `<span class="overview-chip">Qəzaya uğrayıb: ${crashed}</span>` : ``}
-        </div>
-        <div class="overview-note">${escapeHtml(getOverviewComment(sideInfo.key, stats))}</div>
-      </article>
-    `;
+  const grandTotal = allRecords.length;
+  document.getElementById('totalBadge').textContent = `${grandTotal} qeyd`;
+  document.getElementById('footerTotal').textContent = grandTotal;
+  document.getElementById('footerCategories').textContent = unique(allRecords.map(r => r.kateqoriya)).length;
+
+  wrap.innerHTML = SIDE_ORDER.map(si => {
+    const st = computeSideStats(si.key);
+    const pct = grandTotal > 0 ? Math.round(st.total / grandTotal * 100) : 0;
+    const destroyed = st.statusCounts["Məhv edilib"] || 0;
+    const damaged = st.statusCounts["Zədələnib"] || 0;
+    const captured = st.statusCounts["Ələ keçirilib"] || 0;
+    const crashed = st.statusCounts["Qəzaya uğrayıb"] || 0;
+
+    const chips = [
+      destroyed ? `<span class="ov-chip">Məhv: ${destroyed}</span>` : '',
+      damaged ? `<span class="ov-chip">Zədə: ${damaged}</span>` : '',
+      captured ? `<span class="ov-chip">Ələ keçirilib: ${captured}</span>` : '',
+      crashed ? `<span class="ov-chip">Qəza: ${crashed}</span>` : ''
+    ].filter(Boolean).join('');
+
+    return `<article class="overview-card ${si.cls}">
+      <div class="ov-top">
+        <div class="ov-flag">${si.flag}</div>
+        <div class="ov-name">${escapeHtml(si.label)}</div>
+      </div>
+      <div class="ov-num" data-count="${st.total}">0</div>
+      <div class="ov-num-label">ümumi təsdiqlənmiş itki</div>
+      <div class="ov-bar-wrap"><div class="ov-bar" style="width:0%" data-pct="${pct}"></div></div>
+      <div class="ov-chips">${chips}</div>
+      <div class="ov-note">${escapeHtml(getOverviewComment(si.key))}</div>
+    </article>`;
   }).join('');
+
+  wrap.querySelectorAll('.overview-card').forEach((card, i) => {
+    const numEl = card.querySelector('.ov-num');
+    const barEl = card.querySelector('.ov-bar');
+    setTimeout(() => {
+      animateCount(numEl, parseInt(numEl.dataset.count || '0', 10), 900);
+      barEl.style.width = parseInt(barEl.dataset.pct || '0', 10) + '%';
+    }, i * 80);
+  });
 }
 
 function renderPersons(){
   const grid = document.getElementById('personGrid');
-  const people = (appData?.şəxsi_itkilər || []).slice().sort((a,b)=>(a.prioritet||999)-(b.prioritet||999));
+  const people = (appData?.şəxsi_itkilər || []).slice().sort((a,b) => (a.prioritet || 999) - (b.prioritet || 999));
 
-  grid.innerHTML = people.map(person => `
-    <article class="person-card">
-      <div class="person-photo">${personPhotoMarkup(person)}</div>
-      <div class="person-main">
-        <div class="person-name">${escapeHtml(person.ad)}</div>
-        <div class="person-role">${escapeHtml(person.vəzifə || '—')}</div>
+  if(!people.length){
+    grid.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">👤</div><div class="empty-text">Şəxsi itki qeydi tapılmadı.</div></div>`;
+    return;
+  }
+
+  grid.innerHTML = people.map(p => {
+    const sideKey = p.tərəf || 'İran';
+    const sideInfo = SIDE_ORDER.find(s => s.key === sideKey);
+    const badgeCls =
+      sideInfo?.cls === 'iran' ? 'green' :
+      sideInfo?.cls === 'usa' ? '' :
+      sideInfo?.cls === 'israel' ? 'blue' : 'orange';
+
+    const note = p.mənbə_qeydi || p.qeyd || '';
+
+    return `<article class="person-card">
+      <div class="person-photo">${personPhotoMarkup(p)}</div>
+      <div>
+        <div class="person-name">${escapeHtml(p.ad)}</div>
+        <div class="person-role">${escapeHtml(p.vəzifə || '—')}</div>
         <div class="person-meta">
           <span class="badge red">Öldürülüb</span>
-          <span class="badge gold">${escapeHtml(person.tərəf || 'İran')}</span>
-          <span class="badge blue">${escapeHtml(person.tarix_göstəriş || formatDate(person.tarix))}</span>
+          <span class="badge ${badgeCls}">${escapeHtml(sideKey)}</span>
+          <span class="badge gold">${escapeHtml(p.tarix_göstəriş || formatDate(p.tarix))}</span>
         </div>
-        <div class="person-note">${escapeHtml(person.mənbə_qeydi || '')}</div>
+        ${note ? `<div class="person-note">${escapeHtml(note)}</div>` : ''}
       </div>
-    </article>
-  `).join('');
+    </article>`;
+  }).join('');
 }
 
-function recordItemMarkup(record){
-  return `
-    <div class="record-item">
-      <div class="record-top">
-        <div class="record-title">${escapeHtml(record.ad)}</div>
-        <span class="status-pill" data-status="${escapeHtml(record.status)}">${escapeHtml(record.status)}</span>
-      </div>
-      <div class="record-meta">
-        <span class="badge blue">${escapeHtml(formatDate(record.itki_tarixi || record.itkiTarixi || record.qeyd_tarixi || record.qeydTarixi))}</span>
-      </div>
-      <div class="src-links">${(record.mənbələr||[]).map(sourceLink).join('')}</div>
+function recordItemMarkup(r){
+  const date = r.itki_tarixi_göstəriş || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi);
+
+  return `<div class="record-item">
+    <div class="record-top">
+      <div class="record-title">${escapeHtml(r.ad)}</div>
+      <span class="status-pill" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span>
     </div>
-  `;
+    <div class="record-meta">
+      <span class="badge blue">${escapeHtml(date)}</span>
+      ${r.taymkod ? `<span class="badge gold">⏱ ${escapeHtml(r.taymkod)}</span>` : ''}
+    </div>
+    <div class="src-links">
+      ${r.mənbələr?.length ? r.mənbələr.map(sourceLink).join('') : `<span class="badge">Mənbə yoxdur</span>`}
+    </div>
+  </div>`;
 }
 
 function renderLossesGrid(){
   const wrap = document.getElementById('lossesGrid');
-  wrap.innerHTML = SIDE_ORDER.map(sideInfo => {
-    const stats = computeSideStats(sideInfo.key);
-    const mini = STATUS_ORDER.map(st => `
-      <div class="mini-stat">
-        <b>${stats.statusCounts[st] || 0}</b>
-        <span>${escapeHtml(st)}</span>
-      </div>
-    `).join('');
 
-    const categories = stats.categories.length
-      ? stats.categories.map(cat => `
-        <div class="cat-item" data-side="${escapeHtml(sideInfo.key)}" data-cat="${escapeHtml(cat.name)}">
+  if(!allRecords.length){
+    wrap.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">📦</div><div class="empty-text">Vizual təsdiqlənmiş texnika qeydləri tapılmadı.</div></div>`;
+    return;
+  }
+
+  wrap.innerHTML = SIDE_ORDER.map(si => {
+    const st = computeSideStats(si.key);
+    const mini = STATUS_ORDER.map(status =>
+      `<div class="mini-stat"><b>${st.statusCounts[status] || 0}</b><span>${escapeHtml(status)}</span></div>`
+    ).join('');
+
+    const categories = st.categories.length
+      ? st.categories.map(cat => `<div class="cat-item">
           <button class="cat-trigger" type="button">
             <div class="cat-trigger-left">
               <div class="cat-icon">${escapeHtml(cat.icon)}</div>
               <div>
                 <div class="cat-name">${escapeHtml(cat.name)}</div>
                 <div class="cat-count">
-                  Məhv: ${cat.statusCounts['Məhv edilib']||0}
-                  · Zədə: ${cat.statusCounts['Zədələnib']||0}
-                  · Ələ keçirilib: ${cat.statusCounts['Ələ keçirilib']||0}
-                  · Qəzaya uğrayıb: ${cat.statusCounts['Qəzaya uğrayıb']||0}
+                  Məhv: ${cat.statusCounts["Məhv edilib"] || 0} ·
+                  Zədə: ${cat.statusCounts["Zədələnib"] || 0} ·
+                  Ələ keçirilib: ${cat.statusCounts["Ələ keçirilib"] || 0} ·
+                  Qəza: ${cat.statusCounts["Qəzaya uğrayıb"] || 0}
                 </div>
               </div>
             </div>
@@ -527,26 +1156,25 @@ function renderLossesGrid(){
             </div>
           </button>
           <div class="cat-body">
-            ${cat.items.length ? `<div class="record-list">${cat.items.map(recordItemMarkup).join('')}</div>` : `<div class="empty">Bu kateqoriya üzrə qeyd yoxdur.</div>`}
+            <div class="record-list">${cat.items.map(recordItemMarkup).join('')}</div>
           </div>
-        </div>
-      `).join('')
-      : `<div class="empty">Bu tərəf üzrə vizual təsdiqlənmiş qeyd yoxdur.</div>`;
+        </div>`).join('')
+      : `<div class="empty"><div class="empty-icon">—</div><div class="empty-text">Bu tərəf üzrə qeyd yoxdur.</div></div>`;
 
-    return `
-      <article class="side-card" data-side="${escapeHtml(sideInfo.key)}">
-        <div class="side-name">
-          <span class="flag">${sideInfo.flag}</span>
-          <div class="side-title">${escapeHtml(sideInfo.label)}</div>
+    return `<article class="side-card" data-side="${escapeHtml(si.key)}">
+      <div class="side-header">
+        <div class="side-name-wrap">
+          <div class="side-flag">${si.flag}</div>
+          <div class="side-title">${escapeHtml(si.label)}</div>
         </div>
-        <div class="side-total">
-          <b>${stats.total}</b>
-          <span>Ümumi itki</span>
+        <div>
+          <div class="side-total-num">${st.total}</div>
+          <div class="side-total-label">ümumi itki</div>
         </div>
-        <div class="mini-stats">${mini}</div>
-        <div class="cat-list">${categories}</div>
-      </article>
-    `;
+      </div>
+      <div class="mini-stats">${mini}</div>
+      <div class="cat-list">${categories}</div>
+    </article>`;
   }).join('');
 
   wrap.querySelectorAll('.cat-trigger').forEach(btn => {
@@ -557,38 +1185,69 @@ function renderLossesGrid(){
 function renderImpacts(){
   const wrap = document.getElementById('impactGrid');
   const items = appData?.strateji_təsirlər || [];
-  wrap.innerHTML = items.map(item => `
-    <article class="impact-card">
-      <div class="impact-head">
-        <div class="impact-icon">${escapeHtml(item.ikon || '⚠️')}</div>
-        <div>
-          <div class="impact-title">${escapeHtml(item.ad || item.başlıq || '—')}</div>
-          <div class="impact-type">${escapeHtml(item.növ || item.kateqoriya || 'Strateji və mülki təsir')}</div>
-        </div>
+
+  if(!items.length){
+    wrap.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🏙️</div><div class="empty-text">Strateji və mülki təsir qeydi tapılmadı.</div></div>`;
+    return;
+  }
+
+  wrap.innerHTML = items.map(it => `<article class="impact-card">
+    <div class="impact-head">
+      <div class="impact-icon">${escapeHtml(it.ikon || '⚠️')}</div>
+      <div>
+        <div class="impact-title">${escapeHtml(it.başlıq || it.ad || '—')}</div>
+        <div class="impact-type">${escapeHtml(it.növ || it.kateqoriya || 'Strateji və mülki təsir')}</div>
       </div>
-      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
-        <span class="badge red">${escapeHtml(item.status || 'Təsir qeydi')}</span>
-        <span class="badge blue">${escapeHtml(item.tarix_göstəriş || formatDate(item.tarix))}</span>
-      </div>
-      <div class="impact-desc">${escapeHtml(item.qeyd || item.təsvir || '')}</div>
-    </article>
-  `).join('');
+    </div>
+    <div class="impact-badges">
+      <span class="badge red">${escapeHtml(it.status || 'Təsir qeydi')}</span>
+      <span class="badge gold">${escapeHtml(it.tarix_göstəriş || formatDate(it.tarix))}</span>
+    </div>
+    <div class="impact-desc">${escapeHtml(it.təsvir || it.qeyd || '')}</div>
+  </article>`).join('');
 }
 
 function populateFilters(){
-  const sideSel = document.getElementById('sideFilter');
-  const catSel = document.getElementById('categoryFilter');
-  const statusSel = document.getElementById('statusFilter');
-  const dateSel = document.getElementById('dateFilter');
+  document.getElementById('sideFilter').innerHTML =
+    '<option value="">Hamısı</option>' +
+    unique(allRecords.map(r => r.tərəf)).map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
 
-  sideSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.tərəf)).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
-  catSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.kateqoriya)).sort((a,b)=>a.localeCompare(b,'az')).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
-  statusSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>r.status)).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
-  dateSel.innerHTML = '<option value="">Hamısı</option>' + unique(allRecords.map(r=>formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi))).sort((a,b)=>{
-    const pa=a.split('.').reverse().join('');
-    const pb=b.split('.').reverse().join('');
-    return pa.localeCompare(pb);
-  }).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+  document.getElementById('categoryFilter').innerHTML =
+    '<option value="">Hamısı</option>' +
+    unique(allRecords.map(r => r.kateqoriya)).sort((a,b)=>a.localeCompare(b,'az'))
+      .map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+
+  document.getElementById('statusFilter').innerHTML =
+    '<option value="">Hamısı</option>' +
+    unique(allRecords.map(r => r.status)).map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+
+  document.getElementById('dateFilter').innerHTML =
+    '<option value="">Hamısı</option>' +
+    unique(allRecords.map(r => r.itki_tarixi_göstəriş || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi)))
+      .sort((a,b)=>a.localeCompare(b,'az'))
+      .map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+}
+
+function renderTable(){
+  const body = document.getElementById('recordsBody');
+  document.getElementById('searchCount').textContent = `${filteredRecords.length} nəticə`;
+
+  if(!filteredRecords.length){
+    body.innerHTML = `<tr><td colspan="6"><div class="empty"><div class="empty-icon">🔎</div><div class="empty-text">Seçilmiş süzgəclərə uyğun qeyd tapılmadı.</div></div></td></tr>`;
+    return;
+  }
+
+  body.innerHTML = filteredRecords.map(r => {
+    const date = r.itki_tarixi_göstəriş || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi);
+    return `<tr>
+      <td><strong>${escapeHtml(r.ad)}</strong></td>
+      <td><span class="side-dot" data-side="${escapeHtml(r.tərəf)}">${escapeHtml(r.tərəf)}</span></td>
+      <td>${escapeHtml(r.kateqoriya)}</td>
+      <td><span class="status-pill" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span></td>
+      <td>${escapeHtml(date)}</td>
+      <td>${r.mənbələr?.length ? `<a href="${escapeHtml(r.mənbələr[0])}" target="_blank" rel="noopener noreferrer">1+ mənbə</a>` : '—'}</td>
+    </tr>`;
+  }).join('');
 }
 
 function applyFilters(){
@@ -599,45 +1258,20 @@ function applyFilters(){
   const date = document.getElementById('dateFilter').value;
 
   filteredRecords = allRecords.filter(r => {
-    const hay = [
-      r.ad, r.tərəf, r.kateqoriya, r.status, ...(r.mənbələr || [])
-    ].join(' ').toLowerCase();
-
+    const hay = [r.ad, r.tərəf, r.kateqoriya, r.status, ...(r.mənbələr || [])].join(' ').toLowerCase();
+    const itemDate = r.itki_tarixi_göstəriş || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi);
     return (!q || hay.includes(q))
       && (!side || r.tərəf === side)
       && (!cat || r.kateqoriya === cat)
       && (!status || r.status === status)
-      && (!date || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi) === date);
+      && (!date || itemDate === date);
   });
 
   renderTable();
 }
 
-function renderTable(){
-  const body = document.getElementById('recordsBody');
-  document.getElementById('searchCount').textContent = `Axtarış nəticəsi: ${filteredRecords.length} qeyd`;
-
-  if(!filteredRecords.length){
-    body.innerHTML = `<tr><td colspan="6"><div class="empty">Seçilmiş axtarış meyarları üzrə nəticə tapılmadı.</div></td></tr>`;
-    return;
-  }
-
-  body.innerHTML = filteredRecords.map(r => `
-    <tr>
-      <td><strong>${escapeHtml(r.ad)}</strong></td>
-      <td>${escapeHtml(r.tərəf)}</td>
-      <td>${escapeHtml(r.kateqoriya)}</td>
-      <td><span class="status-pill" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span></td>
-      <td>${escapeHtml(formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi))}</td>
-      <td>${(r.mənbələr||[]).length ? `<a href="${escapeHtml(r.mənbələr[0])}" target="_blank" rel="noopener noreferrer">${(r.mənbələr||[]).length} mənbə</a>` : '—'}</td>
-    </tr>
-  `).join('');
-}
-
-async function loadData(){
-  const res = await fetch('data/losses.json', {cache:'no-store'});
-  appData = await res.json();
-  allRecords = normalizeRecords(appData?.qeydlər || appData?.records || []);
+function renderAll(){
+  setHeroSummary();
   renderOverview();
   renderPersons();
   renderLossesGrid();
@@ -647,14 +1281,63 @@ async function loadData(){
   renderTable();
 }
 
-document.getElementById('yenileBtn').addEventListener('click', () => location.reload());
+function showLoadError(message){
+  setStatus('JSON yüklənmədi', 'err');
+  document.getElementById('overviewGrid').innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">⚠️</div><div class="empty-text">${escapeHtml(message)}</div></div>`;
+  document.getElementById('personGrid').innerHTML = '';
+  document.getElementById('lossesGrid').innerHTML = '';
+  document.getElementById('impactGrid').innerHTML = '';
+  document.getElementById('recordsBody').innerHTML = `<tr><td colspan="6"><div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">${escapeHtml(message)}</div></div></td></tr>`;
+  document.getElementById('searchCount').textContent = 'Xəta';
+}
+
+async function loadData(){
+  const paths = ['./data/losses.json', 'data/losses.json', '/data/losses.json', './losses.json', 'losses.json'];
+  let usedPath = null;
+  let json = null;
+  let lastError = null;
+
+  for(const path of paths){
+    try{
+      const res = await fetch(path, { cache:'no-store' });
+      if(!res.ok){
+        lastError = new Error(`${path} → HTTP ${res.status}`);
+        continue;
+      }
+      json = await res.json();
+      usedPath = path;
+      break;
+    }catch(err){
+      lastError = err;
+    }
+  }
+
+  if(!json){
+    showLoadError('Məlumat faylı tapılmadı. losses.html kök qovluqda, losses.json isə data qovluğunda olmalıdır: ./data/losses.json');
+    console.error(lastError);
+    return;
+  }
+
+  appData = json;
+  allRecords = normalizeRecords(appData.qeydlər || appData.records || []);
+  setStatus(`JSON: ${usedPath}`, 'ok');
+
+  if(!Array.isArray(appData.qeydlər) && !Array.isArray(appData.records)){
+    showLoadError('JSON oxundu, amma itki qeydləri tapılmadı. "qeydlər" massivini yoxla.');
+    return;
+  }
+
+  renderAll();
+}
+
+document.getElementById('yenileBtn').addEventListener('click', loadData);
 
 ['searchInput','sideFilter','categoryFilter','statusFilter','dateFilter'].forEach(id => {
   const el = document.getElementById(id);
   el.addEventListener(id === 'searchInput' ? 'input' : 'change', applyFilters);
 });
 
-loadData().catch(err => console.error(err));
+loadData();
 </script>
 </body>
 </html>

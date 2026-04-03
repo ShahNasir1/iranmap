@@ -4,64 +4,69 @@
     "alt_başlıq": "Vizual təsdiqlənmiş itkilər, şəxsi itkilər və strateji təsirlər",
     "dil": "az",
     "sxem_versiyası": "1.0.0",
-    "yaradılma_tarixi": "2026-04-02",
-    "qeyd": "Bu fayl əlavə edilmiş tam cədvəl və əməliyyat xülasəsi əsasında formalaşdırılıb."
+    "yaradılma_tarixi": "2026-04-03",
+    "qeyd": "Bu fayl son əlavə edilmiş tam cədvəl və yenilənmiş şəxsi itkilər siyahısı əsasında formalaşdırılıb."
   },
   "mənbə_xülasəsi": {
-    "sənəd_adı": "Operation Epic Fury - 2026 İsrail/ABŞ - İran müharibəsində avadanlıq itkilərinin sənədləşdirilməsi",
+    "sənəd_adı": "Operation Epic Fury / Roaring Lion — 2026 münaqişəsi üzrə yenilənmiş itki cədvəli",
     "ümumi_rəqəmlər": {
       "İran": {
-        "cəmi": 270,
-        "məhv_edilib": 240,
-        "zədələnib": 30
+        "cəmi": 289,
+        "məhv_edilib": 260,
+        "zədələnib": 29
       },
       "İsrail": {
         "cəmi": 16,
         "məhv_edilib": 16
       },
       "ABŞ": {
-        "cəmi": 24,
-        "məhv_edilib": 20,
-        "zədələnib": 4
+        "cəmi": 28,
+        "məhv_edilib": 23,
+        "zədələnib": 4,
+        "qəzaya_uğrayıb": 1
       },
       "İraq yönlü pro-İran milis qrupları": {
-        "cəmi": 4,
-        "məhv_edilib": 1,
-        "ələ_keçirilib": 3
+        "cəmi": 6,
+        "ələ_keçirilib": 4,
+        "məhv_edilib": 2
+      },
+      "Naməlum": {
+        "cəmi": 1,
+        "məhv_edilib": 1
       }
     },
-    "qeyd": "Bu rəqəmlər sənədin xülasə hissəsində verilən yekun göstəricilərdir; tam cədvəl üzrə dinamik hesablama fərqli ola bilər."
+    "qeyd": "Bu rəqəmlər son əlavə edilmiş Excel siyahısı üzrə birbaşa hesablanmış yekun göstəricilərdir."
   },
   "dinamik_xülasə": {
-    "cəmi": 325,
+    "cəmi": 340,
     "statuslar": {
-      "Məhv edilib": 287,
+      "Məhv edilib": 302,
       "Zədələnib": 33,
       "Ələ keçirilib": 4,
       "Qəzaya uğrayıb": 1
     },
     "tərəflər": {
       "İran": {
-        "cəmi": 279,
+        "cəmi": 289,
         "statuslar": {
-          "Məhv edilib": 250,
+          "Məhv edilib": 260,
           "Zədələnib": 29
         },
         "kateqoriyalar": {
+          "Nəqliyyat vasitələri": 63,
           "Dəniz platforması": 62,
-          "Nəqliyyat vasitələri": 60,
-          "Ballistik raket sistemi": 46,
-          "Təyyarə": 36,
-          "HHM raket sistemi": 21,
+          "Ballistik raket sistemi": 49,
+          "Təyyarə": 37,
+          "HHM raket sistemi": 22,
           "Komanda məntəqəsi": 14,
           "Radar sistemi": 11,
-          "Zenit topu": 10,
+          "Zenit topu": 11,
           "Mühəndis texnikası": 5,
+          "PUA": 4,
           "Helikopter": 4,
-          "PUA": 3,
+          "Yedəkli artilleriya": 2,
           "Elektron mübarizə sistemi": 2,
           "YARS / Çoxsaylı raket buraxıcısı": 2,
-          "Yedəkli artilleriya": 2,
           "Piyada hərəkətlilik vasitəsi": 1
         }
       },
@@ -75,14 +80,14 @@
         }
       },
       "ABŞ": {
-        "cəmi": 24,
+        "cəmi": 28,
         "statuslar": {
-          "Məhv edilib": 19,
+          "Məhv edilib": 23,
           "Zədələnib": 4,
           "Qəzaya uğrayıb": 1
         },
         "kateqoriyalar": {
-          "PUA": 9,
+          "PUA": 13,
           "Təyyarə": 8,
           "Radar sistemi": 4,
           "Rabitə / SATCOM": 3
@@ -99,33 +104,42 @@
           "Yedəkli artilleriya": 2,
           "Nəqliyyat vasitələri": 1
         }
+      },
+      "Naməlum": {
+        "cəmi": 1,
+        "statuslar": {
+          "Məhv edilib": 1
+        },
+        "kateqoriyalar": {
+          "PUA": 1
+        }
       }
     }
   },
   "kateqoriya_xülasəsi": [
     {
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "say": 64
+    },
+    {
       "kateqoriya": "Dəniz platforması",
       "say": 62
     },
     {
-      "kateqoriya": "Nəqliyyat vasitələri",
-      "say": 61
-    },
-    {
       "kateqoriya": "Ballistik raket sistemi",
-      "say": 46
+      "say": 49
     },
     {
       "kateqoriya": "Təyyarə",
-      "say": 44
+      "say": 45
     },
     {
       "kateqoriya": "PUA",
-      "say": 28
+      "say": 34
     },
     {
       "kateqoriya": "HHM raket sistemi",
-      "say": 21
+      "say": 22
     },
     {
       "kateqoriya": "Radar sistemi",
@@ -137,7 +151,7 @@
     },
     {
       "kateqoriya": "Zenit topu",
-      "say": 10
+      "say": 11
     },
     {
       "kateqoriya": "Mühəndis texnikası",
@@ -148,11 +162,11 @@
       "say": 5
     },
     {
-      "kateqoriya": "Helikopter",
+      "kateqoriya": "Yedəkli artilleriya",
       "say": 4
     },
     {
-      "kateqoriya": "Yedəkli artilleriya",
+      "kateqoriya": "Helikopter",
       "say": 4
     },
     {
@@ -171,19 +185,19 @@
   "tarix_dinamikası": [
     {
       "tarix": "28.02.2026",
-      "qeyd_sayı": 18
+      "qeyd_sayı": 10
     },
     {
       "tarix": "01.03.2026",
-      "qeyd_sayı": 25
+      "qeyd_sayı": 32
     },
     {
       "tarix": "02.03.2026",
-      "qeyd_sayı": 21
+      "qeyd_sayı": 18
     },
     {
       "tarix": "03.03.2026",
-      "qeyd_sayı": 19
+      "qeyd_sayı": 17
     },
     {
       "tarix": "04.03.2026",
@@ -191,15 +205,15 @@
     },
     {
       "tarix": "05.03.2026",
-      "qeyd_sayı": 26
+      "qeyd_sayı": 22
     },
     {
       "tarix": "06.03.2026",
-      "qeyd_sayı": 16
+      "qeyd_sayı": 19
     },
     {
       "tarix": "07.03.2026",
-      "qeyd_sayı": 9
+      "qeyd_sayı": 10
     },
     {
       "tarix": "08.03.2026",
@@ -210,32 +224,24 @@
       "qeyd_sayı": 7
     },
     {
-      "tarix": "10.03.2026",
-      "qeyd_sayı": 23
-    },
-    {
       "tarix": "11.03.2026",
-      "qeyd_sayı": 27
+      "qeyd_sayı": 53
     },
     {
       "tarix": "12.03.2026",
-      "qeyd_sayı": 15
+      "qeyd_sayı": 16
     },
     {
       "tarix": "13.03.2026",
-      "qeyd_sayı": 6
+      "qeyd_sayı": 7
     },
     {
       "tarix": "14.03.2026",
-      "qeyd_sayı": 5
-    },
-    {
-      "tarix": "15.03.2026",
-      "qeyd_sayı": 9
+      "qeyd_sayı": 2
     },
     {
       "tarix": "16.03.2026",
-      "qeyd_sayı": 7
+      "qeyd_sayı": 17
     },
     {
       "tarix": "17.03.2026",
@@ -247,31 +253,31 @@
     },
     {
       "tarix": "19.03.2026",
-      "qeyd_sayı": 10
+      "qeyd_sayı": 9
+    },
+    {
+      "tarix": "20.03.2026",
+      "qeyd_sayı": 1
     },
     {
       "tarix": "21.03.2026",
-      "qeyd_sayı": 16
+      "qeyd_sayı": 14
     },
     {
       "tarix": "22.03.2026",
-      "qeyd_sayı": 5
-    },
-    {
-      "tarix": "23.03.2026",
-      "qeyd_sayı": 5
+      "qeyd_sayı": 7
     },
     {
       "tarix": "24.03.2026",
-      "qeyd_sayı": 7
+      "qeyd_sayı": 12
     },
     {
       "tarix": "25.03.2026",
-      "qeyd_sayı": 7
+      "qeyd_sayı": 1
     },
     {
       "tarix": "26.03.2026",
-      "qeyd_sayı": 1
+      "qeyd_sayı": 7
     },
     {
       "tarix": "27.03.2026",
@@ -279,795 +285,848 @@
     },
     {
       "tarix": "28.03.2026",
-      "qeyd_sayı": 6
+      "qeyd_sayı": 9
     },
     {
       "tarix": "29.03.2026",
       "qeyd_sayı": 1
+    },
+    {
+      "tarix": "31.03.2026",
+      "qeyd_sayı": 10
+    },
+    {
+      "tarix": "02.04.2026",
+      "qeyd_sayı": 5
     }
   ],
-"şəxsi_itkilər": [
-  {
-    "id": "şəxs-001",
-    "ad": "Əli Xamenei",
-    "vəzifə": "İranın ali rəhbəri",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Ali siyasi rəhbərlik",
-    "prioritet": 1,
-    "ikon": "👤",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-002",
-    "ad": "Əli Şamxani",
-    "vəzifə": "İran Müdafiə Şurasının katibi",
-    "rütbə": "Kontr-admiral",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
-    "prioritet": 2,
-    "ikon": "🧠",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-003",
-    "ad": "Məhəmməd Pakpur",
-    "vəzifə": "SEPAH-ın komandanı",
-    "rütbə": "General-mayor",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Ali hərbi rəhbərlik",
-    "prioritet": 3,
-    "ikon": "🎖️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-004",
-    "ad": "Əbdülrəhim Musəvi",
-    "vəzifə": "İran Silahlı Qüvvələrinin Baş Qərargah rəisi",
-    "rütbə": "General-mayor",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Ali hərbi rəhbərlik",
-    "prioritet": 4,
-    "ikon": "🎖️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-005",
-    "ad": "Əziz Nəsirzadə",
-    "vəzifə": "Müdafiə və Silahlı Qüvvələrin Təchizatı naziri",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Siyasi-hərbi rəhbərlik",
-    "prioritet": 5,
-    "ikon": "🎖️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-006",
-    "ad": "İsmayıl Xətib",
-    "vəzifə": "Kəşfiyyat naziri",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-18",
-    "tarix_göstəriş": "18.03.2026",
-    "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
-    "prioritet": 6,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-007",
-    "ad": "Əli Laricani",
-    "vəzifə": "Ali Milli Təhlükəsizlik Şurasının katibi",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-17",
-    "tarix_göstəriş": "17.03.2026",
-    "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
-    "prioritet": 7,
-    "ikon": "🧠",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-008",
-    "ad": "Əlirza Tangsiri",
-    "vəzifə": "SEPAH Hərbi Dəniz Qüvvələrinin komandanı",
-    "rütbə": "Kommodor",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-26",
-    "tarix_göstəriş": "26.03.2026",
-    "kateqoriya": "Ali hərbi rəhbərlik",
-    "prioritet": 8,
-    "ikon": "⚓",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-009",
-    "ad": "Qulamrza Süleymani",
-    "vəzifə": "Bəsic qüvvələrinin rəhbəri",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-17",
-    "tarix_göstəriş": "17.03.2026",
-    "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
-    "prioritet": 9,
-    "ikon": "🛡️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-010",
-    "ad": "Məhəmməd Şirazi",
-    "vəzifə": "Ali rəhbərin Hərbi Bürosunun rəhbəri",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-02",
-    "tarix_göstəriş": "02.03.2026",
-    "kateqoriya": "Ali hərbi idarəetmə",
-    "prioritet": 10,
-    "ikon": "🧭",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-011",
-    "ad": "Hüseyn Cəbəl Əməlian",
-    "vəzifə": "Müdafiə İnnovasiyası və Tədqiqat Təşkilatının (SPND) sədri",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Müdafiə-tədqiqat rəhbərliyi",
-    "prioritet": 11,
-    "ikon": "🔬",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-012",
-    "ad": "Rza Müzəffəri Nia",
-    "vəzifə": "Müdafiə İnnovasiyası və Tədqiqat Təşkilatının (SPND) keçmiş sədri",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Müdafiə-tədqiqat rəhbərliyi",
-    "prioritet": 12,
-    "ikon": "🔬",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-013",
-    "ad": "Mehdi Qureyşi",
-    "vəzifə": "SEPAH Aerokosmik Qüvvələrinin komandanı",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-20",
-    "tarix_göstəriş": "20.03.2026",
-    "kateqoriya": "SEPAH komandanlığı",
-    "prioritet": 13,
-    "ikon": "🚀",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-014",
-    "ad": "Saleh Əsədi",
-    "vəzifə": "Silahlı Qüvvələr Baş Qərargahının kəşfiyyat üzrə müavini və “Xatəm əl-Ənbiya” Mərkəzi Qərargahının Kəşfiyyat İdarəsinin rəisi",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-02",
-    "tarix_göstəriş": "02.03.2026",
-    "kateqoriya": "Kəşfiyyat rəhbərliyi",
-    "prioritet": 14,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-015",
-    "ad": "Əbülqasım Babaian",
-    "vəzifə": "“Xatəm əl-Ənbiya” Mərkəzi Qərargahının qərargah rəisi",
-    "rütbə": "General-mayor",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-14",
-    "tarix_göstəriş": "14.03.2026",
-    "kateqoriya": "Ali hərbi idarəetmə",
-    "prioritet": 15,
-    "ikon": "🧭",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-016",
-    "ad": "Bəhnam Rezai",
-    "vəzifə": "SEPAH Hərbi Dəniz Qüvvələrinin Kəşfiyyat İdarəsinin rəisi",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-26",
-    "tarix_göstəriş": "26.03.2026",
-    "kateqoriya": "SEPAH komandanlığı",
-    "prioritet": 16,
-    "ikon": "⚓",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-017",
-    "ad": "Qulamrza Rəzaian",
-    "vəzifə": "İran Polis Kəşfiyyat Təşkilatının komandanı",
-    "rütbə": "General-mayor",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-02",
-    "tarix_göstəriş": "02.03.2026",
-    "kateqoriya": "Kəşfiyyat rəhbərliyi",
-    "prioritet": 17,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-018",
-    "ad": "Yəhya Hüseyni Pəncəki",
-    "vəzifə": "İsrail istiqaməti üzrə kəşfiyyat nazirinin müavini və Kəşfiyyat və Təhlükəsizlik Nazirliyinin Daxili Təhlükəsizlik İdarəsinin rəisi",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Kəşfiyyat rəhbərliyi",
-    "prioritet": 18,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-019",
-    "ad": "Məhəmməd Baseri",
-    "vəzifə": "Kəşfiyyat Nazirliyinin yüksəksəviyyəli rəsmisi",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-02-28",
-    "tarix_göstəriş": "28.02.2026",
-    "kateqoriya": "Kəşfiyyat rəhbərliyi",
-    "prioritet": 19,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-020",
-    "ad": "Möhsün Məhdəvi Kəlateh",
-    "vəzifə": "Kəşfiyyat nazirinin müavini",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-03",
-    "tarix_göstəriş": "03.03.2026",
-    "kateqoriya": "Kəşfiyyat rəhbərliyi",
-    "prioritet": 20,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-021",
-    "ad": "Əkbər Qaffari",
-    "vəzifə": "Kəşfiyyat nazirinin müavini",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-12",
-    "tarix_göstəriş": "12.03.2026",
-    "kateqoriya": "Kəşfiyyat rəhbərliyi",
-    "prioritet": 21,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-022",
-    "ad": "Mehdi Rüstəmi Şəmistan",
-    "vəzifə": "Kəşfiyyat Nazirliyində yüksəksəviyyəli komandan",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-20",
-    "tarix_göstəriş": "20.03.2026",
-    "kateqoriya": "Kəşfiyyat rəhbərliyi",
-    "prioritet": 22,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-023",
-    "ad": "Möhsün Dərrəbaği",
-    "vəzifə": "Silahlı Qüvvələr Baş Qərargahının logistika və təminat üzrə müavini",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-02",
-    "tarix_göstəriş": "02.03.2026",
-    "kateqoriya": "Baş Qərargah rəhbərliyi",
-    "prioritet": 23,
-    "ikon": "📦",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-024",
-    "ad": "Bəhram Hüseyni Mütləq",
-    "vəzifə": "Silahlı Qüvvələr Baş Qərargahının planlaşdırma və əməliyyatlar rəisi",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-02",
-    "tarix_göstəriş": "02.03.2026",
-    "kateqoriya": "Baş Qərargah rəhbərliyi",
-    "prioritet": 24,
-    "ikon": "🧭",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-025",
-    "ad": "Həsənəli Tacik",
-    "vəzifə": "Silahlı Qüvvələr Baş Qərargahının logistika idarəsinin rəisi",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-02",
-    "tarix_göstəriş": "02.03.2026",
-    "kateqoriya": "Baş Qərargah rəhbərliyi",
-    "prioritet": 25,
-    "ikon": "📦",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-026",
-    "ad": "Əkbər İbrahimzadə",
-    "vəzifə": "Ali baş komandanın ofisinin müavin rəhbəri",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-02",
-    "tarix_göstəriş": "02.03.2026",
-    "kateqoriya": "Ali hərbi idarəetmə",
-    "prioritet": 26,
-    "ikon": "🧭",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-027",
-    "ad": "Əsədullah Bədfər",
-    "vəzifə": "Silahlı Qüvvələr Baş Qərargahı xətti üzrə Bəsic qüvvələrinin rəhbəri",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-10",
-    "tarix_göstəriş": "10.03.2026",
-    "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
-    "prioritet": 27,
-    "ikon": "🛡️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-028",
-    "ad": "İsmayıl Dehqan",
-    "vəzifə": "SEPAH Aerokosmik Qüvvələrinin yüksəksəviyyəli komandanı",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-10",
-    "tarix_göstəriş": "10.03.2026",
-    "kateqoriya": "SEPAH komandanlığı",
-    "prioritet": 28,
-    "ikon": "🚀",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-029",
-    "ad": "Əli Məhəmməd Naini",
-    "vəzifə": "SEPAH sözçüsü və ictimaiyyətlə əlaqələr üzrə müavin",
-    "rütbə": "İkinci briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-20",
-    "tarix_göstəriş": "20.03.2026",
-    "kateqoriya": "SEPAH komandanlığı",
-    "prioritet": 29,
-    "ikon": "📣",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-030",
-    "ad": "Əli Haşimi",
-    "vəzifə": "İsfahandakı “Sahib əl-Zaman” SEPAH birliyinin komandir müavini",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-08",
-    "tarix_göstəriş": "08.03.2026",
-    "kateqoriya": "Regional SEPAH rəhbərliyi",
-    "prioritet": 30,
-    "ikon": "🎖️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-031",
-    "ad": "Məhəmmədrza Səqəfifar",
-    "vəzifə": "Əli Xameneinin xüsusi köməkçisi",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-08",
-    "tarix_göstəriş": "08.03.2026",
-    "kateqoriya": "Ali siyasi rəhbərlik ətrafı",
-    "prioritet": 31,
-    "ikon": "👤",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-032",
-    "ad": "Naqi Möhəddəsnia",
-    "vəzifə": "SEPAH-ın Şərqi Azərbaycan üzrə ruhani işlər rəhbəri",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-12",
-    "tarix_göstəriş": "12.03.2026",
-    "kateqoriya": "Regional SEPAH rəhbərliyi",
-    "prioritet": 32,
-    "ikon": "🕌",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-033",
-    "ad": "Abdullah Cəlali-Nəsəb",
-    "vəzifə": "“Xatəm əl-Ənbiya” Fövqəladə Komandanlığının kəşfiyyat qolunda yüksək vəzifəli zabit",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-14",
-    "tarix_göstəriş": "14.03.2026",
-    "kateqoriya": "Kəşfiyyat rəhbərliyi",
-    "prioritet": 33,
-    "ikon": "🕶️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-034",
-    "ad": "Əlirza Bayat",
-    "vəzifə": "Ali Milli Təhlükəsizlik Şurasının daxili təhlükəsizlik üzrə müavini",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-17",
-    "tarix_göstəriş": "17.03.2026",
-    "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
-    "prioritet": 34,
-    "ikon": "🧠",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-035",
-    "ad": "Mürtəza Laricani",
-    "vəzifə": "Ali Milli Təhlükəsizlik Şurasının daxili təhlükəsizlik üzrə köməkçisi",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-17",
-    "tarix_göstəriş": "17.03.2026",
-    "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
-    "prioritet": 35,
-    "ikon": "🧠",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-036",
-    "ad": "Əli Bateni",
-    "vəzifə": "Ali Milli Təhlükəsizlik Şurası katibinin müavini",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-17",
-    "tarix_göstəriş": "17.03.2026",
-    "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
-    "prioritet": 36,
-    "ikon": "🧠",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-037",
-    "ad": "İsmayıl Əhmədi",
-    "vəzifə": "Bəsic qüvvələrinin kəşfiyyat rəisi",
-    "rütbə": "Briqada generalı",
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-17",
-    "tarix_göstəriş": "17.03.2026",
-    "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
-    "prioritet": 37,
-    "ikon": "🛡️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-038",
-    "ad": "Qasım Qureyşi",
-    "vəzifə": "Bəsic qüvvələri rəhbərinin müavini",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-17",
-    "tarix_göstəriş": "17.03.2026",
-    "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
-    "prioritet": 38,
-    "ikon": "🛡️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-039",
-    "ad": "Əzim İsmaili Xosrovabadi",
-    "vəzifə": "Bəsic qüvvələri komandanının müavini",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-17",
-    "tarix_göstəriş": "17.03.2026",
-    "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
-    "prioritet": 39,
-    "ikon": "🛡️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-040",
-    "ad": "Afşin Nəqşibəndi",
-    "vəzifə": "Silahlı Qüvvələr Baş Qərargahının Bəsic qüvvələri üzrə nümayəndəsi",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-19",
-    "tarix_göstəriş": "19.03.2026",
-    "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
-    "prioritet": 40,
-    "ikon": "🛡️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-041",
-    "ad": "Qədir Azarian",
-    "vəzifə": "SEPAH-ın Şərqi Azərbaycan vilayəti üzrə komandanı",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-21",
-    "tarix_göstəriş": "21.03.2026",
-    "kateqoriya": "Regional SEPAH rəhbərliyi",
-    "prioritet": 41,
-    "ikon": "🎖️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-042",
-    "ad": "İbrahim Mürtəzəvi-Nəsb",
-    "vəzifə": "Şirazdakı Bəsic birliyinin komandiri",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-22",
-    "tarix_göstəriş": "22.03.2026",
-    "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
-    "prioritet": 42,
-    "ikon": "🛡️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-043",
-    "ad": "Həsən Həsənzadə",
-    "vəzifə": "SEPAH-da yüksəksəviyyəli komandan",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-29",
-    "tarix_göstəriş": "29.03.2026",
-    "kateqoriya": "SEPAH komandanlığı",
-    "prioritet": 43,
-    "ikon": "🎖️",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-044",
-    "ad": "Davud Əlizadə",
-    "vəzifə": "SEPAH Qüds Qüvvələrinin Livan korpusunun komandanı",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-12",
-    "tarix_göstəriş": "12.03.2026",
-    "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
-    "prioritet": 44,
-    "ikon": "🌍",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-045",
-    "ad": "Əbuzər Məhəmmədi",
-    "vəzifə": "Hizbullahın raket bölməsində SEPAH raket əməliyyatları komandanı",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-12",
-    "tarix_göstəriş": "12.03.2026",
-    "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
-    "prioritet": 45,
-    "ikon": "🌍",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-046",
-    "ad": "Reza Xəzai",
-    "vəzifə": "SEPAH Qüds Qüvvələrinin rəsmisi",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-03",
-    "tarix_göstəriş": "03.03.2026",
-    "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
-    "prioritet": 46,
-    "ikon": "🌍",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-047",
-    "ad": "Məcid Hüseynikəndəsər",
-    "vəzifə": "SEPAH Qüds Qüvvələrinin Livan korpusunun maliyyə rəhbəri",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-08",
-    "tarix_göstəriş": "08.03.2026",
-    "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
-    "prioritet": 47,
-    "ikon": "🌍",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-048",
-    "ad": "Dhu əl-Fiqar",
-    "vəzifə": "“İmam Hüseyn Diviziyası”nın komandanı",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-01",
-    "tarix_göstəriş": "01.03.2026",
-    "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
-    "prioritet": 48,
-    "ikon": "🪖",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-049",
-    "ad": "Əli Məslam Təbəcəh",
-    "vəzifə": "“İmam Hüseyn Diviziyası”nın komandanı",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-01",
-    "tarix_göstəriş": "01.03.2026",
-    "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
-    "prioritet": 49,
-    "ikon": "🪖",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-050",
-    "ad": "Hüseyn Əli Mərvan",
-    "vəzifə": "“İmam Hüseyn Diviziyası”nın komandanı",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-08",
-    "tarix_göstəriş": "08.03.2026",
-    "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
-    "prioritet": 50,
-    "ikon": "🪖",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-051",
-    "ad": "Sacid əl-Həndəsa",
-    "vəzifə": "“İmam Hüseyn Diviziyası”nda PUA istiqamətinə cavabdeh şəxs",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-08",
-    "tarix_göstəriş": "08.03.2026",
-    "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
-    "prioritet": 51,
-    "ikon": "🪖",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  },
-  {
-    "id": "şəxs-052",
-    "ad": "Cihad əl-Safira",
-    "vəzifə": "“İmam Hüseyn Diviziyası”nın komandir müavini",
-    "rütbə": null,
-    "tərəf": "İran",
-    "status": "Öldürülüb",
-    "tarix": "2026-03-08",
-    "tarix_göstəriş": "08.03.2026",
-    "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
-    "prioritet": 52,
-    "ikon": "🪖",
-    "şəkil": null,
-    "mənbə_qeydi": ""
-  }
-],
+  "şəxsi_itkilər": [
+    {
+      "id": "şəxs-001",
+      "ad": "Əli Xamenei",
+      "vəzifə": "İranın ali rəhbəri",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Ali siyasi rəhbərlik",
+      "prioritet": 1,
+      "ikon": "👤",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-002",
+      "ad": "Əli Şamxani",
+      "vəzifə": "İran Müdafiə Şurasının katibi",
+      "rütbə": "Kontr-admiral",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
+      "prioritet": 2,
+      "ikon": "🧠",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-003",
+      "ad": "Məhəmməd Pakpur",
+      "vəzifə": "SEPAH-ın komandanı",
+      "rütbə": "General-mayor",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Ali hərbi rəhbərlik",
+      "prioritet": 3,
+      "ikon": "🎖️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-004",
+      "ad": "Əbdülrəhim Musəvi",
+      "vəzifə": "İran Silahlı Qüvvələrinin Baş Qərargah rəisi",
+      "rütbə": "General-mayor",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Ali hərbi rəhbərlik",
+      "prioritet": 4,
+      "ikon": "🎖️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-005",
+      "ad": "Əziz Nəsirzadə",
+      "vəzifə": "Müdafiə və Silahlı Qüvvələrin Təchizatı naziri",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Siyasi-hərbi rəhbərlik",
+      "prioritet": 5,
+      "ikon": "🎖️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-006",
+      "ad": "İsmayıl Xətib",
+      "vəzifə": "Kəşfiyyat naziri",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-18",
+      "tarix_göstəriş": "18.03.2026",
+      "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
+      "prioritet": 6,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-007",
+      "ad": "Əli Laricani",
+      "vəzifə": "Ali Milli Təhlükəsizlik Şurasının katibi",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-17",
+      "tarix_göstəriş": "17.03.2026",
+      "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
+      "prioritet": 7,
+      "ikon": "🧠",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-008",
+      "ad": "Əlirza Tangsiri",
+      "vəzifə": "SEPAH Hərbi Dəniz Qüvvələrinin komandanı",
+      "rütbə": "Kommodor",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-26",
+      "tarix_göstəriş": "26.03.2026",
+      "kateqoriya": "Ali hərbi rəhbərlik",
+      "prioritet": 8,
+      "ikon": "⚓",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-009",
+      "ad": "Qulamrza Süleymani",
+      "vəzifə": "Bəsic qüvvələrinin rəhbəri",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-17",
+      "tarix_göstəriş": "17.03.2026",
+      "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
+      "prioritet": 9,
+      "ikon": "🛡️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-010",
+      "ad": "Məhəmməd Şirazi",
+      "vəzifə": "Ali rəhbərin Hərbi Bürosunun rəhbəri",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-02",
+      "tarix_göstəriş": "02.03.2026",
+      "kateqoriya": "Ali hərbi idarəetmə",
+      "prioritet": 10,
+      "ikon": "🧭",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-011",
+      "ad": "Hüseyn Cəbəl Əməlian",
+      "vəzifə": "Müdafiə İnnovasiyası və Tədqiqat Təşkilatının (SPND) sədri",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Müdafiə-tədqiqat rəhbərliyi",
+      "prioritet": 11,
+      "ikon": "🔬",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-012",
+      "ad": "Rza Müzəffəri Nia",
+      "vəzifə": "Müdafiə İnnovasiyası və Tədqiqat Təşkilatının (SPND) keçmiş sədri",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Müdafiə-tədqiqat rəhbərliyi",
+      "prioritet": 12,
+      "ikon": "🔬",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-013",
+      "ad": "Mehdi Qureyşi",
+      "vəzifə": "SEPAH Aerokosmik Qüvvələrinin komandanı",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-20",
+      "tarix_göstəriş": "20.03.2026",
+      "kateqoriya": "SEPAH komandanlığı",
+      "prioritet": 13,
+      "ikon": "🚀",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-014",
+      "ad": "Saleh Əsədi",
+      "vəzifə": "Silahlı Qüvvələr Baş Qərargahının kəşfiyyat üzrə müavini və “Xatəm əl-Ənbiya” Mərkəzi Qərargahının Kəşfiyyat İdarəsinin rəisi",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-02",
+      "tarix_göstəriş": "02.03.2026",
+      "kateqoriya": "Kəşfiyyat rəhbərliyi",
+      "prioritet": 14,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-015",
+      "ad": "Əbülqasım Babaian",
+      "vəzifə": "“Xatəm əl-Ənbiya” Mərkəzi Qərargahının qərargah rəisi",
+      "rütbə": "General-mayor",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-14",
+      "tarix_göstəriş": "14.03.2026",
+      "kateqoriya": "Ali hərbi idarəetmə",
+      "prioritet": 15,
+      "ikon": "🧭",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-016",
+      "ad": "Bəhnam Rezai",
+      "vəzifə": "SEPAH Hərbi Dəniz Qüvvələrinin Kəşfiyyat İdarəsinin rəisi",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-26",
+      "tarix_göstəriş": "26.03.2026",
+      "kateqoriya": "SEPAH komandanlığı",
+      "prioritet": 16,
+      "ikon": "⚓",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-017",
+      "ad": "Qulamrza Rəzaian",
+      "vəzifə": "İran Polis Kəşfiyyat Təşkilatının komandanı",
+      "rütbə": "General-mayor",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-02",
+      "tarix_göstəriş": "02.03.2026",
+      "kateqoriya": "Kəşfiyyat rəhbərliyi",
+      "prioritet": 17,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-018",
+      "ad": "Yəhya Hüseyni Pəncəki",
+      "vəzifə": "İsrail istiqaməti üzrə kəşfiyyat nazirinin müavini və Kəşfiyyat və Təhlükəsizlik Nazirliyinin Daxili Təhlükəsizlik İdarəsinin rəisi",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Kəşfiyyat rəhbərliyi",
+      "prioritet": 18,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-019",
+      "ad": "Məhəmməd Baseri",
+      "vəzifə": "Kəşfiyyat Nazirliyinin yüksəksəviyyəli rəsmisi",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-02-28",
+      "tarix_göstəriş": "28.02.2026",
+      "kateqoriya": "Kəşfiyyat rəhbərliyi",
+      "prioritet": 19,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-020",
+      "ad": "Möhsün Məhdəvi Kəlateh",
+      "vəzifə": "Kəşfiyyat nazirinin müavini",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-03",
+      "tarix_göstəriş": "03.03.2026",
+      "kateqoriya": "Kəşfiyyat rəhbərliyi",
+      "prioritet": 20,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-021",
+      "ad": "Əkbər Qaffari",
+      "vəzifə": "Kəşfiyyat nazirinin müavini",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-12",
+      "tarix_göstəriş": "12.03.2026",
+      "kateqoriya": "Kəşfiyyat rəhbərliyi",
+      "prioritet": 21,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-022",
+      "ad": "Mehdi Rüstəmi Şəmistan",
+      "vəzifə": "Kəşfiyyat Nazirliyində yüksəksəviyyəli komandan",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-20",
+      "tarix_göstəriş": "20.03.2026",
+      "kateqoriya": "Kəşfiyyat rəhbərliyi",
+      "prioritet": 22,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-023",
+      "ad": "Möhsün Dərrəbaği",
+      "vəzifə": "Silahlı Qüvvələr Baş Qərargahının logistika və təminat üzrə müavini",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-02",
+      "tarix_göstəriş": "02.03.2026",
+      "kateqoriya": "Baş Qərargah rəhbərliyi",
+      "prioritet": 23,
+      "ikon": "📦",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-024",
+      "ad": "Bəhram Hüseyni Mütləq",
+      "vəzifə": "Silahlı Qüvvələr Baş Qərargahının planlaşdırma və əməliyyatlar rəisi",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-02",
+      "tarix_göstəriş": "02.03.2026",
+      "kateqoriya": "Baş Qərargah rəhbərliyi",
+      "prioritet": 24,
+      "ikon": "🧭",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-025",
+      "ad": "Həsənəli Tacik",
+      "vəzifə": "Silahlı Qüvvələr Baş Qərargahının logistika idarəsinin rəisi",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-02",
+      "tarix_göstəriş": "02.03.2026",
+      "kateqoriya": "Baş Qərargah rəhbərliyi",
+      "prioritet": 25,
+      "ikon": "📦",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-026",
+      "ad": "Əkbər İbrahimzadə",
+      "vəzifə": "Ali baş komandanın ofisinin müavin rəhbəri",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-02",
+      "tarix_göstəriş": "02.03.2026",
+      "kateqoriya": "Ali hərbi idarəetmə",
+      "prioritet": 26,
+      "ikon": "🧭",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-027",
+      "ad": "Əsədullah Bədfər",
+      "vəzifə": "Silahlı Qüvvələr Baş Qərargahı xətti üzrə Bəsic qüvvələrinin rəhbəri",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-10",
+      "tarix_göstəriş": "10.03.2026",
+      "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
+      "prioritet": 27,
+      "ikon": "🛡️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-028",
+      "ad": "İsmayıl Dehqan",
+      "vəzifə": "SEPAH Aerokosmik Qüvvələrinin yüksəksəviyyəli komandanı",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-10",
+      "tarix_göstəriş": "10.03.2026",
+      "kateqoriya": "SEPAH komandanlığı",
+      "prioritet": 28,
+      "ikon": "🚀",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-029",
+      "ad": "Əli Məhəmməd Naini",
+      "vəzifə": "SEPAH sözçüsü və ictimaiyyətlə əlaqələr üzrə müavin",
+      "rütbə": "İkinci briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-20",
+      "tarix_göstəriş": "20.03.2026",
+      "kateqoriya": "SEPAH komandanlığı",
+      "prioritet": 29,
+      "ikon": "📣",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-030",
+      "ad": "Əli Haşimi",
+      "vəzifə": "İsfahandakı “Sahib əl-Zaman” SEPAH birliyinin komandir müavini",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-08",
+      "tarix_göstəriş": "08.03.2026",
+      "kateqoriya": "Regional SEPAH rəhbərliyi",
+      "prioritet": 30,
+      "ikon": "🎖️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-031",
+      "ad": "Məhəmmədrza Səqəfifar",
+      "vəzifə": "Əli Xameneinin xüsusi köməkçisi",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-08",
+      "tarix_göstəriş": "08.03.2026",
+      "kateqoriya": "Ali siyasi rəhbərlik ətrafı",
+      "prioritet": 31,
+      "ikon": "👤",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-032",
+      "ad": "Naqi Möhəddəsnia",
+      "vəzifə": "SEPAH-ın Şərqi Azərbaycan üzrə ruhani işlər rəhbəri",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-12",
+      "tarix_göstəriş": "12.03.2026",
+      "kateqoriya": "Regional SEPAH rəhbərliyi",
+      "prioritet": 32,
+      "ikon": "🕌",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-033",
+      "ad": "Abdullah Cəlali-Nəsəb",
+      "vəzifə": "“Xatəm əl-Ənbiya” Fövqəladə Komandanlığının kəşfiyyat qolunda yüksək vəzifəli zabit",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-14",
+      "tarix_göstəriş": "14.03.2026",
+      "kateqoriya": "Kəşfiyyat rəhbərliyi",
+      "prioritet": 33,
+      "ikon": "🕶️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-034",
+      "ad": "Əlirza Bayat",
+      "vəzifə": "Ali Milli Təhlükəsizlik Şurasının daxili təhlükəsizlik üzrə müavini",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-17",
+      "tarix_göstəriş": "17.03.2026",
+      "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
+      "prioritet": 34,
+      "ikon": "🧠",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-035",
+      "ad": "Mürtəza Laricani",
+      "vəzifə": "Ali Milli Təhlükəsizlik Şurasının daxili təhlükəsizlik üzrə köməkçisi",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-17",
+      "tarix_göstəriş": "17.03.2026",
+      "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
+      "prioritet": 35,
+      "ikon": "🧠",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-036",
+      "ad": "Əli Bateni",
+      "vəzifə": "Ali Milli Təhlükəsizlik Şurası katibinin müavini",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-17",
+      "tarix_göstəriş": "17.03.2026",
+      "kateqoriya": "Ali təhlükəsizlik rəhbərliyi",
+      "prioritet": 36,
+      "ikon": "🧠",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-037",
+      "ad": "İsmayıl Əhmədi",
+      "vəzifə": "Bəsic qüvvələrinin kəşfiyyat rəisi",
+      "rütbə": "Briqada generalı",
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-17",
+      "tarix_göstəriş": "17.03.2026",
+      "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
+      "prioritet": 37,
+      "ikon": "🛡️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-038",
+      "ad": "Qasım Qureyşi",
+      "vəzifə": "Bəsic qüvvələri rəhbərinin müavini",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-17",
+      "tarix_göstəriş": "17.03.2026",
+      "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
+      "prioritet": 38,
+      "ikon": "🛡️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-039",
+      "ad": "Əzim İsmaili Xosrovabadi",
+      "vəzifə": "Bəsic qüvvələri komandanının müavini",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-17",
+      "tarix_göstəriş": "17.03.2026",
+      "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
+      "prioritet": 39,
+      "ikon": "🛡️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-040",
+      "ad": "Afşin Nəqşibəndi",
+      "vəzifə": "Silahlı Qüvvələr Baş Qərargahının Bəsic qüvvələri üzrə nümayəndəsi",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-19",
+      "tarix_göstəriş": "19.03.2026",
+      "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
+      "prioritet": 40,
+      "ikon": "🛡️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-041",
+      "ad": "Qədir Azarian",
+      "vəzifə": "SEPAH-ın Şərqi Azərbaycan vilayəti üzrə komandanı",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-21",
+      "tarix_göstəriş": "21.03.2026",
+      "kateqoriya": "Regional SEPAH rəhbərliyi",
+      "prioritet": 41,
+      "ikon": "🎖️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-042",
+      "ad": "İbrahim Mürtəzəvi-Nəsb",
+      "vəzifə": "Şirazdakı Bəsic birliyinin komandiri",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-22",
+      "tarix_göstəriş": "22.03.2026",
+      "kateqoriya": "Daxili təhlükəsizlik və Bəsic rəhbərliyi",
+      "prioritet": 42,
+      "ikon": "🛡️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-043",
+      "ad": "Həsən Həsənzadə",
+      "vəzifə": "SEPAH-da yüksəksəviyyəli komandan",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-29",
+      "tarix_göstəriş": "29.03.2026",
+      "kateqoriya": "SEPAH komandanlığı",
+      "prioritet": 43,
+      "ikon": "🎖️",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-044",
+      "ad": "Davud Əlizadə",
+      "vəzifə": "SEPAH Qüds Qüvvələrinin Livan korpusunun komandanı",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-12",
+      "tarix_göstəriş": "12.03.2026",
+      "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
+      "prioritet": 44,
+      "ikon": "🌍",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-045",
+      "ad": "Əbuzər Məhəmmədi",
+      "vəzifə": "Hizbullahın raket bölməsində SEPAH raket əməliyyatları komandanı",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-12",
+      "tarix_göstəriş": "12.03.2026",
+      "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
+      "prioritet": 45,
+      "ikon": "🌍",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-046",
+      "ad": "Reza Xəzai",
+      "vəzifə": "SEPAH Qüds Qüvvələrinin rəsmisi",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-03",
+      "tarix_göstəriş": "03.03.2026",
+      "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
+      "prioritet": 46,
+      "ikon": "🌍",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-047",
+      "ad": "Məcid Hüseynikəndəsər",
+      "vəzifə": "SEPAH Qüds Qüvvələrinin Livan korpusunun maliyyə rəhbəri",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-08",
+      "tarix_göstəriş": "08.03.2026",
+      "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
+      "prioritet": 47,
+      "ikon": "🌍",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-048",
+      "ad": "Dhu əl-Fiqar",
+      "vəzifə": "“İmam Hüseyn Diviziyası”nın komandanı",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-01",
+      "tarix_göstəriş": "01.03.2026",
+      "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
+      "prioritet": 48,
+      "ikon": "🪖",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-049",
+      "ad": "Əli Məslam Təbəcəh",
+      "vəzifə": "“İmam Hüseyn Diviziyası”nın komandanı",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-01",
+      "tarix_göstəriş": "01.03.2026",
+      "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
+      "prioritet": 49,
+      "ikon": "🪖",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-050",
+      "ad": "Hüseyn Əli Mərvan",
+      "vəzifə": "“İmam Hüseyn Diviziyası”nın komandanı",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-08",
+      "tarix_göstəriş": "08.03.2026",
+      "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
+      "prioritet": 50,
+      "ikon": "🪖",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-051",
+      "ad": "Sacid əl-Həndəsa",
+      "vəzifə": "“İmam Hüseyn Diviziyası”nda PUA istiqamətinə cavabdeh şəxs",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-08",
+      "tarix_göstəriş": "08.03.2026",
+      "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
+      "prioritet": 51,
+      "ikon": "🪖",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "id": "şəxs-052",
+      "ad": "Cihad əl-Safira",
+      "vəzifə": "“İmam Hüseyn Diviziyası”nın komandir müavini",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": "2026-03-08",
+      "tarix_göstəriş": "08.03.2026",
+      "kateqoriya": "Proksi qüvvələr / “İmam Hüseyn Diviziyası”",
+      "prioritet": 52,
+      "ikon": "🪖",
+      "şəkil": null,
+      "mənbə_qeydi": ""
+    },
+    {
+      "ad": "Əlirza Bi-Azər",
+      "vəzifə": "SEPAH Qüds Qüvvələrinin Livan korpusunun kəşfiyyat zabiti",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": null,
+      "tarix_göstəriş": "Tarix göstərilməyib",
+      "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
+      "ikon": "🌍",
+      "şəkil": null,
+      "mənbə_qeydi": "",
+      "id": "şəxs-053",
+      "prioritet": 53
+    },
+    {
+      "ad": "Əhməd Rəsuli",
+      "vəzifə": "SEPAH Qüds Qüvvələrinin Fələstin korpusunun kəşfiyyat zabiti",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": null,
+      "tarix_göstəriş": "Tarix göstərilməyib",
+      "kateqoriya": "Qüds Qüvvələri / Fələstin istiqaməti",
+      "ikon": "🌍",
+      "şəkil": null,
+      "mənbə_qeydi": "",
+      "id": "şəxs-054",
+      "prioritet": 54
+    },
+    {
+      "ad": "Hüseyn Əhmədlou",
+      "vəzifə": "SEPAH Qüds Qüvvələrinin İsrail istiqaməti üzrə zabiti (\"Sionist dosye\")",
+      "rütbə": null,
+      "tərəf": "İran",
+      "status": "Öldürülüb",
+      "tarix": null,
+      "tarix_göstəriş": "Tarix göstərilməyib",
+      "kateqoriya": "Qüds Qüvvələri / İsrail istiqaməti",
+      "ikon": "🌍",
+      "şəkil": null,
+      "mənbə_qeydi": "",
+      "id": "şəxs-055",
+      "prioritet": 55
+    }
+  ],
   "strateji_təsirlər": [
     {
       "id": "təsir-001",
@@ -1078,7 +1137,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "BƏƏ",
       "ikon": "🏢",
-      "təsvir": "Mənbə sənədinə görə İranın qeyri-hərbi hədəflərə zərbələri içində Dubay Beynəlxalq Hava Limanı ayrıca qeyd olunur.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1090,7 +1149,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "BƏƏ",
       "ikon": "🏨",
-      "təsvir": "Dubaydakı Fairmont The Palm Hotel-in də zərbə alan qeyri-hərbi hədəflərdən biri olduğu bildirilir.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1102,7 +1161,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "Bəhreyn",
       "ikon": "🏙️",
-      "təsvir": "Mənbə mətnində Bəhreyndə bir hündürmərtəbəli binanın dağıdıldığı ayrıca vurğulanır.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1114,7 +1173,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "İsrail",
       "ikon": "🌆",
-      "təsvir": "Mənbə xülasəsində İranın zərbə endirdiyi qeyri-hərbi və urban hədəflər sırasında Təl-Əviv də qeyd olunur.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1126,7 +1185,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "İran",
       "ikon": "🏫",
-      "təsvir": "Mənbəyə görə Minabda yerləşən qız məktəbinə zərbə dəyib və ən azı 80 uşağın öldüyü qeyd olunub; zərbəni kimin endirdiyi qeyri-müəyyən təsvir edilir.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1138,7 +1197,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "ABŞ / Bəhreyn",
       "ikon": "⚓",
-      "təsvir": "Mənbə sənədinin giriş hissəsində İranın cavab zərbələri içində bu qərargah nümunə kimi göstərilir.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1150,7 +1209,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "Suriya",
       "ikon": "🏠",
-      "təsvir": "Mənbəyə görə raket qalıqlarından biri Suveydada bir evə düşüb və ən azı 4 nəfərin ölümünə səbəb olub.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     }
   ],
@@ -1286,7 +1345,7 @@
         "https://x.com/CENTCOM/status/2027814907119321481"
       ],
       "taymkod": "00:24",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-008",
@@ -1400,7 +1459,7 @@
         "https://x.com/IAFsite/status/2028060148984320445/video/2"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-014",
@@ -1533,7 +1592,7 @@
         "https://x.com/CENTCOM/status/2027919256709423376"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-021",
@@ -1742,7 +1801,7 @@
         "https://x.com/trbrtc/status/2028150580439285864"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-032",
@@ -1875,7 +1934,7 @@
         "https://x.com/idfonline/status/2027902222806274546"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-039",
@@ -2656,7 +2715,7 @@
         "https://x.com/IAFsite/status/2029125895651242261/video/2"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-080",
@@ -2810,7 +2869,7 @@
         "https://x.com/Osinttechnical/status/2028966387926835445"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-088",
@@ -2924,7 +2983,7 @@
         "https://x.com/MenchOsint/status/2029319092109275638"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-094",
@@ -3095,7 +3154,7 @@
         "https://x.com/IAFsite/status/2029563465719751160"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-103",
@@ -3475,7 +3534,7 @@
         "https://x.com/CENTCOM/status/2029890618571260277"
       ],
       "taymkod": "00:01",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-123",
@@ -3894,7 +3953,7 @@
         "https://x.com/CENTCOM/status/2030472250537672951"
       ],
       "taymkod": "00:01",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-145",
@@ -3932,7 +3991,7 @@
         "https://x.com/CENTCOM/status/2030472250537672951"
       ],
       "taymkod": "00:13",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-147",
@@ -4692,7 +4751,7 @@
         "https://x.com/WhiteHouse/status/2031411594979160164"
       ],
       "taymkod": "00:22",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-187",
@@ -4730,7 +4789,7 @@
         "https://x.com/WhiteHouse/status/2031411594979160164"
       ],
       "taymkod": "00:43",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-189",
@@ -5569,7 +5628,7 @@
         "https://x.com/FarooqB90714421/status/2032872999951679763"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-233",
@@ -5607,7 +5666,7 @@
         "https://x.com/CENTCOM/status/2032935530443231575"
       ],
       "taymkod": "00:12",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-235",
@@ -5835,7 +5894,7 @@
         "https://x.com/CENTCOM/status/2033563047021658359"
       ],
       "taymkod": "00:01",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-247",
@@ -5911,7 +5970,7 @@
         "https://x.com/CENTCOM/status/2033847981628121305"
       ],
       "taymkod": "00:01",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-251",
@@ -5930,7 +5989,7 @@
         "https://x.com/CENTCOM/status/2033847981628121305"
       ],
       "taymkod": "00:05",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-252",
@@ -5949,7 +6008,7 @@
         "https://x.com/CENTCOM/status/2033847981628121305"
       ],
       "taymkod": "00:08",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-253",
@@ -5968,7 +6027,7 @@
         "https://x.com/CENTCOM/status/2033847981628121305"
       ],
       "taymkod": "00:14",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-254",
@@ -6025,7 +6084,7 @@
         "https://x.com/CENTCOM/status/2034329250203857316"
       ],
       "taymkod": "00:04",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-257",
@@ -6731,7 +6790,7 @@
         "https://x.com/CENTCOM/status/2036141805008277906"
       ],
       "taymkod": "00:05",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-294",
@@ -6750,7 +6809,7 @@
         "https://x.com/CENTCOM/status/2036141805008277906"
       ],
       "taymkod": "00:10",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-295",
@@ -6769,7 +6828,7 @@
         "https://x.com/CENTCOM/status/2036141805008277906"
       ],
       "taymkod": "00:12",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-296",
@@ -6788,7 +6847,7 @@
         "https://x.com/CENTCOM/status/2036505530051530934"
       ],
       "taymkod": "00:06",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-297",
@@ -6826,7 +6885,7 @@
         "https://x.com/CENTCOM/status/2036505530051530934"
       ],
       "taymkod": "00:16",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-299",
@@ -6940,7 +6999,7 @@
         "https://x.com/imp_navigator/status/2036683235577467106"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-305",
@@ -7149,7 +7208,7 @@
         "https://x.com/CENTCOM/status/2037487683618959540"
       ],
       "taymkod": "00:17",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-316",
@@ -7337,6 +7396,291 @@
       "qeyd_tarixi_göstəriş": "29.03.2026",
       "mənbələr": [
         "https://x.com/war_noir/status/2038284342527504480"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-326",
+      "ad": "Unknown Ballistic Missile System",
+      "kateqoriya": "Ballistik raket sistemi",
+      "kateqoriya_xam": "Ballistic Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "00:11",
+      "ikon": "🚀"
+    },
+    {
+      "id": "qeyd-327",
+      "ad": "Unknown Ballistic Missile System",
+      "kateqoriya": "Ballistik raket sistemi",
+      "kateqoriya_xam": "Ballistic Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "00:16 / 01:49",
+      "ikon": "🚀"
+    },
+    {
+      "id": "qeyd-328",
+      "ad": "Chengdu F-7",
+      "kateqoriya": "Təyyarə",
+      "kateqoriya_xam": "Aircraft",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "00:20",
+      "ikon": "✈️"
+    },
+    {
+      "id": "qeyd-329",
+      "ad": "Majid SAM",
+      "kateqoriya": "HHM raket sistemi",
+      "kateqoriya_xam": "STA-Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "01:43",
+      "ikon": "🛡️"
+    },
+    {
+      "id": "qeyd-330",
+      "ad": "Mercedes Rundhauber Tanker",
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "kateqoriya_xam": "Jeeps, Trucks etc",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "01:45",
+      "ikon": "🚚"
+    },
+    {
+      "id": "qeyd-331",
+      "ad": "Pickup mounted Shahed Launcher",
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "kateqoriya_xam": "Jeeps, Trucks etc",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-30",
+      "itki_tarixi_göstəriş": "30.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038721345052143633"
+      ],
+      "taymkod": "00:08",
+      "ikon": "🚚"
+    },
+    {
+      "id": "qeyd-332",
+      "ad": "23mm ZU-23-2",
+      "kateqoriya": "Zenit topu",
+      "kateqoriya_xam": "AA-Gun",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-30",
+      "itki_tarixi_göstəriş": "30.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038721345052143633"
+      ],
+      "taymkod": "00:13",
+      "ikon": "🛡️"
+    },
+    {
+      "id": "qeyd-333",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/noctu_mind/status/2038921085421301924"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-334",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/noctu_mind/status/2038921085421301924"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-335",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-22",
+      "itki_tarixi_göstəriş": "22.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/noctu_mind/status/2035497115808411648"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-336",
+      "ad": "Unknown Ballistic Missile System",
+      "kateqoriya": "Ballistik raket sistemi",
+      "kateqoriya_xam": "Ballistic Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://www.youtube.com/watch?v=w5Bw02xSTAs"
+      ],
+      "taymkod": null,
+      "ikon": "🚀"
+    },
+    {
+      "id": "qeyd-337",
+      "ad": "Shahed 171/191",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2039647713550110964"
+      ],
+      "taymkod": "00:01",
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-338",
+      "ad": "Toyota Landcruiser 79",
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "kateqoriya_xam": "Jeeps, Trucks etc",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2039647713550110964"
+      ],
+      "taymkod": "00:03",
+      "ikon": "🚚"
+    },
+    {
+      "id": "qeyd-339",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://x.com/imp_navigator/status/2039720517150687467"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-340",
+      "ad": "CAIG Wing Loong II",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "Naməlum",
+      "tərəf_xam": "Unknown",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://x.com/Tasnimnews_Fa/status/2039676855608021359"
       ],
       "taymkod": null,
       "ikon": "🛰️"
