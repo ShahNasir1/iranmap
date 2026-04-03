@@ -42,7 +42,7 @@
     "cat": "military"
   },
   {
-    "name": "121‑ci Komando Briqadası – Təbriz",
+    "name": "121-ci “Şəhid Rəhman Foruzəndaz” Qarnizonu - Komando taboru",
     "lat": 38.16029690265559,
     "lon": 46.22737744083483,
     "cat": "military"
@@ -588,6 +588,144 @@
     "cat": "military"
   },
   {
+    "name": "“Əhmədaben Musa” Təlim Qarnizonu",
+    "lat": 29.75136000088269,
+    "lon": 52.61957700495589,
+    "cat": "military"
+  },
+  {
+    "name": "“Fatimə əz-Zəhra” taboru",
+    "lat": 29.75370095758788,
+    "lon": 52.61799734182789,
+    "cat": "military"
+  },
+  {
+    "name": "“İmam Əli” və “Ruhullah” taborları",
+    "lat": 29.75354335500284,
+    "lon": 52.61630797017252,
+    "cat": "military"
+  },
+  {
+    "name": "Məhdəşt Kosmik Mərkəzi",
+    "lat": 35.76440884064357,
+    "lon": 50.78699076213215,
+    "cat": "military"
+  },
+  {
+    "name": "“İmam Cavad (ə)” Raket Obyektləri",
+    "lat": 29.72042229848421,
+    "lon": 52.56475812386294,
+    "cat": "military"
+  },
+  {
+    "name": "“Bəsət” Bazası",
+    "lat": 29.70973575069083,
+    "lon": 52.52305587146414,
+    "cat": "military"
+  },
+  {
+    "name": "“Bədindeh” Raket Qarnizonu",
+    "lat": 35.02964941837322,
+    "lon": 51.87091531252252,
+    "cat": "military"
+  },
+  {
+    "name": "İsfahan “MERSAD” Yerüstü-Hava Raket Batareyası bazası",
+    "lat": 32.58714999529287,
+    "lon": 51.70284398519129,
+    "cat": "military"
+  },
+  {
+    "name": "Aerokosmik Qüvvələri Müdafiə Qarnizonu",
+    "lat": 29.57358299602153,
+    "lon": 52.37688899665781,
+    "cat": "military"
+  },
+  {
+    "name": "“Xatəmül-Ənbiya” Hava Hücumundan Müdafiə Bazası",
+    "lat": 35.56888900378327,
+    "lon": 51.54480600312437,
+    "cat": "military"
+  },
+  {
+    "name": "İsfahan Hərbi Hava Bazası – “Şəhid Bəbai” 8-ci Taktiki Hava Bazası",
+    "lat": 32.76769343825428,
+    "lon": 51.87987007499178,
+    "cat": "military"
+  },
+  {
+    "name": "Şiraz Elektronika Sənayesi Müəssisəsi",
+    "lat": 29.70481762184088,
+    "lon": 52.4447882289206,
+    "cat": "military"
+  },
+  {
+    "name": "Bircənd “MERSAD” Hava Hücumundan Müdafiə Raket Bazası",
+    "lat": 32.86648499586254,
+    "lon": 59.29361900013304,
+    "cat": "military"
+  },
+  {
+    "name": "Təbriz Raket Bazası",
+    "lat": 38.16641973332333,
+    "lon": 46.24726528850726,
+    "cat": "military"
+  },
+  {
+    "name": "Şimal Donanması İdarəetmə Obyekti",
+    "lat": 36.74234112183487,
+    "lon": 49.41190410286147,
+    "cat": "military"
+  },
+  {
+    "name": "Məcil Bazası",
+    "lat": 36.74343451044966,
+    "lon": 49.41717668442465,
+    "cat": "military"
+  },
+  {
+    "name": "Məcil Dəniz Komando Təlim Bazası",
+    "lat": 36.7406622458402,
+    "lon": 49.41701720278359,
+    "cat": "military"
+  },
+  {
+    "name": "Damğan Orta Mənzilli Ballistik Raket Bazası (MRBM)",
+    "lat": 35.77407409922949,
+    "lon": 54.28216237578215,
+    "cat": "military"
+  },
+  {
+    "name": "Sircan Dəniz Missiya Təlim Bazası Düşərgə Sahəsi",
+    "lat": 29.28502283250312,
+    "lon": 55.70104128081685,
+    "cat": "military"
+  },
+  {
+    "name": "Sircan Dəniz Missiya Təlim Bazası",
+    "lat": 29.47907641154849,
+    "lon": 55.67083689845581,
+    "cat": "military"
+  },
+  {
+    "name": "Çabahar Dəniz Bazası – “İmam Əli” Müstəqil Dəniz Bazası",
+    "lat": 25.34450862420444,
+    "lon": 60.61040883468011,
+    "cat": "military"
+  },
+  {
+    "name": "Çabahar Dənizçilik və Dəniz Elmləri Universiteti",
+    "lat": 25.30926493919609,
+    "lon": 60.62723930094754,
+    "cat": "military"
+  },
+  {
+    "name": "Çabahar dəniz limanı",
+    "lat": 25.29531250838975,
+    "lon": 60.60959985837123,
+    "cat": "military"
+  },
+  {
     "name": "Dəmiryolu stanstiyası",
     "lat": 38.49377530850065,
     "lon": 44.33932999572343,
@@ -807,6 +945,12 @@
     "name": "Xomacin aerodromu",
     "lat": 35.0541367932264,
     "lon": 49.18517307487033,
+    "cat": "aviation"
+  },
+  {
+    "name": "Sircan hava limanı",
+    "lat": 29.55094418810828,
+    "lon": 55.66675977170894,
     "cat": "aviation"
   },
   {
@@ -1432,6 +1576,24 @@
     "lat": 33.66865285963419,
     "lon": 56.89643108298463,
     "cat": "aviation"
+  },
+  {
+    "name": "Bədindeh aerodromu",
+    "lat": 35.0349604728311,
+    "lon": 51.84161730625089,
+    "cat": "aviation"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.05582182255772,
+    "lon": 60.45575936909042,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.06947311709574,
+    "lon": 60.46512631947999,
+    "cat": "post"
   },
   {
     "name": "Sərhəd postu",
@@ -11924,7 +12086,7 @@
   {
     "name": "Sərhəd postu",
     "lat": 32.06305418369148,
-    "lon": 47.6534097359819,
+    "lon": 47.65340973598191,
     "cat": "post"
   },
   {
@@ -12009,6 +12171,156 @@
     "name": "Sərhəd postu",
     "lat": 38.8654535909052,
     "lon": 46.02766755764404,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.50622549472985,
+    "lon": 61.15579589331013,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.4983233521353,
+    "lon": 61.16071447996315,
+    "cat": "post"
+  },
+  {
+    "name": "SBM",
+    "lat": 36.49810873852488,
+    "lon": 61.15970937165728,
+    "cat": "sbm"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.47853023886827,
+    "lon": 61.15643845129122,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.48446781865558,
+    "lon": 61.15239988951788,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 36.45478047486841,
+    "lon": 61.14915281690585,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.78914107498189,
+    "lon": 61.24875716246833,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.81889009020585,
+    "lon": 61.25718298423187,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 35.84322700025245,
+    "lon": 61.2348229155922,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.08970195184214,
+    "lon": 60.48039849956682,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.04383273067564,
+    "lon": 60.44727486095811,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.03540661235836,
+    "lon": 60.44130227255894,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.01125664511452,
+    "lon": 60.42333564786722,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.12587236679099,
+    "lon": 60.51263262360902,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.14898384878717,
+    "lon": 60.52892697219805,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.16677395136063,
+    "lon": 60.53844596432688,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.1836156614225,
+    "lon": 60.54967744125975,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.20168324341609,
+    "lon": 60.56830198660897,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 34.2125433552873,
+    "lon": 60.58357471975703,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 33.0897977836951,
+    "lon": 46.07974778106718,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 33.08566684521675,
+    "lon": 46.09757259395516,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 33.08122911242098,
+    "lon": 46.1073382677333,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 33.0723965103784,
+    "lon": 46.12092230165623,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 33.07213545143395,
+    "lon": 46.13649049701981,
+    "cat": "post"
+  },
+  {
+    "name": "Sərhəd postu",
+    "lat": 33.07128992987584,
+    "lon": 46.15294970448832,
     "cat": "post"
   }
 ]
