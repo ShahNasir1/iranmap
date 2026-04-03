@@ -1092,7 +1092,7 @@
       "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
       "ikon": "🌍",
       "şəkil": null,
-      "mənbə_qeydi": "Son əlavə edilən siyahıda adı keçir; ölüm tarixi mətn parçasında ayrıca göstərilməyib.",
+      "mənbə_qeydi": "",
       "id": "şəxs-053",
       "prioritet": 53
     },
@@ -1107,7 +1107,7 @@
       "kateqoriya": "Qüds Qüvvələri / Fələstin istiqaməti",
       "ikon": "🌍",
       "şəkil": null,
-      "mənbə_qeydi": "Son əlavə edilən siyahıda adı keçir; ölüm tarixi mətn parçasında ayrıca göstərilməyib.",
+      "mənbə_qeydi": "",
       "id": "şəxs-054",
       "prioritet": 54
     },
@@ -1122,7 +1122,7 @@
       "kateqoriya": "Qüds Qüvvələri / İsrail istiqaməti",
       "ikon": "🌍",
       "şəkil": null,
-      "mənbə_qeydi": "Son əlavə edilən siyahıda adı keçir; ölüm tarixi mətn parçasında ayrıca göstərilməyib.",
+      "mənbə_qeydi": "",
       "id": "şəxs-055",
       "prioritet": 55
     }
@@ -1137,7 +1137,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "BƏƏ",
       "ikon": "🏢",
-      "təsvir": "Mənbə sənədinə görə İranın qeyri-hərbi hədəflərə zərbələri içində Dubay Beynəlxalq Hava Limanı ayrıca qeyd olunur.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1149,7 +1149,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "BƏƏ",
       "ikon": "🏨",
-      "təsvir": "Dubaydakı Fairmont The Palm Hotel-in də zərbə alan qeyri-hərbi hədəflərdən biri olduğu bildirilir.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1161,7 +1161,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "Bəhreyn",
       "ikon": "🏙️",
-      "təsvir": "Mənbə mətnində Bəhreyndə bir hündürmərtəbəli binanın dağıdıldığı ayrıca vurğulanır.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1173,7 +1173,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "İsrail",
       "ikon": "🌆",
-      "təsvir": "Mənbə xülasəsində İranın zərbə endirdiyi qeyri-hərbi və urban hədəflər sırasında Təl-Əviv də qeyd olunur.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1185,7 +1185,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "İran",
       "ikon": "🏫",
-      "təsvir": "Mənbəyə görə Minabda yerləşən qız məktəbinə zərbə dəyib və ən azı 80 uşağın öldüyü qeyd olunub; zərbəni kimin endirdiyi qeyri-müəyyən təsvir edilir.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1197,7 +1197,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "ABŞ / Bəhreyn",
       "ikon": "⚓",
-      "təsvir": "Mənbə sənədinin giriş hissəsində İranın cavab zərbələri içində bu qərargah nümunə kimi göstərilir.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     },
     {
@@ -1209,7 +1209,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "Suriya",
       "ikon": "🏠",
-      "təsvir": "Mənbəyə görə raket qalıqlarından biri Suveydada bir evə düşüb və ən azı 4 nəfərin ölümünə səbəb olub.",
+      "təsvir": "",
       "mənbə_qeydi": ""
     }
   ],
