@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     /* ── Reset ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -51,9 +51,9 @@
       --red:    #ef4444;
       --orange: #f97316;
 
-      --mono: 'IBM Plex Mono', monospace;
-      --sans: 'IBM Plex Sans', sans-serif;
-      --display: 'Bebas Neue', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'Inter', sans-serif;
+      --display: 'Manrope', sans-serif;
 
       --r-sm: 14px;
       --r-md: 20px;
@@ -132,7 +132,7 @@
     .brand-text { line-height: 1; }
     .brand-title {
       font-family: var(--display);
-      font-size: 22px; letter-spacing: .04em; color: #fff;
+      font-size: 22px; font-weight: 800; letter-spacing: .01em; color: #fff;
     }
     .brand-title em { font-style: normal; color: var(--accent); }
     .brand-sub {
@@ -154,6 +154,11 @@
       background: #22c55e;
       animation: pulse-dot 1.8s ease-in-out infinite;
     }
+    .data-status{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);font-family:var(--mono);font-size:11px;font-weight:600;color:var(--muted)}
+    .data-status.ok{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.22);color:#86efac}
+    .data-status.warn{background:rgba(249,115,22,.08);border-color:rgba(249,115,22,.22);color:#fdba74}
+    .data-status.err{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.22);color:#fca5a5}
+
 
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
@@ -211,8 +216,8 @@
     }
     .hero h1 {
       font-family: var(--display);
-      font-size: clamp(42px, 5.5vw, 76px);
-      letter-spacing: .03em; line-height: 1;
+      font-size: clamp(40px, 5.2vw, 72px);
+      font-weight: 800; letter-spacing: -.02em; line-height: .98;
       max-width: 960px; margin: 0 auto; color: #fff;
     }
     .hero h1 span { color: var(--accent); }
@@ -241,7 +246,7 @@
     }
     .section-title {
       font-family: var(--display);
-      font-size: 32px; letter-spacing: .04em; line-height: 1; color: #fff;
+      font-size: 32px; font-weight: 800; letter-spacing: -.01em; line-height: 1.02; color: #fff;
     }
     .section-sub {
       margin-top: 7px; color: var(--muted);
@@ -287,12 +292,12 @@
     .ov-flag { font-size: 24px; line-height: 1; }
     .ov-name {
       font-family: var(--display);
-      font-size: 20px; letter-spacing: .04em; color: #fff;
+      font-size: 20px; font-weight: 800; letter-spacing: -.01em; color: #fff;
     }
 
     .ov-num {
       font-family: var(--display);
-      font-size: 52px; letter-spacing: -.01em; line-height: 1;
+      font-size: 46px; font-weight: 800; letter-spacing: -.02em; line-height: 1;
       color: #fff;
     }
     .ov-num-label {
@@ -359,7 +364,7 @@
     .person-body { flex: 1; min-width: 0; }
     .person-name {
       font-family: var(--display);
-      font-size: 20px; letter-spacing: .03em; color: #fff; line-height: 1.1;
+      font-size: 20px; font-weight: 800; letter-spacing: -.01em; color: #fff; line-height: 1.1;
     }
     .person-role { margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.55; }
     .person-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
@@ -406,9 +411,9 @@
     .side-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .side-name-wrap { display: flex; align-items: center; gap: 10px; }
     .side-flag { font-size: 26px; line-height: 1; }
-    .side-title { font-family: var(--display); font-size: 24px; letter-spacing: .04em; color: #fff; }
+    .side-title { font-family: var(--display); font-size: 24px; font-weight: 800; letter-spacing: -.01em; color: #fff; }
     .side-total-num {
-      font-family: var(--display); font-size: 44px; letter-spacing: -.01em; color: #fff;
+      font-family: var(--display); font-size: 42px; font-weight: 800; letter-spacing: -.02em; color: #fff;
       text-align: right; line-height: 1;
     }
     .side-total-label {
@@ -465,7 +470,7 @@
     }
     .cat-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
     .cat-total {
-      font-family: var(--display); font-size: 20px; letter-spacing: .02em;
+      font-family: var(--display); font-size: 20px; font-weight: 800; letter-spacing: -.01em;
     }
     .chev {
       font-size: 12px; color: var(--muted);
@@ -519,7 +524,7 @@
     }
     .impact-title {
       font-family: var(--display);
-      font-size: 20px; letter-spacing: .03em; color: #fff; line-height: 1.1;
+      font-size: 20px; font-weight: 800; letter-spacing: -.01em; color: #fff; line-height: 1.1;
     }
     .impact-type { margin-top: 4px; font-family: var(--mono); font-size: 11px; color: var(--dim); }
     .impact-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
@@ -633,7 +638,7 @@
       display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
     }
     .footer-stat-num {
-      font-family: var(--display); font-size: 22px; letter-spacing: .03em; color: #fff;
+      font-family: var(--display); font-size: 22px; font-weight: 800; letter-spacing: -.01em; color: #fff;
     }
     .footer-stat-label {
       font-family: var(--mono); font-size: 10px; text-transform: uppercase;
@@ -678,6 +683,7 @@
       </a>
       <div class="topbar-right">
         <div class="live-chip"><span class="live-dot"></span>Canlı məlumat</div>
+        <div class="data-status" id="dataStatus">JSON gözlənilir…</div>
         <button class="btn primary" id="yenileBtn">↺ Yenilə</button>
         <a class="btn" href="index.html">🗺 Xəritəyə qayıt</a>
       </div>
@@ -1214,9 +1220,52 @@ function renderTable() {
 
 /* ── Load ── */
 async function loadData() {
-  const res  = await fetch('data/losses.json', { cache: 'no-store' });
-  appData    = await res.json();
+  const statusEl = document.getElementById('dataStatus');
+  const candidatePaths = [
+    './data/losses.json',
+    'data/losses.json',
+    './losses.json',
+    'losses.json'
+  ];
+
+  let res = null;
+  let usedPath = null;
+  let lastError = null;
+
+  for (const path of candidatePaths) {
+    try {
+      const attempt = await fetch(path, { cache: 'no-store' });
+      if (attempt.ok) {
+        res = attempt;
+        usedPath = path;
+        break;
+      }
+      lastError = new Error(`HTTP ${attempt.status} for ${path}`);
+    } catch (err) {
+      lastError = err;
+    }
+  }
+
+  if (!res) {
+    statusEl.textContent = 'JSON tapılmadı';
+    statusEl.className = 'data-status err';
+
+    document.getElementById('overviewGrid').innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">⚠️</div><div class="empty-text">Məlumat faylı yüklənmədi. <code>data/losses.json</code> və ya <code>losses.json</code> yolunu yoxla.</div></div>`;
+    document.getElementById('personGrid').innerHTML = '';
+    document.getElementById('lossesGrid').innerHTML = '';
+    document.getElementById('impactGrid').innerHTML = '';
+    document.getElementById('recordsBody').innerHTML = `<tr><td colspan="6"><div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">JSON yüklənmədi: ${escapeHtml(lastError?.message || 'naməlum xəta')}</div></div></td></tr>`;
+    document.getElementById('searchCount').textContent = 'Yüklənmə xətası';
+    console.error('losses.json yüklənmədi', lastError);
+    return;
+  }
+
+  appData = await res.json();
   allRecords = normalizeRecords(appData?.qeydlər || appData?.records || []);
+
+  statusEl.textContent = `JSON: ${usedPath}`;
+  statusEl.className = 'data-status ok';
+
   renderOverview();
   renderPersons();
   renderLossesGrid();
