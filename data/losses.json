@@ -5,63 +5,68 @@
     "dil": "az",
     "sxem_versiyası": "1.0.0",
     "yaradılma_tarixi": "2026-04-03",
-    "qeyd": "Bu fayl son əlavə edilən siyahı əsasında yenilənib; şəxsi itkilər bölməsinə siyahıda adı keçən əlavə rəsmilər daxil edilib."
+    "qeyd": "Bu fayl son əlavə edilmiş tam cədvəl və yenilənmiş şəxsi itkilər siyahısı əsasında formalaşdırılıb."
   },
   "mənbə_xülasəsi": {
-    "sənəd_adı": "Operation Epic Fury - 2026 İsrail/ABŞ - İran müharibəsində avadanlıq itkilərinin sənədləşdirilməsi",
+    "sənəd_adı": "Operation Epic Fury / Roaring Lion — 2026 münaqişəsi üzrə yenilənmiş itki cədvəli",
     "ümumi_rəqəmlər": {
       "İran": {
-        "cəmi": 270,
-        "məhv_edilib": 240,
-        "zədələnib": 30
+        "cəmi": 289,
+        "məhv_edilib": 260,
+        "zədələnib": 29
       },
       "İsrail": {
         "cəmi": 16,
         "məhv_edilib": 16
       },
       "ABŞ": {
-        "cəmi": 24,
-        "məhv_edilib": 20,
-        "zədələnib": 4
+        "cəmi": 28,
+        "məhv_edilib": 23,
+        "zədələnib": 4,
+        "qəzaya_uğrayıb": 1
       },
       "İraq yönlü pro-İran milis qrupları": {
-        "cəmi": 4,
-        "məhv_edilib": 1,
-        "ələ_keçirilib": 3
+        "cəmi": 6,
+        "ələ_keçirilib": 4,
+        "məhv_edilib": 2
+      },
+      "Naməlum": {
+        "cəmi": 1,
+        "məhv_edilib": 1
       }
     },
-    "qeyd": "Bu rəqəmlər sənədin xülasə hissəsində verilən yekun göstəricilərdir; tam cədvəl üzrə dinamik hesablama fərqli ola bilər."
+    "qeyd": "Bu rəqəmlər son əlavə edilmiş Excel siyahısı üzrə birbaşa hesablanmış yekun göstəricilərdir."
   },
   "dinamik_xülasə": {
-    "cəmi": 325,
+    "cəmi": 340,
     "statuslar": {
-      "Məhv edilib": 287,
+      "Məhv edilib": 302,
       "Zədələnib": 33,
       "Ələ keçirilib": 4,
       "Qəzaya uğrayıb": 1
     },
     "tərəflər": {
       "İran": {
-        "cəmi": 279,
+        "cəmi": 289,
         "statuslar": {
-          "Məhv edilib": 250,
+          "Məhv edilib": 260,
           "Zədələnib": 29
         },
         "kateqoriyalar": {
+          "Nəqliyyat vasitələri": 63,
           "Dəniz platforması": 62,
-          "Nəqliyyat vasitələri": 60,
-          "Ballistik raket sistemi": 46,
-          "Təyyarə": 36,
-          "HHM raket sistemi": 21,
+          "Ballistik raket sistemi": 49,
+          "Təyyarə": 37,
+          "HHM raket sistemi": 22,
           "Komanda məntəqəsi": 14,
           "Radar sistemi": 11,
-          "Zenit topu": 10,
+          "Zenit topu": 11,
           "Mühəndis texnikası": 5,
+          "PUA": 4,
           "Helikopter": 4,
-          "PUA": 3,
+          "Yedəkli artilleriya": 2,
           "Elektron mübarizə sistemi": 2,
           "YARS / Çoxsaylı raket buraxıcısı": 2,
-          "Yedəkli artilleriya": 2,
           "Piyada hərəkətlilik vasitəsi": 1
         }
       },
@@ -75,14 +80,14 @@
         }
       },
       "ABŞ": {
-        "cəmi": 24,
+        "cəmi": 28,
         "statuslar": {
-          "Məhv edilib": 19,
+          "Məhv edilib": 23,
           "Zədələnib": 4,
           "Qəzaya uğrayıb": 1
         },
         "kateqoriyalar": {
-          "PUA": 9,
+          "PUA": 13,
           "Təyyarə": 8,
           "Radar sistemi": 4,
           "Rabitə / SATCOM": 3
@@ -99,33 +104,42 @@
           "Yedəkli artilleriya": 2,
           "Nəqliyyat vasitələri": 1
         }
+      },
+      "Naməlum": {
+        "cəmi": 1,
+        "statuslar": {
+          "Məhv edilib": 1
+        },
+        "kateqoriyalar": {
+          "PUA": 1
+        }
       }
     }
   },
   "kateqoriya_xülasəsi": [
     {
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "say": 64
+    },
+    {
       "kateqoriya": "Dəniz platforması",
       "say": 62
     },
     {
-      "kateqoriya": "Nəqliyyat vasitələri",
-      "say": 61
-    },
-    {
       "kateqoriya": "Ballistik raket sistemi",
-      "say": 46
+      "say": 49
     },
     {
       "kateqoriya": "Təyyarə",
-      "say": 44
+      "say": 45
     },
     {
       "kateqoriya": "PUA",
-      "say": 28
+      "say": 34
     },
     {
       "kateqoriya": "HHM raket sistemi",
-      "say": 21
+      "say": 22
     },
     {
       "kateqoriya": "Radar sistemi",
@@ -137,7 +151,7 @@
     },
     {
       "kateqoriya": "Zenit topu",
-      "say": 10
+      "say": 11
     },
     {
       "kateqoriya": "Mühəndis texnikası",
@@ -148,11 +162,11 @@
       "say": 5
     },
     {
-      "kateqoriya": "Helikopter",
+      "kateqoriya": "Yedəkli artilleriya",
       "say": 4
     },
     {
-      "kateqoriya": "Yedəkli artilleriya",
+      "kateqoriya": "Helikopter",
       "say": 4
     },
     {
@@ -171,19 +185,19 @@
   "tarix_dinamikası": [
     {
       "tarix": "28.02.2026",
-      "qeyd_sayı": 18
+      "qeyd_sayı": 10
     },
     {
       "tarix": "01.03.2026",
-      "qeyd_sayı": 25
+      "qeyd_sayı": 32
     },
     {
       "tarix": "02.03.2026",
-      "qeyd_sayı": 21
+      "qeyd_sayı": 18
     },
     {
       "tarix": "03.03.2026",
-      "qeyd_sayı": 19
+      "qeyd_sayı": 17
     },
     {
       "tarix": "04.03.2026",
@@ -191,15 +205,15 @@
     },
     {
       "tarix": "05.03.2026",
-      "qeyd_sayı": 26
+      "qeyd_sayı": 22
     },
     {
       "tarix": "06.03.2026",
-      "qeyd_sayı": 16
+      "qeyd_sayı": 19
     },
     {
       "tarix": "07.03.2026",
-      "qeyd_sayı": 9
+      "qeyd_sayı": 10
     },
     {
       "tarix": "08.03.2026",
@@ -210,32 +224,24 @@
       "qeyd_sayı": 7
     },
     {
-      "tarix": "10.03.2026",
-      "qeyd_sayı": 23
-    },
-    {
       "tarix": "11.03.2026",
-      "qeyd_sayı": 27
+      "qeyd_sayı": 53
     },
     {
       "tarix": "12.03.2026",
-      "qeyd_sayı": 15
+      "qeyd_sayı": 16
     },
     {
       "tarix": "13.03.2026",
-      "qeyd_sayı": 6
+      "qeyd_sayı": 7
     },
     {
       "tarix": "14.03.2026",
-      "qeyd_sayı": 5
-    },
-    {
-      "tarix": "15.03.2026",
-      "qeyd_sayı": 9
+      "qeyd_sayı": 2
     },
     {
       "tarix": "16.03.2026",
-      "qeyd_sayı": 7
+      "qeyd_sayı": 17
     },
     {
       "tarix": "17.03.2026",
@@ -247,31 +253,31 @@
     },
     {
       "tarix": "19.03.2026",
-      "qeyd_sayı": 10
+      "qeyd_sayı": 9
+    },
+    {
+      "tarix": "20.03.2026",
+      "qeyd_sayı": 1
     },
     {
       "tarix": "21.03.2026",
-      "qeyd_sayı": 16
+      "qeyd_sayı": 14
     },
     {
       "tarix": "22.03.2026",
-      "qeyd_sayı": 5
-    },
-    {
-      "tarix": "23.03.2026",
-      "qeyd_sayı": 5
+      "qeyd_sayı": 7
     },
     {
       "tarix": "24.03.2026",
-      "qeyd_sayı": 7
+      "qeyd_sayı": 12
     },
     {
       "tarix": "25.03.2026",
-      "qeyd_sayı": 7
+      "qeyd_sayı": 1
     },
     {
       "tarix": "26.03.2026",
-      "qeyd_sayı": 1
+      "qeyd_sayı": 7
     },
     {
       "tarix": "27.03.2026",
@@ -279,11 +285,19 @@
     },
     {
       "tarix": "28.03.2026",
-      "qeyd_sayı": 6
+      "qeyd_sayı": 9
     },
     {
       "tarix": "29.03.2026",
       "qeyd_sayı": 1
+    },
+    {
+      "tarix": "31.03.2026",
+      "qeyd_sayı": 10
+    },
+    {
+      "tarix": "02.04.2026",
+      "qeyd_sayı": 5
     }
   ],
   "şəxsi_itkilər": [
@@ -1078,7 +1092,7 @@
       "kateqoriya": "Qüds Qüvvələri / Livan istiqaməti",
       "ikon": "🌍",
       "şəkil": null,
-      "mənbə_qeydi": "",
+      "mənbə_qeydi": "Son əlavə edilən siyahıda adı keçir; ölüm tarixi mətn parçasında ayrıca göstərilməyib.",
       "id": "şəxs-053",
       "prioritet": 53
     },
@@ -1093,12 +1107,12 @@
       "kateqoriya": "Qüds Qüvvələri / Fələstin istiqaməti",
       "ikon": "🌍",
       "şəkil": null,
-      "mənbə_qeydi": "",
+      "mənbə_qeydi": "Son əlavə edilən siyahıda adı keçir; ölüm tarixi mətn parçasında ayrıca göstərilməyib.",
       "id": "şəxs-054",
       "prioritet": 54
     },
     {
-      "ad": "Hüseyn Əhmədlu",
+      "ad": "Hüseyn Əhmədlou",
       "vəzifə": "SEPAH Qüds Qüvvələrinin İsrail istiqaməti üzrə zabiti (\"Sionist dosye\")",
       "rütbə": null,
       "tərəf": "İran",
@@ -1108,7 +1122,7 @@
       "kateqoriya": "Qüds Qüvvələri / İsrail istiqaməti",
       "ikon": "🌍",
       "şəkil": null,
-      "mənbə_qeydi": "",
+      "mənbə_qeydi": "Son əlavə edilən siyahıda adı keçir; ölüm tarixi mətn parçasında ayrıca göstərilməyib.",
       "id": "şəxs-055",
       "prioritet": 55
     }
@@ -1123,7 +1137,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "BƏƏ",
       "ikon": "🏢",
-      "təsvir": "",
+      "təsvir": "Mənbə sənədinə görə İranın qeyri-hərbi hədəflərə zərbələri içində Dubay Beynəlxalq Hava Limanı ayrıca qeyd olunur.",
       "mənbə_qeydi": ""
     },
     {
@@ -1135,7 +1149,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "BƏƏ",
       "ikon": "🏨",
-      "təsvir": "",
+      "təsvir": "Dubaydakı Fairmont The Palm Hotel-in də zərbə alan qeyri-hərbi hədəflərdən biri olduğu bildirilir.",
       "mənbə_qeydi": ""
     },
     {
@@ -1147,7 +1161,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "Bəhreyn",
       "ikon": "🏙️",
-      "təsvir": "",
+      "təsvir": "Mənbə mətnində Bəhreyndə bir hündürmərtəbəli binanın dağıdıldığı ayrıca vurğulanır.",
       "mənbə_qeydi": ""
     },
     {
@@ -1159,7 +1173,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "İsrail",
       "ikon": "🌆",
-      "təsvir": "",
+      "təsvir": "Mənbə xülasəsində İranın zərbə endirdiyi qeyri-hərbi və urban hədəflər sırasında Təl-Əviv də qeyd olunur.",
       "mənbə_qeydi": ""
     },
     {
@@ -1183,7 +1197,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "ABŞ / Bəhreyn",
       "ikon": "⚓",
-      "təsvir": "",
+      "təsvir": "Mənbə sənədinin giriş hissəsində İranın cavab zərbələri içində bu qərargah nümunə kimi göstərilir.",
       "mənbə_qeydi": ""
     },
     {
@@ -1195,7 +1209,7 @@
       "tarix_göstəriş": "28.02.2026",
       "tərəf": "Suriya",
       "ikon": "🏠",
-      "təsvir": "",
+      "təsvir": "Mənbəyə görə raket qalıqlarından biri Suveydada bir evə düşüb və ən azı 4 nəfərin ölümünə səbəb olub.",
       "mənbə_qeydi": ""
     }
   ],
@@ -1331,7 +1345,7 @@
         "https://x.com/CENTCOM/status/2027814907119321481"
       ],
       "taymkod": "00:24",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-008",
@@ -1445,7 +1459,7 @@
         "https://x.com/IAFsite/status/2028060148984320445/video/2"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-014",
@@ -1578,7 +1592,7 @@
         "https://x.com/CENTCOM/status/2027919256709423376"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-021",
@@ -1787,7 +1801,7 @@
         "https://x.com/trbrtc/status/2028150580439285864"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-032",
@@ -1920,7 +1934,7 @@
         "https://x.com/idfonline/status/2027902222806274546"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-039",
@@ -2701,7 +2715,7 @@
         "https://x.com/IAFsite/status/2029125895651242261/video/2"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-080",
@@ -2855,7 +2869,7 @@
         "https://x.com/Osinttechnical/status/2028966387926835445"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-088",
@@ -2969,7 +2983,7 @@
         "https://x.com/MenchOsint/status/2029319092109275638"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-094",
@@ -3140,7 +3154,7 @@
         "https://x.com/IAFsite/status/2029563465719751160"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-103",
@@ -3520,7 +3534,7 @@
         "https://x.com/CENTCOM/status/2029890618571260277"
       ],
       "taymkod": "00:01",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-123",
@@ -3939,7 +3953,7 @@
         "https://x.com/CENTCOM/status/2030472250537672951"
       ],
       "taymkod": "00:01",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-145",
@@ -3977,7 +3991,7 @@
         "https://x.com/CENTCOM/status/2030472250537672951"
       ],
       "taymkod": "00:13",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-147",
@@ -4737,7 +4751,7 @@
         "https://x.com/WhiteHouse/status/2031411594979160164"
       ],
       "taymkod": "00:22",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-187",
@@ -4775,7 +4789,7 @@
         "https://x.com/WhiteHouse/status/2031411594979160164"
       ],
       "taymkod": "00:43",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-189",
@@ -5614,7 +5628,7 @@
         "https://x.com/FarooqB90714421/status/2032872999951679763"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-233",
@@ -5652,7 +5666,7 @@
         "https://x.com/CENTCOM/status/2032935530443231575"
       ],
       "taymkod": "00:12",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-235",
@@ -5880,7 +5894,7 @@
         "https://x.com/CENTCOM/status/2033563047021658359"
       ],
       "taymkod": "00:01",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-247",
@@ -5956,7 +5970,7 @@
         "https://x.com/CENTCOM/status/2033847981628121305"
       ],
       "taymkod": "00:01",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-251",
@@ -5975,7 +5989,7 @@
         "https://x.com/CENTCOM/status/2033847981628121305"
       ],
       "taymkod": "00:05",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-252",
@@ -5994,7 +6008,7 @@
         "https://x.com/CENTCOM/status/2033847981628121305"
       ],
       "taymkod": "00:08",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-253",
@@ -6013,7 +6027,7 @@
         "https://x.com/CENTCOM/status/2033847981628121305"
       ],
       "taymkod": "00:14",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-254",
@@ -6070,7 +6084,7 @@
         "https://x.com/CENTCOM/status/2034329250203857316"
       ],
       "taymkod": "00:04",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-257",
@@ -6776,7 +6790,7 @@
         "https://x.com/CENTCOM/status/2036141805008277906"
       ],
       "taymkod": "00:05",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-294",
@@ -6795,7 +6809,7 @@
         "https://x.com/CENTCOM/status/2036141805008277906"
       ],
       "taymkod": "00:10",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-295",
@@ -6814,7 +6828,7 @@
         "https://x.com/CENTCOM/status/2036141805008277906"
       ],
       "taymkod": "00:12",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-296",
@@ -6833,7 +6847,7 @@
         "https://x.com/CENTCOM/status/2036505530051530934"
       ],
       "taymkod": "00:06",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-297",
@@ -6871,7 +6885,7 @@
         "https://x.com/CENTCOM/status/2036505530051530934"
       ],
       "taymkod": "00:16",
-      "ikon": "📡"
+      "ikon": "🧠"
     },
     {
       "id": "qeyd-299",
@@ -6985,7 +6999,7 @@
         "https://x.com/imp_navigator/status/2036683235577467106"
       ],
       "taymkod": null,
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-305",
@@ -7194,7 +7208,7 @@
         "https://x.com/CENTCOM/status/2037487683618959540"
       ],
       "taymkod": "00:17",
-      "ikon": "🛡️"
+      "ikon": "📡"
     },
     {
       "id": "qeyd-316",
@@ -7382,6 +7396,291 @@
       "qeyd_tarixi_göstəriş": "29.03.2026",
       "mənbələr": [
         "https://x.com/war_noir/status/2038284342527504480"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-326",
+      "ad": "Unknown Ballistic Missile System",
+      "kateqoriya": "Ballistik raket sistemi",
+      "kateqoriya_xam": "Ballistic Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "00:11",
+      "ikon": "🚀"
+    },
+    {
+      "id": "qeyd-327",
+      "ad": "Unknown Ballistic Missile System",
+      "kateqoriya": "Ballistik raket sistemi",
+      "kateqoriya_xam": "Ballistic Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "00:16 / 01:49",
+      "ikon": "🚀"
+    },
+    {
+      "id": "qeyd-328",
+      "ad": "Chengdu F-7",
+      "kateqoriya": "Təyyarə",
+      "kateqoriya_xam": "Aircraft",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "00:20",
+      "ikon": "✈️"
+    },
+    {
+      "id": "qeyd-329",
+      "ad": "Majid SAM",
+      "kateqoriya": "HHM raket sistemi",
+      "kateqoriya_xam": "STA-Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "01:43",
+      "ikon": "🛡️"
+    },
+    {
+      "id": "qeyd-330",
+      "ad": "Mercedes Rundhauber Tanker",
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "kateqoriya_xam": "Jeeps, Trucks etc",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038966187640430937"
+      ],
+      "taymkod": "01:45",
+      "ikon": "🚚"
+    },
+    {
+      "id": "qeyd-331",
+      "ad": "Pickup mounted Shahed Launcher",
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "kateqoriya_xam": "Jeeps, Trucks etc",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-30",
+      "itki_tarixi_göstəriş": "30.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038721345052143633"
+      ],
+      "taymkod": "00:08",
+      "ikon": "🚚"
+    },
+    {
+      "id": "qeyd-332",
+      "ad": "23mm ZU-23-2",
+      "kateqoriya": "Zenit topu",
+      "kateqoriya_xam": "AA-Gun",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-30",
+      "itki_tarixi_göstəriş": "30.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2038721345052143633"
+      ],
+      "taymkod": "00:13",
+      "ikon": "🛡️"
+    },
+    {
+      "id": "qeyd-333",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/noctu_mind/status/2038921085421301924"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-334",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-31",
+      "itki_tarixi_göstəriş": "31.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/noctu_mind/status/2038921085421301924"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-335",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-03-22",
+      "itki_tarixi_göstəriş": "22.03.2026",
+      "qeyd_tarixi": "2026-03-31",
+      "qeyd_tarixi_göstəriş": "31.03.2026",
+      "mənbələr": [
+        "https://x.com/noctu_mind/status/2035497115808411648"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-336",
+      "ad": "Unknown Ballistic Missile System",
+      "kateqoriya": "Ballistik raket sistemi",
+      "kateqoriya_xam": "Ballistic Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://www.youtube.com/watch?v=w5Bw02xSTAs"
+      ],
+      "taymkod": null,
+      "ikon": "🚀"
+    },
+    {
+      "id": "qeyd-337",
+      "ad": "Shahed 171/191",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2039647713550110964"
+      ],
+      "taymkod": "00:01",
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-338",
+      "ad": "Toyota Landcruiser 79",
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "kateqoriya_xam": "Jeeps, Trucks etc",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2039647713550110964"
+      ],
+      "taymkod": "00:03",
+      "ikon": "🚚"
+    },
+    {
+      "id": "qeyd-339",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://x.com/imp_navigator/status/2039720517150687467"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-340",
+      "ad": "CAIG Wing Loong II",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "Naməlum",
+      "tərəf_xam": "Unknown",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-02",
+      "itki_tarixi_göstəriş": "02.04.2026",
+      "qeyd_tarixi": "2026-04-02",
+      "qeyd_tarixi_göstəriş": "02.04.2026",
+      "mənbələr": [
+        "https://x.com/Tasnimnews_Fa/status/2039676855608021359"
       ],
       "taymkod": null,
       "ikon": "🛰️"
