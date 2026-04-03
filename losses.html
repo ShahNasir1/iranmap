@@ -4,679 +4,736 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IranMap — Münaqişə nəticələri</title>
-  <meta name="description" content="Vizual təsdiqlənmiş itkilər, öldürülmüş şəxslər və strateji təsirlər paneli." />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <meta name="description" content="Vizual şəkildə təsdiqlənmiş itkilər, öldürülmüş şəxslər və strateji təsirlər paneli." />
+  <link rel="icon" type="image/png" href="./favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* ── Reset ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ── Tokens ── */
-    :root {
-      --bg:       #040a10;
-      --bg2:      #070f18;
-      --surface:  rgba(8,18,30,.92);
-      --surface2: rgba(255,255,255,.035);
-      --surface3: rgba(255,255,255,.025);
-      --border:   rgba(255,255,255,.07);
-      --border2:  rgba(255,255,255,.12);
-
-      --text:     #e8f0fb;
-      --muted:    #8ca0bc;
-      --dim:      #5a6d86;
-
-      /* Tərəf rəngləri */
-      --iran:        #22c55e;   /* yaşıl */
-      --iran-soft:   rgba(34,197,94,.14);
-      --iran-border: rgba(34,197,94,.28);
-      --usa:         #f0f4ff;   /* ağ */
-      --usa-soft:    rgba(240,244,255,.10);
-      --usa-border:  rgba(240,244,255,.24);
-      --israel:      #60a5fa;   /* mavi */
-      --israel-soft: rgba(96,165,250,.13);
-      --israel-border:rgba(96,165,250,.28);
-      --proxy:       #f97316;   /* narıncı */
-      --proxy-soft:  rgba(249,115,22,.13);
-      --proxy-border:rgba(249,115,22,.28);
-      --unknown:     #94a3b8;
-      --unknown-soft:rgba(148,163,184,.10);
-
-      --accent:      #d4af37;
-      --accent-soft: rgba(212,175,55,.12);
-      --accent-dim:  rgba(212,175,55,.22);
-
-      --red:    #ef4444;
-      --orange: #f97316;
-
-      --mono: 'JetBrains Mono', monospace;
-      --sans: 'Inter', sans-serif;
-      --display: 'Manrope', sans-serif;
-
-      --r-sm: 14px;
-      --r-md: 20px;
-      --r-lg: 26px;
-      --shadow: 0 24px 64px rgba(0,0,0,.45);
-      --max: 1500px;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    a{text-decoration:none;color:inherit}
+    :root{
+      --bg:#040a10;--bg2:#07111b;--surface:rgba(8,18,30,.92);--surface2:rgba(255,255,255,.035);--surface3:rgba(255,255,255,.025);
+      --border:rgba(255,255,255,.07);--border2:rgba(255,255,255,.12);
+      --text:#e8f0fb;--muted:#8ca0bc;--dim:#5a6d86;
+      --iran:#22c55e;--iran-soft:rgba(34,197,94,.14);--iran-border:rgba(34,197,94,.28);
+      --usa:#f0f4ff;--usa-soft:rgba(240,244,255,.10);--usa-border:rgba(240,244,255,.24);
+      --israel:#60a5fa;--israel-soft:rgba(96,165,250,.13);--israel-border:rgba(96,165,250,.28);
+      --proxy:#f97316;--proxy-soft:rgba(249,115,22,.13);--proxy-border:rgba(249,115,22,.28);
+      --unknown:#94a3b8;
+      --accent:#d4af37;--accent-soft:rgba(212,175,55,.12);--accent-dim:rgba(212,175,55,.22);
+      --mono:'JetBrains Mono',monospace;--sans:'Inter',sans-serif;--display:'Manrope',sans-serif;
+      --r-sm:14px;--r-md:20px;--r-lg:26px;--shadow:0 24px 64px rgba(0,0,0,.45);--max:1500px;
     }
 
-    /* ── Base ── */
-    html, body {
-      min-height: 100%;
+    html,body{
+      min-height:100%;
       background:
         radial-gradient(ellipse at 8% 0%, rgba(34,197,94,.07) 0%, transparent 28%),
         radial-gradient(ellipse at 92% 8%, rgba(96,165,250,.07) 0%, transparent 24%),
         linear-gradient(180deg, #030810 0%, #05101a 40%, #060f18 100%);
-      color: var(--text);
-      font-family: var(--sans);
-      line-height: 1.55;
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.55;
     }
 
-    /* Grid overlay */
-    body::before {
-      content: "";
-      position: fixed; inset: 0;
-      pointer-events: none; z-index: 0;
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:0;
       background-image:
         linear-gradient(rgba(255,255,255,.016) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,.016) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.06) 80%);
+      background-size:48px 48px;
+      mask-image:linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.06) 80%);
     }
 
-    /* ── Animations ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(18px)}
+      to{opacity:1;transform:translateY(0)}
     }
-    @keyframes scanLine {
-      0%   { top: -2px; }
-      100% { top: 100%; }
-    }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; }
-      50%       { opacity: .35; }
-    }
-    .fade-up { animation: fadeUp .55s ease both; }
-    .fd-1 { animation-delay: .08s; }
-    .fd-2 { animation-delay: .16s; }
-    .fd-3 { animation-delay: .24s; }
-    .fd-4 { animation-delay: .32s; }
-
-    /* ── Layout shell ── */
-    .shell { position: relative; z-index: 1; min-height: 100vh; }
-
-    /* ── Topbar ── */
-    .topbar {
-      position: sticky; top: 0; z-index: 100;
-      background: linear-gradient(180deg, rgba(3,8,16,.98), rgba(5,12,22,.94));
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-    }
-    .topbar-inner {
-      max-width: var(--max); margin: 0 auto;
-      padding: 12px 22px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    }
-    .brand { display: flex; align-items: center; gap: 14px; }
-    .brand-badge {
-      width: 40px; height: 40px; border-radius: 12px; flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      background: linear-gradient(135deg, rgba(212,175,55,.3), rgba(212,175,55,.08));
-      border: 1px solid var(--accent-dim);
-      font-size: 18px;
-      box-shadow: 0 0 20px rgba(212,175,55,.15);
-    }
-    .brand-text { line-height: 1; }
-    .brand-title {
-      font-family: var(--display);
-      font-size: 22px; font-weight: 800; letter-spacing: .01em; color: #fff;
-    }
-    .brand-title em { font-style: normal; color: var(--accent); }
-    .brand-sub {
-      margin-top: 3px; font-family: var(--mono);
-      font-size: 10px; font-weight: 500; color: var(--dim);
-      letter-spacing: .3px; text-transform: uppercase;
-    }
-    .topbar-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
-
-    /* live dot */
-    .live-chip {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 6px 12px; border-radius: 999px;
-      background: rgba(34,197,94,.08); border: 1px solid rgba(34,197,94,.2);
-      font-family: var(--mono); font-size: 11px; font-weight: 600; color: #86efac;
-    }
-    .live-dot {
-      width: 7px; height: 7px; border-radius: 50%;
-      background: #22c55e;
-      animation: pulse-dot 1.8s ease-in-out infinite;
-    }
-    .data-status{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--border);font-family:var(--mono);font-size:11px;font-weight:600;color:var(--muted)}
-    .data-status.ok{background:rgba(34,197,94,.08);border-color:rgba(34,197,94,.22);color:#86efac}
-    .data-status.warn{background:rgba(249,115,22,.08);border-color:rgba(249,115,22,.22);color:#fdba74}
-    .data-status.err{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.22);color:#fca5a5}
-
-
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      min-height: 38px; padding: 0 16px; border-radius: 10px;
-      border: 1px solid var(--border2); background: var(--surface2);
-      color: var(--muted); font-family: var(--sans);
-      font-size: 13px; font-weight: 600;
-      transition: all .18s ease; cursor: pointer;
-    }
-    .btn:hover { background: var(--accent-soft); border-color: var(--accent-dim); color: var(--text); transform: translateY(-1px); }
-    .btn.primary { background: var(--accent-soft); border-color: var(--accent-dim); color: var(--accent); }
-    .btn.primary:hover { background: rgba(212,175,55,.2); color: #fff; }
-
-    /* ── Page ── */
-    .page {
-      width: min(var(--max), calc(100% - 36px));
-      margin: 26px auto 52px;
-      display: flex; flex-direction: column; gap: 20px;
+    @keyframes pulse-dot{
+      0%,100%{opacity:1}
+      50%{opacity:.35}
     }
 
-    /* ── Card ── */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--r-lg);
-      box-shadow: var(--shadow);
-      overflow: hidden;
+    .fade-up{animation:fadeUp .55s ease both}
+    .fd-1{animation-delay:.08s}
+    .fd-2{animation-delay:.16s}
+    .fd-3{animation-delay:.24s}
+    .fd-4{animation-delay:.32s}
+
+    .shell{position:relative;z-index:1;min-height:100vh}
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:100;
+      background:linear-gradient(180deg, rgba(3,8,16,.98), rgba(5,12,22,.94));
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar-inner{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:12px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:14px}
+    .brand-badge{
+      width:40px;height:40px;border-radius:12px;
+      display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg, rgba(212,175,55,.3), rgba(212,175,55,.08));
+      border:1px solid var(--accent-dim);
+      font-size:18px;
+      box-shadow:0 0 20px rgba(212,175,55,.15);
+    }
+    .brand-title{
+      font-family:var(--display);
+      font-size:22px;
+      font-weight:800;
+      color:#fff;
+      line-height:1;
+    }
+    .brand-title em{font-style:normal;color:var(--accent)}
+    .brand-sub{
+      margin-top:3px;
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:500;
+      color:var(--dim);
+      letter-spacing:.3px;
+      text-transform:uppercase;
+    }
+    .topbar-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
     }
 
-    /* ── Hero ── */
-    .hero {
-      position: relative; overflow: hidden;
-      padding: 52px 36px 44px;
+    .live-chip,.data-status{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:6px 12px;
+      border-radius:999px;
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:600;
+    }
+    .live-chip{
+      background:rgba(34,197,94,.08);
+      border:1px solid rgba(34,197,94,.2);
+      color:#86efac;
+    }
+    .live-dot{
+      width:7px;height:7px;border-radius:50%;
+      background:#22c55e;
+      animation:pulse-dot 1.8s ease-in-out infinite;
+    }
+    .data-status{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--border);
+      color:var(--muted);
+    }
+    .data-status.ok{
+      background:rgba(34,197,94,.08);
+      border-color:rgba(34,197,94,.22);
+      color:#86efac;
+    }
+    .data-status.err{
+      background:rgba(239,68,68,.08);
+      border-color:rgba(239,68,68,.22);
+      color:#fca5a5;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      min-height:38px;
+      padding:0 16px;
+      border-radius:10px;
+      border:1px solid var(--border2);
+      background:var(--surface2);
+      color:var(--muted);
+      font-size:13px;
+      font-weight:600;
+      transition:all .18s ease;
+      cursor:pointer;
+    }
+    .btn:hover{
+      background:var(--accent-soft);
+      border-color:var(--accent-dim);
+      color:var(--text);
+      transform:translateY(-1px);
+    }
+    .btn.primary{
+      background:var(--accent-soft);
+      border-color:var(--accent-dim);
+      color:var(--accent);
+    }
+
+    .page{
+      width:min(var(--max), calc(100% - 36px));
+      margin:26px auto 52px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--r-lg);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .hero{
+      padding:52px 36px 44px;
       background:
         radial-gradient(ellipse at 82% 0%, rgba(96,165,250,.1), transparent 30%),
         radial-gradient(ellipse at 10% 60%, rgba(34,197,94,.07), transparent 28%),
         linear-gradient(160deg, rgba(8,16,28,.97), rgba(6,14,24,.92));
-      text-align: center;
+      text-align:center;
     }
-    /* Scan line effect */
-    .hero::before {
-      content: "";
-      position: absolute; left: 0; right: 0; top: -2px; height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(212,175,55,.5), transparent);
-      animation: scanLine 5s linear infinite;
-      opacity: .5; pointer-events: none;
+    .hero-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:8px 16px;
+      border-radius:999px;
+      background:rgba(212,175,55,.07);
+      border:1px solid var(--accent-dim);
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:600;
+      color:var(--accent);
+      letter-spacing:.4px;
+      text-transform:uppercase;
+      margin-bottom:20px;
     }
-    .hero-kicker {
-      display: inline-flex; align-items: center; gap: 9px;
-      padding: 8px 16px; border-radius: 999px;
-      background: rgba(212,175,55,.07); border: 1px solid var(--accent-dim);
-      font-family: var(--mono); font-size: 11px; font-weight: 600;
-      color: var(--accent); letter-spacing: .4px; text-transform: uppercase;
-      margin-bottom: 20px;
+    .hero h1{
+      font-family:var(--display);
+      font-size:clamp(40px, 5.2vw, 72px);
+      font-weight:800;
+      letter-spacing:-.02em;
+      line-height:.98;
+      max-width:960px;
+      margin:0 auto;
+      color:#fff;
     }
-    .hero h1 {
-      font-family: var(--display);
-      font-size: clamp(40px, 5.2vw, 72px);
-      font-weight: 800; letter-spacing: -.02em; line-height: .98;
-      max-width: 960px; margin: 0 auto; color: #fff;
-    }
-    .hero h1 span { color: var(--accent); }
-    .hero-sub {
-      max-width: 720px; margin: 20px auto 0;
-      color: var(--muted); font-size: 15px; line-height: 1.75;
-    }
-
-    /* ── Section wrapper ── */
-    .section { padding: 28px 28px 24px; }
-    .losses-shell { padding: 28px 28px 20px; }
-    .search-wrap  { padding: 28px; }
-
-    /* Section head */
-    .section-head {
-      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
-      margin-bottom: 22px;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--border);
-    }
-    .section-label {
-      font-family: var(--mono);
-      font-size: 10px; font-weight: 600;
-      color: var(--dim); letter-spacing: .55px; text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .section-title {
-      font-family: var(--display);
-      font-size: 32px; font-weight: 800; letter-spacing: -.01em; line-height: 1.02; color: #fff;
-    }
-    .section-sub {
-      margin-top: 7px; color: var(--muted);
-      font-size: 13.5px; line-height: 1.7; max-width: 680px;
-    }
-    .section-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 6px 12px; border-radius: 999px;
-      background: var(--accent-soft); border: 1px solid var(--accent-dim);
-      font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--accent);
-      white-space: nowrap; flex-shrink: 0; margin-top: 4px;
+    .hero h1 span{color:var(--accent)}
+    .hero-sub{
+      max-width:720px;
+      margin:20px auto 0;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.75;
     }
 
-    /* ── Overview Grid ── */
-    .overview-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+    .section,.losses-shell,.search-wrap{padding:28px}
+    .section-head{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:22px;
+      padding-bottom:18px;
+      border-bottom:1px solid var(--border);
     }
-    .overview-card {
-      position: relative; overflow: hidden;
-      padding: 22px 20px 18px; border-radius: var(--r-md);
-      background: var(--surface2); border: 1px solid var(--border);
-      transition: border-color .2s, transform .2s;
+    .section-label{
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      color:var(--dim);
+      letter-spacing:.55px;
+      text-transform:uppercase;
+      margin-bottom:8px;
     }
-    .overview-card:hover { transform: translateY(-2px); }
-
-    /* Tərəf rəng sistemi — sol şaquli xətt */
-    .overview-card::before {
-      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-      border-radius: 3px 0 0 3px;
+    .section-title{
+      font-family:var(--display);
+      font-size:32px;
+      font-weight:800;
+      letter-spacing:-.01em;
+      line-height:1.02;
+      color:#fff;
     }
-    .overview-card.iran  { border-color: var(--iran-border);   }
-    .overview-card.iran::before  { background: var(--iran);   }
-    .overview-card.usa   { border-color: var(--usa-border);    }
-    .overview-card.usa::before   { background: var(--usa);    }
-    .overview-card.israel{ border-color: var(--israel-border); }
-    .overview-card.israel::before{ background: var(--israel); }
-    .overview-card.proxy { border-color: var(--proxy-border);  }
-    .overview-card.proxy::before { background: var(--proxy);  }
-
-    .ov-top { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-    .ov-flag { font-size: 24px; line-height: 1; }
-    .ov-name {
-      font-family: var(--display);
-      font-size: 20px; font-weight: 800; letter-spacing: -.01em; color: #fff;
+    .section-sub{
+      margin-top:7px;
+      color:var(--muted);
+      font-size:13.5px;
+      line-height:1.7;
+      max-width:680px;
     }
-
-    .ov-num {
-      font-family: var(--display);
-      font-size: 46px; font-weight: 800; letter-spacing: -.02em; line-height: 1;
-      color: #fff;
-    }
-    .ov-num-label {
-      font-family: var(--mono);
-      font-size: 10px; font-weight: 600; letter-spacing: .4px;
-      text-transform: uppercase; color: var(--dim); margin-top: 4px;
-    }
-
-    /* Progress bar — itki nisbəti */
-    .ov-bar-wrap {
-      margin-top: 14px; height: 4px; border-radius: 99px;
-      background: rgba(255,255,255,.07); overflow: hidden;
-    }
-    .ov-bar { height: 100%; border-radius: 99px; transition: width 1.2s cubic-bezier(.4,0,.2,1); }
-    .iran .ov-bar   { background: var(--iran); }
-    .usa  .ov-bar   { background: var(--usa); }
-    .israel .ov-bar { background: var(--israel); }
-    .proxy  .ov-bar { background: var(--proxy); }
-
-    .ov-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-    .ov-chip {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 4px 9px; border-radius: 999px;
-      font-family: var(--mono); font-size: 11px; font-weight: 600;
-      background: var(--surface3); border: 1px solid var(--border);
-      color: var(--muted);
-    }
-    .ov-note {
-      margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border);
-      font-size: 12px; color: var(--muted); line-height: 1.65;
+    .section-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:var(--accent-soft);
+      border:1px solid var(--accent-dim);
+      font-family:var(--mono);
+      font-size:12px;
+      font-weight:700;
+      color:var(--accent);
+      white-space:nowrap;
     }
 
-    /* ── Person Grid ── */
-    .person-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
-    }
-    .person-card {
-      position: relative; overflow: hidden;
-      padding: 20px; border-radius: var(--r-md);
-      background: var(--surface2); border: 1px solid var(--border);
-      display: flex; flex-direction: column; gap: 14px;
-      transition: border-color .2s, transform .2s;
-    }
-    .person-card:hover { transform: translateY(-2px); border-color: var(--border2); }
-    .person-card::before {
-      content: ""; position: absolute; inset: 0 0 auto 0; height: 1px;
-      background: linear-gradient(90deg, rgba(212,175,55,.45), transparent);
-    }
-    .person-photo {
-      width: 72px; height: 72px; flex-shrink: 0;
-      border-radius: 16px; overflow: hidden;
-      background: linear-gradient(135deg, rgba(212,175,55,.18), rgba(255,255,255,.04));
-      border: 1px solid var(--accent-dim);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .person-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .person-fallback {
-      width: 100%; height: 100%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: var(--display); font-size: 26px; letter-spacing: .04em; color: #fff;
-      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,.1), transparent 40%),
-                  linear-gradient(135deg, rgba(212,175,55,.2), rgba(8,24,48,.6));
-    }
-    .person-body { flex: 1; min-width: 0; }
-    .person-name {
-      font-family: var(--display);
-      font-size: 20px; font-weight: 800; letter-spacing: -.01em; color: #fff; line-height: 1.1;
-    }
-    .person-role { margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.55; }
-    .person-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-    .person-note { font-size: 12px; color: var(--dim); line-height: 1.6; padding-top: 10px; border-top: 1px solid var(--border); }
+    .overview-grid,.person-grid,.impact-grid{display:grid;gap:14px}
+    .overview-grid{grid-template-columns:repeat(4,1fr)}
+    .person-grid{grid-template-columns:repeat(4,1fr)}
+    .impact-grid{grid-template-columns:repeat(3,1fr)}
+    .losses-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 
-    /* ── Badges ── */
-    .badge {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 4px 9px; border-radius: 999px;
-      font-family: var(--mono); font-size: 11px; font-weight: 600;
-      border: 1px solid var(--border); background: var(--surface3); color: var(--muted);
-    }
-    .badge.red    { color: #fdd; background: rgba(239,68,68,.1);  border-color: rgba(239,68,68,.22); }
-    .badge.gold   { color: #fde68a; background: var(--accent-soft); border-color: var(--accent-dim); }
-    .badge.blue   { color: #bfdbfe; background: var(--israel-soft); border-color: var(--israel-border); }
-    .badge.green  { color: #bbf7d0; background: var(--iran-soft);   border-color: var(--iran-border); }
-    .badge.orange { color: #fed7aa; background: var(--proxy-soft);  border-color: var(--proxy-border); }
-
-    /* ── Losses Grid (Tərəflər) ── */
-    .losses-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-    .side-card {
-      padding: 20px; border-radius: var(--r-md);
-      background: var(--surface2); border: 1px solid var(--border);
-      position: relative; overflow: hidden;
-    }
-    /* Side-specific left accent */
-    .side-card::before {
-      content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-      border-radius: 3px 0 0 3px;
-    }
-    .side-card[data-side="İran"]::before                 { background: var(--iran); }
-    .side-card[data-side="ABŞ"]::before                  { background: var(--usa); }
-    .side-card[data-side="İsrail"]::before               { background: var(--israel); }
-    .side-card[data-side="İranın proksi qrupları"]::before{ background: var(--proxy); }
-    .side-card[data-side="İran"]                 { border-color: var(--iran-border); }
-    .side-card[data-side="ABŞ"]                  { border-color: var(--usa-border); }
-    .side-card[data-side="İsrail"]               { border-color: var(--israel-border); }
-    .side-card[data-side="İranın proksi qrupları"]{ border-color: var(--proxy-border); }
-
-    .side-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-    .side-name-wrap { display: flex; align-items: center; gap: 10px; }
-    .side-flag { font-size: 26px; line-height: 1; }
-    .side-title { font-family: var(--display); font-size: 24px; font-weight: 800; letter-spacing: -.01em; color: #fff; }
-    .side-total-num {
-      font-family: var(--display); font-size: 42px; font-weight: 800; letter-spacing: -.02em; color: #fff;
-      text-align: right; line-height: 1;
-    }
-    .side-total-label {
-      font-family: var(--mono); font-size: 10px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: .4px; color: var(--dim);
-      text-align: right; margin-top: 3px;
+    .overview-card,.person-card,.impact-card,.side-card{
+      position:relative;
+      overflow:hidden;
+      padding:20px;
+      border-radius:var(--r-md);
+      background:var(--surface2);
+      border:1px solid var(--border);
     }
 
-    /* Mini stats */
-    .mini-stats {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 8px; margin: 14px 0;
-    }
-    .mini-stat {
-      padding: 10px 12px; border-radius: var(--r-sm);
-      background: rgba(255,255,255,.028); border: 1px solid var(--border);
-    }
-    .mini-stat b {
-      display: block; font-family: var(--display);
-      font-size: 22px; letter-spacing: .02em; color: #fff;
-    }
-    .mini-stat span {
-      display: block; margin-top: 3px;
-      font-family: var(--mono); font-size: 10px;
-      color: var(--dim); line-height: 1.3;
+    .overview-card::before,.side-card::before{
+      content:"";
+      position:absolute;
+      left:0;top:0;bottom:0;
+      width:3px;
     }
 
-    /* Category accordion */
-    .cat-list { display: flex; flex-direction: column; gap: 8px; }
-    .cat-item {
-      border: 1px solid var(--border);
-      background: var(--surface3);
-      border-radius: var(--r-sm); overflow: hidden;
-    }
-    .cat-trigger {
-      width: 100%; padding: 12px 14px;
-      background: transparent; border: none; border-radius: 0;
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      color: var(--text); cursor: pointer; text-align: left;
-      transition: background .15s;
-    }
-    .cat-trigger:hover { background: rgba(255,255,255,.03); }
-    .cat-trigger-left { display: flex; align-items: center; gap: 10px; min-width: 0; }
-    .cat-icon {
-      width: 32px; height: 32px; flex-shrink: 0; border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--accent-soft); border: 1px solid var(--accent-dim);
-      font-size: 15px;
-    }
-    .cat-name { font-size: 13.5px; font-weight: 600; line-height: 1.3; }
-    .cat-count {
-      font-family: var(--mono); font-size: 11px;
-      color: var(--dim); margin-top: 2px;
-    }
-    .cat-right { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-    .cat-total {
-      font-family: var(--display); font-size: 20px; font-weight: 800; letter-spacing: -.01em;
-    }
-    .chev {
-      font-size: 12px; color: var(--muted);
-      transition: transform .2s ease;
-    }
-    .cat-item.open .chev { transform: rotate(180deg); }
-    .cat-body { display: none; padding: 0 14px 14px; }
-    .cat-item.open .cat-body { display: block; }
+    .overview-card.iran,.side-card[data-side="İran"]{border-color:var(--iran-border)}
+    .overview-card.iran::before,.side-card[data-side="İran"]::before{background:var(--iran)}
+    .overview-card.usa,.side-card[data-side="ABŞ"]{border-color:var(--usa-border)}
+    .overview-card.usa::before,.side-card[data-side="ABŞ"]::before{background:var(--usa)}
+    .overview-card.israel,.side-card[data-side="İsrail"]{border-color:var(--israel-border)}
+    .overview-card.israel::before,.side-card[data-side="İsrail"]::before{background:var(--israel)}
+    .overview-card.proxy,.side-card[data-side="İranın proksi qrupları"]{border-color:var(--proxy-border)}
+    .overview-card.proxy::before,.side-card[data-side="İranın proksi qrupları"]::before{background:var(--proxy)}
 
-    /* Record items */
-    .record-list { display: flex; flex-direction: column; gap: 8px; }
-    .record-item {
-      padding: 12px 14px; border-radius: 12px;
-      background: rgba(255,255,255,.025); border: 1px solid var(--border);
-      transition: border-color .15s;
+    .ov-top,.side-name-wrap,.impact-head{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
     }
-    .record-item:hover { border-color: var(--border2); }
-    .record-top {
-      display: flex; align-items: flex-start;
-      justify-content: space-between; gap: 10px;
+    .ov-flag,.side-flag{font-size:24px;line-height:1}
+    .ov-name,.person-name,.impact-title,.side-title{
+      font-family:var(--display);
+      font-weight:800;
+      color:#fff;
     }
-    .record-title { font-size: 13px; font-weight: 600; line-height: 1.45; color: #fff; }
-    .record-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-    .src-links { display: flex; flex-direction: column; gap: 6px; margin-top: 8px; }
-    .src-links a {
-      padding: 7px 10px; border-radius: 10px;
-      background: rgba(255,255,255,.03); border: 1px solid var(--border);
-      font-family: var(--mono); font-size: 11px; color: var(--muted);
-      word-break: break-all; transition: all .15s;
+    .ov-name{font-size:20px}
+    .ov-num{
+      font-family:var(--display);
+      font-size:46px;
+      font-weight:800;
+      line-height:1;
+      color:#fff;
     }
-    .src-links a:hover { border-color: var(--accent-dim); background: var(--accent-soft); color: var(--text); }
+    .ov-num-label,.side-total-label{
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.4px;
+      color:var(--dim);
+    }
+    .ov-bar-wrap{
+      margin-top:14px;
+      height:4px;
+      border-radius:99px;
+      background:rgba(255,255,255,.07);
+      overflow:hidden;
+    }
+    .ov-bar{
+      height:100%;
+      border-radius:99px;
+      transition:width 1.2s cubic-bezier(.4,0,.2,1);
+    }
+    .iran .ov-bar{background:var(--iran)}
+    .usa .ov-bar{background:var(--usa)}
+    .israel .ov-bar{background:var(--israel)}
+    .proxy .ov-bar{background:var(--proxy)}
 
-    /* ── Impact Grid ── */
-    .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-    .impact-card {
-      padding: 20px; border-radius: var(--r-md);
-      background: var(--surface2); border: 1px solid var(--border);
-      position: relative; overflow: hidden;
-      transition: border-color .2s, transform .2s;
+    .ov-chips,.person-meta,.impact-badges,.record-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
     }
-    .impact-card:hover { transform: translateY(-2px); border-color: var(--border2); }
-    .impact-card::before {
-      content: ""; position: absolute; inset: 0 0 auto 0; height: 1px;
-      background: linear-gradient(90deg, rgba(239,68,68,.4), transparent);
-    }
-    .impact-head { display: flex; align-items: flex-start; gap: 14px; }
-    .impact-icon {
-      width: 48px; height: 48px; flex-shrink: 0; border-radius: 14px;
-      background: rgba(239,68,68,.1); border: 1px solid rgba(239,68,68,.2);
-      display: flex; align-items: center; justify-content: center; font-size: 22px;
-    }
-    .impact-title {
-      font-family: var(--display);
-      font-size: 20px; font-weight: 800; letter-spacing: -.01em; color: #fff; line-height: 1.1;
-    }
-    .impact-type { margin-top: 4px; font-family: var(--mono); font-size: 11px; color: var(--dim); }
-    .impact-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-    .impact-desc { margin-top: 12px; font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .ov-chips{margin-top:12px}
 
-    /* ── Search / Filters ── */
-    .filters {
-      display: grid;
-      grid-template-columns: 1.4fr repeat(4, minmax(140px, 1fr));
-      gap: 12px;
-      margin-bottom: 18px;
+    .ov-chip,.badge,.status-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      padding:4px 9px;
+      border-radius:999px;
+      font-family:var(--mono);
+      font-size:11px;
+      font-weight:600;
+      border:1px solid var(--border);
     }
-    .field { display: flex; flex-direction: column; gap: 6px; }
-    .field label {
-      font-family: var(--mono); font-size: 10px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: .55px; color: var(--dim);
+    .ov-chip{background:var(--surface3);color:var(--muted)}
+    .person-name{font-size:20px}
+    .person-role,.person-note,.ov-note,.impact-desc{
+      color:var(--muted);
+      line-height:1.65;
     }
-    .field input, .field select {
-      width: 100%; min-height: 44px;
-      border-radius: 12px; border: 1px solid var(--border2);
-      background: rgba(255,255,255,.04); color: var(--text);
-      padding: 0 14px; outline: none;
-      font-family: var(--sans); font-size: 13.5px;
-      transition: border-color .15s, background .15s;
-      appearance: none; -webkit-appearance: none;
+    .person-role{margin-top:6px;font-size:13px}
+    .person-note,.ov-note{margin-top:12px}
+    .person-note{
+      padding-top:10px;
+      border-top:1px solid var(--border);
+      color:var(--dim);
+      font-size:12px;
     }
-    .field input::placeholder { color: var(--dim); }
-    .field input:focus, .field select:focus {
-      border-color: var(--accent-dim); background: rgba(212,175,55,.05);
-    }
-    .field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a6d86' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px; }
-    .field select option { background: #070f18; }
+    .ov-note{font-size:12px}
 
-    /* search count */
-    .search-count {
-      font-family: var(--mono); font-size: 12px; font-weight: 600;
-      color: var(--accent); white-space: nowrap; margin-top: 6px;
+    .person-photo{
+      width:72px;height:72px;
+      border-radius:16px;
+      overflow:hidden;
+      background:linear-gradient(135deg, rgba(212,175,55,.18), rgba(255,255,255,.04));
+      border:1px solid var(--accent-dim);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .person-photo img{width:100%;height:100%;object-fit:cover}
+    .person-fallback{
+      width:100%;height:100%;
+      display:flex;align-items:center;justify-content:center;
+      font-family:var(--display);
+      font-size:26px;
+      color:#fff;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255,255,255,.1), transparent 40%),
+        linear-gradient(135deg, rgba(212,175,55,.2), rgba(8,24,48,.6));
     }
 
-    /* Results table */
-    .results-table {
-      border: 1px solid var(--border); border-radius: 18px;
-      overflow: hidden; background: rgba(255,255,255,.018);
-    }
-    .table-wrap { overflow: auto; max-height: 800px; }
-    table { width: 100%; border-collapse: collapse; }
-    thead th {
-      position: sticky; top: 0; z-index: 2;
-      background: rgba(6,13,22,.98);
-      padding: 13px 16px;
-      border-bottom: 1px solid var(--border);
-      font-family: var(--mono); font-size: 10px; font-weight: 600;
-      text-transform: uppercase; letter-spacing: .55px;
-      color: var(--dim); text-align: left;
-    }
-    tbody td {
-      padding: 13px 16px; border-bottom: 1px solid rgba(255,255,255,.04);
-      vertical-align: top; font-size: 13px;
-    }
-    tbody tr:hover { background: rgba(255,255,255,.025); }
-    tbody tr:last-child td { border-bottom: none; }
+    .badge{background:var(--surface3);color:var(--muted)}
+    .badge.red{color:#fdd;background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.22)}
+    .badge.gold{color:#fde68a;background:var(--accent-soft);border-color:var(--accent-dim)}
+    .badge.blue{color:#bfdbfe;background:var(--israel-soft);border-color:var(--israel-border)}
+    .badge.green{color:#bbf7d0;background:var(--iran-soft);border-color:var(--iran-border)}
+    .badge.orange{color:#fed7aa;background:var(--proxy-soft);border-color:var(--proxy-border)}
 
-    /* Tərəf dot in table */
-    .side-dot {
-      display: inline-flex; align-items: center; gap: 7px;
+    .side-title{font-size:24px}
+    .side-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
     }
-    .side-dot::before {
-      content: ""; width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+    .side-total-num{
+      font-family:var(--display);
+      font-size:42px;
+      font-weight:800;
+      color:#fff;
+      text-align:right;
+      line-height:1;
     }
-    .side-dot[data-side="İran"]::before                  { background: var(--iran); }
-    .side-dot[data-side="ABŞ"]::before                   { background: var(--usa); border: 1px solid rgba(255,255,255,.3); }
-    .side-dot[data-side="İsrail"]::before                { background: var(--israel); }
-    .side-dot[data-side="İranın proksi qrupları"]::before { background: var(--proxy); }
-    .side-dot[data-side="Naməlum"]::before               { background: var(--unknown); }
 
-    /* Status pill */
-    .status-pill {
-      display: inline-flex; align-items: center;
-      padding: 4px 9px; border-radius: 999px;
-      font-family: var(--mono); font-size: 11px; font-weight: 600;
-      border: 1px solid var(--border);
+    .mini-stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+      margin:14px 0;
     }
-    .status-pill[data-status="Məhv edilib"]  { background: rgba(239,68,68,.1);  border-color: rgba(239,68,68,.22);  color: #fdd; }
-    .status-pill[data-status="Zədələnib"]    { background: rgba(245,158,11,.1); border-color: rgba(245,158,11,.22); color: #fed7aa; }
-    .status-pill[data-status="Ələ keçirilib"]{ background: rgba(139,92,246,.1); border-color: rgba(139,92,246,.22); color: #e9d5ff; }
-    .status-pill[data-status="Qəzaya uğrayıb"]{ background: rgba(96,165,250,.1);border-color: rgba(96,165,250,.22); color: #bfdbfe; }
+    .mini-stat{
+      padding:10px 12px;
+      border-radius:var(--r-sm);
+      background:rgba(255,255,255,.028);
+      border:1px solid var(--border);
+    }
+    .mini-stat b{
+      display:block;
+      font-family:var(--display);
+      font-size:22px;
+      color:#fff;
+    }
+    .mini-stat span{
+      display:block;
+      margin-top:3px;
+      font-family:var(--mono);
+      font-size:10px;
+      color:var(--dim);
+      line-height:1.3;
+    }
 
-    /* Empty state */
-    .empty {
-      display: flex; flex-direction: column; align-items: center;
-      padding: 36px 20px; gap: 10px;
-      text-align: center; color: var(--dim);
-    }
-    .empty-icon { font-size: 32px; opacity: .4; }
-    .empty-text { font-size: 13px; line-height: 1.6; max-width: 320px; }
+    .cat-list,.record-list,.src-links{display:flex;flex-direction:column}
+    .cat-list,.record-list{gap:8px}
+    .src-links{gap:6px;margin-top:8px}
 
-    /* ── Footer ── */
-    .footer-bar {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 20px; flex-wrap: wrap;
-      padding: 18px 24px;
-      background: var(--surface);
-      border: 1px solid var(--border); border-radius: var(--r-lg);
+    .cat-item{
+      border:1px solid var(--border);
+      background:var(--surface3);
+      border-radius:var(--r-sm);
+      overflow:hidden;
     }
-    .footer-left { font-size: 13px; color: var(--muted); line-height: 1.7; }
-    .footer-left b { color: var(--text); }
-    .footer-right {
-      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    .cat-trigger{
+      width:100%;
+      padding:12px 14px;
+      background:transparent;
+      border:none;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      color:var(--text);
+      cursor:pointer;
+      text-align:left;
     }
-    .footer-stat {
-      display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
+    .cat-trigger-left{display:flex;align-items:center;gap:10px;min-width:0}
+    .cat-icon{
+      width:32px;height:32px;
+      border-radius:10px;
+      display:flex;align-items:center;justify-content:center;
+      background:var(--accent-soft);
+      border:1px solid var(--accent-dim);
+      font-size:15px;
     }
-    .footer-stat-num {
-      font-family: var(--display); font-size: 22px; font-weight: 800; letter-spacing: -.01em; color: #fff;
+    .cat-name{font-size:13.5px;font-weight:600;line-height:1.3}
+    .cat-count{
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--dim);
+      margin-top:2px;
     }
-    .footer-stat-label {
-      font-family: var(--mono); font-size: 10px; text-transform: uppercase;
-      letter-spacing: .4px; color: var(--dim);
+    .cat-right{display:flex;align-items:center;gap:10px}
+    .cat-total{
+      font-family:var(--display);
+      font-size:20px;
+      font-weight:800;
     }
-    .footer-divider { width: 1px; height: 36px; background: var(--border); }
+    .chev{font-size:12px;color:var(--muted);transition:transform .2s ease}
+    .cat-item.open .chev{transform:rotate(180deg)}
+    .cat-body{display:none;padding:0 14px 14px}
+    .cat-item.open .cat-body{display:block}
 
-    /* ── Responsive ── */
-    @media (max-width: 1280px) {
-      .overview-grid { grid-template-columns: repeat(2, 1fr); }
-      .person-grid   { grid-template-columns: repeat(2, 1fr); }
-      .impact-grid   { grid-template-columns: repeat(2, 1fr); }
-      .mini-stats    { grid-template-columns: repeat(2, 1fr); }
+    .record-item{
+      padding:12px 14px;
+      border-radius:12px;
+      background:rgba(255,255,255,.025);
+      border:1px solid var(--border);
     }
-    @media (max-width: 860px) {
-      .page { width: min(calc(100% - 22px), var(--max)); }
-      .hero, .section, .losses-shell, .search-wrap { padding: 20px; }
-      .overview-grid, .person-grid, .impact-grid, .filters, .losses-grid { grid-template-columns: 1fr; }
-      .topbar-inner { padding: 12px; }
-      .topbar-right { width: 100%; justify-content: flex-start; }
-      .brand-title { font-size: 20px; }
-      thead th:nth-child(5), tbody td:nth-child(5) { display: none; }
-      .section-title { font-size: 26px; }
-      .hero h1 { font-size: clamp(34px, 9vw, 52px); }
-      .footer-bar { flex-direction: column; align-items: flex-start; }
-      .footer-right { justify-content: flex-start; }
+    .record-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .record-title{
+      font-size:13px;
+      font-weight:600;
+      line-height:1.45;
+      color:#fff;
+    }
+    .src-links a{
+      padding:7px 10px;
+      border-radius:10px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--border);
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--muted);
+      word-break:break-all;
+    }
+
+    .impact-icon{
+      width:48px;height:48px;
+      border-radius:14px;
+      background:rgba(239,68,68,.1);
+      border:1px solid rgba(239,68,68,.2);
+      display:flex;align-items:center;justify-content:center;
+      font-size:22px;
+    }
+    .impact-title{font-size:20px;line-height:1.1}
+    .impact-type{
+      margin-top:4px;
+      font-family:var(--mono);
+      font-size:11px;
+      color:var(--dim);
+    }
+    .impact-desc{
+      margin-top:12px;
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .filters{
+      display:grid;
+      grid-template-columns:1.4fr repeat(4,minmax(140px,1fr));
+      gap:12px;
+      margin-bottom:18px;
+    }
+    .field{display:flex;flex-direction:column;gap:6px}
+    .field label{
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.55px;
+      color:var(--dim);
+    }
+    .field input,.field select{
+      width:100%;
+      min-height:44px;
+      border-radius:12px;
+      border:1px solid var(--border2);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      padding:0 14px;
+      outline:none;
+      font-family:var(--sans);
+      font-size:13.5px;
+      appearance:none;
+    }
+    .field input::placeholder{color:var(--dim)}
+    .field select{
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a6d86' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat:no-repeat;
+      background-position:right 14px center;
+      padding-right:36px;
+    }
+
+    .search-count{
+      font-family:var(--mono);
+      font-size:12px;
+      font-weight:600;
+      color:var(--accent);
+      white-space:nowrap;
+      margin-top:6px;
+    }
+
+    .results-table{
+      border:1px solid var(--border);
+      border-radius:18px;
+      overflow:hidden;
+      background:rgba(255,255,255,.018);
+    }
+    .table-wrap{overflow:auto;max-height:800px}
+    table{width:100%;border-collapse:collapse}
+    thead th{
+      position:sticky;
+      top:0;
+      z-index:2;
+      background:rgba(6,13,22,.98);
+      padding:13px 16px;
+      border-bottom:1px solid var(--border);
+      font-family:var(--mono);
+      font-size:10px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.55px;
+      color:var(--dim);
+      text-align:left;
+    }
+    tbody td{
+      padding:13px 16px;
+      border-bottom:1px solid rgba(255,255,255,.04);
+      vertical-align:top;
+      font-size:13px;
+    }
+
+    .side-dot{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+    }
+    .side-dot::before{
+      content:"";
+      width:7px;height:7px;
+      border-radius:50%;
+    }
+    .side-dot[data-side="İran"]::before{background:var(--iran)}
+    .side-dot[data-side="ABŞ"]::before{background:var(--usa);border:1px solid rgba(255,255,255,.3)}
+    .side-dot[data-side="İsrail"]::before{background:var(--israel)}
+    .side-dot[data-side="İranın proksi qrupları"]::before{background:var(--proxy)}
+    .side-dot[data-side="Naməlum"]::before{background:var(--unknown)}
+
+    .status-pill{color:var(--muted)}
+    .status-pill[data-status="Məhv edilib"]{background:rgba(239,68,68,.1);border-color:rgba(239,68,68,.22);color:#fdd}
+    .status-pill[data-status="Zədələnib"]{background:rgba(245,158,11,.1);border-color:rgba(245,158,11,.22);color:#fed7aa}
+    .status-pill[data-status="Ələ keçirilib"]{background:rgba(139,92,246,.1);border-color:rgba(139,92,246,.22);color:#e9d5ff}
+    .status-pill[data-status="Qəzaya uğrayıb"]{background:rgba(96,165,250,.1);border-color:rgba(96,165,250,.22);color:#bfdbfe}
+
+    .empty{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:36px 20px;
+      gap:10px;
+      text-align:center;
+      color:var(--dim);
+    }
+    .empty-icon{font-size:32px;opacity:.4}
+    .empty-text{font-size:13px;line-height:1.6;max-width:420px}
+
+    .footer-bar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+      padding:18px 24px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--r-lg);
+    }
+    .footer-left{font-size:13px;color:var(--muted);line-height:1.7}
+    .footer-left b{color:var(--text)}
+    .footer-right{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+    .footer-stat{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+    .footer-stat-num{
+      font-family:var(--display);
+      font-size:22px;
+      font-weight:800;
+      color:#fff;
+    }
+    .footer-stat-label{
+      font-family:var(--mono);
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.4px;
+      color:var(--dim);
+    }
+    .footer-divider{width:1px;height:36px;background:var(--border)}
+
+    @media (max-width:1280px){
+      .overview-grid,.person-grid,.impact-grid{grid-template-columns:repeat(2,1fr)}
+      .mini-stats{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:860px){
+      .page{width:min(calc(100% - 22px), var(--max))}
+      .hero,.section,.losses-shell,.search-wrap{padding:20px}
+      .overview-grid,.person-grid,.impact-grid,.filters,.losses-grid{grid-template-columns:1fr}
+      .topbar-inner{padding:12px}
+      .topbar-right{width:100%;justify-content:flex-start}
+      .brand-title{font-size:20px}
+      thead th:nth-child(5),tbody td:nth-child(5){display:none}
+      .section-title{font-size:26px}
+      .hero h1{font-size:clamp(34px,9vw,52px)}
+      .footer-bar{flex-direction:column;align-items:flex-start}
+      .footer-right{justify-content:flex-start}
     }
   </style>
 </head>
 <body>
 <div class="shell">
-
-  <!-- Topbar -->
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="index.html">
+      <a class="brand" href="./index.html">
         <div class="brand-badge">📊</div>
-        <div class="brand-text">
+        <div>
           <div class="brand-title">Iran<em>Map</em></div>
           <div class="brand-sub">Münaqişə nəticələri paneli</div>
         </div>
@@ -685,23 +742,18 @@
         <div class="live-chip"><span class="live-dot"></span>Canlı məlumat</div>
         <div class="data-status" id="dataStatus">JSON gözlənilir…</div>
         <button class="btn primary" id="yenileBtn">↺ Yenilə</button>
-        <a class="btn" href="index.html">🗺 Xəritəyə qayıt</a>
+        <a class="btn" href="./index.html">🗺 Xəritəyə qayıt</a>
       </div>
     </div>
   </header>
 
   <main class="page">
-
-    <!-- Hero -->
     <section class="hero card fade-up">
       <div class="hero-kicker">📡 Əməliyyat Epic Fury / Roaring Lion — 2026</div>
       <h1>Vizual <span>təsdiqlənmiş itkilər</span></h1>
-      <div class="hero-sub">
-        Təsdiqlənmiş itki qeydləri üzrə ümumi mənzərə: əsas yük İranın üzərində cəmlənib, ABŞ və İsrailin itkiləri daha məhdud səviyyədədir, proksi qüvvələr isə lokal miqyasda zərbə alıb.
-      </div>
+      <div class="hero-sub" id="heroSub">Təsdiqlənmiş itki qeydləri üzrə ümumi mənzərə yüklənir…</div>
     </section>
 
-    <!-- Overview -->
     <section class="card section fade-up fd-1">
       <div class="section-head">
         <div>
@@ -714,7 +766,6 @@
       <div class="overview-grid" id="overviewGrid"></div>
     </section>
 
-    <!-- Persons -->
     <section class="card section fade-up fd-2">
       <div class="section-head">
         <div>
@@ -726,7 +777,6 @@
       <div class="person-grid" id="personGrid"></div>
     </section>
 
-    <!-- Losses -->
     <section class="card losses-shell fade-up fd-3">
       <div class="section-head">
         <div>
@@ -738,7 +788,6 @@
       <div class="losses-grid" id="lossesGrid"></div>
     </section>
 
-    <!-- Impacts -->
     <section class="card section fade-up fd-4">
       <div class="section-head">
         <div>
@@ -750,7 +799,6 @@
       <div class="impact-grid" id="impactGrid"></div>
     </section>
 
-    <!-- Search -->
     <section class="card search-wrap fade-up fd-4">
       <div class="section-head">
         <div>
@@ -760,6 +808,7 @@
         </div>
         <div class="search-count" id="searchCount">—</div>
       </div>
+
       <div class="filters">
         <div class="field">
           <label for="searchInput">Axtarış</label>
@@ -782,6 +831,7 @@
           <select id="dateFilter"><option value="">Hamısı</option></select>
         </div>
       </div>
+
       <div class="results-table">
         <div class="table-wrap">
           <table>
@@ -801,10 +851,9 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer-bar fade-up fd-4">
       <div class="footer-left">
-        <b>Qeyd:</b> Bütün qeydlər vizual material üzrə (foto/video) müstəqil mənbələr tərəfindən təsdiqlənib. Əsas ardıcıllıq: ümumi vəziyyət → şəxsi itkilər → vizual itkilər → strateji təsirlər.
+        <b>Qeyd:</b> Bütün qeydlər vizual material üzrə müstəqil mənbələr tərəfindən təsdiqlənib. Əsas ardıcıllıq: ümumi vəziyyət → şəxsi itkilər → vizual itkilər → strateji təsirlər.
       </div>
       <div class="footer-right">
         <div class="footer-stat">
@@ -823,201 +872,207 @@
         </div>
       </div>
     </footer>
-
   </main>
 </div>
 
 <script>
-/* ── Constants ── */
 const STATUS_ORDER = ["Məhv edilib","Zədələnib","Ələ keçirilib","Qəzaya uğrayıb"];
 const SIDE_ORDER = [
-  { key: "İran",                    label: "İran",         flag: "🇮🇷", cls: "iran"   },
-  { key: "ABŞ",                     label: "ABŞ",          flag: "🇺🇸", cls: "usa"    },
-  { key: "İsrail",                  label: "İsrail",       flag: "🇮🇱", cls: "israel" },
-  { key: "İranın proksi qrupları",  label: "Proksi qruplar", flag: "🟧", cls: "proxy"  }
+  { key: "İran", label: "İran", flag: "🇮🇷", cls: "iran" },
+  { key: "ABŞ", label: "ABŞ", flag: "🇺🇸", cls: "usa" },
+  { key: "İsrail", label: "İsrail", flag: "🇮🇱", cls: "israel" },
+  { key: "İranın proksi qrupları", label: "Proksi qruplar", flag: "🟧", cls: "proxy" }
 ];
 const SIDE_ALIASES = {
-  "Pro-Iranian Militia (Iraq)":               "İranın proksi qrupları",
-  "İraq yönlü pro-İran milis qrupları":        "İranın proksi qrupları",
-  "İran-yönlü pro-İran milis qrupları":        "İranın proksi qrupları",
-  "Proksi":                                    "İranın proksi qrupları"
+  "Pro-Iranian Militia (Iraq)": "İranın proksi qrupları",
+  "İraq yönlü pro-İran milis qrupları": "İranın proksi qrupları",
+  "İran-yönlü pro-İran milis qrupları": "İranın proksi qrupları",
+  "Proksi": "İranın proksi qrupları"
 };
 const STATUS_ALIASES = {
   "Destroyed": "Məhv edilib",
-  "Damaged":   "Zədələnib",
-  "Captured":  "Ələ keçirilib",
-  "Crashed":   "Qəzaya uğrayıb"
+  "Damaged": "Zədələnib",
+  "Captured": "Ələ keçirilib",
+  "Crashed": "Qəzaya uğrayıb"
 };
 const CATEGORY_ICONS = {
-  "Dəniz platforması":                "🚢",
-  "Təyyarə":                          "✈️",
-  "PUA":                              "🛰️",
-  "Ballistik raket sistemi":          "🚀",
-  "HHM raket sistemi":                "🛡️",
-  "Radar sistemi":                    "📡",
-  "Komanda məntəqəsi":                "🧠",
-  "Nəqliyyat vasitələri":             "🚚",
-  "Zenit topu":                       "🔫",
-  "Yedəkli artilleriya":              "🎯",
-  "YARS / Çoxsaylı raket buraxıcısı": "🎯",
-  "Mühəndis texnikası":               "🏗️",
-  "Helikopter":                       "🚁",
-  "Piyada hərəkətlilik vasitəsi":     "🚙",
-  "Piyada hərəkət vasitəsi":          "🚙",
-  "Rabitə / SATCOM":                  "📡",
-  "Elektron mübarizə sistemi":        "📶",
-  "Digər":                            "📦"
+  "Dəniz platforması":"🚢","Təyyarə":"✈️","PUA":"🛰️","Ballistik raket sistemi":"🚀","HHM raket sistemi":"🛡️","Radar sistemi":"📡",
+  "Komanda məntəqəsi":"🧠","Nəqliyyat vasitələri":"🚚","Zenit topu":"🔫","Yedəkli artilleriya":"🎯","YARS / Çoxsaylı raket buraxıcısı":"🎯",
+  "Mühəndis texnikası":"🏗️","Helikopter":"🚁","Piyada hərəkətlilik vasitəsi":"🚙","Piyada hərəkət vasitəsi":"🚙","Rabitə / SATCOM":"📡",
+  "Elektron mübarizə sistemi":"📶","Digər":"📦"
 };
 
 let appData = null;
 let allRecords = [];
 let filteredRecords = [];
 
-/* ── Helpers ── */
-function mapSide(s)   { return SIDE_ALIASES[s] || s; }
-function mapStatus(s) { return STATUS_ALIASES[s] || s; }
+function mapSide(s){ return SIDE_ALIASES[s] || s; }
+function mapStatus(s){ return STATUS_ALIASES[s] || s; }
 
-function formatDate(d) {
-  if (!d) return "—";
-  if (d.includes('.')) return d;
+function formatDate(d){
+  if(!d) return "—";
+  if(d.includes('.')) return d;
   const p = d.split('-');
   return p.length === 3 ? `${p[2]}.${p[1]}.${p[0]}` : d;
 }
 
-function escapeHtml(s) {
+function escapeHtml(s){
   return String(s ?? '').replace(/[&<>"']/g, c => (
     {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]
   ));
 }
-function unique(arr) { return [...new Set(arr.filter(Boolean))]; }
-function initials(name) {
-  return String(name || '').split(/\s+/).slice(0,2).map(w => w[0]||'').join('').toUpperCase();
-}
-function personPhotoMarkup(p) {
-  if (p?.şəkil) return `<img src="${escapeHtml(p.şəkil)}" alt="${escapeHtml(p.ad)}" loading="lazy">`;
-  return `<div class="person-fallback">${escapeHtml(initials(p.ad) || '?')}</div>`;
-}
-function sourceLink(url, idx) {
-  const safe = escapeHtml(url);
-  return `<a href="${safe}" target="_blank" rel="noopener noreferrer">Mənbə ${idx+1}</a>`;
+
+function unique(arr){ return [...new Set(arr.filter(Boolean))]; }
+
+function initials(name){
+  return String(name || '').split(/\s+/).slice(0,2).map(w => w[0] || '').join('').toUpperCase();
 }
 
-/* ── Counter animation ── */
-function animateCount(el, target, duration = 900) {
+function personPhotoMarkup(p){
+  if(p?.şəkil){
+    return `<img src="${escapeHtml(p.şəkil)}" alt="${escapeHtml(p.ad)}" loading="lazy">`;
+  }
+  return `<div class="person-fallback">${escapeHtml(initials(p?.ad) || '?')}</div>`;
+}
+
+function sourceLink(url, idx){
+  const safe = escapeHtml(url);
+  return `<a href="${safe}" target="_blank" rel="noopener noreferrer">Mənbə ${idx + 1}</a>`;
+}
+
+function animateCount(el, target, duration = 900){
   const start = performance.now();
-  const from = 0;
-  function step(now) {
+  function step(now){
     const progress = Math.min((now - start) / duration, 1);
     const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(from + (target - from) * eased);
-    if (progress < 1) requestAnimationFrame(step);
+    el.textContent = Math.round(target * eased);
+    if(progress < 1) requestAnimationFrame(step);
     else el.textContent = target;
   }
   requestAnimationFrame(step);
 }
 
-/* ── Normalize ── */
-function normalizeRecords(records) {
-  return records.map((r, idx) => ({
+function normalizeRecords(records){
+  return (records || []).map((r, idx) => ({
     ...r,
-    tərəf:     mapSide(r.tərəf || r.xamTərəf || ''),
-    status:    mapStatus(r.status || r.xamStatus || ''),
+    tərəf: mapSide(r.tərəf || r.tərəf_xam || r.xamTərəf || ''),
+    status: mapStatus(r.status || r.status_xam || r.xamStatus || ''),
     kateqoriya: r.kateqoriya || 'Digər',
-    ikon:      r.ikon || CATEGORY_ICONS[r.kateqoriya] || '📦',
-    mənbələr:  Array.isArray(r.mənbələr) ? r.mənbələr : [],
-    id:        r.id || `qeyd-${idx + 1}`
+    ikon: r.ikon || CATEGORY_ICONS[r.kateqoriya] || '📦',
+    mənbələr: Array.isArray(r.mənbələr) ? r.mənbələr : [],
+    id: r.id || `qeyd-${idx + 1}`
   }));
 }
 
-/* ── Side stats ── */
-function computeSideStats(side) {
+function computeSideStats(side){
   const recs = allRecords.filter(r => r.tərəf === side);
   const statusCounts = Object.fromEntries(STATUS_ORDER.map(s => [s, 0]));
-  recs.forEach(r => { statusCounts[r.status] = (statusCounts[r.status] || 0) + 1; });
+  recs.forEach(r => statusCounts[r.status] = (statusCounts[r.status] || 0) + 1);
 
   const catMap = new Map();
   recs.forEach(r => {
     const k = r.kateqoriya || 'Digər';
-    if (!catMap.has(k)) catMap.set(k, []);
+    if(!catMap.has(k)) catMap.set(k, []);
     catMap.get(k).push(r);
   });
+
   const categories = [...catMap.entries()].map(([name, items]) => {
     const st = Object.fromEntries(STATUS_ORDER.map(s => [s, 0]));
-    items.forEach(it => { st[it.status] = (st[it.status] || 0) + 1; });
-    return { name, items, total: items.length, statusCounts: st, icon: CATEGORY_ICONS[name] || items[0]?.ikon || '📦' };
-  }).sort((a, b) => b.total - a.total || a.name.localeCompare(b.name, 'az'));
+    items.forEach(it => st[it.status] = (st[it.status] || 0) + 1);
+    return {
+      name,
+      items,
+      total: items.length,
+      statusCounts: st,
+      icon: CATEGORY_ICONS[name] || items[0]?.ikon || '📦'
+    };
+  }).sort((a,b) => b.total - a.total || a.name.localeCompare(b.name, 'az'));
 
   return { total: recs.length, statusCounts, categories };
 }
 
-/* ── Overview comments ── */
-function getOverviewComment(side) {
-  if (side === "İran")   return "İranın itkiləri hərbi-strateji dayaqlarının ağır şəkildə aşınması deməkdir. Tehran cavab zərbələri endirə bilir, amma bunu əvvəlki güc ilə etməsi çətinləşib.";
-  if (side === "ABŞ")    return "Bu itkilər ABŞ üçün "toxunulmazlıq mifinin" ciddi şəkildə zədələnməsi deməkdir. Vaşinqton qalib gəlsə də, artıq itkisiz edə bilmir.";
-  if (side === "İsrail") return "Bu itkilər İsrailin tam toxunulmaz olmadığını göstərən ciddi siqnaldır. Zərbələrinin cavabsız qalmayacağı görünür.";
-  return "Proksi qüvvələr üçün bu müharibə həm imkan, həm də risk deməkdir: rolları artır, amma itkiləri daha görünən olur.";
+function getOverviewComment(side){
+  if(side === "İran") return "İranın itkiləri hərbi-strateji dayaqlarının ağır şəkildə aşınması deməkdir.";
+  if(side === "ABŞ") return "ABŞ üzrə itkilər məhduddur, amma sıfır deyil.";
+  if(side === "İsrail") return "İsrailin itkiləri əsasən PUA seqmentində toplanır.";
+  return "Proksi qüvvələrdə itki daha lokal miqyasda görünür.";
 }
 
-/* ── Render: Overview ── */
-function renderOverview() {
-  const wrap = document.getElementById('overviewGrid');
-  const grandTotal = allRecords.length;
+function setStatus(text, mode){
+  const el = document.getElementById('dataStatus');
+  el.textContent = text;
+  el.className = `data-status ${mode || ''}`.trim();
+}
 
+function setHeroSummary(){
+  const src = appData?.mənbə_xülasəsi?.ümumi_rəqəmlər || {};
+  const iran = src["İran"]?.cəmi ?? computeSideStats("İran").total;
+  const usa = src["ABŞ"]?.cəmi ?? computeSideStats("ABŞ").total;
+  const israel = src["İsrail"]?.cəmi ?? computeSideStats("İsrail").total;
+  const proxy = src["İraq yönlü pro-İran milis qrupları"]?.cəmi
+    ?? src["İranın proksi qrupları"]?.cəmi
+    ?? computeSideStats("İranın proksi qrupları").total;
+
+  document.getElementById('heroSub').textContent =
+    `Təsdiqlənmiş itki qeydləri üzrə ümumi mənzərə: İran üzrə ${iran}, ABŞ üzrə ${usa}, İsrail üzrə ${israel}, proksi qruplar üzrə isə ${proxy} qeyd mövcuddur. Əsas yük İranın üzərində cəmlənir.`;
+}
+
+function renderOverview(){
+  const wrap = document.getElementById('overviewGrid');
+
+  if(!allRecords.length){
+    wrap.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">⚠️</div><div class="empty-text">İtki qeydləri tapılmadı.</div></div>`;
+    return;
+  }
+
+  const grandTotal = allRecords.length;
   document.getElementById('totalBadge').textContent = `${grandTotal} qeyd`;
   document.getElementById('footerTotal').textContent = grandTotal;
-
-  const cats = unique(allRecords.map(r => r.kateqoriya));
-  document.getElementById('footerCategories').textContent = cats.length;
+  document.getElementById('footerCategories').textContent = unique(allRecords.map(r => r.kateqoriya)).length;
 
   wrap.innerHTML = SIDE_ORDER.map(si => {
     const st = computeSideStats(si.key);
-    const pct = grandTotal > 0 ? Math.round((st.total / grandTotal) * 100) : 0;
-    const destroyed = st.statusCounts["Məhv edilib"]   || 0;
-    const damaged   = st.statusCounts["Zədələnib"]     || 0;
-    const captured  = st.statusCounts["Ələ keçirilib"] || 0;
-    const crashed   = st.statusCounts["Qəzaya uğrayıb"]|| 0;
+    const pct = grandTotal > 0 ? Math.round(st.total / grandTotal * 100) : 0;
+    const destroyed = st.statusCounts["Məhv edilib"] || 0;
+    const damaged = st.statusCounts["Zədələnib"] || 0;
+    const captured = st.statusCounts["Ələ keçirilib"] || 0;
+    const crashed = st.statusCounts["Qəzaya uğrayıb"] || 0;
 
     const chips = [
       destroyed ? `<span class="ov-chip">Məhv: ${destroyed}</span>` : '',
-      damaged   ? `<span class="ov-chip">Zədə: ${damaged}</span>`   : '',
-      captured  ? `<span class="ov-chip">Ələ keçirilmiş: ${captured}</span>` : '',
-      crashed   ? `<span class="ov-chip">Qəza: ${crashed}</span>`   : ''
+      damaged ? `<span class="ov-chip">Zədə: ${damaged}</span>` : '',
+      captured ? `<span class="ov-chip">Ələ keçirilib: ${captured}</span>` : '',
+      crashed ? `<span class="ov-chip">Qəza: ${crashed}</span>` : ''
     ].filter(Boolean).join('');
 
-    return `
-      <article class="overview-card ${si.cls}" data-total="${st.total}" data-pct="${pct}">
-        <div class="ov-top">
-          <div class="ov-flag">${si.flag}</div>
-          <div class="ov-name">${escapeHtml(si.label)}</div>
-        </div>
-        <div class="ov-num" data-count="${st.total}">0</div>
-        <div class="ov-num-label">ümumi təsdiqlənmiş itki</div>
-        <div class="ov-bar-wrap"><div class="ov-bar" style="width:0%" data-pct="${pct}"></div></div>
-        <div class="ov-chips">${chips}</div>
-        <div class="ov-note">${escapeHtml(getOverviewComment(si.key))}</div>
-      </article>
-    `;
+    return `<article class="overview-card ${si.cls}">
+      <div class="ov-top">
+        <div class="ov-flag">${si.flag}</div>
+        <div class="ov-name">${escapeHtml(si.label)}</div>
+      </div>
+      <div class="ov-num" data-count="${st.total}">0</div>
+      <div class="ov-num-label">ümumi təsdiqlənmiş itki</div>
+      <div class="ov-bar-wrap"><div class="ov-bar" style="width:0%" data-pct="${pct}"></div></div>
+      <div class="ov-chips">${chips}</div>
+      <div class="ov-note">${escapeHtml(getOverviewComment(si.key))}</div>
+    </article>`;
   }).join('');
 
-  /* Animate counters + bars */
   wrap.querySelectorAll('.overview-card').forEach((card, i) => {
-    const numEl  = card.querySelector('.ov-num');
-    const barEl  = card.querySelector('.ov-bar');
-    const target = parseInt(numEl.dataset.count, 10);
-    const pct    = parseInt(barEl.dataset.pct, 10);
+    const numEl = card.querySelector('.ov-num');
+    const barEl = card.querySelector('.ov-bar');
     setTimeout(() => {
-      animateCount(numEl, target, 900);
-      barEl.style.width = pct + '%';
+      animateCount(numEl, parseInt(numEl.dataset.count || '0', 10), 900);
+      barEl.style.width = parseInt(barEl.dataset.pct || '0', 10) + '%';
     }, i * 80);
   });
 }
 
-/* ── Render: Persons ── */
-function renderPersons() {
+function renderPersons(){
   const grid = document.getElementById('personGrid');
-  const people = (appData?.şəxsi_itkilər || []).slice().sort((a,b)=>(a.prioritet||999)-(b.prioritet||999));
+  const people = (appData?.şəxsi_itkilər || []).slice().sort((a,b) => (a.prioritet || 999) - (b.prioritet || 999));
 
-  if (!people.length) {
+  if(!people.length){
     grid.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">👤</div><div class="empty-text">Şəxsi itki qeydi tapılmadı.</div></div>`;
     return;
   }
@@ -1025,66 +1080,73 @@ function renderPersons() {
   grid.innerHTML = people.map(p => {
     const sideKey = p.tərəf || 'İran';
     const sideInfo = SIDE_ORDER.find(s => s.key === sideKey);
-    const badgeCls = sideInfo?.cls === 'iran' ? 'green' : sideInfo?.cls === 'usa' ? '' : sideInfo?.cls === 'israel' ? 'blue' : 'orange';
-    return `
-      <article class="person-card">
-        <div class="person-photo">${personPhotoMarkup(p)}</div>
-        <div class="person-body">
-          <div class="person-name">${escapeHtml(p.ad)}</div>
-          <div class="person-role">${escapeHtml(p.vəzifə || '—')}</div>
-          <div class="person-meta">
-            <span class="badge red">Öldürülüb</span>
-            <span class="badge ${badgeCls}">${escapeHtml(sideKey)}</span>
-            <span class="badge gold">${escapeHtml(p.tarix_göstəriş || formatDate(p.tarix))}</span>
-          </div>
-          ${p.mənbə_qeydi ? `<div class="person-note">${escapeHtml(p.mənbə_qeydi)}</div>` : ''}
+    const badgeCls =
+      sideInfo?.cls === 'iran' ? 'green' :
+      sideInfo?.cls === 'usa' ? '' :
+      sideInfo?.cls === 'israel' ? 'blue' : 'orange';
+
+    const note = p.mənbə_qeydi || p.qeyd || '';
+
+    return `<article class="person-card">
+      <div class="person-photo">${personPhotoMarkup(p)}</div>
+      <div>
+        <div class="person-name">${escapeHtml(p.ad)}</div>
+        <div class="person-role">${escapeHtml(p.vəzifə || '—')}</div>
+        <div class="person-meta">
+          <span class="badge red">Öldürülüb</span>
+          <span class="badge ${badgeCls}">${escapeHtml(sideKey)}</span>
+          <span class="badge gold">${escapeHtml(p.tarix_göstəriş || formatDate(p.tarix))}</span>
         </div>
-      </article>
-    `;
+        ${note ? `<div class="person-note">${escapeHtml(note)}</div>` : ''}
+      </div>
+    </article>`;
   }).join('');
 }
 
-/* ── Render: Losses Grid ── */
-function recordItemMarkup(r) {
-  return `
-    <div class="record-item">
-      <div class="record-top">
-        <div class="record-title">${escapeHtml(r.ad)}</div>
-        <span class="status-pill" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span>
-      </div>
-      <div class="record-meta">
-        <span class="badge blue">${escapeHtml(formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi))}</span>
-        ${r.taymkod ? `<span class="badge gold">⏱ ${escapeHtml(r.taymkod)}</span>` : ''}
-      </div>
-      <div class="src-links">${(r.mənbələr||[]).map(sourceLink).join('')}</div>
+function recordItemMarkup(r){
+  const date = r.itki_tarixi_göstəriş || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi);
+
+  return `<div class="record-item">
+    <div class="record-top">
+      <div class="record-title">${escapeHtml(r.ad)}</div>
+      <span class="status-pill" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span>
     </div>
-  `;
+    <div class="record-meta">
+      <span class="badge blue">${escapeHtml(date)}</span>
+      ${r.taymkod ? `<span class="badge gold">⏱ ${escapeHtml(r.taymkod)}</span>` : ''}
+    </div>
+    <div class="src-links">
+      ${r.mənbələr?.length ? r.mənbələr.map(sourceLink).join('') : `<span class="badge">Mənbə yoxdur</span>`}
+    </div>
+  </div>`;
 }
 
-function renderLossesGrid() {
+function renderLossesGrid(){
   const wrap = document.getElementById('lossesGrid');
+
+  if(!allRecords.length){
+    wrap.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">📦</div><div class="empty-text">Vizual təsdiqlənmiş texnika qeydləri tapılmadı.</div></div>`;
+    return;
+  }
+
   wrap.innerHTML = SIDE_ORDER.map(si => {
     const st = computeSideStats(si.key);
-    const mini = STATUS_ORDER.map(s => `
-      <div class="mini-stat">
-        <b>${st.statusCounts[s] || 0}</b>
-        <span>${escapeHtml(s)}</span>
-      </div>
-    `).join('');
+    const mini = STATUS_ORDER.map(status =>
+      `<div class="mini-stat"><b>${st.statusCounts[status] || 0}</b><span>${escapeHtml(status)}</span></div>`
+    ).join('');
 
-    const cats = st.categories.length
-      ? st.categories.map(cat => `
-        <div class="cat-item" data-side="${escapeHtml(si.key)}" data-cat="${escapeHtml(cat.name)}">
+    const categories = st.categories.length
+      ? st.categories.map(cat => `<div class="cat-item">
           <button class="cat-trigger" type="button">
             <div class="cat-trigger-left">
               <div class="cat-icon">${escapeHtml(cat.icon)}</div>
               <div>
                 <div class="cat-name">${escapeHtml(cat.name)}</div>
                 <div class="cat-count">
-                  Məhv: ${cat.statusCounts['Məhv edilib']||0}
-                  · Zədə: ${cat.statusCounts['Zədələnib']||0}
-                  · Ələ keçirilib: ${cat.statusCounts['Ələ keçirilib']||0}
-                  · Qəza: ${cat.statusCounts['Qəzaya uğrayıb']||0}
+                  Məhv: ${cat.statusCounts["Məhv edilib"] || 0} ·
+                  Zədə: ${cat.statusCounts["Zədələnib"] || 0} ·
+                  Ələ keçirilib: ${cat.statusCounts["Ələ keçirilib"] || 0} ·
+                  Qəza: ${cat.statusCounts["Qəzaya uğrayıb"] || 0}
                 </div>
               </div>
             </div>
@@ -1094,30 +1156,25 @@ function renderLossesGrid() {
             </div>
           </button>
           <div class="cat-body">
-            ${cat.items.length
-              ? `<div class="record-list">${cat.items.map(recordItemMarkup).join('')}</div>`
-              : `<div class="empty"><div class="empty-icon">📭</div><div class="empty-text">Bu kateqoriya üzrə qeyd yoxdur.</div></div>`}
+            <div class="record-list">${cat.items.map(recordItemMarkup).join('')}</div>
           </div>
-        </div>
-      `).join('')
-      : `<div class="empty"><div class="empty-icon">📭</div><div class="empty-text">Bu tərəf üzrə vizual təsdiqlənmiş qeyd yoxdur.</div></div>`;
+        </div>`).join('')
+      : `<div class="empty"><div class="empty-icon">—</div><div class="empty-text">Bu tərəf üzrə qeyd yoxdur.</div></div>`;
 
-    return `
-      <article class="side-card" data-side="${escapeHtml(si.key)}">
-        <div class="side-header">
-          <div class="side-name-wrap">
-            <div class="side-flag">${si.flag}</div>
-            <div class="side-title">${escapeHtml(si.label)}</div>
-          </div>
-          <div>
-            <div class="side-total-num">${st.total}</div>
-            <div class="side-total-label">Ümumi itki</div>
-          </div>
+    return `<article class="side-card" data-side="${escapeHtml(si.key)}">
+      <div class="side-header">
+        <div class="side-name-wrap">
+          <div class="side-flag">${si.flag}</div>
+          <div class="side-title">${escapeHtml(si.label)}</div>
         </div>
-        <div class="mini-stats">${mini}</div>
-        <div class="cat-list">${cats}</div>
-      </article>
-    `;
+        <div>
+          <div class="side-total-num">${st.total}</div>
+          <div class="side-total-label">ümumi itki</div>
+        </div>
+      </div>
+      <div class="mini-stats">${mini}</div>
+      <div class="cat-list">${categories}</div>
+    </article>`;
   }).join('');
 
   wrap.querySelectorAll('.cat-trigger').forEach(btn => {
@@ -1125,147 +1182,96 @@ function renderLossesGrid() {
   });
 }
 
-/* ── Render: Impacts ── */
-function renderImpacts() {
+function renderImpacts(){
   const wrap = document.getElementById('impactGrid');
   const items = appData?.strateji_təsirlər || [];
 
-  if (!items.length) {
-    wrap.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">⚠️</div><div class="empty-text">Strateji təsir qeydi tapılmadı.</div></div>`;
+  if(!items.length){
+    wrap.innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🏙️</div><div class="empty-text">Strateji və mülki təsir qeydi tapılmadı.</div></div>`;
     return;
   }
 
-  wrap.innerHTML = items.map(item => `
-    <article class="impact-card">
-      <div class="impact-head">
-        <div class="impact-icon">${escapeHtml(item.ikon || '⚠️')}</div>
-        <div>
-          <div class="impact-title">${escapeHtml(item.ad || item.başlıq || '—')}</div>
-          <div class="impact-type">${escapeHtml(item.növ || item.kateqoriya || 'Strateji və mülki təsir')}</div>
-        </div>
+  wrap.innerHTML = items.map(it => `<article class="impact-card">
+    <div class="impact-head">
+      <div class="impact-icon">${escapeHtml(it.ikon || '⚠️')}</div>
+      <div>
+        <div class="impact-title">${escapeHtml(it.başlıq || it.ad || '—')}</div>
+        <div class="impact-type">${escapeHtml(it.növ || it.kateqoriya || 'Strateji və mülki təsir')}</div>
       </div>
-      <div class="impact-badges">
-        <span class="badge red">${escapeHtml(item.status || 'Təsir qeydi')}</span>
-        <span class="badge blue">${escapeHtml(item.tarix_göstəriş || formatDate(item.tarix))}</span>
-      </div>
-      <div class="impact-desc">${escapeHtml(item.qeyd || item.təsvir || '')}</div>
-    </article>
-  `).join('');
+    </div>
+    <div class="impact-badges">
+      <span class="badge red">${escapeHtml(it.status || 'Təsir qeydi')}</span>
+      <span class="badge gold">${escapeHtml(it.tarix_göstəriş || formatDate(it.tarix))}</span>
+    </div>
+    <div class="impact-desc">${escapeHtml(it.təsvir || it.qeyd || '')}</div>
+  </article>`).join('');
 }
 
-/* ── Filters ── */
-function populateFilters() {
-  const sideSel   = document.getElementById('sideFilter');
-  const catSel    = document.getElementById('categoryFilter');
-  const statusSel = document.getElementById('statusFilter');
-  const dateSel   = document.getElementById('dateFilter');
+function populateFilters(){
+  document.getElementById('sideFilter').innerHTML =
+    '<option value="">Hamısı</option>' +
+    unique(allRecords.map(r => r.tərəf)).map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
 
-  sideSel.innerHTML   = '<option value="">Hamısı</option>' +
-    unique(allRecords.map(r=>r.tərəf)).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
-  catSel.innerHTML    = '<option value="">Hamısı</option>' +
-    unique(allRecords.map(r=>r.kateqoriya)).sort((a,b)=>a.localeCompare(b,'az')).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
-  statusSel.innerHTML = '<option value="">Hamısı</option>' +
-    unique(allRecords.map(r=>r.status)).map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
-  dateSel.innerHTML   = '<option value="">Hamısı</option>' +
-    unique(allRecords.map(r=>formatDate(r.itki_tarixi||r.itkiTarixi||r.qeyd_tarixi||r.qeydTarixi)))
-      .sort((a,b)=> a.split('.').reverse().join('').localeCompare(b.split('.').reverse().join('')))
-      .map(v=>`<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+  document.getElementById('categoryFilter').innerHTML =
+    '<option value="">Hamısı</option>' +
+    unique(allRecords.map(r => r.kateqoriya)).sort((a,b)=>a.localeCompare(b,'az'))
+      .map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+
+  document.getElementById('statusFilter').innerHTML =
+    '<option value="">Hamısı</option>' +
+    unique(allRecords.map(r => r.status)).map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
+
+  document.getElementById('dateFilter').innerHTML =
+    '<option value="">Hamısı</option>' +
+    unique(allRecords.map(r => r.itki_tarixi_göstəriş || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi)))
+      .sort((a,b)=>a.localeCompare(b,'az'))
+      .map(v => `<option value="${escapeHtml(v)}">${escapeHtml(v)}</option>`).join('');
 }
 
-function applyFilters() {
-  const q      = document.getElementById('searchInput').value.trim().toLowerCase();
-  const side   = document.getElementById('sideFilter').value;
-  const cat    = document.getElementById('categoryFilter').value;
-  const status = document.getElementById('statusFilter').value;
-  const date   = document.getElementById('dateFilter').value;
-
-  filteredRecords = allRecords.filter(r => {
-    const hay = [r.ad, r.tərəf, r.kateqoriya, r.status, ...(r.mənbələr||[])].join(' ').toLowerCase();
-    return (!q      || hay.includes(q))
-        && (!side   || r.tərəf === side)
-        && (!cat    || r.kateqoriya === cat)
-        && (!status || r.status === status)
-        && (!date   || formatDate(r.itki_tarixi||r.itkiTarixi||r.qeyd_tarixi||r.qeydTarixi) === date);
-  });
-  renderTable();
-}
-
-function renderTable() {
+function renderTable(){
   const body = document.getElementById('recordsBody');
-  document.getElementById('searchCount').textContent = `${filteredRecords.length} qeyd tapıldı`;
+  document.getElementById('searchCount').textContent = `${filteredRecords.length} nəticə`;
 
-  if (!filteredRecords.length) {
-    body.innerHTML = `<tr><td colspan="6">
-      <div class="empty">
-        <div class="empty-icon">🔍</div>
-        <div class="empty-text">Seçilmiş meyarlar üzrə nəticə tapılmadı.<br>Süzgəcləri dəyişdirməyə cəhd edin.</div>
-      </div>
-    </td></tr>`;
+  if(!filteredRecords.length){
+    body.innerHTML = `<tr><td colspan="6"><div class="empty"><div class="empty-icon">🔎</div><div class="empty-text">Seçilmiş süzgəclərə uyğun qeyd tapılmadı.</div></div></td></tr>`;
     return;
   }
 
-  body.innerHTML = filteredRecords.map(r => `
-    <tr>
+  body.innerHTML = filteredRecords.map(r => {
+    const date = r.itki_tarixi_göstəriş || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi);
+    return `<tr>
       <td><strong>${escapeHtml(r.ad)}</strong></td>
       <td><span class="side-dot" data-side="${escapeHtml(r.tərəf)}">${escapeHtml(r.tərəf)}</span></td>
       <td>${escapeHtml(r.kateqoriya)}</td>
       <td><span class="status-pill" data-status="${escapeHtml(r.status)}">${escapeHtml(r.status)}</span></td>
-      <td>${escapeHtml(formatDate(r.itki_tarixi||r.itkiTarixi||r.qeyd_tarixi||r.qeydTarixi))}</td>
-      <td>${(r.mənbələr||[]).length
-        ? `<a href="${escapeHtml(r.mənbələr[0])}" target="_blank" rel="noopener noreferrer">${(r.mənbələr||[]).length} mənbə ↗</a>`
-        : '—'}</td>
-    </tr>
-  `).join('');
+      <td>${escapeHtml(date)}</td>
+      <td>${r.mənbələr?.length ? `<a href="${escapeHtml(r.mənbələr[0])}" target="_blank" rel="noopener noreferrer">1+ mənbə</a>` : '—'}</td>
+    </tr>`;
+  }).join('');
 }
 
-/* ── Load ── */
-async function loadData() {
-  const statusEl = document.getElementById('dataStatus');
-  const candidatePaths = [
-    './data/losses.json',
-    'data/losses.json',
-    './losses.json',
-    'losses.json'
-  ];
+function applyFilters(){
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  const side = document.getElementById('sideFilter').value;
+  const cat = document.getElementById('categoryFilter').value;
+  const status = document.getElementById('statusFilter').value;
+  const date = document.getElementById('dateFilter').value;
 
-  let res = null;
-  let usedPath = null;
-  let lastError = null;
+  filteredRecords = allRecords.filter(r => {
+    const hay = [r.ad, r.tərəf, r.kateqoriya, r.status, ...(r.mənbələr || [])].join(' ').toLowerCase();
+    const itemDate = r.itki_tarixi_göstəriş || formatDate(r.itki_tarixi || r.itkiTarixi || r.qeyd_tarixi || r.qeydTarixi);
+    return (!q || hay.includes(q))
+      && (!side || r.tərəf === side)
+      && (!cat || r.kateqoriya === cat)
+      && (!status || r.status === status)
+      && (!date || itemDate === date);
+  });
 
-  for (const path of candidatePaths) {
-    try {
-      const attempt = await fetch(path, { cache: 'no-store' });
-      if (attempt.ok) {
-        res = attempt;
-        usedPath = path;
-        break;
-      }
-      lastError = new Error(`HTTP ${attempt.status} for ${path}`);
-    } catch (err) {
-      lastError = err;
-    }
-  }
+  renderTable();
+}
 
-  if (!res) {
-    statusEl.textContent = 'JSON tapılmadı';
-    statusEl.className = 'data-status err';
-
-    document.getElementById('overviewGrid').innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">⚠️</div><div class="empty-text">Məlumat faylı yüklənmədi. <code>data/losses.json</code> və ya <code>losses.json</code> yolunu yoxla.</div></div>`;
-    document.getElementById('personGrid').innerHTML = '';
-    document.getElementById('lossesGrid').innerHTML = '';
-    document.getElementById('impactGrid').innerHTML = '';
-    document.getElementById('recordsBody').innerHTML = `<tr><td colspan="6"><div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">JSON yüklənmədi: ${escapeHtml(lastError?.message || 'naməlum xəta')}</div></div></td></tr>`;
-    document.getElementById('searchCount').textContent = 'Yüklənmə xətası';
-    console.error('losses.json yüklənmədi', lastError);
-    return;
-  }
-
-  appData = await res.json();
-  allRecords = normalizeRecords(appData?.qeydlər || appData?.records || []);
-
-  statusEl.textContent = `JSON: ${usedPath}`;
-  statusEl.className = 'data-status ok';
-
+function renderAll(){
+  setHeroSummary();
   renderOverview();
   renderPersons();
   renderLossesGrid();
@@ -1275,14 +1281,63 @@ async function loadData() {
   renderTable();
 }
 
-/* ── Events ── */
-document.getElementById('yenileBtn').addEventListener('click', () => location.reload());
+function showLoadError(message){
+  setStatus('JSON yüklənmədi', 'err');
+  document.getElementById('overviewGrid').innerHTML = `<div class="empty" style="grid-column:1/-1"><div class="empty-icon">⚠️</div><div class="empty-text">${escapeHtml(message)}</div></div>`;
+  document.getElementById('personGrid').innerHTML = '';
+  document.getElementById('lossesGrid').innerHTML = '';
+  document.getElementById('impactGrid').innerHTML = '';
+  document.getElementById('recordsBody').innerHTML = `<tr><td colspan="6"><div class="empty"><div class="empty-icon">⚠️</div><div class="empty-text">${escapeHtml(message)}</div></div></td></tr>`;
+  document.getElementById('searchCount').textContent = 'Xəta';
+}
+
+async function loadData(){
+  const paths = ['./data/losses.json', 'data/losses.json', '/data/losses.json', './losses.json', 'losses.json'];
+  let usedPath = null;
+  let json = null;
+  let lastError = null;
+
+  for(const path of paths){
+    try{
+      const res = await fetch(path, { cache:'no-store' });
+      if(!res.ok){
+        lastError = new Error(`${path} → HTTP ${res.status}`);
+        continue;
+      }
+      json = await res.json();
+      usedPath = path;
+      break;
+    }catch(err){
+      lastError = err;
+    }
+  }
+
+  if(!json){
+    showLoadError('Məlumat faylı tapılmadı. losses.html kök qovluqda, losses.json isə data qovluğunda olmalıdır: ./data/losses.json');
+    console.error(lastError);
+    return;
+  }
+
+  appData = json;
+  allRecords = normalizeRecords(appData.qeydlər || appData.records || []);
+  setStatus(`JSON: ${usedPath}`, 'ok');
+
+  if(!Array.isArray(appData.qeydlər) && !Array.isArray(appData.records)){
+    showLoadError('JSON oxundu, amma itki qeydləri tapılmadı. "qeydlər" massivini yoxla.');
+    return;
+  }
+
+  renderAll();
+}
+
+document.getElementById('yenileBtn').addEventListener('click', loadData);
+
 ['searchInput','sideFilter','categoryFilter','statusFilter','dateFilter'].forEach(id => {
   const el = document.getElementById(id);
   el.addEventListener(id === 'searchInput' ? 'input' : 'change', applyFilters);
 });
 
-loadData().catch(err => console.error(err));
+loadData();
 </script>
 </body>
 </html>
