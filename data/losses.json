@@ -4,15 +4,15 @@
     "alt_başlıq": "Vizual təsdiqlənmiş itkilər, şəxsi itkilər və strateji təsirlər",
     "dil": "az",
     "sxem_versiyası": "1.0.0",
-    "yaradılma_tarixi": "2026-04-03",
-    "qeyd": "Bu fayl son əlavə edilmiş tam cədvəl və yenilənmiş şəxsi itkilər siyahısı əsasında formalaşdırılıb."
+    "yaradılma_tarixi": "2026-04-04",
+    "qeyd": "Bu fayl istifadəçinin son losses.json faylı saxlanılmaqla, əlavə edilmiş yenilənmiş Excel itki cədvəli əsasında hərbi texnika bölməsi üzrə yenilənib."
   },
   "mənbə_xülasəsi": {
     "sənəd_adı": "Operation Epic Fury / Roaring Lion — 2026 münaqişəsi üzrə yenilənmiş itki cədvəli",
     "ümumi_rəqəmlər": {
       "İran": {
-        "cəmi": 289,
-        "məhv_edilib": 260,
+        "cəmi": 290,
+        "məhv_edilib": 261,
         "zədələnib": 29
       },
       "İsrail": {
@@ -20,53 +20,53 @@
         "məhv_edilib": 16
       },
       "ABŞ": {
-        "cəmi": 28,
-        "məhv_edilib": 23,
+        "cəmi": 31,
+        "məhv_edilib": 26,
         "zədələnib": 4,
         "qəzaya_uğrayıb": 1
       },
       "İraq yönlü pro-İran milis qrupları": {
         "cəmi": 6,
-        "ələ_keçirilib": 4,
-        "məhv_edilib": 2
+        "məhv_edilib": 2,
+        "ələ_keçirilib": 4
       },
       "Naməlum": {
-        "cəmi": 1,
-        "məhv_edilib": 1
+        "cəmi": 2,
+        "məhv_edilib": 2
       }
     },
     "qeyd": "Bu rəqəmlər son əlavə edilmiş Excel siyahısı üzrə birbaşa hesablanmış yekun göstəricilərdir."
   },
   "dinamik_xülasə": {
-    "cəmi": 340,
+    "cəmi": 345,
     "statuslar": {
-      "Məhv edilib": 302,
+      "Məhv edilib": 307,
       "Zədələnib": 33,
       "Ələ keçirilib": 4,
       "Qəzaya uğrayıb": 1
     },
     "tərəflər": {
       "İran": {
-        "cəmi": 289,
+        "cəmi": 290,
         "statuslar": {
-          "Məhv edilib": 260,
+          "Məhv edilib": 261,
           "Zədələnib": 29
         },
         "kateqoriyalar": {
           "Nəqliyyat vasitələri": 63,
           "Dəniz platforması": 62,
-          "Ballistik raket sistemi": 49,
+          "Ballistik raket sistemi": 50,
           "Təyyarə": 37,
+          "PUA": 4,
           "HHM raket sistemi": 22,
-          "Komanda məntəqəsi": 14,
           "Radar sistemi": 11,
+          "Komanda məntəqəsi": 14,
           "Zenit topu": 11,
           "Mühəndis texnikası": 5,
-          "PUA": 4,
-          "Helikopter": 4,
-          "Yedəkli artilleriya": 2,
-          "Elektron mübarizə sistemi": 2,
           "YARS / Çoxsaylı raket buraxıcısı": 2,
+          "Yedəkli artilleriya": 2,
+          "Helikopter": 4,
+          "Elektron mübarizə sistemi": 2,
           "Piyada hərəkətlilik vasitəsi": 1
         }
       },
@@ -80,38 +80,39 @@
         }
       },
       "ABŞ": {
-        "cəmi": 28,
+        "cəmi": 31,
         "statuslar": {
-          "Məhv edilib": 23,
+          "Məhv edilib": 26,
           "Zədələnib": 4,
           "Qəzaya uğrayıb": 1
         },
         "kateqoriyalar": {
-          "PUA": 13,
-          "Təyyarə": 8,
+          "Təyyarə": 9,
+          "PUA": 14,
           "Radar sistemi": 4,
+          "Helikopter": 1,
           "Rabitə / SATCOM": 3
         }
       },
       "İraq yönlü pro-İran milis qrupları": {
         "cəmi": 6,
         "statuslar": {
-          "Ələ keçirilib": 4,
-          "Məhv edilib": 2
+          "Məhv edilib": 2,
+          "Ələ keçirilib": 4
         },
         "kateqoriyalar": {
+          "Nəqliyyat vasitələri": 1,
           "YARS / Çoxsaylı raket buraxıcısı": 3,
-          "Yedəkli artilleriya": 2,
-          "Nəqliyyat vasitələri": 1
+          "Yedəkli artilleriya": 2
         }
       },
       "Naməlum": {
-        "cəmi": 1,
+        "cəmi": 2,
         "statuslar": {
-          "Məhv edilib": 1
+          "Məhv edilib": 2
         },
         "kateqoriyalar": {
-          "PUA": 1
+          "PUA": 2
         }
       }
     }
@@ -127,15 +128,15 @@
     },
     {
       "kateqoriya": "Ballistik raket sistemi",
-      "say": 49
+      "say": 50
     },
     {
       "kateqoriya": "Təyyarə",
-      "say": 45
+      "say": 46
     },
     {
       "kateqoriya": "PUA",
-      "say": 34
+      "say": 36
     },
     {
       "kateqoriya": "HHM raket sistemi",
@@ -167,7 +168,7 @@
     },
     {
       "kateqoriya": "Helikopter",
-      "say": 4
+      "say": 5
     },
     {
       "kateqoriya": "Rabitə / SATCOM",
@@ -297,6 +298,10 @@
     },
     {
       "tarix": "02.04.2026",
+      "qeyd_sayı": 5
+    },
+    {
+      "tarix": "04.04.2026",
       "qeyd_sayı": 5
     }
   ],
@@ -7681,6 +7686,101 @@
       "qeyd_tarixi_göstəriş": "02.04.2026",
       "mənbələr": [
         "https://x.com/Tasnimnews_Fa/status/2039676855608021359"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-341",
+      "ad": "F-15E Strike Eagle",
+      "kateqoriya": "Təyyarə",
+      "kateqoriya_xam": "Aircraft",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-03",
+      "itki_tarixi_göstəriş": "03.04.2026",
+      "qeyd_tarixi": "2026-04-04",
+      "qeyd_tarixi_göstəriş": "04.04.2026",
+      "mənbələr": [
+        "https://x.com/Osinttechnical/status/2039939656284877006"
+      ],
+      "taymkod": null,
+      "ikon": "✈️"
+    },
+    {
+      "id": "qeyd-342",
+      "ad": "CH-47 Chinook",
+      "kateqoriya": "Helikopter",
+      "kateqoriya_xam": "Helicopter",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-04",
+      "itki_tarixi_göstəriş": "04.04.2026",
+      "qeyd_tarixi": "2026-04-04",
+      "qeyd_tarixi_göstəriş": "04.04.2026",
+      "mənbələr": [
+        "https://x.com/Osinttechnical/status/2040232558571483465"
+      ],
+      "taymkod": null,
+      "ikon": "🚁"
+    },
+    {
+      "id": "qeyd-343",
+      "ad": "Unknown Ballistic Missile System",
+      "kateqoriya": "Ballistik raket sistemi",
+      "kateqoriya_xam": "Ballistic Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-04",
+      "itki_tarixi_göstəriş": "04.04.2026",
+      "qeyd_tarixi": "2026-04-04",
+      "qeyd_tarixi_göstəriş": "04.04.2026",
+      "mənbələr": [
+        "https://www.youtube.com/watch?v=PysziZD6yns"
+      ],
+      "taymkod": null,
+      "ikon": "🚀"
+    },
+    {
+      "id": "qeyd-344",
+      "ad": "CAIG Wing Loong II",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "Naməlum",
+      "tərəf_xam": "Unknown",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-04",
+      "itki_tarixi_göstəriş": "04.04.2026",
+      "qeyd_tarixi": "2026-04-04",
+      "qeyd_tarixi_göstəriş": "04.04.2026",
+      "mənbələr": [
+        "https://x.com/FarsNews_Agency/status/2040369201974583379"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-345",
+      "ad": "MQ-9 Reaper",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-04",
+      "itki_tarixi_göstəriş": "04.04.2026",
+      "qeyd_tarixi": "2026-04-04",
+      "qeyd_tarixi_göstəriş": "04.04.2026",
+      "mənbələr": [
+        "https://x.com/imp_navigator/status/2040419584046428413"
       ],
       "taymkod": null,
       "ikon": "🛰️"
