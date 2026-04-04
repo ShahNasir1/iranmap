@@ -1,48 +1,50 @@
 {
   "metadata": {
     "başlıq": "IranMap — Maliyyə itkilərinin qiymətləndirilməsi",
-    "alt_başlıq": "Tərəflərin itirdiyi hərbi vasitələrin təqribi maliyyə dəyəri",
+    "alt_başlıq": "Tərəflərin itirdiyi hərbi vasitələrin ümumi maliyyə dəyəri",
     "dil": "az",
-    "sxem_versiyası": "1.0.0",
-    "yaradılma_tarixi": "2026-04-03",
+    "sxem_versiyası": "1.1.0",
+    "yaradılma_tarixi": "2026-04-04",
     "valyuta": "USD",
     "vahid": "dollar",
-    "göstəriş_qaydası": "Böyük məbləğlər həm tam rəqəmlə, həm də qısa formatda göstərilə bilər.",
-    "qeyd": "Bu fayldakı rəqəmlər tərəflərin itirdiyi hərbi vasitələrin təqribi ümumi maliyyə dəyərini göstərir və infoqrafik təqdimat üçün hazırlanıb."
+    "göstəriş_qaydası": "Böyük məbləğlər həm qısa formatda, həm də lazım olduqda tam rəqəmlə göstərilə bilər.",
+    "qeyd": "Bu fayldakı rəqəmlər tərəflərin itirdiyi hərbi vasitələrin ümumi maliyyə dəyərini göstərir və infoqrafik təqdimat üçün hazırlanıb."
   },
   "ümumi_xülasə": {
-    "təqribi_cəmi_usd": 6014400000,
-    "təqribi_cəmi_göstəriş": "təqribi 6.01 milyard dollar",
-    "qısa_qeyd": "Maliyyə yükünün əsas hissəsi İran və ABŞ üzrə cəmlənir."
+    "cəmi_usd": 7189400000,
+    "cəmi_göstəriş": "7.18 milyard dollar",
+    "qısa_qeyd": "Maliyyə yükünün əsas hissəsi ABŞ və İran üzrə cəmlənir."
   },
   "tərəflər": [
-    {
-      "id": "iran",
-      "ad": "İran",
-      "qısa_ad": "İran",
-      "bayraq": "🇮🇷",
-      "rəng": "iran",
-      "məbləğ_usd": 3100000000,
-      "məbləğ_göstəriş": "təqribi 3.1 milyard dollar",
-      "pay_faiz": 51.54,
-      "pay_göstəriş": "51.54%",
-      "sıralama": 1,
-      "kateqoriya": "dövlət",
-      "status": "Ən böyük maliyyə itkisi"
-    },
     {
       "id": "usa",
       "ad": "ABŞ",
       "qısa_ad": "ABŞ",
       "bayraq": "🇺🇸",
       "rəng": "usa",
-      "məbləğ_usd": 2740000000,
-      "məbləğ_göstəriş": "təqribi 2.74 milyard dollar",
-      "pay_faiz": 45.56,
-      "pay_göstəriş": "45.56%",
+      "məbləğ_usd": 3400000000,
+      "məbləğ_göstəriş": "3.4 milyard dollar",
+      "tam_göstəriş": "3,400,000,000 dollar",
+      "pay_faiz": 47.29,
+      "pay_göstəriş": "47.29%",
+      "sıralama": 1,
+      "kateqoriya": "dövlət",
+      "status": "Ən böyük maliyyə itkisi"
+    },
+    {
+      "id": "iran",
+      "ad": "İran",
+      "qısa_ad": "İran",
+      "bayraq": "🇮🇷",
+      "rəng": "iran",
+      "məbləğ_usd": 3300000000,
+      "məbləğ_göstəriş": "3.3 milyard dollar",
+      "tam_göstəriş": "3,300,000,000 dollar",
+      "pay_faiz": 45.9,
+      "pay_göstəriş": "45.90%",
       "sıralama": 2,
       "kateqoriya": "dövlət",
-      "status": "Yüksək maliyyə itkisi"
+      "status": "Çox yüksək maliyyə itkisi"
     },
     {
       "id": "israel",
@@ -50,13 +52,29 @@
       "qısa_ad": "İsrail",
       "bayraq": "🇮🇱",
       "rəng": "israel",
-      "məbləğ_usd": 171000000,
-      "məbləğ_göstəriş": "təqribi 171 milyon dollar",
-      "pay_faiz": 2.84,
-      "pay_göstəriş": "2.84%",
+      "məbləğ_usd": 382800000,
+      "məbləğ_göstəriş": "0.38 milyard dollar",
+      "tam_göstəriş": "382.8 milyon dollar",
+      "pay_faiz": 5.32,
+      "pay_göstəriş": "5.32%",
       "sıralama": 3,
       "kateqoriya": "dövlət",
       "status": "Məhdud maliyyə itkisi"
+    },
+    {
+      "id": "unknown",
+      "ad": "Qeyri-müəyyən",
+      "qısa_ad": "Qeyri-müəyyən",
+      "bayraq": "❔",
+      "rəng": "unknown",
+      "məbləğ_usd": 20000000,
+      "məbləğ_göstəriş": "0.02 milyard dollar",
+      "tam_göstəriş": "20.0 milyon dollar",
+      "pay_faiz": 0.28,
+      "pay_göstəriş": "0.28%",
+      "sıralama": 4,
+      "kateqoriya": "qeyri-müəyyən",
+      "status": "Aşağı maliyyə itkisi"
     },
     {
       "id": "proxy",
@@ -64,32 +82,34 @@
       "qısa_ad": "Proksi qruplar",
       "bayraq": "🟧",
       "rəng": "proxy",
-      "məbləğ_usd": 3400000,
-      "məbləğ_göstəriş": "təqribi 3.4 milyon dollar",
-      "pay_faiz": 0.06,
-      "pay_göstəriş": "0.06%",
-      "sıralama": 4,
+      "məbləğ_usd": 6600000,
+      "məbləğ_göstəriş": "0.007 milyard dollar",
+      "tam_göstəriş": "6.6 milyon dollar",
+      "pay_faiz": 0.09,
+      "pay_göstəriş": "0.09%",
+      "sıralama": 5,
       "kateqoriya": "proksi",
       "status": "Çox aşağı maliyyə itkisi"
     }
   ],
   "müqayisəli_göstəricilər": {
-    "ən_böyük_itki_tərəfi": "İran",
-    "ən_böyük_itki_məbləği_usd": 3100000000,
-    "ən_böyük_itki_məbləği_göstəriş": "təqribi 3.1 milyard dollar",
-    "ikinci_yer": "ABŞ",
-    "ikinci_yer_məbləği_usd": 2740000000,
-    "ikinci_yer_məbləği_göstəriş": "təqribi 2.74 milyard dollar",
+    "ən_böyük_itki_tərəfi": "ABŞ",
+    "ən_böyük_itki_məbləği_usd": 3400000000,
+    "ən_böyük_itki_məbləği_göstəriş": "3.4 milyard dollar",
+    "ikinci_yer": "İran",
+    "ikinci_yer_məbləği_usd": 3300000000,
+    "ikinci_yer_məbləği_göstəriş": "3.3 milyard dollar",
     "ən_aşağı_itki_tərəfi": "Proksi qruplar",
-    "ən_aşağı_itki_məbləği_usd": 3400000,
-    "ən_aşağı_itki_məbləği_göstəriş": "təqribi 3.4 milyon dollar"
+    "ən_aşağı_itki_məbləği_usd": 6600000,
+    "ən_aşağı_itki_məbləği_göstəriş": "6.6 milyon dollar"
   },
   "infoqrafika_qeydləri": {
-    "əsas_mesaj": "Ümumi maliyyə yükü təqribi 6.01 milyard dollar səviyyəsindədir.",
+    "əsas_mesaj": "Ümumi maliyyə yükü 7.18 milyard dollar səviyyəsindədir.",
     "vizual_prioritet": [
-      "İran",
       "ABŞ",
+      "İran",
       "İsrail",
+      "Qeyri-müəyyən",
       "Proksi qruplar"
     ],
     "göstərim_tipi": [
