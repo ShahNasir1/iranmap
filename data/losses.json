@@ -4,69 +4,69 @@
     "alt_başlıq": "Vizual təsdiqlənmiş itkilər, şəxsi itkilər və strateji təsirlər",
     "dil": "az",
     "sxem_versiyası": "1.0.0",
-    "yaradılma_tarixi": "2026-04-04",
-    "qeyd": "Bu fayl istifadəçinin son losses.json faylı saxlanılmaqla, əlavə edilmiş yenilənmiş Excel itki cədvəli əsasında hərbi texnika bölməsi üzrə yenilənib."
+    "yaradılma_tarixi": "2026-04-08",
+    "qeyd": "Bu fayl istifadəçinin əlavə etdiyi yenilənmiş Excel itki cədvəli əsasında hərbi texnika bölməsi üzrə yenilənib."
   },
   "mənbə_xülasəsi": {
     "sənəd_adı": "Operation Epic Fury / Roaring Lion — 2026 münaqişəsi üzrə yenilənmiş itki cədvəli",
     "ümumi_rəqəmlər": {
       "İran": {
-        "cəmi": 290,
-        "məhv_edilib": 261,
+        "cəmi": 296,
+        "məhv_edilib": 267,
         "zədələnib": 29
-      },
-      "İsrail": {
-        "cəmi": 16,
-        "məhv_edilib": 16
-      },
-      "ABŞ": {
-        "cəmi": 31,
-        "məhv_edilib": 26,
-        "zədələnib": 4,
-        "qəzaya_uğrayıb": 1
       },
       "İraq yönlü pro-İran milis qrupları": {
         "cəmi": 6,
         "məhv_edilib": 2,
         "ələ_keçirilib": 4
       },
+      "İsrail": {
+        "cəmi": 16,
+        "məhv_edilib": 16
+      },
+      "ABŞ": {
+        "cəmi": 35,
+        "məhv_edilib": 30,
+        "zədələnib": 4,
+        "qəzaya_uğrayıb": 1
+      },
       "Naməlum": {
         "cəmi": 2,
         "məhv_edilib": 2
       }
     },
-    "qeyd": "Bu rəqəmlər son əlavə edilmiş Excel siyahısı üzrə birbaşa hesablanmış yekun göstəricilərdir."
+    "qeyd": "Bu rəqəmlər istifadəçinin əlavə etdiyi son Excel siyahısı üzrə birbaşa hesablanmış yekun göstəricilərdir."
   },
   "dinamik_xülasə": {
-    "cəmi": 345,
+    "cəmi": 355,
     "statuslar": {
-      "Məhv edilib": 307,
+      "Məhv edilib": 317,
       "Zədələnib": 33,
       "Ələ keçirilib": 4,
       "Qəzaya uğrayıb": 1
     },
     "tərəflər": {
       "İran": {
-        "cəmi": 290,
+        "cəmi": 296,
         "statuslar": {
-          "Məhv edilib": 261,
+          "Məhv edilib": 267,
           "Zədələnib": 29
         },
         "kateqoriyalar": {
-          "Nəqliyyat vasitələri": 63,
+          "Nəqliyyat vasitələri": 65,
           "Dəniz platforması": 62,
-          "Ballistik raket sistemi": 50,
-          "Təyyarə": 37,
-          "PUA": 4,
+          "Ballistik raket sistemi": 51,
+          "Təyyarə": 39,
           "HHM raket sistemi": 22,
-          "Radar sistemi": 11,
           "Komanda məntəqəsi": 14,
+          "Radar sistemi": 11,
           "Zenit topu": 11,
+          "PUA": 5,
           "Mühəndis texnikası": 5,
-          "YARS / Çoxsaylı raket buraxıcısı": 2,
-          "Yedəkli artilleriya": 2,
           "Helikopter": 4,
           "Elektron mübarizə sistemi": 2,
+          "Yedəkli artilleriya": 2,
+          "YARS / Çoxsaylı raket buraxıcısı": 2,
           "Piyada hərəkətlilik vasitəsi": 1
         }
       },
@@ -80,17 +80,17 @@
         }
       },
       "ABŞ": {
-        "cəmi": 31,
+        "cəmi": 35,
         "statuslar": {
-          "Məhv edilib": 26,
+          "Məhv edilib": 30,
           "Zədələnib": 4,
           "Qəzaya uğrayıb": 1
         },
         "kateqoriyalar": {
-          "Təyyarə": 9,
           "PUA": 14,
+          "Təyyarə": 11,
           "Radar sistemi": 4,
-          "Helikopter": 1,
+          "Helikopter": 3,
           "Rabitə / SATCOM": 3
         }
       },
@@ -101,9 +101,9 @@
           "Ələ keçirilib": 4
         },
         "kateqoriyalar": {
-          "Nəqliyyat vasitələri": 1,
           "YARS / Çoxsaylı raket buraxıcısı": 3,
-          "Yedəkli artilleriya": 2
+          "Yedəkli artilleriya": 2,
+          "Nəqliyyat vasitələri": 1
         }
       },
       "Naməlum": {
@@ -120,7 +120,7 @@
   "kateqoriya_xülasəsi": [
     {
       "kateqoriya": "Nəqliyyat vasitələri",
-      "say": 64
+      "say": 66
     },
     {
       "kateqoriya": "Dəniz platforması",
@@ -128,15 +128,15 @@
     },
     {
       "kateqoriya": "Ballistik raket sistemi",
-      "say": 50
+      "say": 51
     },
     {
       "kateqoriya": "Təyyarə",
-      "say": 46
+      "say": 50
     },
     {
       "kateqoriya": "PUA",
-      "say": 36
+      "say": 37
     },
     {
       "kateqoriya": "HHM raket sistemi",
@@ -155,6 +155,10 @@
       "say": 11
     },
     {
+      "kateqoriya": "Helikopter",
+      "say": 7
+    },
+    {
       "kateqoriya": "Mühəndis texnikası",
       "say": 5
     },
@@ -165,10 +169,6 @@
     {
       "kateqoriya": "Yedəkli artilleriya",
       "say": 4
-    },
-    {
-      "kateqoriya": "Helikopter",
-      "say": 5
     },
     {
       "kateqoriya": "Rabitə / SATCOM",
@@ -303,6 +303,14 @@
     {
       "tarix": "04.04.2026",
       "qeyd_sayı": 5
+    },
+    {
+      "tarix": "05.04.2026",
+      "qeyd_sayı": 6
+    },
+    {
+      "tarix": "06.04.2026",
+      "qeyd_sayı": 4
     }
   ],
   "şəxsi_itkilər": [
@@ -2240,8 +2248,7 @@
       "qeyd_tarixi": "2026-03-02",
       "qeyd_tarixi_göstəriş": "02.03.2026",
       "mənbələr": [
-        "https://x.com/CENTCOM/status/2028424933794087326",
-        "https://x.com/Osinttechnical/status/2028397872593449399"
+        "https://x.com/CENTCOM/status/2028424933794087326"
       ],
       "taymkod": null,
       "ikon": "✈️"
@@ -2260,8 +2267,7 @@
       "qeyd_tarixi": "2026-03-02",
       "qeyd_tarixi_göstəriş": "02.03.2026",
       "mənbələr": [
-        "https://x.com/CENTCOM/status/2028424933794087326",
-        "https://x.com/Osinttechnical/status/2028397872593449399"
+        "https://x.com/CENTCOM/status/2028424933794087326"
       ],
       "taymkod": null,
       "ikon": "✈️"
@@ -2793,8 +2799,7 @@
       "qeyd_tarixi": "2026-03-04",
       "qeyd_tarixi_göstəriş": "04.03.2026",
       "mənbələr": [
-        "https://x.com/CENTCOM/status/2029222307676238030",
-        "https://x.com/hey_itsmyturn/status/2029174172258021379/video/1"
+        "https://x.com/CENTCOM/status/2029222307676238030"
       ],
       "taymkod": null,
       "ikon": "🚢"
@@ -2832,8 +2837,7 @@
       "qeyd_tarixi": "2026-03-04",
       "qeyd_tarixi_göstəriş": "04.03.2026",
       "mənbələr": [
-        "https://x.com/DeptofWar/status/2029203986314919960",
-        "https://x.com/DeptofWar/status/2029193757162139762"
+        "https://x.com/DeptofWar/status/2029203986314919960"
       ],
       "taymkod": null,
       "ikon": "🚢"
@@ -3688,8 +3692,7 @@
       "qeyd_tarixi": "2026-03-06",
       "qeyd_tarixi_göstəriş": "06.03.2026",
       "mənbələr": [
-        "https://x.com/Easybakeovensz/status/2029967222026777068",
-        "https://t.me/Tasnimnews/393429#"
+        "https://x.com/Easybakeovensz/status/2029967222026777068"
       ],
       "taymkod": null,
       "ikon": "🛰️"
@@ -5475,8 +5478,7 @@
       "qeyd_tarixi": "2026-03-13",
       "qeyd_tarixi_göstəriş": "13.03.2026",
       "mənbələr": [
-        "https://x.com/FaytuksNetwork/status/2032377449854505018",
-        "https://x.com/Osinttechnical/status/2032256392858395009"
+        "https://x.com/FaytuksNetwork/status/2032377449854505018"
       ],
       "taymkod": null,
       "ikon": "✈️"
@@ -5495,8 +5497,7 @@
       "qeyd_tarixi": "2026-03-13",
       "qeyd_tarixi_göstəriş": "13.03.2026",
       "mənbələr": [
-        "https://x.com/CENTCOM/status/2032389087491985700",
-        "https://x.com/DD_Geopolitics/status/2037161107807224115"
+        "https://x.com/CENTCOM/status/2032389087491985700"
       ],
       "taymkod": null,
       "ikon": "✈️"
@@ -5515,8 +5516,7 @@
       "qeyd_tarixi": "2026-03-13",
       "qeyd_tarixi_göstəriş": "13.03.2026",
       "mənbələr": [
-        "https://x.com/hey_itsmyturn/status/2032219754111377745",
-        "https://x.com/AvichayAdraee/status/2035020377705828515"
+        "https://x.com/hey_itsmyturn/status/2032219754111377745"
       ],
       "taymkod": null,
       "ikon": "✈️"
@@ -6713,8 +6713,7 @@
       "qeyd_tarixi": "2026-03-22",
       "qeyd_tarixi_göstəriş": "22.03.2026",
       "mənbələr": [
-        "https://x.com/Osinttechnical/status/2035769422153941392",
-        "https://x.com/Varsevan/status/2035768941725778307"
+        "https://x.com/Osinttechnical/status/2035769422153941392"
       ],
       "taymkod": null,
       "ikon": "🚢"
@@ -6733,8 +6732,7 @@
       "qeyd_tarixi": "2026-03-22",
       "qeyd_tarixi_göstəriş": "22.03.2026",
       "mənbələr": [
-        "https://x.com/Osinttechnical/status/2035769422153941392",
-        "https://x.com/Varsevan/status/2035768941725778307"
+        "https://x.com/Osinttechnical/status/2035769422153941392"
       ],
       "taymkod": null,
       "ikon": "🚢"
@@ -6753,8 +6751,7 @@
       "qeyd_tarixi": "2026-03-22",
       "qeyd_tarixi_göstəriş": "22.03.2026",
       "mənbələr": [
-        "https://x.com/Osinttechnical/status/2035769422153941392",
-        "https://x.com/Varsevan/status/2035768941725778307"
+        "https://x.com/Osinttechnical/status/2035769422153941392"
       ],
       "taymkod": null,
       "ikon": "🚢"
@@ -7440,7 +7437,7 @@
       "mənbələr": [
         "https://x.com/CENTCOM/status/2038966187640430937"
       ],
-      "taymkod": "00:16 / 01:49",
+      "taymkod": "00:16",
       "ikon": "🚀"
     },
     {
@@ -7784,6 +7781,196 @@
       ],
       "taymkod": null,
       "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-346",
+      "ad": "HC-130",
+      "kateqoriya": "Təyyarə",
+      "kateqoriya_xam": "Aircraft",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-05",
+      "itki_tarixi_göstəriş": "05.04.2026",
+      "qeyd_tarixi": "2026-04-05",
+      "qeyd_tarixi_göstəriş": "05.04.2026",
+      "mənbələr": [
+        "https://x.com/Osinttechnical/status/2040695046580641835"
+      ],
+      "taymkod": null,
+      "ikon": "✈️"
+    },
+    {
+      "id": "qeyd-347",
+      "ad": "HC-130",
+      "kateqoriya": "Təyyarə",
+      "kateqoriya_xam": "Aircraft",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-05",
+      "itki_tarixi_göstəriş": "05.04.2026",
+      "qeyd_tarixi": "2026-04-05",
+      "qeyd_tarixi_göstəriş": "05.04.2026",
+      "mənbələr": [
+        "https://x.com/Osinttechnical/status/2040695046580641835"
+      ],
+      "taymkod": null,
+      "ikon": "✈️"
+    },
+    {
+      "id": "qeyd-348",
+      "ad": "MH-6",
+      "kateqoriya": "Helikopter",
+      "kateqoriya_xam": "Helicopter",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-05",
+      "itki_tarixi_göstəriş": "05.04.2026",
+      "qeyd_tarixi": "2026-04-05",
+      "qeyd_tarixi_göstəriş": "05.04.2026",
+      "mənbələr": [
+        "https://x.com/Osinttechnical/status/2040695046580641835"
+      ],
+      "taymkod": null,
+      "ikon": "🚁"
+    },
+    {
+      "id": "qeyd-349",
+      "ad": "Mohajer-6",
+      "kateqoriya": "PUA",
+      "kateqoriya_xam": "UAV",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-05",
+      "itki_tarixi_göstəriş": "05.04.2026",
+      "qeyd_tarixi": "2026-04-05",
+      "qeyd_tarixi_göstəriş": "05.04.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2040786123111145868"
+      ],
+      "taymkod": null,
+      "ikon": "🛰️"
+    },
+    {
+      "id": "qeyd-350",
+      "ad": "MH-6",
+      "kateqoriya": "Helikopter",
+      "kateqoriya_xam": "Helicopter",
+      "tərəf": "ABŞ",
+      "tərəf_xam": "USA",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-05",
+      "itki_tarixi_göstəriş": "05.04.2026",
+      "qeyd_tarixi": "2026-04-05",
+      "qeyd_tarixi_göstəriş": "05.04.2026",
+      "mənbələr": [
+        "https://t.me/QudsN/688650"
+      ],
+      "taymkod": null,
+      "ikon": "🚁"
+    },
+    {
+      "id": "qeyd-351",
+      "ad": "Unknown Ballistic Missile System",
+      "kateqoriya": "Ballistik raket sistemi",
+      "kateqoriya_xam": "Ballistic Missile System",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-05",
+      "itki_tarixi_göstəriş": "05.04.2026",
+      "qeyd_tarixi": "2026-04-05",
+      "qeyd_tarixi_göstəriş": "05.04.2026",
+      "mənbələr": [
+        "https://x.com/aldin_aba/status/2040729495229915548"
+      ],
+      "taymkod": null,
+      "ikon": "🚀"
+    },
+    {
+      "id": "qeyd-352",
+      "ad": "Shahed Launcher",
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "kateqoriya_xam": "Jeeps, Trucks etc",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-06",
+      "itki_tarixi_göstəriş": "06.04.2026",
+      "qeyd_tarixi": "2026-04-06",
+      "qeyd_tarixi_göstəriş": "06.04.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2041123525923160471"
+      ],
+      "taymkod": null,
+      "ikon": "🚚"
+    },
+    {
+      "id": "qeyd-353",
+      "ad": "Shahed Launcher",
+      "kateqoriya": "Nəqliyyat vasitələri",
+      "kateqoriya_xam": "Jeeps, Trucks etc",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-06",
+      "itki_tarixi_göstəriş": "06.04.2026",
+      "qeyd_tarixi": "2026-04-06",
+      "qeyd_tarixi_göstəriş": "06.04.2026",
+      "mənbələr": [
+        "https://x.com/CENTCOM/status/2041123525923160471"
+      ],
+      "taymkod": null,
+      "ikon": "🚚"
+    },
+    {
+      "id": "qeyd-354",
+      "ad": "C-130",
+      "kateqoriya": "Təyyarə",
+      "kateqoriya_xam": "Aircraft",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-06",
+      "itki_tarixi_göstəriş": "06.04.2026",
+      "qeyd_tarixi": "2026-04-06",
+      "qeyd_tarixi_göstəriş": "06.04.2026",
+      "mənbələr": [
+        "https://x.com/Osinttechnical/status/2041185355747995813"
+      ],
+      "taymkod": null,
+      "ikon": "✈️"
+    },
+    {
+      "id": "qeyd-355",
+      "ad": "C-130",
+      "kateqoriya": "Təyyarə",
+      "kateqoriya_xam": "Aircraft",
+      "tərəf": "İran",
+      "tərəf_xam": "Iran",
+      "status": "Məhv edilib",
+      "status_xam": "Destroyed",
+      "itki_tarixi": "2026-04-06",
+      "itki_tarixi_göstəriş": "06.04.2026",
+      "qeyd_tarixi": "2026-04-06",
+      "qeyd_tarixi_göstəriş": "06.04.2026",
+      "mənbələr": [
+        "https://x.com/Osinttechnical/status/2041185355747995813"
+      ],
+      "taymkod": null,
+      "ikon": "✈️"
     }
   ]
 }
