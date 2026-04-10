@@ -30,7 +30,7 @@
     "cat": "military"
   },
   {
-    "name": "Piranşəhr 164‑cü Hucum Briqadası",
+    "name": "Piranşəhr 164‑cü Hücum Briqadası",
     "lat": 36.72754392192417,
     "lon": 45.14629839740033,
     "cat": "military"
@@ -66,7 +66,7 @@
     "cat": "military"
   },
   {
-    "name": "“Əmir əl‑Möminin” Quru Qoşunları Elmlər və Texnologiya Universiteti",
+    "name": "“Əmir əl‑Möminin” Quru Qoşunlarının Elm və Texnologiya Universiteti",
     "lat": 32.57296759613343,
     "lon": 51.66409953059632,
     "cat": "military"
@@ -120,7 +120,7 @@
     "cat": "military"
   },
   {
-    "name": "\"Havanirooz\" 6‑cı Döyüş Bazası – Hucum Vertolyot Taboru",
+    "name": "\"Havanirooz\" 6‑cı Döyüş Bazası – Hücum Vertolyot Taboru",
     "lat": 38.15831040234541,
     "lon": 46.21472808830199,
     "cat": "military"
@@ -234,7 +234,7 @@
     "cat": "military"
   },
   {
-    "name": "“Besat” Xəstəxanası",
+    "name": "“Bəsət” Xəstəxanası",
     "lat": 35.68000148557283,
     "lon": 51.49681953432929,
     "cat": "military"
@@ -246,7 +246,7 @@
     "cat": "military"
   },
   {
-    "name": "“Maxaval Şahid” Qarnizonu",
+    "name": "“Maxaval Şəhid” Qarnizonu",
     "lat": 34.42369401351502,
     "lon": 47.04568013380586,
     "cat": "military"
@@ -270,7 +270,7 @@
     "cat": "military"
   },
   {
-    "name": "Dəniz Qüvvələri Xüsusi Bölməsi – Forur Adası",
+    "name": "Hərbi Dəniz Qüvvələrinin Xüsusi Bölməsi – Forur adası",
     "lat": 26.29006426008862,
     "lon": 54.5380698508025,
     "cat": "military"
@@ -390,7 +390,7 @@
     "cat": "military"
   },
   {
-    "name": "Musa ibn Cəfər (ə) Xüsusi Təyinatlı Briqadası (2-ci Bölmə)",
+    "name": "Musa ibn Cəfər (ə) Xüsusi Təyinatlı Briqadası (2-ci bölmə)",
     "lat": 35.5694098660323,
     "lon": 51.56721207836205,
     "cat": "military"
@@ -408,7 +408,7 @@
     "cat": "military"
   },
   {
-    "name": "İmam Hüseyn Dəniz Bazası – Bəndər-e Mahşəhr",
+    "name": "İmam Hüseyn Hərbi Dəniz Bazası – Bəndər-i Mahşəhr",
     "lat": 30.49577362247715,
     "lon": 49.20577778436206,
     "cat": "military"
@@ -468,7 +468,7 @@
     "cat": "military"
   },
   {
-    "name": "Ərvənd Çay Flotiliya Bazası",
+    "name": "Ərvənd Çay Flotiliyası Bazası",
     "lat": 29.93782713809742,
     "lon": 48.62449505754896,
     "cat": "military"
@@ -504,7 +504,7 @@
     "cat": "military"
   },
   {
-    "name": "Dezful Hərbi Hava Bazası (Hava Limanı) – 4-cü Taktiki Qırıcı Hava Bazası",
+    "name": "Dezful Hərbi Hava Bazası – 4-cü Taktiki Qırıcı Hava Bazası",
     "lat": 32.44148762902216,
     "lon": 48.3815006776078,
     "cat": "military"
@@ -522,7 +522,7 @@
     "cat": "military"
   },
   {
-    "name": "“Şəhid Bahunər” Qarnizonu",
+    "name": "“Şəhid Bahonar” Qarnizonu",
     "lat": 30.35148072400245,
     "lon": 56.88865012443349,
     "cat": "military"
@@ -540,7 +540,7 @@
     "cat": "military"
   },
   {
-    "name": "Nuh Nəbi (Buşehr) dəniz bazasının Xarq adası bölməsi",
+    "name": "Nuh Nəbi (Buşəhr) Hərbi Dəniz Bazasının Xarq adası bölməsi",
     "lat": 29.246859015783,
     "lon": 50.32872276905116,
     "cat": "military"
@@ -582,7 +582,7 @@
     "cat": "military"
   },
   {
-    "name": "Beheşti Qarnizonu | Raket Saxlama Anbarları",
+    "name": "Beheşti Qarnizonu – Raket Saxlama Anbarları",
     "lat": 29.8940353816094,
     "lon": 52.41094046521771,
     "cat": "military"
@@ -594,7 +594,7 @@
     "cat": "military"
   },
   {
-    "name": "“Fatimə əz-Zəhra” taboru",
+    "name": "“Fatimə əz-Zəhra” Taboru",
     "lat": 29.75370095758788,
     "lon": 52.61799734182789,
     "cat": "military"
@@ -630,13 +630,13 @@
     "cat": "military"
   },
   {
-    "name": "İsfahan “MERSAD” Yerüstü-Hava Raket Batareyası bazası",
+    "name": "İsfahan “Mersad” Yer-Hava Raket Batareyası bazası",
     "lat": 32.58714999529287,
     "lon": 51.70284398519129,
     "cat": "military"
   },
   {
-    "name": "Aerokosmik Qüvvələri Müdafiə Qarnizonu",
+    "name": "Aerokosmik Qüvvələrin Müdafiə Qarnizonu",
     "lat": 29.57358299602153,
     "lon": 52.37688899665781,
     "cat": "military"
@@ -660,7 +660,7 @@
     "cat": "military"
   },
   {
-    "name": "Bircənd “MERSAD” Hava Hücumundan Müdafiə Raket Bazası",
+    "name": "Bircənd “Mersad” Hava Hücumundan Müdafiə Raket Bazası",
     "lat": 32.86648499586254,
     "lon": 59.29361900013304,
     "cat": "military"
@@ -684,7 +684,7 @@
     "cat": "military"
   },
   {
-    "name": "Məcil Dəniz Komando Təlim Bazası",
+    "name": "Məcil Hərbi Dəniz Komando Təlim Bazası",
     "lat": 36.7406622458402,
     "lon": 49.41701720278359,
     "cat": "military"
@@ -696,19 +696,19 @@
     "cat": "military"
   },
   {
-    "name": "Sircan Dəniz Missiya Təlim Bazası Düşərgə Sahəsi",
+    "name": "Sircan Hərbi Dəniz Missiyası Təlim Bazası Düşərgə Sahəsi",
     "lat": 29.28502283250312,
     "lon": 55.70104128081685,
     "cat": "military"
   },
   {
-    "name": "Sircan Dəniz Missiya Təlim Bazası",
+    "name": "Sircan Hərbi Dəniz Missiyası Təlim Bazası",
     "lat": 29.47907641154849,
     "lon": 55.67083689845581,
     "cat": "military"
   },
   {
-    "name": "Çabahar Dəniz Bazası – “İmam Əli” Müstəqil Dəniz Bazası",
+    "name": "Çabahar Hərbi Dəniz Bazası – “İmam Əli” Müstəqil Hərbi Dəniz Bazası",
     "lat": 25.34450862420444,
     "lon": 60.61040883468011,
     "cat": "military"
@@ -720,85 +720,85 @@
     "cat": "military"
   },
   {
-    "name": "Çabahar dəniz limanı",
+    "name": "Çabahar Dəniz Limanı",
     "lat": 25.29531250838975,
     "lon": 60.60959985837123,
     "cat": "military"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.49377530850065,
     "lon": 44.33932999572343,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.45078282776269,
     "lon": 44.69945003804288,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.45154294952147,
     "lon": 44.79682018301922,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.33003649555069,
     "lon": 44.82667129691416,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.30233986895051,
     "lon": 44.9413736722755,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.28711478432382,
     "lon": 45.11906562610935,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.26414377153243,
     "lon": 45.34202424300894,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.16837179986207,
     "lon": 45.48500806285493,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.14363358159526,
     "lon": 45.74923900688937,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.45572908701183,
     "lon": 44.53949667229275,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.27269394784172,
     "lon": 46.00248906484421,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.19764186105355,
     "lon": 46.09828872458414,
     "cat": "rail"
   },
   {
-    "name": "Dəmiryolu stanstiyası",
+    "name": "Dəmiryolu stansiyası",
     "lat": 38.08019219480367,
     "lon": 46.22799183946704,
     "cat": "rail"
@@ -942,103 +942,103 @@
     "cat": "rail"
   },
   {
-    "name": "Xomacin aerodromu",
+    "name": "Xomacin Aerodromu",
     "lat": 35.0541367932264,
     "lon": 49.18517307487033,
     "cat": "aviation"
   },
   {
-    "name": "Sircan hava limanı",
+    "name": "Sircan Hava Limanı",
     "lat": 29.55094418810828,
     "lon": 55.66675977170894,
     "cat": "aviation"
   },
   {
-    "name": "Dezful hava limanı",
+    "name": "Dezful Hava Limanı",
     "lat": 32.43980827713483,
     "lon": 48.38917630404326,
     "cat": "aviation"
   },
   {
-    "name": "Əli Ruşən uçuş-eniş zolağı",
+    "name": "Əli Ruşən Uçuş-Eniş Zolağı",
     "lat": 32.10619722047623,
     "lon": 48.70389424201699,
     "cat": "aviation"
   },
   {
-    "name": "Ella uçuş-eniş zolağı",
+    "name": "Ella Uçuş-Eniş Zolağı",
     "lat": 31.92084949681517,
     "lon": 48.87348985361493,
     "cat": "aviation"
   },
   {
-    "name": "Qasım Süleymani beynəlxalq hava limanı",
+    "name": "Qasım Süleymani Beynəlxalq Hava Limanı",
     "lat": 31.34319229902763,
     "lon": 48.74929056292398,
     "cat": "aviation"
   },
   {
-    "name": "Əli Əkbər aerodromu",
+    "name": "Əli Əkbər Aerodromu",
     "lat": 31.57263095203515,
     "lon": 48.67583568948303,
     "cat": "aviation"
   },
   {
-    "name": "Məhşəhr hava limanı",
+    "name": "Məhşəhr Hava Limanı",
     "lat": 30.55063221080012,
     "lon": 49.15414343148613,
     "cat": "aviation"
   },
   {
-    "name": "Şadegan uçuş-eniş zolağı",
+    "name": "Şadegan Uçuş-Eniş Zolağı",
     "lat": 30.66488293376962,
     "lon": 48.64393558644846,
     "cat": "aviation"
   },
   {
-    "name": "Abadan beynəlxalq hava limanı",
+    "name": "Abadan Beynəlxalq Hava Limanı",
     "lat": 30.36523422610871,
     "lon": 48.22736090260146,
     "cat": "aviation"
   },
   {
-    "name": "Ümidiyyə hava limanı",
+    "name": "Ümidiyyə Hava Limanı",
     "lat": 30.82930755252469,
     "lon": 49.5394001079726,
     "cat": "aviation"
   },
   {
-    "name": "Ağacari hava limanı",
+    "name": "Ağacari Hava Limanı",
     "lat": 30.73946598499786,
     "lon": 49.68467599086546,
     "cat": "aviation"
   },
   {
-    "name": "Behbahan aerodromu",
+    "name": "Behbahan Aerodromu",
     "lat": 30.73051825881761,
     "lon": 50.11680999421896,
     "cat": "aviation"
   },
   {
-    "name": "Şəhid Asiyə aerodromu",
+    "name": "Şəhid Asiyə Aerodromu",
     "lat": 31.99966355728785,
     "lon": 49.27131752684444,
     "cat": "aviation"
   },
   {
-    "name": "Xorrəmabad hava limanı",
+    "name": "Xorrəmabad Hava Limanı",
     "lat": 33.43687844617057,
     "lon": 48.28576229977748,
     "cat": "aviation"
   },
   {
-    "name": "Elam hava limanı",
+    "name": "Elam Hava Limanı",
     "lat": 33.58767394102333,
     "lon": 46.40036536667959,
     "cat": "aviation"
   },
   {
-    "name": "Abdanan aerodromu",
+    "name": "Abdanan Aerodromu",
     "lat": 32.93167567558157,
     "lon": 47.48677505525345,
     "cat": "aviation"
@@ -1050,229 +1050,229 @@
     "cat": "aviation"
   },
   {
-    "name": "Mərcan uçuş-eniş zolağı",
+    "name": "Mərcan Uçuş-Eniş Zolağı",
     "lat": 34.25169382676299,
     "lon": 45.83072126542501,
     "cat": "aviation"
   },
   {
-    "name": "Maku hava limanı",
+    "name": "Maku Hava Limanı",
     "lat": 39.19210478695263,
     "lon": 44.92549215530098,
     "cat": "aviation"
   },
   {
-    "name": "Qəzəl Qəşl uçuş-eniş zolağı",
+    "name": "Qəzəl Qəşl Uçuş-Eniş Zolağı",
     "lat": 39.11079280002841,
     "lon": 45.333343251732,
     "cat": "aviation"
   },
   {
-    "name": "Xoy hava limanı",
+    "name": "Xoy Hava Limanı",
     "lat": 38.42113028219648,
     "lon": 44.9740110929862,
     "cat": "aviation"
   },
   {
-    "name": "Sufiyan uçuş-eniş zolağı",
+    "name": "Sufiyan Uçuş-Eniş Zolağı",
     "lat": 38.28723253979671,
     "lon": 45.9893591486952,
     "cat": "aviation"
   },
   {
-    "name": "Təbriz hava limanı",
+    "name": "Təbriz Hava Limanı",
     "lat": 38.12457615583386,
     "lon": 46.2427648630819,
     "cat": "aviation"
   },
   {
-    "name": "Ərdəbil hava limanı",
+    "name": "Ərdəbil Hava Limanı",
     "lat": 38.32404187542198,
     "lon": 48.42034787076832,
     "cat": "aviation"
   },
   {
-    "name": "Parsabad hava limanı",
+    "name": "Parsabad Hava Limanı",
     "lat": 39.60634585576904,
     "lon": 47.87673814053903,
     "cat": "aviation"
   },
   {
-    "name": "Urmiya hava limanı",
+    "name": "Urmiya Hava Limanı",
     "lat": 37.66179132868615,
     "lon": 45.06075915562393,
     "cat": "aviation"
   },
   {
-    "name": "Səhənd hava limanı",
+    "name": "Səhənd Hava Limanı",
     "lat": 37.34845841728322,
     "lon": 46.14391339765535,
     "cat": "aviation"
   },
   {
-    "name": "Saqqız hava limanı",
+    "name": "Saqqız Hava Limanı",
     "lat": 36.21365999156304,
     "lon": 46.30878889422568,
     "cat": "aviation"
   },
   {
-    "name": "Rəşt hava limanı",
+    "name": "Rəşt Hava Limanı",
     "lat": 37.32271792886812,
     "lon": 49.61689876270832,
     "cat": "aviation"
   },
   {
-    "name": "Ənzəli aerodromu",
+    "name": "Ənzəli Aerodromu",
     "lat": 37.45163141491057,
     "lon": 49.88853930847984,
     "cat": "aviation"
   },
   {
-    "name": "Zəncan hava limanı",
+    "name": "Zəncan Hava Limanı",
     "lat": 36.77224904841575,
     "lon": 48.36823999868311,
     "cat": "aviation"
   },
   {
-    "name": "Qəzvin aerodromu",
+    "name": "Qəzvin Aerodromu",
     "lat": 36.24077697857622,
     "lon": 50.04203936068215,
     "cat": "aviation"
   },
   {
-    "name": "Ramsər hava limanı",
+    "name": "Ramsər Hava Limanı",
     "lat": 36.90500352782011,
     "lon": 50.68262365416791,
     "cat": "aviation"
   },
   {
-    "name": "Xarrud uçuş-eniş zolağı",
+    "name": "Xarrud Uçuş-Eniş Zolağı",
     "lat": 35.94370798388805,
     "lon": 50.08155471473898,
     "cat": "aviation"
   },
   {
-    "name": "Vayqan aerodromu",
+    "name": "Vayqan Aerodromu",
     "lat": 38.07134267881077,
     "lon": 45.72103909168597,
     "cat": "aviation"
   },
   {
-    "name": "Esfarvarin aerodromu",
+    "name": "Esfarvarin Aerodromu",
     "lat": 35.95184730791491,
     "lon": 49.59748992209957,
     "cat": "aviation"
   },
   {
-    "name": "Xətayan uçuş-eniş zolağı",
+    "name": "Xətayan Uçuş-Eniş Zolağı",
     "lat": 36.09610635491208,
     "lon": 50.24425797253753,
     "cat": "aviation"
   },
   {
-    "name": "Qəzvin Azadi hava limanı",
+    "name": "Qəzvin Azadi Hava Limanı",
     "lat": 35.95381043653874,
     "lon": 50.45414615142264,
     "cat": "aviation"
   },
   {
-    "name": "Həmədan hava bazası",
+    "name": "Həmədan Hava Bazası",
     "lat": 35.19190381175407,
     "lon": 48.69425010339186,
     "cat": "aviation"
   },
   {
-    "name": "Piranşəhr uçuş-eniş zolağı",
+    "name": "Piranşəhr Uçuş-Eniş Zolağı",
     "lat": 36.72986614445008,
     "lon": 45.15843290193831,
     "cat": "aviation"
   },
   {
-    "name": "Namakab Rud aerodromu",
+    "name": "Namakab Rud Aerodromu",
     "lat": 36.68699459790808,
     "lon": 51.30837067773498,
     "cat": "aviation"
   },
   {
-    "name": "Novşəhr hava limanı",
+    "name": "Novşəhr Hava Limanı",
     "lat": 36.6611766252601,
     "lon": 51.46946792058943,
     "cat": "aviation"
   },
   {
-    "name": "Payam hava limanı",
+    "name": "Payam Hava Limanı",
     "lat": 35.76945847492181,
     "lon": 50.83384822488119,
     "cat": "aviation"
   },
   {
-    "name": "Naja aerodromu",
+    "name": "Naja Aerodromu",
     "lat": 35.77368464866503,
     "lon": 50.88226363718155,
     "cat": "aviation"
   },
   {
-    "name": "Fəth hava limanı",
+    "name": "Fəth Hava Limanı",
     "lat": 35.71526709107932,
     "lon": 50.93417598394948,
     "cat": "aviation"
   },
   {
-    "name": "Tehran ehtiyat uçuş-eniş zolağı",
+    "name": "Tehran ehtiyat Uçuş-Eniş Zolağı",
     "lat": 35.57655349630218,
     "lon": 50.88192973499056,
     "cat": "aviation"
   },
   {
-    "name": "Saqarçin hava bazası",
+    "name": "Saqarçin Hava Bazası",
     "lat": 35.54568960881184,
     "lon": 50.97539618535102,
     "cat": "aviation"
   },
   {
-    "name": "İmam Xomeyni hava limanı",
+    "name": "İmam Xomeyni Hava Limanı",
     "lat": 35.40501879787252,
     "lon": 51.1593864171573,
     "cat": "aviation"
   },
   {
-    "name": "Tehran qərb hava limanı",
+    "name": "Tehran qərb Hava Limanı",
     "lat": 35.7420637049815,
     "lon": 51.23068948028745,
     "cat": "aviation"
   },
   {
-    "name": "Mehrabad hava limanı",
+    "name": "Mehrabad Hava Limanı",
     "lat": 35.69020065076369,
     "lon": 51.30868281704844,
     "cat": "aviation"
   },
   {
-    "name": "Düşəntəpə hava limanı",
+    "name": "Düşəntəpə Hava Limanı",
     "lat": 35.70090216594192,
     "lon": 51.47287868024469,
     "cat": "aviation"
   },
   {
-    "name": "Sepehr hava limanı",
+    "name": "Sepehr Hava Limanı",
     "lat": 35.74766361650753,
     "lon": 51.60340435288547,
     "cat": "aviation"
   },
   {
-    "name": "Şəhid Aryafar hava limanı",
+    "name": "Şəhid Aryafar Hava Limanı",
     "lat": 35.52945200939705,
     "lon": 51.50660142829381,
     "cat": "aviation"
   },
   {
-    "name": "Əsgərabad uçuş-eniş zolağı",
+    "name": "Əsgərabad Uçuş-Eniş Zolağı",
     "lat": 35.33384876707473,
     "lon": 51.66680600430276,
     "cat": "aviation"
   },
   {
-    "name": "Mənzəriyyə hava bazası",
+    "name": "Mənzəriyyə Hava Bazası",
     "lat": 34.9764420087245,
     "lon": 50.81424239072727,
     "cat": "aviation"
@@ -1284,31 +1284,31 @@
     "cat": "aviation"
   },
   {
-    "name": "Cəfərabad uçuş-eniş zolağı",
+    "name": "Cəfərabad Uçuş-Eniş Zolağı",
     "lat": 34.78662885332155,
     "lon": 50.58746700209844,
     "cat": "aviation"
   },
   {
-    "name": "Qomrud aerodromu",
+    "name": "Qomrud Aerodromu",
     "lat": 34.7637515769936,
     "lon": 50.90889355156391,
     "cat": "aviation"
   },
   {
-    "name": "Savə aerodromu",
+    "name": "Savə Aerodromu",
     "lat": 34.98501879790764,
     "lon": 50.36978326083074,
     "cat": "aviation"
   },
   {
-    "name": "Bişe Kola aerodromu",
+    "name": "Bişe Kola Aerodromu",
     "lat": 36.65502811060195,
     "lon": 52.34979863537364,
     "cat": "aviation"
   },
   {
-    "name": "Babolsar uçuş-eniş zolağı",
+    "name": "Babolsar Uçuş-Eniş Zolağı",
     "lat": 36.71151943580823,
     "lon": 52.68020500924089,
     "cat": "aviation"
@@ -1320,115 +1320,115 @@
     "cat": "aviation"
   },
   {
-    "name": "Mehtar uçuş-eniş zolağı",
+    "name": "Mehtar Uçuş-Eniş Zolağı",
     "lat": 36.85618248245861,
     "lon": 54.20265781446873,
     "cat": "aviation"
   },
   {
-    "name": "Qorqan hava limanı",
+    "name": "Qorqan Hava Limanı",
     "lat": 36.90775585304871,
     "lon": 54.4085029806701,
     "cat": "aviation"
   },
   {
-    "name": "Qonbad-i Kavus uçuş-eniş zolağı",
+    "name": "Qonbad-i Kavus Uçuş-Eniş Zolağı",
     "lat": 37.24608998456016,
     "lon": 55.09600154828389,
     "cat": "aviation"
   },
   {
-    "name": "Hacı Balkan uçuş-eniş zolağı",
+    "name": "Hacı Balkan Uçuş-Eniş Zolağı",
     "lat": 37.2010910749115,
     "lon": 55.26685657921706,
     "cat": "aviation"
   },
   {
-    "name": "Qalalə aerodromu",
+    "name": "Qalalə Aerodromu",
     "lat": 37.38308994629915,
     "lon": 55.45393510659068,
     "cat": "aviation"
   },
   {
-    "name": "Soga aerodromu",
+    "name": "Soga Aerodromu",
     "lat": 37.61887777522762,
     "lon": 56.16581954548026,
     "cat": "aviation"
   },
   {
-    "name": "Bocnurd hava limanı",
+    "name": "Bocnurd Hava Limanı",
     "lat": 37.49076151066296,
     "lon": 57.30850174541807,
     "cat": "aviation"
   },
   {
-    "name": "Məşhəd beynəlxalq hava limanı",
+    "name": "Məşhəd Beynəlxalq Hava Limanı",
     "lat": 36.22771614689379,
     "lon": 59.64209297587937,
     "cat": "aviation"
   },
   {
-    "name": "Saraxs aerodromu",
+    "name": "Saraxs Aerodromu",
     "lat": 36.49381562719442,
     "lon": 61.07093907042184,
     "cat": "aviation"
   },
   {
-    "name": "Nişapur qliderportu",
+    "name": "Nişapur Qliderportu",
     "lat": 36.2480529718912,
     "lon": 58.90992700248559,
     "cat": "aviation"
   },
   {
-    "name": "Keçmiş Nişapur hava limanı (uçuş-eniş zolağı)",
+    "name": "Keçmiş Nişapur Hava Limanı (Uçuş-Eniş Zolağı)",
     "lat": 36.09423253845939,
     "lon": 58.70950954645739,
     "cat": "aviation"
   },
   {
-    "name": "Səbzəvar hava limanı",
+    "name": "Səbzəvar Hava Limanı",
     "lat": 36.16993108701949,
     "lon": 57.60277064259021,
     "cat": "aviation"
   },
   {
-    "name": "Mayamey uçuş-eniş zolağı",
+    "name": "Mayamey Uçuş-Eniş Zolağı",
     "lat": 36.42154225071523,
     "lon": 55.67296471744458,
     "cat": "aviation"
   },
   {
-    "name": "Şahrud beynəlxalq hava limanı",
+    "name": "Şahrud Beynəlxalq Hava Limanı",
     "lat": 36.42269350760177,
     "lon": 55.09645297453677,
     "cat": "aviation"
   },
   {
-    "name": "Jajarm uçuş-eniş zolağı",
+    "name": "Jajarm Uçuş-Eniş Zolağı",
     "lat": 36.9630172193365,
     "lon": 56.4602276630906,
     "cat": "aviation"
   },
   {
-    "name": "Zərğabad uçuş-eniş zolağı",
+    "name": "Zərğabad Uçuş-Eniş Zolağı",
     "lat": 37.04475579326876,
     "lon": 57.27670748719116,
     "cat": "aviation"
   },
   {
-    "name": "Esfarayen uçuş-eniş zolağı",
+    "name": "Esfarayen Uçuş-Eniş Zolağı",
     "lat": 37.01793668040434,
     "lon": 57.56484868626584,
     "cat": "aviation"
   },
   {
-    "name": "Xorrəmdərə uçuş-eniş zolağı",
+    "name": "Xorrəmdərə Uçuş-Eniş Zolağı",
     "lat": 36.24157138824845,
     "lon": 49.22511841906252,
     "cat": "aviation"
   },
   {
-    "name": "Abxar uçuş-eniş zolağı",
+    "name": "Abxar Uçuş-Eniş Zolağı",
     "lat": 36.12953630916603,
     "lon": 49.20115369990599,
     "cat": "aviation"
@@ -1440,145 +1440,145 @@
     "cat": "aviation"
   },
   {
-    "name": "Həmədan hava limanı",
+    "name": "Həmədan Hava Limanı",
     "lat": 34.86735456320528,
     "lon": 48.53926106309709,
     "cat": "aviation"
   },
   {
-    "name": "Sənəndəc hava limanı",
+    "name": "Sənəndəc Hava Limanı",
     "lat": 35.25016775141929,
     "lon": 47.01118442599252,
     "cat": "aviation"
   },
   {
-    "name": "Eyvanekey hava limanı",
+    "name": "Eyvanekey Hava Limanı",
     "lat": 35.360391329792,
     "lon": 51.98597696542146,
     "cat": "aviation"
   },
   {
-    "name": "Qarmsar uçuş-eniş zolağı",
+    "name": "Qarmsar Uçuş-Eniş Zolağı",
     "lat": 35.1737423840741,
     "lon": 52.32404509534166,
     "cat": "aviation"
   },
   {
-    "name": "Aradan aerodromu",
+    "name": "Aradan Aerodromu",
     "lat": 35.23905855483567,
     "lon": 52.50797908310171,
     "cat": "aviation"
   },
   {
-    "name": "Səmnan hava limanı",
+    "name": "Səmnan Hava Limanı",
     "lat": 35.59366211358721,
     "lon": 53.49747639376591,
     "cat": "aviation"
   },
   {
-    "name": "Səmnan aerodromu",
+    "name": "Səmnan Aerodromu",
     "lat": 35.39575376840512,
     "lon": 53.68438307089144,
     "cat": "aviation"
   },
   {
-    "name": "Kirmanşah hava limanı",
+    "name": "Kirmanşah Hava Limanı",
     "lat": 34.35340665053077,
     "lon": 47.14522799169597,
     "cat": "aviation"
   },
   {
-    "name": "Dalake uçuş-eniş zolağı",
+    "name": "Dalake Uçuş-Eniş Zolağı",
     "lat": 34.24628652380642,
     "lon": 46.79810267763722,
     "cat": "aviation"
   },
   {
-    "name": "Cəfərabad uçuş-eniş zolağı",
+    "name": "Cəfərabad Uçuş-Eniş Zolağı",
     "lat": 34.82759003307747,
     "lon": 50.73250202162741,
     "cat": "aviation"
   },
   {
-    "name": "Arak hava limanı",
+    "name": "Arak Hava Limanı",
     "lat": 34.13538324348658,
     "lon": 49.84225811228753,
     "cat": "aviation"
   },
   {
-    "name": "Mahmudabad uçuş-eniş zolağı",
+    "name": "Mahmudabad Uçuş-Eniş Zolağı",
     "lat": 34.16961625835349,
     "lon": 51.31756875408573,
     "cat": "aviation"
   },
   {
-    "name": "Kaşan hava limanı",
+    "name": "Kaşan Hava Limanı",
     "lat": 33.89629612156034,
     "lon": 51.57113784415437,
     "cat": "aviation"
   },
   {
-    "name": "Naen hərbi hava bazası",
+    "name": "Naen hərbi Hava Bazası",
     "lat": 33.09377458592829,
     "lon": 53.4128338420001,
     "cat": "aviation"
   },
   {
-    "name": "Todeşk aerodromu",
+    "name": "Todeşk Aerodromu",
     "lat": 32.74324218719506,
     "lon": 52.66936737474899,
     "cat": "aviation"
   },
   {
-    "name": "İsfahan beynəlxalq hava limanı",
+    "name": "İsfahan Beynəlxalq Hava Limanı",
     "lat": 32.74634036637354,
     "lon": 51.87341275897874,
     "cat": "aviation"
   },
   {
-    "name": "İsfahan uçuş-eniş zolağı",
+    "name": "İsfahan Uçuş-Eniş Zolağı",
     "lat": 32.58248646429976,
     "lon": 52.00262868209208,
     "cat": "aviation"
   },
   {
-    "name": "Bədr hava bazası",
+    "name": "Bədr Hava Bazası",
     "lat": 32.61880535901609,
     "lon": 51.7015528399147,
     "cat": "aviation"
   },
   {
-    "name": "Şəhid Vətənpur hərbi hava bazası",
+    "name": "Şəhid Vətənpur hərbi Hava Bazası",
     "lat": 32.56841759677379,
     "lon": 51.68632883088831,
     "cat": "aviation"
   },
   {
-    "name": "Hesa hava limanı",
+    "name": "Hesa Hava Limanı",
     "lat": 32.92764189313516,
     "lon": 51.5617874500048,
     "cat": "aviation"
   },
   {
-    "name": "Zərrinşəhr aerodromu",
+    "name": "Zərrinşəhr Aerodromu",
     "lat": 32.3269821357997,
     "lon": 51.37832254984755,
     "cat": "aviation"
   },
   {
-    "name": "Şəhrikürd hava limanı",
+    "name": "Şəhrikürd Hava Limanı",
     "lat": 32.29519059015293,
     "lon": 50.83917636722363,
     "cat": "aviation"
   },
   {
-    "name": "Tabas hava limanı",
+    "name": "Tabas Hava Limanı",
     "lat": 33.66865285963419,
     "lon": 56.89643108298463,
     "cat": "aviation"
   },
   {
-    "name": "Bədindeh aerodromu",
+    "name": "Bədindeh Aerodromu",
     "lat": 35.0349604728311,
     "lon": 51.84161730625089,
     "cat": "aviation"
@@ -1644,7 +1644,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 33.50708973526272,
     "lon": 60.90082280210509,
     "cat": "sbm"
@@ -2736,13 +2736,13 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 38.43923945072678,
     "lon": 48.87601637550231,
     "cat": "sbm"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 38.45152081942994,
     "lon": 48.84116513639255,
     "cat": "sbm"
@@ -2946,7 +2946,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 39.38896758298403,
     "lon": 48.35957566685958,
     "cat": "sbm"
@@ -3762,7 +3762,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 38.94384147919281,
     "lon": 45.63287034256167,
     "cat": "sbm"
@@ -3828,7 +3828,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 38.85068803675621,
     "lon": 46.20151550569872,
     "cat": "sbm"
@@ -4560,7 +4560,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 37.7178230325994,
     "lon": 44.62248085628032,
     "cat": "sbm"
@@ -5310,7 +5310,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 36.66534984939527,
     "lon": 45.06826456087268,
     "cat": "sbm"
@@ -5598,7 +5598,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 38.49613903319534,
     "lon": 44.32143226068549,
     "cat": "sbm"
@@ -5952,7 +5952,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 36.18625622128351,
     "lon": 45.3225088181767,
     "cat": "sbm"
@@ -5976,13 +5976,13 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 39.41160182572656,
     "lon": 44.37765259731656,
     "cat": "sbm"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 37.44564702519204,
     "lon": 54.61861225032963,
     "cat": "sbm"
@@ -6804,7 +6804,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 35.82936524738669,
     "lon": 45.95587314574385,
     "cat": "sbm"
@@ -7254,7 +7254,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 25.37943491019085,
     "lon": 61.6569902948422,
     "cat": "sbm"
@@ -7344,7 +7344,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 26.09300433304948,
     "lon": 61.84542873398614,
     "cat": "sbm"
@@ -7722,7 +7722,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 30.5054992190202,
     "lon": 48.02692871658394,
     "cat": "sbm"
@@ -8112,7 +8112,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 35.61417354416843,
     "lon": 46.01714259061123,
     "cat": "sbm"
@@ -8262,7 +8262,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 35.5135710873141,
     "lon": 45.99964879507566,
     "cat": "sbm"
@@ -8490,7 +8490,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 35.18104736804434,
     "lon": 46.18105505454291,
     "cat": "sbm"
@@ -9090,7 +9090,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 33.12369974261858,
     "lon": 46.05153695936974,
     "cat": "sbm"
@@ -9756,7 +9756,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 34.76542137140113,
     "lon": 45.6858196321577,
     "cat": "sbm"
@@ -10632,7 +10632,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 36.52049816548827,
     "lon": 61.16575563208209,
     "cat": "sbm"
@@ -11274,13 +11274,13 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 32.15616781138122,
     "lon": 60.86834786859379,
     "cat": "sbm"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 32.16068815854945,
     "lon": 60.87056566460551,
     "cat": "sbm"
@@ -11514,7 +11514,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 33.06688262132501,
     "lon": 60.60250553641808,
     "cat": "sbm"
@@ -11760,7 +11760,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 34.97455017874091,
     "lon": 45.89406108029301,
     "cat": "sbm"
@@ -11964,7 +11964,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 31.79326339299152,
     "lon": 47.8618866895766,
     "cat": "sbm"
@@ -11988,7 +11988,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 31.85392997914754,
     "lon": 47.80228872848031,
     "cat": "sbm"
@@ -12186,7 +12186,7 @@
     "cat": "post"
   },
   {
-    "name": "SBM",
+    "name": "Sərhəd bölməsi məntəqəsi",
     "lat": 36.49810873852488,
     "lon": 61.15970937165728,
     "cat": "sbm"
@@ -12342,7 +12342,7 @@
     "cat": "military"
   },
   {
-    "name": "Buşehr Hərbi Hava Bazası",
+    "name": "Buşəhr Hərbi Hava Bazası",
     "lat": 28.943959,
     "lon": 50.836247,
     "cat": "aviation"
@@ -12354,25 +12354,25 @@
     "cat": "aviation"
   },
   {
-    "name": "Bəndər Abbas hava limanı",
+    "name": "Bəndər Abbas Hava Limanı",
     "lat": 27.2191888,
     "lon": 56.3783786,
     "cat": "aviation"
   },
   {
-    "name": "Çabahar hava limanı / Konarak hava limanı",
+    "name": "Çabahar Hava Limanı / Konarak Hava Limanı",
     "lat": 25.4443236,
     "lon": 60.3837469,
     "cat": "aviation"
   },
   {
-    "name": "Düşəntəpə hava limanı",
+    "name": "Düşəntəpə Hava Limanı",
     "lat": 35.7031117,
     "lon": 51.4750203,
     "cat": "aviation"
   },
   {
-    "name": "Əhvaz hava limanı",
+    "name": "Əhvaz Hava Limanı",
     "lat": 31.3402105,
     "lon": 48.7573006,
     "cat": "aviation"
@@ -12384,13 +12384,13 @@
     "cat": "aviation"
   },
   {
-    "name": "Zahedan hava limanı",
+    "name": "Zahedan Hava Limanı",
     "lat": 29.4750835,
     "lon": 60.906197,
     "cat": "aviation"
   },
   {
-    "name": "Kirman hava limanı",
+    "name": "Kirman Hava Limanı",
     "lat": 30.2690085,
     "lon": 56.9524922,
     "cat": "aviation"
@@ -12402,7 +12402,7 @@
     "cat": "aviation"
   },
   {
-    "name": "Kiş hava limanı",
+    "name": "Kiş Hava Limanı",
     "lat": 26.5271748,
     "lon": 53.9808536,
     "cat": "aviation"
@@ -12438,7 +12438,7 @@
     "cat": "military"
   },
   {
-    "name": "Kushke Nosrat / Manzariyeh hava limanı",
+    "name": "Kushke Nosrat / Manzariyeh Hava Limanı",
     "lat": 34.9825393,
     "lon": 50.806197,
     "cat": "aviation"
@@ -12486,7 +12486,7 @@
     "cat": "military"
   },
   {
-    "name": "Firuzabad hava limanı",
+    "name": "Firuzabad Hava Limanı",
     "lat": 35.5298825,
     "lon": 51.5061568,
     "cat": "aviation"
@@ -12810,7 +12810,7 @@
     "cat": "military"
   },
   {
-    "name": "[SEPAH] SEPAHAF Buşehr",
+    "name": "[SEPAH] SEPAHAF Buşəhr",
     "lat": 28.9354156,
     "lon": 50.8417293,
     "cat": "military"
@@ -12822,7 +12822,7 @@
     "cat": "military"
   },
   {
-    "name": "Fath hava limanı",
+    "name": "Fath Hava Limanı",
     "lat": 35.7156532,
     "lon": 50.9336454,
     "cat": "aviation"
@@ -12876,7 +12876,7 @@
     "cat": "military"
   },
   {
-    "name": "Tohid Jam hava limanı",
+    "name": "Tohid Jam Hava Limanı",
     "lat": 27.8206748,
     "lon": 52.3514149,
     "cat": "aviation"
@@ -12936,7 +12936,7 @@
     "cat": "military"
   },
   {
-    "name": "[SEPAH] Buşehr limanı",
+    "name": "[SEPAH] Buşəhr limanı",
     "lat": 28.9814111,
     "lon": 50.8451384,
     "cat": "military"
@@ -13026,7 +13026,7 @@
     "cat": "military"
   },
   {
-    "name": "[SEPAH] Bandar Buşehr Dock",
+    "name": "[SEPAH] Bandar Buşəhr Dock",
     "lat": 28.9199304,
     "lon": 50.8074425,
     "cat": "military"
@@ -13044,7 +13044,7 @@
     "cat": "military"
   },
   {
-    "name": "Havadarya hava limanı",
+    "name": "Havadarya Hava Limanı",
     "lat": 27.1585823,
     "lon": 56.1700083,
     "cat": "aviation"
@@ -13452,13 +13452,13 @@
     "cat": "aviation"
   },
   {
-    "name": "Buşehr Heliport",
+    "name": "Buşəhr Heliport",
     "lat": 28.9115809,
     "lon": 50.8575129,
     "cat": "military"
   },
   {
-    "name": "Buşehr Army Base",
+    "name": "Buşəhr Army Base",
     "lat": 28.9068877,
     "lon": 50.8667333,
     "cat": "military"
@@ -13482,7 +13482,7 @@
     "cat": "military"
   },
   {
-    "name": "Buşehr Navy Base",
+    "name": "Buşəhr Navy Base",
     "lat": 28.9654953,
     "lon": 50.8659598,
     "cat": "military"
@@ -13494,7 +13494,7 @@
     "cat": "military"
   },
   {
-    "name": "Greater Tunb hava limanı",
+    "name": "Greater Tunb Hava Limanı",
     "lat": 26.2584106,
     "lon": 55.3154169,
     "cat": "aviation"
@@ -13518,7 +13518,7 @@
     "cat": "military"
   },
   {
-    "name": "Lesser Tunb hava limanı",
+    "name": "Lesser Tunb Hava Limanı",
     "lat": 26.2433111,
     "lon": 55.1455775,
     "cat": "aviation"
@@ -13536,7 +13536,7 @@
     "cat": "military"
   },
   {
-    "name": "Sirri hava limanı",
+    "name": "Sirri Hava Limanı",
     "lat": 25.9086073,
     "lon": 54.5407839,
     "cat": "aviation"
@@ -13554,7 +13554,7 @@
     "cat": "rail"
   },
   {
-    "name": "Buşehr Dəniz Transport Squadron",
+    "name": "Buşəhr Dəniz Transport Squadron",
     "lat": 28.9124513,
     "lon": 50.8551316,
     "cat": "military"
@@ -13590,37 +13590,37 @@
     "cat": "military"
   },
   {
-    "name": "Bandar Lengeh hava limanı",
+    "name": "Bandar Lengeh Hava Limanı",
     "lat": 26.5322198,
     "lon": 54.8256191,
     "cat": "aviation"
   },
   {
-    "name": "Bastak hava limanı",
+    "name": "Bastak Hava Limanı",
     "lat": 27.2125678,
     "lon": 54.3186645,
     "cat": "aviation"
   },
   {
-    "name": "Gachsaran hava limanı",
+    "name": "Gachsaran Hava Limanı",
     "lat": 30.3347773,
     "lon": 50.8323333,
     "cat": "aviation"
   },
   {
-    "name": "Kharg hava limanı",
+    "name": "Kharg Hava Limanı",
     "lat": 29.2600921,
     "lon": 50.3227162,
     "cat": "aviation"
   },
   {
-    "name": "Noshahr hava limanı",
+    "name": "Noshahr Hava Limanı",
     "lat": 36.6636046,
     "lon": 51.4650625,
     "cat": "aviation"
   },
   {
-    "name": "Qavzin hava limanı",
+    "name": "Qavzin Hava Limanı",
     "lat": 36.2400534,
     "lon": 50.0471425,
     "cat": "aviation"
@@ -13638,7 +13638,7 @@
     "cat": "military"
   },
   {
-    "name": "Yazd Şəhid Sadoughi hava limanı",
+    "name": "Yazd Şəhid Sadoughi Hava Limanı",
     "lat": 31.9049319,
     "lon": 54.2766288,
     "cat": "aviation"
@@ -13650,103 +13650,103 @@
     "cat": "military"
   },
   {
-    "name": "Bahregan hava limanı",
+    "name": "Bahregan Hava Limanı",
     "lat": 29.8390617,
     "lon": 50.2733094,
     "cat": "aviation"
   },
   {
-    "name": "Bam hava limanı",
+    "name": "Bam Hava Limanı",
     "lat": 29.0837628,
     "lon": 58.4509953,
     "cat": "aviation"
   },
   {
-    "name": "Behbehan hava limanı Şimalwest",
+    "name": "Behbehan Hava Limanı Şimalwest",
     "lat": 30.7345715,
     "lon": 50.1109745,
     "cat": "aviation"
   },
   {
-    "name": "Darab hava limanı",
+    "name": "Darab Hava Limanı",
     "lat": 28.7209526,
     "lon": 54.4446992,
     "cat": "aviation"
   },
   {
-    "name": "Fasa hava limanı",
+    "name": "Fasa Hava Limanı",
     "lat": 28.8924384,
     "lon": 53.7227775,
     "cat": "aviation"
   },
   {
-    "name": "Garmcar SW hava limanı",
+    "name": "Garmcar SW Hava Limanı",
     "lat": 35.1743383,
     "lon": 52.3228231,
     "cat": "aviation"
   },
   {
-    "name": "Gharpuz Abad hava limanı",
+    "name": "Gharpuz Abad Hava Limanı",
     "lat": 35.9521485,
     "lon": 50.4509113,
     "cat": "aviation"
   },
   {
-    "name": "Iranshahr hava limanı",
+    "name": "Iranshahr Hava Limanı",
     "lat": 27.2357028,
     "lon": 60.7199905,
     "cat": "aviation"
   },
   {
-    "name": "Jahrom hava limanı",
+    "name": "Jahrom Hava Limanı",
     "lat": 28.5872354,
     "lon": 53.5836009,
     "cat": "aviation"
   },
   {
-    "name": "Kalaleh hava limanı",
+    "name": "Kalaleh Hava Limanı",
     "lat": 37.3831915,
     "lon": 55.4522094,
     "cat": "aviation"
   },
   {
-    "name": "Lamerd hava limanı",
+    "name": "Lamerd Hava Limanı",
     "lat": 27.3716121,
     "lon": 53.1924449,
     "cat": "aviation"
   },
   {
-    "name": "Larestan hava limanı",
+    "name": "Larestan Hava Limanı",
     "lat": 27.6728556,
     "lon": 54.3822273,
     "cat": "aviation"
   },
   {
-    "name": "Lavan hava limanı",
+    "name": "Lavan Hava Limanı",
     "lat": 26.811607,
     "lon": 53.3527087,
     "cat": "aviation"
   },
   {
-    "name": "Qeshm hava limanı",
+    "name": "Qeshm Hava Limanı",
     "lat": 26.7539021,
     "lon": 55.9012206,
     "cat": "aviation"
   },
   {
-    "name": "Rafsanjan hava limanı",
+    "name": "Rafsanjan Hava Limanı",
     "lat": 30.2989613,
     "lon": 56.0479631,
     "cat": "aviation"
   },
   {
-    "name": "Sabzevar hava limanı",
+    "name": "Sabzevar Hava Limanı",
     "lat": 36.1680554,
     "lon": 57.5960502,
     "cat": "aviation"
   },
   {
-    "name": "Jiroft hava limanı",
+    "name": "Jiroft Hava Limanı",
     "lat": 28.72487,
     "lon": 57.6735441,
     "cat": "aviation"
@@ -13782,7 +13782,7 @@
     "cat": "military"
   },
   {
-    "name": "Gonabad hava limanı",
+    "name": "Gonabad Hava Limanı",
     "lat": 34.4212802,
     "lon": 58.703672,
     "cat": "aviation"
@@ -13794,7 +13794,7 @@
     "cat": "aviation"
   },
   {
-    "name": "Minab uçuş-eniş zolağı",
+    "name": "Minab Uçuş-Eniş Zolağı",
     "lat": 27.1009692,
     "lon": 57.0838735,
     "cat": "aviation"
@@ -13860,7 +13860,7 @@
     "cat": "military"
   },
   {
-    "name": "Sarakhs hava limanı",
+    "name": "Sarakhs Hava Limanı",
     "lat": 36.5003199,
     "lon": 61.0659436,
     "cat": "aviation"
@@ -14556,7 +14556,7 @@
     "cat": "military"
   },
   {
-    "name": "Saravan hava limanı",
+    "name": "Saravan Hava Limanı",
     "lat": 27.4154101,
     "lon": 62.3204099,
     "cat": "aviation"
@@ -14664,7 +14664,7 @@
     "cat": "military"
   },
   {
-    "name": "Hamedan hava limanı",
+    "name": "Hamedan Hava Limanı",
     "lat": 34.8662319,
     "lon": 48.5585442,
     "cat": "aviation"
@@ -14706,7 +14706,7 @@
     "cat": "military"
   },
   {
-    "name": "Buşehr Radomes",
+    "name": "Buşəhr Radomes",
     "lat": 28.8766696,
     "lon": 50.8526812,
     "cat": "military"
@@ -14898,7 +14898,7 @@
     "cat": "military"
   },
   {
-    "name": "Qum uçuş-eniş zolağı",
+    "name": "Qum Uçuş-Eniş Zolağı",
     "lat": 34.764084,
     "lon": 50.9116838,
     "cat": "aviation"
@@ -14988,7 +14988,7 @@
     "cat": "military"
   },
   {
-    "name": "Əbu Musa hava limanı",
+    "name": "Əbu Musa Hava Limanı",
     "lat": 25.8760221,
     "lon": 55.0327064,
     "cat": "aviation"
@@ -15024,7 +15024,7 @@
     "cat": "military"
   },
   {
-    "name": "[SEPAH] Nayband uçuş-eniş zolağı",
+    "name": "[SEPAH] Nayband Uçuş-Eniş Zolağı",
     "lat": 27.3709305,
     "lon": 52.6032207,
     "cat": "aviation"
