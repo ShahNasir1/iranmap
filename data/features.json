@@ -12322,5 +12322,2909 @@
     "lat": 33.07128992987584,
     "lon": 46.15294970448832,
     "cat": "post"
+  },
+  {
+    "name": "“Heydər Kərrar” SEPAH Qərargahı",
+    "lat": 35.686841,
+    "lon": 52.1426621,
+    "cat": "military"
+  },
+  {
+    "name": "Bəndər Abbas Dəniz Bazası",
+    "lat": 27.1426484,
+    "lon": 56.2116365,
+    "cat": "military"
+  },
+  {
+    "name": "Ali Rəhbərin Ofisi",
+    "lat": 35.6919937,
+    "lon": 51.3989067,
+    "cat": "military"
+  },
+  {
+    "name": "Buşehr Hərbi Hava Bazası",
+    "lat": 28.943959,
+    "lon": 50.836247,
+    "cat": "aviation"
+  },
+  {
+    "name": "Şiraz Hərbi Hava Bazası",
+    "lat": 29.5383928,
+    "lon": 52.5866167,
+    "cat": "aviation"
+  },
+  {
+    "name": "Bəndər Abbas hava limanı",
+    "lat": 27.2191888,
+    "lon": 56.3783786,
+    "cat": "aviation"
+  },
+  {
+    "name": "Çabahar hava limanı / Konarak hava limanı",
+    "lat": 25.4443236,
+    "lon": 60.3837469,
+    "cat": "aviation"
+  },
+  {
+    "name": "Düşəntəpə hava limanı",
+    "lat": 35.7031117,
+    "lon": 51.4750203,
+    "cat": "aviation"
+  },
+  {
+    "name": "Əhvaz hava limanı",
+    "lat": 31.3402105,
+    "lon": 48.7573006,
+    "cat": "aviation"
+  },
+  {
+    "name": "Bircənd Hərbi Hava Bazası",
+    "lat": 32.8969975,
+    "lon": 59.2663257,
+    "cat": "aviation"
+  },
+  {
+    "name": "Zahedan hava limanı",
+    "lat": 29.4750835,
+    "lon": 60.906197,
+    "cat": "aviation"
+  },
+  {
+    "name": "Kirman hava limanı",
+    "lat": 30.2690085,
+    "lon": 56.9524922,
+    "cat": "aviation"
+  },
+  {
+    "name": "Oghab 44 Hərbi Hava Bazası",
+    "lat": 28.0564527,
+    "lon": 55.5065808,
+    "cat": "aviation"
+  },
+  {
+    "name": "Kiş hava limanı",
+    "lat": 26.5271748,
+    "lon": 53.9808536,
+    "cat": "aviation"
+  },
+  {
+    "name": "Ahmadi Hərbi Hava Sahəsi",
+    "lat": 29.0999426,
+    "lon": 51.0345903,
+    "cat": "military"
+  },
+  {
+    "name": "Darrahi Hava Sahəsi",
+    "lat": 29.3762699,
+    "lon": 51.0668992,
+    "cat": "military"
+  },
+  {
+    "name": "Gorreh Hava Sahəsi",
+    "lat": 29.9071552,
+    "lon": 50.4288686,
+    "cat": "military"
+  },
+  {
+    "name": "Hesa Hava Sahəsi",
+    "lat": 32.9290919,
+    "lon": 51.5573345,
+    "cat": "military"
+  },
+  {
+    "name": "Cask Hava Sahəsi",
+    "lat": 25.6535471,
+    "lon": 57.7986581,
+    "cat": "military"
+  },
+  {
+    "name": "Kushke Nosrat / Manzariyeh hava limanı",
+    "lat": 34.9825393,
+    "lon": 50.806197,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qəzəl Qəşl Ag Hərbi Hava Sahəsi",
+    "lat": 39.1108991,
+    "lon": 45.333599,
+    "cat": "military"
+  },
+  {
+    "name": "Konarak Dəniz Bazası",
+    "lat": 25.3008799,
+    "lon": 60.4333439,
+    "cat": "military"
+  },
+  {
+    "name": "Fordou uran zənginləşdirmə zavodu",
+    "lat": 34.884041,
+    "lon": 50.9988323,
+    "cat": "military"
+  },
+  {
+    "name": "Natanz nüvə obyekti",
+    "lat": 33.72438,
+    "lon": 51.7257725,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Underground SEPAH Base",
+    "lat": 33.5600082,
+    "lon": 50.1316032,
+    "cat": "military"
+  },
+  {
+    "name": "İsfahan Nüvə Tədqiqat Mərkəzi",
+    "lat": 32.5775062,
+    "lon": 51.826853,
+    "cat": "military"
+  },
+  {
+    "name": "Əbu Musa Dəniz Bazası",
+    "lat": 25.8732533,
+    "lon": 55.0111655,
+    "cat": "military"
+  },
+  {
+    "name": "Firuzabad hava limanı",
+    "lat": 35.5298825,
+    "lon": 51.5061568,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qale Morqi helikopter bazası",
+    "lat": 35.6489253,
+    "lon": 51.3736069,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Ənsar əl-Məhdi Protection Korpusu Base",
+    "lat": 34.8123198,
+    "lon": 46.4914943,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] General Provost of the İslam İnqilabı Keşikçiləri Korpusu Tehran",
+    "lat": 35.6643512,
+    "lon": 51.5246123,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Xatəm əl-Ənbiya Qarnizonu",
+    "lat": 32.6922165,
+    "lon": 51.433378,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 10th Hava Hücumundan Müdafiə Qrupu Məhərrəm",
+    "lat": 36.5119733,
+    "lon": 54.9514875,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 14th İmam Hüseyn Diviziyası",
+    "lat": 32.5222839,
+    "lon": 51.6773936,
+    "cat": "military"
+  },
+  {
+    "name": "Cəmaran Friqatı - IRIS Cəmaran (76)",
+    "lat": 25.2995028,
+    "lon": 60.4294542,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 21st Zirehli Briqadası Qarnizonu İmam Rza",
+    "lat": 36.2756379,
+    "lon": 58.7922939,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 21st Zirehli Briqadası İmam Rza",
+    "lat": 36.2758455,
+    "lon": 58.7949117,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 48th Fath Briqadası",
+    "lat": 30.3748453,
+    "lon": 51.1569093,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 60th Zirehli Briqadası Əmmar Yasir",
+    "lat": 37.2408369,
+    "lon": 55.1947899,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 61st Artilleriya Qrupu Məhərrəm",
+    "lat": 35.3801265,
+    "lon": 59.2539275,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 8th Zirehli Diviziyası 'Najaf Ashraf' Qarnizonu",
+    "lat": 32.6684072,
+    "lon": 51.3450108,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 8th Zirehli Diviziyası 'Najaf Ashraf'",
+    "lat": 32.6676485,
+    "lon": 51.3460408,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] ABDAKAN-E-YAZD / Atabegs of Yazd",
+    "lat": 32.3193216,
+    "lon": 53.8047749,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Al-Ghadir Briqadası",
+    "lat": 31.7812184,
+    "lon": 54.3645786,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Fasa Qərargahı",
+    "lat": 28.9873578,
+    "lon": 53.6258693,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Maybod SEPAH Base",
+    "lat": 32.2465605,
+    "lon": 53.8728519,
+    "cat": "military"
+  },
+  {
+    "name": "Iranian Bayandor-class corvette",
+    "lat": 25.2995028,
+    "lon": 60.4302381,
+    "cat": "military"
+  },
+  {
+    "name": "Iranian Bayandor-class corvette",
+    "lat": 25.2996871,
+    "lon": 60.4308444,
+    "cat": "military"
+  },
+  {
+    "name": "Islamic Revolutionary Court",
+    "lat": 35.7275984,
+    "lon": 51.4464879,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 14th Iman Hossein Diviziyası Qarnizonu",
+    "lat": 34.4005573,
+    "lon": 47.1723363,
+    "cat": "military"
+  },
+  {
+    "name": "Islamic Republic of Iran Police Qərargahı",
+    "lat": 35.7679791,
+    "lon": 51.4033834,
+    "cat": "military"
+  },
+  {
+    "name": "İsfahan Şimal Missile Mövqeyi",
+    "lat": 32.7100592,
+    "lon": 51.4195922,
+    "cat": "military"
+  },
+  {
+    "name": "Təbriz Şimal Missile Mövqeyi",
+    "lat": 38.2496037,
+    "lon": 46.1429183,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Təbriz SEPAH Qərargahı",
+    "lat": 38.0136045,
+    "lon": 46.3505825,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Vali Asr Qarnizonu",
+    "lat": 31.209024,
+    "lon": 52.5941942,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Qarnizonu - Bu Ali",
+    "lat": 34.9341982,
+    "lon": 48.5747742,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Qarnizonu - Karaj",
+    "lat": 35.8798793,
+    "lon": 50.9275355,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Khyber Agency Camp 17 Ali ibn Abi Talib",
+    "lat": 34.5043956,
+    "lon": 51.0092262,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Qarnizonu - Qush-e Kohneh",
+    "lat": 36.4852478,
+    "lon": 61.1105582,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Qarnizonu - Sadabad",
+    "lat": 36.7961723,
+    "lon": 54.3776127,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Qarnizonu - Səmnan Şimal Şərq",
+    "lat": 35.6441933,
+    "lon": 53.5819835,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Qarnizonu - Zanjan",
+    "lat": 36.751627,
+    "lon": 48.4356081,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Base - Chenel Dokhtar",
+    "lat": 36.7121635,
+    "lon": 55.3048638,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Zahar Komandanlığı",
+    "lat": 33.1176406,
+    "lon": 46.1732977,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Fajr Komandanlığı",
+    "lat": 31.2290714,
+    "lon": 48.7539343,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Nasr Komandanlığı",
+    "lat": 35.5210602,
+    "lon": 46.1752943,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Iman Ali Hərbi Base",
+    "lat": 35.7497185,
+    "lon": 51.1221561,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Iman Ali Academy",
+    "lat": 35.8192033,
+    "lon": 51.4190889,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Pazouki Qarnizonu",
+    "lat": 35.3400963,
+    "lon": 51.7913321,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Baadindeh Mərkəzi",
+    "lat": 35.0707868,
+    "lon": 51.786111,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Malek Ashtar Camp",
+    "lat": 34.0485341,
+    "lon": 49.8122118,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Səmnan Mərkəzi",
+    "lat": 35.2202175,
+    "lon": 53.8972643,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Lowshan Qarnizonu",
+    "lat": 36.6507549,
+    "lon": 49.5192319,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Abadan",
+    "lat": 30.3222905,
+    "lon": 48.2918208,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Qeshm Dəniz Bazası",
+    "lat": 26.7200341,
+    "lon": 55.9734107,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Mashad Mərkəzi",
+    "lat": 36.2135028,
+    "lon": 59.6019223,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Chamran Qarnizonu",
+    "lat": 35.3072573,
+    "lon": 51.7502828,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Shahriar Qarnizonu",
+    "lat": 35.6226997,
+    "lon": 50.8706218,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Bircənd Training Mərkəzi",
+    "lat": 32.8754663,
+    "lon": 59.0181489,
+    "cat": "military"
+  },
+  {
+    "name": "Quds Force - Bandar Mashar",
+    "lat": 30.5549986,
+    "lon": 49.1835786,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] SEPAHAF Əhvaz",
+    "lat": 31.3408504,
+    "lon": 48.7514403,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] SEPAHAF Buşehr",
+    "lat": 28.9354156,
+    "lon": 50.8417293,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] SEPAHAF Esfahan",
+    "lat": 32.622055,
+    "lon": 51.6829564,
+    "cat": "military"
+  },
+  {
+    "name": "Fath hava limanı",
+    "lat": 35.7156532,
+    "lon": 50.9336454,
+    "cat": "aviation"
+  },
+  {
+    "name": "[SEPAH] SEPAHAF Fath",
+    "lat": 35.7116366,
+    "lon": 50.9344164,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] SEPAHAF Məşhəd",
+    "lat": 36.2250891,
+    "lon": 59.6439012,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] SEPAHAF Nasr",
+    "lat": 33.8921305,
+    "lon": 51.577501,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] SEPAHAF Şiraz",
+    "lat": 29.534769,
+    "lon": 52.5823954,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] SEPAHAF Mehrabad",
+    "lat": 35.6845089,
+    "lon": 51.3195832,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Missile Force Qərargahı",
+    "lat": 35.7336137,
+    "lon": 51.2323603,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Borazjan Missile Mövqeyi / 26th Missile Qrupu 'Salman'",
+    "lat": 29.261207,
+    "lon": 51.2758503,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Bakhtaran Missile Base",
+    "lat": 34.394496,
+    "lon": 47.1961509,
+    "cat": "military"
+  },
+  {
+    "name": "Tohid Jam hava limanı",
+    "lat": 27.8206748,
+    "lon": 52.3514149,
+    "cat": "aviation"
+  },
+  {
+    "name": "[SEPAH] Dezful Missile Base",
+    "lat": 32.6092871,
+    "lon": 48.3276251,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Genu Mountain Missile Base",
+    "lat": 27.3895636,
+    "lon": 56.2678766,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Ali Iman / Xorrəmabad Missile Base",
+    "lat": 33.5615045,
+    "lon": 48.19549,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Xorrəmabad Missile Battery",
+    "lat": 33.488591,
+    "lon": 48.2868806,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Lar Missile Base",
+    "lat": 27.6410911,
+    "lon": 54.2559411,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Sajid Missile Base",
+    "lat": 35.5834459,
+    "lon": 50.8921222,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Təbriz Cənub Missile Mövqeyi",
+    "lat": 37.9754418,
+    "lon": 46.1770347,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Ya Madhi Underground Obyekti",
+    "lat": 36.1690007,
+    "lon": 50.4317981,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Bəndər Abbas Navy Base",
+    "lat": 27.1423238,
+    "lon": 56.1970436,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Buşehr limanı",
+    "lat": 28.9814111,
+    "lon": 50.8451384,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Bandar Mashar limanı",
+    "lat": 30.4918626,
+    "lon": 49.2045099,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Asaluyeh limanı",
+    "lat": 27.4739237,
+    "lon": 52.6021728,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Lengeh limanı",
+    "lat": 26.5073853,
+    "lon": 54.804718,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Farsi Island Dock",
+    "lat": 27.9914684,
+    "lon": 50.1742068,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Sirri Island Dock",
+    "lat": 25.894606,
+    "lon": 54.5517534,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Abu Masa Dock",
+    "lat": 25.8715623,
+    "lon": 55.0530637,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Larak Island Dock",
+    "lat": 26.8863047,
+    "lon": 56.3886935,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Tis Pier",
+    "lat": 25.3388707,
+    "lon": 60.6042452,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Bahl Pier",
+    "lat": 25.6778877,
+    "lon": 57.8514791,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Taladar Dock",
+    "lat": 25.4484326,
+    "lon": 58.9674537,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Kooh Mobarak",
+    "lat": 25.8296558,
+    "lon": 57.291762,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Bostano Dock",
+    "lat": 27.1322879,
+    "lon": 52.9903219,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Dayyer Dock",
+    "lat": 27.8285907,
+    "lon": 51.9235593,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Qeshm Pier",
+    "lat": 26.9478454,
+    "lon": 56.2830705,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Bandar Buşehr Dock",
+    "lat": 28.9199304,
+    "lon": 50.8074425,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Ameri limanı",
+    "lat": 28.5130968,
+    "lon": 51.0888315,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Qeshm Qərb",
+    "lat": 26.5397478,
+    "lon": 55.2933723,
+    "cat": "military"
+  },
+  {
+    "name": "Havadarya hava limanı",
+    "lat": 27.1585823,
+    "lon": 56.1700083,
+    "cat": "aviation"
+  },
+  {
+    "name": "[SEPAH] Sepah Navy Special Force",
+    "lat": 26.2945779,
+    "lon": 54.5350581,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 30th Infantry Diviziyası",
+    "lat": 36.8378893,
+    "lon": 54.4455422,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 30th Infantry Diviziyası Qərargahı",
+    "lat": 36.8380761,
+    "lon": 54.4449502,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 38th Independent Zirehli Briqadası",
+    "lat": 35.2392279,
+    "lon": 60.6098232,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 58th 'Zulfiqar' Komandanlığıo Diviziyası Operations Qərargahı",
+    "lat": 36.4130611,
+    "lon": 54.9915893,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 58th 'Zulfiqar' Komandanlığıo Diviziyası",
+    "lat": 36.412474,
+    "lon": 54.9907954,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 158th 'Şəhid Keshavarzian' Briqadası",
+    "lat": 36.4116796,
+    "lon": 54.9897787,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 258th 'Şəhid Pajuhandeh' Briqadası",
+    "lat": 36.4117314,
+    "lon": 54.9908731,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 38th Independent Zirehli Briqadası Qərargahı",
+    "lat": 35.2389932,
+    "lon": 60.6090368,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 77th Infantry Diviziyası Qarnizonu",
+    "lat": 36.1257071,
+    "lon": 59.702611,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 77th Infantry Diviziyası Qərargahı",
+    "lat": 36.2753771,
+    "lon": 59.5814651,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 77th Infantry Diviziyası",
+    "lat": 36.275554,
+    "lon": 59.5809232,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 177th Infantry Briqadası",
+    "lat": 35.3266115,
+    "lon": 59.1878868,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 277th Infantry Briqadası 'Şəhid Tavalaee'",
+    "lat": 37.1289739,
+    "lon": 58.4969611,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 377th Infantry Briqadası 'Şəhid Sarlashkar Parooz Hebroni'",
+    "lat": 36.1954054,
+    "lon": 59.607531,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] Şimalwest Regional Operations Qərargahı",
+    "lat": 38.041968,
+    "lon": 46.2759573,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 11th Artilleriya Qrupuing",
+    "lat": 37.3501166,
+    "lon": 46.1843836,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 11th Artilleriya Qrupuing Qarnizonu",
+    "lat": 37.3526392,
+    "lon": 46.1816536,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 16th Zirehli Diviziyası Qərargahı",
+    "lat": 36.0565463,
+    "lon": 50.4756452,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 16th Zirehli Diviziyası",
+    "lat": 36.0548115,
+    "lon": 50.4755593,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 116th Zirehli Briqadası",
+    "lat": 36.292336,
+    "lon": 50.0276146,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 216th Zirehli Briqadası",
+    "lat": 36.7000706,
+    "lon": 48.4867216,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 21st Infantry Diviziyası \"Hamzeh\" of Azarbaijan",
+    "lat": 38.0432125,
+    "lon": 46.261054,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 21st Infantry Diviziyası Base",
+    "lat": 38.0432801,
+    "lon": 46.2600241,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 121st 'Şəhid Faroozandeh' Komandanlığıo Briqadası",
+    "lat": 37.9406649,
+    "lon": 46.0252328,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 121st 'Şəhid Faroozandeh' Komandanlığıo Briqadası Base",
+    "lat": 37.9414688,
+    "lon": 46.0254045,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 221st 'Şəhid Khosrow Tash' Infantry Briqadası",
+    "lat": 37.3483549,
+    "lon": 46.1774273,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 221st Infantry Briqadası Base",
+    "lat": 37.3493955,
+    "lon": 46.1763759,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 321st Infantry Briqadası",
+    "lat": 38.4389322,
+    "lon": 45.7269266,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 321st Infantry Briqadası Qarnizonu",
+    "lat": 38.4388314,
+    "lon": 45.7261756,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 40th Independant Infantry Briqadası",
+    "lat": 37.9447399,
+    "lon": 47.6618855,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 40th Infantry Briqadası Qarnizonu",
+    "lat": 37.9436062,
+    "lon": 47.6609842,
+    "cat": "military"
+  },
+  {
+    "name": "25th Takavar Briqadası",
+    "lat": 36.8139188,
+    "lon": 45.2776485,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 28th Infantry Diviziyası",
+    "lat": 35.3370122,
+    "lon": 46.9811876,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 28th Infantry Diviziyası Qarnizonu",
+    "lat": 35.3370472,
+    "lon": 46.9806512,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 128th Infantry Briqadası",
+    "lat": 35.3365571,
+    "lon": 46.9810374,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 328th Infantry Briqadası",
+    "lat": 35.5330081,
+    "lon": 46.2022099,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 36th Zirehli Briqadası",
+    "lat": 37.4162902,
+    "lon": 47.7285243,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 41st Infantry Briqadası",
+    "lat": 37.9094727,
+    "lon": 44.9987459,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 64th Infantry Diviziyası",
+    "lat": 37.5986847,
+    "lon": 44.9703952,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 164th Infantry Briqadası",
+    "lat": 37.6466529,
+    "lon": 45.2077771,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 264th Infantry Briqadası",
+    "lat": 38.2034891,
+    "lon": 44.7825692,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 364th Infantry Briqadası",
+    "lat": 36.7517309,
+    "lon": 45.704159,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] Qərbern Operations Komandanlığı Qərargahı",
+    "lat": 34.335259,
+    "lon": 47.0979732,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 71st Mechanized Infantry Briqadası",
+    "lat": 34.3337285,
+    "lon": 45.9841614,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 81st Zirehli Diviziyası",
+    "lat": 34.3562875,
+    "lon": 47.3609326,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 181st Zirehli Battalion",
+    "lat": 34.1141928,
+    "lon": 46.4940458,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 281st Zirehli Battalion",
+    "lat": 34.3668113,
+    "lon": 47.4192432,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 316th Zirehli Briqadası",
+    "lat": 34.7819831,
+    "lon": 48.6481561,
+    "cat": "military"
+  },
+  {
+    "name": "35th Takavar Briqadası",
+    "lat": 34.3538124,
+    "lon": 47.1856081,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 88th Zirehli Diviziyası",
+    "lat": 29.4802492,
+    "lon": 60.8682272,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 28th Mechanized Diviziyası",
+    "lat": 29.7473439,
+    "lon": 57.2530828,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 55th Airborne Briqadası",
+    "lat": 29.5225558,
+    "lon": 52.5834984,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 37th Zirehli Briqadası",
+    "lat": 29.5116053,
+    "lon": 52.3535386,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 22nd Artilleriya Qrupu",
+    "lat": 31.9966195,
+    "lon": 51.765309,
+    "cat": "military"
+  },
+  {
+    "name": "Shahreza Ammo Depot",
+    "lat": 31.9830794,
+    "lon": 51.7666824,
+    "cat": "military"
+  },
+  {
+    "name": "15 Khordad kazarmaları",
+    "lat": 32.4523513,
+    "lon": 51.7518558,
+    "cat": "military"
+  },
+  {
+    "name": "45th Takavar Briqadası",
+    "lat": 32.0784668,
+    "lon": 48.8599302,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 72nd Mechanized Infantry Briqadası",
+    "lat": 32.5379573,
+    "lon": 48.3062566,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 92nd Zirehli Diviziyası",
+    "lat": 31.3429012,
+    "lon": 48.6502106,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 1st Infantry Diviziyası",
+    "lat": 35.7023132,
+    "lon": 51.464095,
+    "cat": "military"
+  },
+  {
+    "name": "23rd Takavar Diviziyası",
+    "lat": 35.5241252,
+    "lon": 51.0136104,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 2nd Infantry Diviziyası",
+    "lat": 35.7819439,
+    "lon": 51.5236321,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 33rd Artilleriya Qrupu",
+    "lat": 35.544654,
+    "lon": 50.9790182,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 65th Airborne Special Forces",
+    "lat": 35.0950844,
+    "lon": 51.0528282,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIA] 840th Missile Qrupu",
+    "lat": 34.1120576,
+    "lon": 51.4847703,
+    "cat": "military"
+  },
+  {
+    "name": "Abyek Hərbi Hava Bazası",
+    "lat": 36.0496909,
+    "lon": 50.4843138,
+    "cat": "aviation"
+  },
+  {
+    "name": "Buşehr Heliport",
+    "lat": 28.9115809,
+    "lon": 50.8575129,
+    "cat": "military"
+  },
+  {
+    "name": "Buşehr Army Base",
+    "lat": 28.9068877,
+    "lon": 50.8667333,
+    "cat": "military"
+  },
+  {
+    "name": "Islamic Republic of Iran Navy Qərargahı",
+    "lat": 35.7397902,
+    "lon": 51.4509482,
+    "cat": "military"
+  },
+  {
+    "name": "Bandar Ənzəli Navy Base",
+    "lat": 37.4696833,
+    "lon": 49.4645125,
+    "cat": "military"
+  },
+  {
+    "name": "Bandar-e Khomeini Navy Base",
+    "lat": 30.4210948,
+    "lon": 49.0810276,
+    "cat": "military"
+  },
+  {
+    "name": "Buşehr Navy Base",
+    "lat": 28.9654953,
+    "lon": 50.8659598,
+    "cat": "military"
+  },
+  {
+    "name": "Tunb Dock",
+    "lat": 26.2648569,
+    "lon": 55.3238543,
+    "cat": "military"
+  },
+  {
+    "name": "Greater Tunb hava limanı",
+    "lat": 26.2584106,
+    "lon": 55.3154169,
+    "cat": "aviation"
+  },
+  {
+    "name": "Cask Navy Base",
+    "lat": 25.6487058,
+    "lon": 57.7674465,
+    "cat": "military"
+  },
+  {
+    "name": "Khark Island Navy Base",
+    "lat": 29.2466243,
+    "lon": 50.3305528,
+    "cat": "military"
+  },
+  {
+    "name": "Khorramshahr Navy Base",
+    "lat": 30.4286534,
+    "lon": 48.1698047,
+    "cat": "military"
+  },
+  {
+    "name": "Lesser Tunb hava limanı",
+    "lat": 26.2433111,
+    "lon": 55.1455775,
+    "cat": "aviation"
+  },
+  {
+    "name": "Lesser Tunb limanı",
+    "lat": 26.2405316,
+    "lon": 55.1555685,
+    "cat": "military"
+  },
+  {
+    "name": "Sirri Navy Base",
+    "lat": 25.8957358,
+    "lon": 54.5375625,
+    "cat": "military"
+  },
+  {
+    "name": "Sirri hava limanı",
+    "lat": 25.9086073,
+    "lon": 54.5407839,
+    "cat": "aviation"
+  },
+  {
+    "name": "Pasabandar Navy Base",
+    "lat": 25.0704139,
+    "lon": 61.4188272,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Bəndər Abbas Dəniz Air Station",
+    "lat": 27.1567602,
+    "lon": 56.1761145,
+    "cat": "rail"
+  },
+  {
+    "name": "Buşehr Dəniz Transport Squadron",
+    "lat": 28.9124513,
+    "lon": 50.8551316,
+    "cat": "military"
+  },
+  {
+    "name": "Cask Dəniz Air Station",
+    "lat": 25.6512402,
+    "lon": 57.7877601,
+    "cat": "rail"
+  },
+  {
+    "name": "[IRIN] 1st Marine Briqadası İmam Hüseyn",
+    "lat": 27.1493449,
+    "lon": 56.2092152,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIN] 2nd Marine Briqadası",
+    "lat": 25.6434137,
+    "lon": 57.7681252,
+    "cat": "military"
+  },
+  {
+    "name": "[IRIN] 3rd Marine Briqadası",
+    "lat": 25.3290869,
+    "lon": 60.3698113,
+    "cat": "military"
+  },
+  {
+    "name": "IRIS Makran",
+    "lat": 27.1326591,
+    "lon": 56.2072074,
+    "cat": "military"
+  },
+  {
+    "name": "Bandar Lengeh hava limanı",
+    "lat": 26.5322198,
+    "lon": 54.8256191,
+    "cat": "aviation"
+  },
+  {
+    "name": "Bastak hava limanı",
+    "lat": 27.2125678,
+    "lon": 54.3186645,
+    "cat": "aviation"
+  },
+  {
+    "name": "Gachsaran hava limanı",
+    "lat": 30.3347773,
+    "lon": 50.8323333,
+    "cat": "aviation"
+  },
+  {
+    "name": "Kharg hava limanı",
+    "lat": 29.2600921,
+    "lon": 50.3227162,
+    "cat": "aviation"
+  },
+  {
+    "name": "Noshahr hava limanı",
+    "lat": 36.6636046,
+    "lon": 51.4650625,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qavzin hava limanı",
+    "lat": 36.2400534,
+    "lon": 50.0471425,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qom Airfield",
+    "lat": 34.58097,
+    "lon": 50.6605605,
+    "cat": "aviation"
+  },
+  {
+    "name": "Shahabad Highway Strip",
+    "lat": 34.0684414,
+    "lon": 46.5988034,
+    "cat": "military"
+  },
+  {
+    "name": "Yazd Şəhid Sadoughi hava limanı",
+    "lat": 31.9049319,
+    "lon": 54.2766288,
+    "cat": "aviation"
+  },
+  {
+    "name": "Asaluyeh Strip",
+    "lat": 27.4842075,
+    "lon": 52.6096328,
+    "cat": "military"
+  },
+  {
+    "name": "Bahregan hava limanı",
+    "lat": 29.8390617,
+    "lon": 50.2733094,
+    "cat": "aviation"
+  },
+  {
+    "name": "Bam hava limanı",
+    "lat": 29.0837628,
+    "lon": 58.4509953,
+    "cat": "aviation"
+  },
+  {
+    "name": "Behbehan hava limanı Şimalwest",
+    "lat": 30.7345715,
+    "lon": 50.1109745,
+    "cat": "aviation"
+  },
+  {
+    "name": "Darab hava limanı",
+    "lat": 28.7209526,
+    "lon": 54.4446992,
+    "cat": "aviation"
+  },
+  {
+    "name": "Fasa hava limanı",
+    "lat": 28.8924384,
+    "lon": 53.7227775,
+    "cat": "aviation"
+  },
+  {
+    "name": "Garmcar SW hava limanı",
+    "lat": 35.1743383,
+    "lon": 52.3228231,
+    "cat": "aviation"
+  },
+  {
+    "name": "Gharpuz Abad hava limanı",
+    "lat": 35.9521485,
+    "lon": 50.4509113,
+    "cat": "aviation"
+  },
+  {
+    "name": "Iranshahr hava limanı",
+    "lat": 27.2357028,
+    "lon": 60.7199905,
+    "cat": "aviation"
+  },
+  {
+    "name": "Jahrom hava limanı",
+    "lat": 28.5872354,
+    "lon": 53.5836009,
+    "cat": "aviation"
+  },
+  {
+    "name": "Kalaleh hava limanı",
+    "lat": 37.3831915,
+    "lon": 55.4522094,
+    "cat": "aviation"
+  },
+  {
+    "name": "Lamerd hava limanı",
+    "lat": 27.3716121,
+    "lon": 53.1924449,
+    "cat": "aviation"
+  },
+  {
+    "name": "Larestan hava limanı",
+    "lat": 27.6728556,
+    "lon": 54.3822273,
+    "cat": "aviation"
+  },
+  {
+    "name": "Lavan hava limanı",
+    "lat": 26.811607,
+    "lon": 53.3527087,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qeshm hava limanı",
+    "lat": 26.7539021,
+    "lon": 55.9012206,
+    "cat": "aviation"
+  },
+  {
+    "name": "Rafsanjan hava limanı",
+    "lat": 30.2989613,
+    "lon": 56.0479631,
+    "cat": "aviation"
+  },
+  {
+    "name": "Sabzevar hava limanı",
+    "lat": 36.1680554,
+    "lon": 57.5960502,
+    "cat": "aviation"
+  },
+  {
+    "name": "Jiroft hava limanı",
+    "lat": 28.72487,
+    "lon": 57.6735441,
+    "cat": "aviation"
+  },
+  {
+    "name": "Tehran Qərb Police Komandanlığı Qərargahı",
+    "lat": 35.6329754,
+    "lon": 51.0602205,
+    "cat": "military"
+  },
+  {
+    "name": "Sənəndəc Police Komandanlığı Qərargahı",
+    "lat": 35.2889314,
+    "lon": 47.0075808,
+    "cat": "military"
+  },
+  {
+    "name": "Sənəndəc Police Sərhəd Mühafizəsi Qərargahı",
+    "lat": 35.2532952,
+    "lon": 47.0153985,
+    "cat": "post"
+  },
+  {
+    "name": "Choqa Balk-e Alireza Drone Base",
+    "lat": 34.3213964,
+    "lon": 46.7662373,
+    "cat": "military"
+  },
+  {
+    "name": "Choghadak Drone Base",
+    "lat": 28.9792875,
+    "lon": 50.9896975,
+    "cat": "military"
+  },
+  {
+    "name": "Gonabad hava limanı",
+    "lat": 34.4212802,
+    "lon": 58.703672,
+    "cat": "aviation"
+  },
+  {
+    "name": "Jakigor Airfield",
+    "lat": 26.143609,
+    "lon": 61.5181838,
+    "cat": "aviation"
+  },
+  {
+    "name": "Minab uçuş-eniş zolağı",
+    "lat": 27.1009692,
+    "lon": 57.0838735,
+    "cat": "aviation"
+  },
+  {
+    "name": "Qeshm Drone Hərbi Hava Bazası",
+    "lat": 26.7057288,
+    "lon": 55.9557568,
+    "cat": "aviation"
+  },
+  {
+    "name": "Şiraz Cənub Missile Base",
+    "lat": 29.4592404,
+    "lon": 52.49103,
+    "cat": "military"
+  },
+  {
+    "name": "Hajiabad Missile Mövqeyi",
+    "lat": 28.3288356,
+    "lon": 55.9423057,
+    "cat": "military"
+  },
+  {
+    "name": "Kaşan Missile Mövqeyi",
+    "lat": 34.092853,
+    "lon": 51.2563475,
+    "cat": "military"
+  },
+  {
+    "name": "Kirman Missile Mövqeyi",
+    "lat": 30.2387698,
+    "lon": 56.8517988,
+    "cat": "military"
+  },
+  {
+    "name": "Panj Pellah / Kirmanshah Şərq Missile Mövqeyi",
+    "lat": 34.368501,
+    "lon": 47.2365517,
+    "cat": "military"
+  },
+  {
+    "name": "Kirmanshah NE Missile Base",
+    "lat": 34.5296102,
+    "lon": 47.3557756,
+    "cat": "military"
+  },
+  {
+    "name": "Kirmanshah NW Missile Base",
+    "lat": 34.4349535,
+    "lon": 47.1910833,
+    "cat": "military"
+  },
+  {
+    "name": "Qom Missile Mövqeyi",
+    "lat": 34.9438044,
+    "lon": 50.7595291,
+    "cat": "military"
+  },
+  {
+    "name": "Yazd Missile Mövqeyi",
+    "lat": 31.8033871,
+    "lon": 54.2992618,
+    "cat": "military"
+  },
+  {
+    "name": "Sarakhs hava limanı",
+    "lat": 36.5003199,
+    "lon": 61.0659436,
+    "cat": "aviation"
+  },
+  {
+    "name": "IRIB Qərargahı",
+    "lat": 35.7863178,
+    "lon": 51.4088865,
+    "cat": "military"
+  },
+  {
+    "name": "Secretariat of the Expediency Discernment Council",
+    "lat": 35.7626763,
+    "lon": 51.4284902,
+    "cat": "military"
+  },
+  {
+    "name": "Bagh-e Feiz Police Station No. 140",
+    "lat": 35.7518951,
+    "lon": 51.3294465,
+    "cat": "rail"
+  },
+  {
+    "name": "Assembly of Experts Secretariate",
+    "lat": 34.6253612,
+    "lon": 50.8763696,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Sarallah Qərargahı",
+    "lat": 35.7782585,
+    "lon": 51.3982208,
+    "cat": "military"
+  },
+  {
+    "name": "Police Qərargahı Elam",
+    "lat": 33.6315639,
+    "lon": 46.3939569,
+    "cat": "military"
+  },
+  {
+    "name": "Al-Mehdi kazarmaları",
+    "lat": 37.6478678,
+    "lon": 45.1962559,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station No.22 / Cyber Police FATA",
+    "lat": 34.3454439,
+    "lon": 47.0930926,
+    "cat": "rail"
+  },
+  {
+    "name": "IRIS 'Dena' Moudge Class Friqatı",
+    "lat": 6.0076244,
+    "lon": 79.8659967,
+    "cat": "military"
+  },
+  {
+    "name": "Khojir Complex - Şəhid Cheragi Industries",
+    "lat": 35.6865686,
+    "lon": 51.6384122,
+    "cat": "military"
+  },
+  {
+    "name": "Faraja Preventive Police Komandanlığı",
+    "lat": 35.6994958,
+    "lon": 51.3916816,
+    "cat": "military"
+  },
+  {
+    "name": "Khordad 15 SEPAH Qərargahı Baneh",
+    "lat": 35.9934485,
+    "lon": 45.886392,
+    "cat": "military"
+  },
+  {
+    "name": "IRIS 'Şəhid Sayyad Şirazi' Soleimani-class corvette",
+    "lat": 27.1073476,
+    "lon": 56.2674825,
+    "cat": "military"
+  },
+  {
+    "name": "Kiş limanı",
+    "lat": 26.5689641,
+    "lon": 54.0044051,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station No.153",
+    "lat": 35.6497421,
+    "lon": 51.3441599,
+    "cat": "rail"
+  },
+  {
+    "name": "Intelligence Ministry Tehran",
+    "lat": 35.753945,
+    "lon": 51.4577128,
+    "cat": "military"
+  },
+  {
+    "name": "Konarak Drone Base",
+    "lat": 25.3317485,
+    "lon": 60.3562671,
+    "cat": "military"
+  },
+  {
+    "name": "NAJA Logistics and Support Base",
+    "lat": 35.7400783,
+    "lon": 51.1450526,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station No.121 Tehran",
+    "lat": 35.6767135,
+    "lon": 51.4767642,
+    "cat": "rail"
+  },
+  {
+    "name": "Minzadehei Nuclear Weapons Development Compound",
+    "lat": 35.7946296,
+    "lon": 51.5540258,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station No.25 Sənəndəc",
+    "lat": 35.3288717,
+    "lon": 46.9903889,
+    "cat": "rail"
+  },
+  {
+    "name": "Bukan Governors Office",
+    "lat": 36.5146369,
+    "lon": 46.2086887,
+    "cat": "military"
+  },
+  {
+    "name": "Sarableh Police Station",
+    "lat": 33.768673,
+    "lon": 46.5612186,
+    "cat": "rail"
+  },
+  {
+    "name": "Police Station No.14 Baharan",
+    "lat": 35.2646397,
+    "lon": 46.998722,
+    "cat": "rail"
+  },
+  {
+    "name": "Police Station No. 138",
+    "lat": 35.7654121,
+    "lon": 51.3119744,
+    "cat": "rail"
+  },
+  {
+    "name": "Moshirie Police Station",
+    "lat": 35.6162481,
+    "lon": 51.4929257,
+    "cat": "rail"
+  },
+  {
+    "name": "Eyvan Police Station",
+    "lat": 33.8326377,
+    "lon": 46.2994639,
+    "cat": "rail"
+  },
+  {
+    "name": "Urmiya Sərhəd Alayı Qərargahı",
+    "lat": 37.504393,
+    "lon": 45.0083889,
+    "cat": "post"
+  },
+  {
+    "name": "Alvand Class Friqatı",
+    "lat": 27.1436521,
+    "lon": 56.2094256,
+    "cat": "military"
+  },
+  {
+    "name": "Alvand Class Friqatı",
+    "lat": 27.1438525,
+    "lon": 56.2101444,
+    "cat": "military"
+  },
+  {
+    "name": "Unknown Ship",
+    "lat": 27.1445841,
+    "lon": 56.2116755,
+    "cat": "military"
+  },
+  {
+    "name": "Paveh Police Station",
+    "lat": 35.0491564,
+    "lon": 46.3529322,
+    "cat": "rail"
+  },
+  {
+    "name": "Fifth Intelligence Police Base",
+    "lat": 35.7067895,
+    "lon": 51.3602662,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Base",
+    "lat": 35.7222661,
+    "lon": 51.0286193,
+    "cat": "military"
+  },
+  {
+    "name": "HESA Aircraft Manufacturing Company Plant",
+    "lat": 32.9098023,
+    "lon": 51.5513807,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station Marivan",
+    "lat": 35.5235622,
+    "lon": 46.1675036,
+    "cat": "rail"
+  },
+  {
+    "name": "Radar - Karaj",
+    "lat": 35.7921574,
+    "lon": 51.0854079,
+    "cat": "military"
+  },
+  {
+    "name": "IRIN 3rd Navy Base Qərargahı",
+    "lat": 30.55545,
+    "lon": 49.1830668,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station Salas Babajani",
+    "lat": 34.7363303,
+    "lon": 46.1561996,
+    "cat": "rail"
+  },
+  {
+    "name": "SEPAH Qərargahı Fardis",
+    "lat": 35.7256643,
+    "lon": 50.9752061,
+    "cat": "military"
+  },
+  {
+    "name": "Police Court Sa'di Town",
+    "lat": 35.3012181,
+    "lon": 46.9904288,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station Khorromabad",
+    "lat": 33.4961096,
+    "lon": 48.3521299,
+    "cat": "rail"
+  },
+  {
+    "name": "Radar - Kiş Island #1",
+    "lat": 26.50243,
+    "lon": 53.95394,
+    "cat": "military"
+  },
+  {
+    "name": "Radar - Kiş Island #2",
+    "lat": 26.5335915,
+    "lon": 53.9898182,
+    "cat": "military"
+  },
+  {
+    "name": "Radar - Elam",
+    "lat": 33.52463,
+    "lon": 46.32573,
+    "cat": "military"
+  },
+  {
+    "name": "Radar - Lipar",
+    "lat": 25.2568473,
+    "lon": 60.861166,
+    "cat": "military"
+  },
+  {
+    "name": "Radar - Bəndər Abbas",
+    "lat": 27.1706269,
+    "lon": 56.1960588,
+    "cat": "military"
+  },
+  {
+    "name": "Khondab Enrichment Obyekti",
+    "lat": 34.4346568,
+    "lon": 49.1801739,
+    "cat": "military"
+  },
+  {
+    "name": "Radar - Dezful",
+    "lat": 32.1472336,
+    "lon": 47.7017269,
+    "cat": "military"
+  },
+  {
+    "name": "Hava Hücumundan Müdafiə Mövqeyi Abadan",
+    "lat": 30.3567503,
+    "lon": 48.26014,
+    "cat": "military"
+  },
+  {
+    "name": "57th Hazrat Abolfazl Briqadası kazarmaları",
+    "lat": 33.4154861,
+    "lon": 48.28581,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Base Minab",
+    "lat": 27.1082651,
+    "lon": 57.0846487,
+    "cat": "military"
+  },
+  {
+    "name": "Valiasr kazarmaları",
+    "lat": 35.7098423,
+    "lon": 51.4412678,
+    "cat": "military"
+  },
+  {
+    "name": "Hengam Class Landing Ship 'IRIS Larak'",
+    "lat": 27.1450102,
+    "lon": 56.2121147,
+    "cat": "military"
+  },
+  {
+    "name": "Dolphin Class Floating Drydock",
+    "lat": 27.1452341,
+    "lon": 56.2121096,
+    "cat": "military"
+  },
+  {
+    "name": "Shapur Alireza Palace",
+    "lat": 35.6879351,
+    "lon": 51.3996071,
+    "cat": "military"
+  },
+  {
+    "name": "Guardian Council",
+    "lat": 35.6888632,
+    "lon": 51.4002482,
+    "cat": "military"
+  },
+  {
+    "name": "Parchin Weapons Complex",
+    "lat": 35.5204879,
+    "lon": 51.7786691,
+    "cat": "military"
+  },
+  {
+    "name": "Hava Hücumundan Müdafiə Mövqeyi Shahrud",
+    "lat": 36.1785934,
+    "lon": 55.3468648,
+    "cat": "military"
+  },
+  {
+    "name": "Law Enforcement Komandanlığı and Criminal Investigation Department Urmiya",
+    "lat": 37.5504348,
+    "lon": 45.0580665,
+    "cat": "military"
+  },
+  {
+    "name": "Intelligence and Security Organization Şiraz",
+    "lat": 29.6223326,
+    "lon": 52.5335026,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Base Paveh",
+    "lat": 35.0176859,
+    "lon": 46.3773139,
+    "cat": "military"
+  },
+  {
+    "name": "Şiraz Qərb Missile Mövqeyi",
+    "lat": 29.5710328,
+    "lon": 52.3709656,
+    "cat": "military"
+  },
+  {
+    "name": "Hava Hücumundan Müdafiə Mövqeyi Tehran",
+    "lat": 35.5678623,
+    "lon": 51.5444792,
+    "cat": "military"
+  },
+  {
+    "name": "Raja Shimi Industries",
+    "lat": 35.6502462,
+    "lon": 50.8707704,
+    "cat": "military"
+  },
+  {
+    "name": "Ghazanfar Roknabadi Industries / Şəhid Borujerdi Logistic Support / SEPAH Aerospace Science and Technology Complex Qərargahı",
+    "lat": 35.6987611,
+    "lon": 51.2173159,
+    "cat": "military"
+  },
+  {
+    "name": "INIS Şəhid Bagheri Drone Carrier",
+    "lat": 27.034577,
+    "lon": 56.0758223,
+    "cat": "military"
+  },
+  {
+    "name": "Police Komandanlığı and Relief Qərargahı - Sənəndəc",
+    "lat": 35.3098959,
+    "lon": 47.0130934,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Pakdasht Basij Resistance Area",
+    "lat": 35.4818912,
+    "lon": 51.6674952,
+    "cat": "military"
+  },
+  {
+    "name": "Law Enforcement Komandanlığı Eslamshahr",
+    "lat": 35.5447674,
+    "lon": 51.2203445,
+    "cat": "military"
+  },
+  {
+    "name": "Province Police Komandanlığı Mərkəzi and Cyber Police Həmədan",
+    "lat": 34.8250991,
+    "lon": 48.5284414,
+    "cat": "military"
+  },
+  {
+    "name": "Police Komandanlığı Qərargahı Kirmanshah",
+    "lat": 34.5012485,
+    "lon": 47.9649742,
+    "cat": "military"
+  },
+  {
+    "name": "Sərhəd Mühafizəsi Komandanlığı Dehloran",
+    "lat": 32.7027969,
+    "lon": 47.2557868,
+    "cat": "post"
+  },
+  {
+    "name": "Shahran Oil Depot",
+    "lat": 35.7810288,
+    "lon": 51.2982991,
+    "cat": "military"
+  },
+  {
+    "name": "Aqdasieh Oil Depot",
+    "lat": 35.7907082,
+    "lon": 51.5392005,
+    "cat": "military"
+  },
+  {
+    "name": "Shahroud Missile Plant",
+    "lat": 36.2333661,
+    "lon": 55.280589,
+    "cat": "military"
+  },
+  {
+    "name": "Tehran Oil Refinery",
+    "lat": 35.5388543,
+    "lon": 51.4235823,
+    "cat": "military"
+  },
+  {
+    "name": "Hava Hücumundan Müdafiə Mövqeyi Kaşan",
+    "lat": 34.2052444,
+    "lon": 51.4305312,
+    "cat": "military"
+  },
+  {
+    "name": "Hava Hücumundan Müdafiə Mövqeyi Kharg Island",
+    "lat": 29.2540884,
+    "lon": 50.3052466,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station Shahin Shahr",
+    "lat": 32.8451921,
+    "lon": 51.5650181,
+    "cat": "rail"
+  },
+  {
+    "name": "SEPAH Ramadan Qərargahı Marivan",
+    "lat": 35.5200127,
+    "lon": 46.1693043,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station Aleshtar",
+    "lat": 33.8626588,
+    "lon": 48.2666876,
+    "cat": "rail"
+  },
+  {
+    "name": "Law Enforcement Komandanlığı Kuhdasht",
+    "lat": 33.524589,
+    "lon": 47.5902455,
+    "cat": "military"
+  },
+  {
+    "name": "Police Komandanlığı Eslamabad-e Gharb",
+    "lat": 34.1109662,
+    "lon": 46.5247989,
+    "cat": "military"
+  },
+  {
+    "name": "Intelligence and National Security Office Darreh Shahr",
+    "lat": 33.1444531,
+    "lon": 47.380298,
+    "cat": "military"
+  },
+  {
+    "name": "Police Komandanlığı Abadan",
+    "lat": 32.993564,
+    "lon": 47.4354283,
+    "cat": "military"
+  },
+  {
+    "name": "Əhvaz Drone Base",
+    "lat": 31.5728578,
+    "lon": 48.6713396,
+    "cat": "military"
+  },
+  {
+    "name": "Şəhid Soleimani Class Corvette",
+    "lat": 26.550101,
+    "lon": 54.9350078,
+    "cat": "military"
+  },
+  {
+    "name": "Seyyed al-Shohada Intelligence Protection Qərargahı and Basij Mərkəzi",
+    "lat": 32.6452321,
+    "lon": 51.6707652,
+    "cat": "military"
+  },
+  {
+    "name": "Sahab Pardaz Company",
+    "lat": 35.7355871,
+    "lon": 51.4403099,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Sahib al-Zaman Qərargahı",
+    "lat": 32.6059178,
+    "lon": 51.6473774,
+    "cat": "military"
+  },
+  {
+    "name": "Police Patrol Qərargahı Qərb Tehran",
+    "lat": 35.7000229,
+    "lon": 51.3255969,
+    "cat": "military"
+  },
+  {
+    "name": "Khormoj Missile Mövqeyi",
+    "lat": 28.6754666,
+    "lon": 51.4482785,
+    "cat": "military"
+  },
+  {
+    "name": "Hava Hücumundan Müdafiə Mövqeyi Eslamshahr",
+    "lat": 35.4554351,
+    "lon": 51.27802,
+    "cat": "military"
+  },
+  {
+    "name": "Hamedan Fath-14 Radar",
+    "lat": 35.2030766,
+    "lon": 48.6519365,
+    "cat": "military"
+  },
+  {
+    "name": "Shimi Azar Jam Chemicals Plant",
+    "lat": 34.7994289,
+    "lon": 50.834137,
+    "cat": "military"
+  },
+  {
+    "name": "Qom Directorate of Intelligence",
+    "lat": 34.6164481,
+    "lon": 50.8546778,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Iman Hossein Universiteti",
+    "lat": 35.7528886,
+    "lon": 51.5876334,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station No.133",
+    "lat": 35.7324791,
+    "lon": 51.288698,
+    "cat": "rail"
+  },
+  {
+    "name": "Law Enforcement Komandanlığı Qərargahı / Police Station No.15",
+    "lat": 33.8987635,
+    "lon": 48.7478906,
+    "cat": "rail"
+  },
+  {
+    "name": "Traffic Police Station No.8 Tehran",
+    "lat": 35.7322274,
+    "lon": 51.5178029,
+    "cat": "rail"
+  },
+  {
+    "name": "Police Station Bonab",
+    "lat": 37.3710037,
+    "lon": 46.0510081,
+    "cat": "rail"
+  },
+  {
+    "name": "SEPAH Qərargahı Sondor",
+    "lat": 34.7743951,
+    "lon": 47.5965197,
+    "cat": "military"
+  },
+  {
+    "name": "Ghadir-Class Submarine",
+    "lat": 27.1408912,
+    "lon": 56.2114546,
+    "cat": "military"
+  },
+  {
+    "name": "IRIB Kurdistan Radio and Television",
+    "lat": 35.298572,
+    "lon": 47.0006285,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Mərkəzi Sahnej",
+    "lat": 34.4834566,
+    "lon": 47.6682948,
+    "cat": "military"
+  },
+  {
+    "name": "Central Police Station Sahnej",
+    "lat": 34.4822029,
+    "lon": 47.6741182,
+    "cat": "rail"
+  },
+  {
+    "name": "Hakimabad Qarnizonu",
+    "lat": 35.437707,
+    "lon": 51.2253065,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Mərkəzi Khorromabad",
+    "lat": 33.4817468,
+    "lon": 48.3542929,
+    "cat": "military"
+  },
+  {
+    "name": "Law Enforcement Komandanlığı Khorromabad",
+    "lat": 33.515709,
+    "lon": 48.3651837,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 33rd Al-Mahdi Diviziyası Qarnizonu",
+    "lat": 28.5088178,
+    "lon": 53.6467515,
+    "cat": "military"
+  },
+  {
+    "name": "Radar Mövqeyi Marivan",
+    "lat": 35.4957373,
+    "lon": 46.1758789,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station Saqqez",
+    "lat": 36.2366173,
+    "lon": 46.2798574,
+    "cat": "rail"
+  },
+  {
+    "name": "Basij Amir al-Momenin Resistance Base",
+    "lat": 35.6780967,
+    "lon": 51.0478328,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Base Varamin",
+    "lat": 35.3397165,
+    "lon": 51.6332398,
+    "cat": "military"
+  },
+  {
+    "name": "Saravan hava limanı",
+    "lat": 27.4154101,
+    "lon": 62.3204099,
+    "cat": "aviation"
+  },
+  {
+    "name": "Police Station No.135",
+    "lat": 35.652421,
+    "lon": 51.4503675,
+    "cat": "rail"
+  },
+  {
+    "name": "SEPAH Base Kuhdasht",
+    "lat": 33.527166,
+    "lon": 47.6236774,
+    "cat": "military"
+  },
+  {
+    "name": "Police Komandanlığı Mərkəzi Shahriar",
+    "lat": 35.6536984,
+    "lon": 51.0677837,
+    "cat": "military"
+  },
+  {
+    "name": "56th Hazrat Younis Artilleriya Qrupu Base",
+    "lat": 29.2924136,
+    "lon": 53.1605852,
+    "cat": "military"
+  },
+  {
+    "name": "Intelligence Komandanlığı Mərkəzi of the Khuzestan Police Əhvaz",
+    "lat": 31.3770011,
+    "lon": 48.6170268,
+    "cat": "military"
+  },
+  {
+    "name": "Beshahr Radome",
+    "lat": 36.6848317,
+    "lon": 53.52809,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Nayband Navy Base and Underground Sea Tunnels",
+    "lat": 27.3504742,
+    "lon": 52.6237781,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station No. 108 Tehran",
+    "lat": 35.7009784,
+    "lon": 51.3763584,
+    "cat": "rail"
+  },
+  {
+    "name": "Iranian Space Research Mərkəzi",
+    "lat": 35.711916,
+    "lon": 51.3462932,
+    "cat": "military"
+  },
+  {
+    "name": "Piston Iran Factory Təbriz",
+    "lat": 38.0634217,
+    "lon": 46.2135814,
+    "cat": "military"
+  },
+  {
+    "name": "Şəhid Athari-Nejad kazarmaları?",
+    "lat": 29.5136236,
+    "lon": 52.598385,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station No. 148 Tehran",
+    "lat": 35.7007382,
+    "lon": 51.4021196,
+    "cat": "rail"
+  },
+  {
+    "name": "[SEPAH] Base Qasr-e Shirin",
+    "lat": 34.520576,
+    "lon": 45.5778278,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Qərargahı Sarpol-e Zahab",
+    "lat": 34.4533066,
+    "lon": 45.874727,
+    "cat": "military"
+  },
+  {
+    "name": "Intelligence Bureau Sarpol‑e‑Zahab",
+    "lat": 34.4585213,
+    "lon": 45.8696574,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Sepah Militia Camp Hamedan",
+    "lat": 34.7657984,
+    "lon": 48.4939469,
+    "cat": "military"
+  },
+  {
+    "name": "Police Qərargahı and Cyber Police Hamedan",
+    "lat": 34.8108767,
+    "lon": 48.5125316,
+    "cat": "military"
+  },
+  {
+    "name": "Hamedan hava limanı",
+    "lat": 34.8662319,
+    "lon": 48.5585442,
+    "cat": "aviation"
+  },
+  {
+    "name": "Fars Province Police Komandanlığı Şiraz",
+    "lat": 29.6306039,
+    "lon": 52.5438366,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Mərkəzi Tehran",
+    "lat": 35.6902763,
+    "lon": 51.4509539,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station No. 123 Tehran",
+    "lat": 35.81173,
+    "lon": 51.4610612,
+    "cat": "rail"
+  },
+  {
+    "name": "Department of Cultural and Social Affairs Martyr Foundation and Veterans Affairs",
+    "lat": 35.7081001,
+    "lon": 51.4275859,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 5th Dəniz Region Qərargahı",
+    "lat": 26.5248791,
+    "lon": 54.8058011,
+    "cat": "military"
+  },
+  {
+    "name": "Bircənd Drone Base",
+    "lat": 32.8648949,
+    "lon": 59.0279931,
+    "cat": "military"
+  },
+  {
+    "name": "Buşehr Radomes",
+    "lat": 28.8766696,
+    "lon": 50.8526812,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Dəniz Ammunition Komandanlığı Qərargahı Malusjan",
+    "lat": 29.9060966,
+    "lon": 52.3880137,
+    "cat": "military"
+  },
+  {
+    "name": "Hava Hücumundan Müdafiə Mövqeyi Kahrizak",
+    "lat": 35.5149655,
+    "lon": 51.375563,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Storage Shurabad",
+    "lat": 35.413218,
+    "lon": 51.3793661,
+    "cat": "military"
+  },
+  {
+    "name": "Zulfiqar kazarmaları",
+    "lat": 35.7273475,
+    "lon": 51.2601206,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Aerospace Manufacturing Industries",
+    "lat": 35.7301959,
+    "lon": 51.5992246,
+    "cat": "military"
+  },
+  {
+    "name": "Law Enforcement Komandanlığı of Robat Karim County",
+    "lat": 35.4789217,
+    "lon": 51.0817794,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Obyekti Robat Karim",
+    "lat": 35.4868632,
+    "lon": 51.0964938,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Qərargahı Salehi",
+    "lat": 35.7778827,
+    "lon": 51.3143641,
+    "cat": "military"
+  },
+  {
+    "name": "Cənub Pars Oil and Gas Complex",
+    "lat": 27.5138374,
+    "lon": 52.600325,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Elam kazarmaları",
+    "lat": 33.6387037,
+    "lon": 46.3289233,
+    "cat": "military"
+  },
+  {
+    "name": "Larestan Justice Mərkəzi",
+    "lat": 27.6520524,
+    "lon": 54.299808,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Hemmat Ravansar kazarmaları",
+    "lat": 34.6992137,
+    "lon": 46.6518105,
+    "cat": "military"
+  },
+  {
+    "name": "Police Qərargahı Elam",
+    "lat": 33.631703,
+    "lon": 46.400499,
+    "cat": "military"
+  },
+  {
+    "name": "Azadegan Telecom Mərkəzi",
+    "lat": 33.6355239,
+    "lon": 46.3926718,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Base Elam",
+    "lat": 33.616721,
+    "lon": 46.4068994,
+    "cat": "military"
+  },
+  {
+    "name": "Provincial Police Qərargahı Qom",
+    "lat": 34.6848926,
+    "lon": 50.9035896,
+    "cat": "military"
+  },
+  {
+    "name": "IRIS Kordestan",
+    "lat": 27.1034287,
+    "lon": 56.1927383,
+    "cat": "military"
+  },
+  {
+    "name": "IRIS Şəhid Mahdavi",
+    "lat": 27.0640252,
+    "lon": 56.5410883,
+    "cat": "military"
+  },
+  {
+    "name": "MV Behshad / Mensar C2 SIGINT Vessel",
+    "lat": 27.0873652,
+    "lon": 56.2116483,
+    "cat": "military"
+  },
+  {
+    "name": "IRIS Şəhid Roudaki Forward Base",
+    "lat": 27.1045865,
+    "lon": 56.1891767,
+    "cat": "military"
+  },
+  {
+    "name": "Police Qərargahı Javanrud",
+    "lat": 34.8000139,
+    "lon": 46.4932893,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Base Tehran",
+    "lat": 35.7353603,
+    "lon": 51.3460847,
+    "cat": "military"
+  },
+  {
+    "name": "Kahestak Coastal Missile Battery",
+    "lat": 26.7363888,
+    "lon": 57.0757497,
+    "cat": "military"
+  },
+  {
+    "name": "Basij Base Səmnan",
+    "lat": 35.5952473,
+    "lon": 53.3944776,
+    "cat": "military"
+  },
+  {
+    "name": "Tahroui limanı",
+    "lat": 26.5630247,
+    "lon": 57.0795493,
+    "cat": "military"
+  },
+  {
+    "name": "Karaj Surface-to-Surface Missile Plant",
+    "lat": 35.7462851,
+    "lon": 51.026547,
+    "cat": "military"
+  },
+  {
+    "name": "Law Enforcement Komandanlığı Marivan",
+    "lat": 35.5179958,
+    "lon": 46.1710284,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Obyekti Marivan",
+    "lat": 35.5177985,
+    "lon": 46.1771233,
+    "cat": "military"
+  },
+  {
+    "name": "Army Base Marivan",
+    "lat": 35.5012591,
+    "lon": 46.1999196,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Base Divandarreh",
+    "lat": 35.9167732,
+    "lon": 47.0215315,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH or Basij Base",
+    "lat": 35.9092727,
+    "lon": 47.0307626,
+    "cat": "military"
+  },
+  {
+    "name": "Qum uçuş-eniş zolağı",
+    "lat": 34.764084,
+    "lon": 50.9116838,
+    "cat": "aviation"
+  },
+  {
+    "name": "[SEPAH] Hanzala kazarmaları",
+    "lat": 36.2222006,
+    "lon": 46.2984007,
+    "cat": "military"
+  },
+  {
+    "name": "Police Qərargahı Makelan",
+    "lat": 37.1365176,
+    "lon": 46.1039539,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Base Makelan",
+    "lat": 37.159608,
+    "lon": 46.0990923,
+    "cat": "military"
+  },
+  {
+    "name": "Qom Turbine Engine Production Plant",
+    "lat": 34.7954666,
+    "lon": 50.8038259,
+    "cat": "military"
+  },
+  {
+    "name": "Advanced Fiber Development Company",
+    "lat": 36.1277682,
+    "lon": 50.0142124,
+    "cat": "military"
+  },
+  {
+    "name": "IRIS Hamzeh Corvette",
+    "lat": 37.4685273,
+    "lon": 49.4646535,
+    "cat": "military"
+  },
+  {
+    "name": "Police Station Təbriz",
+    "lat": 38.0633965,
+    "lon": 46.3014627,
+    "cat": "rail"
+  },
+  {
+    "name": "21st Hamzeh Infantry Diviziyası Qərargahı",
+    "lat": 38.0625633,
+    "lon": 46.3018681,
+    "cat": "military"
+  },
+  {
+    "name": "Bandar Lengeh limanı",
+    "lat": 26.5493182,
+    "lon": 54.8877719,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Base Bardeh Rasheh",
+    "lat": 35.588503,
+    "lon": 46.0969597,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH Base Yakshaveh",
+    "lat": 36.4942091,
+    "lon": 46.3265298,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Damavand Underground Obyekti",
+    "lat": 35.7209664,
+    "lon": 51.9859754,
+    "cat": "military"
+  },
+  {
+    "name": "Şəhid Kharrazi Qarnizonu",
+    "lat": 32.9757962,
+    "lon": 51.5424913,
+    "cat": "military"
+  },
+  {
+    "name": "Greater Tunb Comms",
+    "lat": 26.2702803,
+    "lon": 55.2991171,
+    "cat": "military"
+  },
+  {
+    "name": "Əbu Musa hava limanı",
+    "lat": 25.8760221,
+    "lon": 55.0327064,
+    "cat": "aviation"
+  },
+  {
+    "name": "Cyber Police Eslamshahr",
+    "lat": 35.5687359,
+    "lon": 51.2450365,
+    "cat": "military"
+  },
+  {
+    "name": "Malak Ashtar Universiteti of Technology Shahin Shahr",
+    "lat": 32.8823117,
+    "lon": 51.552603,
+    "cat": "military"
+  },
+  {
+    "name": "Explosives Production Obyektləri İsfahan",
+    "lat": 32.3339287,
+    "lon": 51.3155466,
+    "cat": "military"
+  },
+  {
+    "name": "Mobarak / Haft-e Tir Munitions Plant",
+    "lat": 32.3400773,
+    "lon": 51.6267808,
+    "cat": "military"
+  },
+  {
+    "name": "İmam Xomeyni Cultural and Educational Camp",
+    "lat": 33.6424131,
+    "lon": 50.1027527,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Nayband uçuş-eniş zolağı",
+    "lat": 27.3709305,
+    "lon": 52.6032207,
+    "cat": "aviation"
+  },
+  {
+    "name": "İsfahan Universiteti of Technology",
+    "lat": 32.7177956,
+    "lon": 51.5258359,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Base Farsan",
+    "lat": 32.2596591,
+    "lon": 50.5531003,
+    "cat": "military"
+  },
+  {
+    "name": "Mount Sofah Obyekti",
+    "lat": 32.5931714,
+    "lon": 51.609778,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] 41st Sarallah Diviziyası Base",
+    "lat": 30.3533268,
+    "lon": 57.0881974,
+    "cat": "military"
+  },
+  {
+    "name": "Arak Heavy Water Plant",
+    "lat": 34.3711177,
+    "lon": 49.2405296,
+    "cat": "military"
+  },
+  {
+    "name": "92nd Zirehli Diviziyası Base",
+    "lat": 31.3331663,
+    "lon": 48.6570877,
+    "cat": "military"
+  },
+  {
+    "name": "Rigu limanı",
+    "lat": 26.8295086,
+    "lon": 56.1230385,
+    "cat": "military"
+  },
+  {
+    "name": "Ramchah limanı",
+    "lat": 26.898195,
+    "lon": 56.1651209,
+    "cat": "military"
+  },
+  {
+    "name": "Sərhəd Postu Kirmanshah",
+    "lat": 34.2995661,
+    "lon": 45.5912836,
+    "cat": "post"
+  },
+  {
+    "name": "Iran Universiteti of Science and Technology (IUST)",
+    "lat": 35.7435833,
+    "lon": 51.5035142,
+    "cat": "military"
+  },
+  {
+    "name": "Mobarakeh Steel Plant Complex",
+    "lat": 32.2444252,
+    "lon": 51.4262793,
+    "cat": "military"
+  },
+  {
+    "name": "44th / 55th Artilleriya Qrupu Qarnizonu",
+    "lat": 32.6172706,
+    "lon": 51.632679,
+    "cat": "military"
+  },
+  {
+    "name": "Kharg Oil Terminal",
+    "lat": 29.2312682,
+    "lon": 50.3132319,
+    "cat": "military"
+  },
+  {
+    "name": "Kouzestan Steel Plant Complex",
+    "lat": 31.2695571,
+    "lon": 48.7326407,
+    "cat": "military"
+  },
+  {
+    "name": "Shahed Sadoughi kazarmaları",
+    "lat": 31.7856005,
+    "lon": 54.3717703,
+    "cat": "military"
+  },
+  {
+    "name": "312th Dəniz Battalion Base",
+    "lat": 29.8408276,
+    "lon": 50.2466722,
+    "cat": "military"
+  },
+  {
+    "name": "Təbriz Petrochemical Plant",
+    "lat": 38.0714228,
+    "lon": 46.1489871,
+    "cat": "military"
+  },
+  {
+    "name": "Ardakan Yellowcake Production Plant",
+    "lat": 32.5194352,
+    "lon": 54.1824458,
+    "cat": "military"
+  },
+  {
+    "name": "Iran Shipbuilding & Offshore Industries Complex (ISOICO)",
+    "lat": 27.0495103,
+    "lon": 55.9767763,
+    "cat": "military"
+  },
+  {
+    "name": "Mexanika Mühəndisliyi və Energetika Fakültəsi (Abbaspur Texniki Kampus)",
+    "lat": 35.7412686,
+    "lon": 51.5770604,
+    "cat": "military"
+  },
+  {
+    "name": "SEPAH yeraltı bunkeri Şimal Şiraz",
+    "lat": 29.6493147,
+    "lon": 52.5365058,
+    "cat": "military"
+  },
+  {
+    "name": "Radio-Rabitə Mövqeyi Təcriş",
+    "lat": 35.8279738,
+    "lon": 51.4468366,
+    "cat": "military"
+  },
+  {
+    "name": "Qom S-300 Hava Hücumundan Müdafiə Mövqeyi",
+    "lat": 34.5707185,
+    "lon": 50.7356328,
+    "cat": "military"
+  },
+  {
+    "name": "Iman Khomeini limanı neft-kimya obyektləri",
+    "lat": 30.4504676,
+    "lon": 49.0869594,
+    "cat": "military"
+  },
+  {
+    "name": "[SEPAH] Şəhid Kolahdooz",
+    "lat": 35.7732818,
+    "lon": 53.3515837,
+    "cat": "military"
+  },
+  {
+    "name": "Abyek Missile Base",
+    "lat": 36.0935775,
+    "lon": 50.5135036,
+    "cat": "military"
+  },
+  {
+    "name": "Radar Mövqeyi Baqak",
+    "lat": 35.16374,
+    "lon": 50.8706442,
+    "cat": "military"
+  },
+  {
+    "name": "Sursat Sahəsi Qom Şimal",
+    "lat": 34.9074086,
+    "lon": 50.7967423,
+    "cat": "military"
+  },
+  {
+    "name": "Kəşfiyyat Nazirliyi Şiraz",
+    "lat": 29.6482642,
+    "lon": 52.5323838,
+    "cat": "military"
+  },
+  {
+    "name": "Radar Mövqeyi Xorasan",
+    "lat": 32.7910064,
+    "lon": 59.8395228,
+    "cat": "military"
+  },
+  {
+    "name": "Lavan adası Oil Depot",
+    "lat": 26.7969424,
+    "lon": 53.35123,
+    "cat": "military"
+  },
+  {
+    "name": "Litek Radar Mövqeyi",
+    "lat": 31.0460739,
+    "lon": 50.1198471,
+    "cat": "military"
+  },
+  {
+    "name": "Bəsət Tədqiqat və Ali Təhsil Kompleksi",
+    "lat": 29.5768681,
+    "lon": 52.5868511,
+    "cat": "military"
   }
 ]
